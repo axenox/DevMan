@@ -260,6 +260,23 @@
             "LABEL": "Related topics",
             "ALIAS": "topic_relations",
             "DATA_ADDRESS": "dwm_topic_relations"
+        },
+        {
+            "CREATED_ON": "2016-12-20 11:57:10",
+            "MODIFIED_ON": "2016-12-20 11:57:10",
+            "CREATED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "UID": "0x11e6c6ab62ffaac2a3e40205857feb80",
+            "DATA_SOURCE": "0x39000000000000000000000000000000",
+            "long_description": null,
+            "APP": "0x38000000000000000000000000000000",
+            "SHORT_DESCRIPTION": "",
+            "PARENT_OBJECT": "",
+            "DATA_ADDRESS_PROPS": "{}",
+            "DEFAULT_EDITOR_UXON": "{}",
+            "LABEL": "Resource",
+            "ALIAS": "resource",
+            "DATA_ADDRESS": "dwm_resource"
         }
     ],
     "totals_rows": [],

@@ -1,5 +1,5 @@
 {
-    "name": "axenox/devman",
+    "name": "axenox/DevMan",
     "require": {
         "exface/core": "~0.1"
     },

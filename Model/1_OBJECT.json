@@ -161,7 +161,7 @@
         },
         {
             "CREATED_ON": "2016-03-23 06:40:56",
-            "MODIFIED_ON": "2016-03-23 06:40:56",
+            "MODIFIED_ON": "2017-03-14 12:06:41",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9bc3b43f389840050568905af",
@@ -171,7 +171,7 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": "{}",
-            "DEFAULT_EDITOR_UXON": "{}",
+            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Form\",\"widgets\":[{\"attribute_alias\":\"title\"},{\"attribute_alias\":\"parent_project\"},{\"attribute_alias\":\"description\",\"height\":20}]}",
             "LABEL": "Project",
             "ALIAS": "project",
             "DATA_ADDRESS": "dwm_project"

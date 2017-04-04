@@ -663,7 +663,7 @@
         },
         {
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2016-04-14 11:18:30",
+            "MODIFIED_ON": "2017-04-03 16:20:13",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9d1911a3289840050568905af",
@@ -673,8 +673,8 @@
             "DEFAULT_AGGREGATE_FUNCTION": "",
             "LABEL": "State",
             "ALIAS": "state",
-            "DATATYPE": "0x35000000000000000000000000000000",
-            "DATA_ADDRESS": "state_uid",
+            "DATATYPE": "0x31000000000000000000000000000000",
+            "DATA_ADDRESS": "state",
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "FORMATTER": "",
             "DISPLAYORDER": null,
@@ -683,15 +683,15 @@
             "HIDDENFLAG": "0",
             "EDITABLEFLAG": "1",
             "REQUIREDFLAG": "1",
-            "RELATED_OBJ": "0x11e60221265e96ba89840050568905af",
+            "RELATED_OBJ": "",
             "SORTERPOS": null,
             "SORTERDIR": "",
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": "{}",
-            "DEFAULT_VALUE": "'1'",
+            "DEFAULT_VALUE": "'10'",
             "FIXED_VALUE": "",
-            "DEFAULT_EDITOR_UXON": "{}"
+            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"StateInputSelect\"}"
         },
         {
             "CREATED_ON": "2016-03-23 06:41:32",

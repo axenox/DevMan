@@ -178,7 +178,7 @@
         },
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2017-04-12 12:37:31",
+            "MODIFIED_ON": "2017-05-10 14:57:42",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -188,7 +188,7 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": "{}",
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Tabs\",\"tabs\":[{\"caption\":\"Topic\",\"widgets\":[{\"attribute_alias\":\"title\"},{\"attribute_alias\":\"description\"},{\"attribute_alias\":\"parent_topic\"},{\"attribute_alias\":\"state\"},{\"attribute_alias\":\"complexity\"},{\"attribute_alias\":\"effort\"},{\"attribute_alias\":\"assigned_to\"}]},{\"caption\":\"Projects\",\"widgets\":[{\"widget_type\":\"DataTable\",\"object_alias\":\"axenox.DevMan.project_topics\",\"filters\":[{\"attribute_alias\":\"topic\",\"widget_type\":\"InputHidden\",\"required\":true},{\"attribute_alias\":\"project\"}],\"columns\":[{\"attribute_alias\":\"project__UID\"},{\"attribute_alias\":\"project__title\"},{\"attribute_alias\":\"priority\",\"footer\":\"AVG\"},{\"attribute_alias\":\"comment\"}],\"buttons\":[{\"action_alias\":\"exface.Core.CreateObjectDialog\"},{\"action_alias\":\"exface.Core.EditObjectDialog\",\"bind_to_double_click\":true},{\"action_alias\":\"exface.Core.DuplicateObjectDialog\"},{\"action_alias\":\"exface.Core.DeleteObject\"}]}]}]}",
+            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Tabs\",\"tabs\":[{\"caption\":\"Topic\",\"widgets\":[{\"attribute_alias\":\"title\"},{\"attribute_alias\":\"description\"},{\"attribute_alias\":\"parent_topic\"},{\"attribute_alias\":\"state\"},{\"attribute_alias\":\"complexity\"},{\"attribute_alias\":\"effort\"},{\"attribute_alias\":\"assigned_to\"}]},{\"caption\":\"Projects\",\"widgets\":[{\"widget_type\":\"DataTable\",\"object_alias\":\"axenox.DevMan.project_topics\",\"filters\":[{\"attribute_alias\":\"topic\",\"widget_type\":\"InputHidden\",\"required\":true},{\"attribute_alias\":\"project\"}],\"columns\":[{\"attribute_alias\":\"project__UID\"},{\"attribute_alias\":\"project__title\"},{\"attribute_alias\":\"priority__value\",\"footer\":\"AVG\"},{\"attribute_alias\":\"comment\"}],\"buttons\":[{\"action_alias\":\"exface.Core.CreateObjectDialog\"},{\"action_alias\":\"exface.Core.EditObjectDialog\",\"bind_to_double_click\":true},{\"action_alias\":\"exface.Core.DuplicateObjectDialog\"},{\"action_alias\":\"exface.Core.DeleteObject\"}]}]}]}",
             "LABEL": "Topic",
             "ALIAS": "topic",
             "DATA_ADDRESS": "dwm_topic"

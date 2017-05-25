@@ -277,6 +277,23 @@
             "LABEL": "Resource",
             "ALIAS": "resource",
             "DATA_ADDRESS": "dwm_resource"
+        },
+        {
+            "CREATED_ON": "2017-05-19 14:21:57",
+            "MODIFIED_ON": "2017-05-19 14:25:58",
+            "CREATED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "UID": "0x11e73c9e784bdf168820e4b318306b9a",
+            "DATA_SOURCE": "0x39000000000000000000000000000000",
+            "long_description": null,
+            "APP": "0x38000000000000000000000000000000",
+            "SHORT_DESCRIPTION": "",
+            "PARENT_OBJECT": "",
+            "DATA_ADDRESS_PROPS": "{}",
+            "DEFAULT_EDITOR_UXON": "{}",
+            "LABEL": "Tickets",
+            "ALIAS": "TICKETS",
+            "DATA_ADDRESS": "dwm_tickets"
         }
     ],
     "totals_rows": [],

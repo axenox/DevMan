@@ -13,10 +13,8 @@ class DevManApp extends \exface\Core\CommonLogic\AbstractApp
         $installer = parent::getInstaller($injected_installer);
         
         $schema_installer = new SqlSchemaInstaller($this->getNameResolver());
-        $schema_installer->setDataConnection($this->getWorkbench()
-            ->model()
-            ->getObject('axenox.DevMan.topic')
-            ->getDataConnection());
+        $schema_installer->setDataConnection($this->getWorkbench()->model()->getObject('axenox.DevMan.topic')->getDataConnection());
+        $schema_installer->setLastUpdateIdConfigOption('LAST_PERFORMED_MODEL_SOURCE_UPDATE_ID');
         $installer->addInstaller($schema_installer);
         
         return $installer;

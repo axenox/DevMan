@@ -3,7 +3,7 @@
 namespace axenox\DevMan;
 
 use exface\Core\Interfaces\InstallerInterface;
-use exface\SqlDataConnector\SqlSchemaInstaller;
+use exface\Core\CommonLogic\AppInstallers\SqlSchemaInstaller;
 use exface\Core\CommonLogic\Model\App;
 
 class DevManApp extends App

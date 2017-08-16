@@ -4,8 +4,9 @@ namespace axenox\DevMan;
 
 use exface\Core\Interfaces\InstallerInterface;
 use exface\SqlDataConnector\SqlSchemaInstaller;
+use exface\Core\CommonLogic\Model\App;
 
-class DevManApp extends \exface\Core\CommonLogic\AbstractApp
+class DevManApp extends App
 {
 
     public function getInstaller(InstallerInterface $injected_installer = null)

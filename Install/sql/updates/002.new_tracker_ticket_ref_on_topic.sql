@@ -1,0 +1,1 @@
+ALTER TABLE `dwm_topic` ADD `tracker_ticket_id` VARCHAR(10) NULL AFTER `complexity`;

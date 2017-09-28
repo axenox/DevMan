@@ -56,6 +56,13 @@
             "hidden": false,
             "data_type": "exface.Core.Relation",
             "attribute_alias": "OBJECT"
+        },
+        {
+            "expression": "APP",
+            "name": "APP",
+            "hidden": false,
+            "data_type": "exface.Core.Relation",
+            "attribute_alias": "APP"
         }
     ],
     "rows": [
@@ -67,7 +74,8 @@
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
             "BEHAVIOR": "exface\/Core\/Behaviors\/StateMachineBehavior.php",
             "CONFIG_UXON": "{\"state_attribute_alias\":\"state\",\"default_state\":10,\"states\":{\"10\":{\"name\":\"New\",\"transitions\":[10,20,30,50,70,90,99]},\"20\":{\"name\":\"Approved\",\"transitions\":[10,20,30,50,70,90,99]},\"30\":{\"name\":\"Ready to start\",\"transitions\":[10,20,30,50,70,90,99]},\"50\":{\"name\":\"In Progress\",\"transitions\":[10,20,30,50,70,90,99]},\"70\":{\"name\":\"Testing\",\"transitions\":[50,70,90,99]},\"90\":{\"name\":\"Canceled\",\"transitions\":[90]},\"99\":{\"name\":\"Completed\",\"transitions\":[99]}}}",
-            "OBJECT": "0x11e5f0b9cd1f508089840050568905af"
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "CREATED_ON": "2017-06-02 09:29:46",
@@ -77,7 +85,8 @@
             "UID": "0x11e74775fce2d650b797e4b318306b9a",
             "BEHAVIOR": "exface\/Core\/Behaviors\/TimeStampingBehavior.php",
             "CONFIG_UXON": "{\"created_on_attribute_alias\":\"CREATED_ON\",\"updated_on_attribute_alias\":\"MODIFIED_ON\"}",
-            "OBJECT": "0x38380000000000000000000000000000"
+            "OBJECT": "0x38380000000000000000000000000000",
+            "APP": "0x38000000000000000000000000000000"
         }
     ],
     "totals_rows": [],
@@ -85,7 +94,7 @@
         "operator": "AND",
         "conditions": [
             {
-                "expression": "OBJECT__APP",
+                "expression": "APP",
                 "comparator": "=",
                 "value": "0x38000000000000000000000000000000",
                 "object_alias": "exface.Core.OBJECT_BEHAVIORS"

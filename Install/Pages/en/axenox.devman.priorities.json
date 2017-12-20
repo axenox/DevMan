@@ -1,0 +1,34 @@
+{
+    "id": "0xaa049014e55b11e7ac8d0050568905af",
+    "alias_with_namespace": "axenox.devman.priorities",
+    "menu_parent_page_alias": "axenox.devman.configuration",
+    "menu_index": "1",
+    "menu_visible": true,
+    "name": "Priorities",
+    "short_description": "",
+    "replaces_page_alias": null,
+    "contents": {
+        "object_alias": "axenox.DevMan.PRIORITY",
+        "widget_type": "DataTable",
+        "columns": [
+            {
+                "attribute_group_alias": "~VISIBLE"
+            }
+        ],
+        "buttons": [
+            {
+                "action_alias": "exface.Core.CreateObjectDialog"
+            },
+            {
+                "action_alias": "exface.Core.EditObjectDialog",
+                "bind_to_double_click": true
+            },
+            {
+                "action_alias": "exface.Core.DuplicateObjectDialog"
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject"
+            }
+        ]
+    }
+}

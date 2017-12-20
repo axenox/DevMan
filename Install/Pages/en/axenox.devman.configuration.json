@@ -1,0 +1,11 @@
+{
+    "id": "0x42d6c29ae55b11e78dad0050568905af",
+    "alias_with_namespace": "axenox.devman.configuration",
+    "menu_parent_page_alias": "axenox.devman.start",
+    "menu_index": "99",
+    "menu_visible": true,
+    "name": "Configuration",
+    "short_description": "",
+    "replaces_page_alias": null,
+    "contents": ""
+}

@@ -1,0 +1,157 @@
+{
+    "id": "0x7c1d5fb0e55a11e78b150050568905af",
+    "alias_with_namespace": "axenox.devman.projects",
+    "menu_parent_page_alias": "axenox.devman.start",
+    "menu_index": "0",
+    "menu_visible": true,
+    "name": "Projects",
+    "short_description": "",
+    "replaces_page_alias": null,
+    "contents": {
+        "widget_type": "DataTable",
+        "object_alias": "axenox.DevMan.project",
+        "filters": [
+            {
+                "attribute_alias": "parent_project"
+            },
+            {
+                "attribute_alias": "title"
+            },
+            {
+                "attribute_alias": "project_topics__topic__state",
+                "multi_select": true,
+                "value": "10,20,30,50,70"
+            }
+        ],
+        "columns": [
+            {
+                "attribute_alias": "parent_project__LABEL"
+            },
+            {
+                "attribute_alias": "UID"
+            },
+            {
+                "attribute_alias": "title"
+            },
+            {
+                "attribute_alias": "project_topics__topic:COUNT",
+                "caption": "Topics",
+                "align": "right"
+            },
+            {
+                "attribute_alias": "description"
+            }
+        ],
+        "row_details": {
+            "height": 8,
+            "widgets": [
+                {
+                    "widget_type": "DataTable",
+                    "object_alias": "project_topics",
+                    "hide_header": true,
+                    "filters": [
+                        {
+                            "attribute_alias": "project"
+                        },
+                        {
+                            "attribute_alias": "topic__state",
+                            "widget_type": "InputHidden"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "attribute_alias": "topic__UID"
+                        },
+                        {
+                            "attribute_alias": "topic__title"
+                        },
+                        {
+                            "attribute_alias": "priority__value",
+                            "caption": "Project priority"
+                        },
+                        {
+                            "attribute_alias": "topic__priority_avg",
+                            "caption": "Avg. priority"
+                        },
+                        {
+                            "attribute_alias": "topic__project_title_list",
+                            "caption": "Projects"
+                        },
+                        {
+                            "attribute_alias": "topic__complexity"
+                        },
+                        {
+                            "attribute_alias": "topic__effort"
+                        },
+                        {
+                            "attribute_alias": "topic__state"
+                        },
+                        {
+                            "attribute_alias": "topic__assigned_to__LABEL"
+                        }
+                    ],
+                    "sorters": [
+                        {
+                            "attribute_alias": "priority__value",
+                            "direction": "ASC"
+                        }
+                    ],
+                    "Buttons": [
+                        {
+                            "action_alias": "exface.Core.CreateObjectDialog",
+                            "caption": "New"
+                        },
+                        {
+                            "action_alias": "exface.Core.EditObjectDialog",
+                            "bind_to_double_click": true,
+                            "caption": "Edit project assignment"
+                        },
+                        {
+                            "action_alias": "exface.Core.EditObjectDialog",
+                            "action_object_alias": "axenox.DevMan.TOPIC",
+                            "caption": "Edit topic"
+                        },
+                        {
+                            "action_alias": "exface.Core.DuplicateObjectDialog",
+                            "caption": "Copy"
+                        },
+                        {
+                            "action_alias": "exface.Core.DeleteObject",
+                            "caption": "Delete"
+                        }
+                    ]
+                }
+            ]
+        },
+        "sorters": [
+            {
+                "attribute_alias": "parent_project__UID",
+                "direction": "ASC"
+            },
+            {
+                "attribute_alias": "title",
+                "direction": "ASC"
+            }
+        ],
+        "Buttons": [
+            {
+                "action_alias": "exface.Core.CreateObjectDialog"
+            },
+            {
+                "action_alias": "exface.Core.EditObjectDialog",
+                "bind_to_double_click": true
+            },
+            {
+                "action_alias": "exface.Core.DuplicateObjectDialog"
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject"
+            },
+            {
+                "action_alias": "exface.Core.GoToPage",
+                "action_page_alias": "axenox.devman.topics",
+                "caption": "Topics"
+            }
+        ]
+    }
+}

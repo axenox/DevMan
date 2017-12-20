@@ -1,0 +1,13 @@
+{
+    "id": "0x35da4e8ce55a11e78da60050568905af",
+    "alias_with_namespace": "axenox.devman.start",
+    "menu_parent_page_alias": "index",
+    "menu_index": "10",
+    "menu_visible": true,
+    "name": "DevMan",
+    "short_description": "",
+    "replaces_page_alias": null,
+    "contents": {
+        "extend_widget": "[axenox.devman.topics]"
+    }
+}

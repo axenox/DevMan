@@ -700,7 +700,7 @@
         },
         {
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2016-03-23 07:09:10",
+            "MODIFIED_ON": "2018-02-05 11:10:06",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9d1911b2c89840050568905af",
@@ -715,7 +715,7 @@
             "DEFAULT_EDITOR_UXON": "",
             "LABEL": "Complexity",
             "ALIAS": "complexity",
-            "DATATYPE": "0x31000000000000000000000000000000",
+            "DATATYPE": "0x11e7b0280dd00a8998350205857feb80",
             "DATA_ADDRESS": "complexity",
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "FORMATTER": "",
@@ -730,7 +730,7 @@
             "SORTERDIR": "",
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
-            "DATA_ADDRESS_PROPS": "",
+            "DATA_ADDRESS_PROPS": "{}",
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": ""
@@ -1255,7 +1255,7 @@
         },
         {
             "CREATED_ON": "2016-12-14 16:29:09",
-            "MODIFIED_ON": "2016-12-20 14:01:57",
+            "MODIFIED_ON": "2018-02-05 11:09:35",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e6c21a6e6c5a1f9da3e4b318306b9a",
@@ -1270,7 +1270,7 @@
             "DEFAULT_EDITOR_UXON": "",
             "LABEL": "Effort",
             "ALIAS": "effort",
-            "DATATYPE": "0x31000000000000000000000000000000",
+            "DATATYPE": "0x11e7b027bba7711798350205857feb80",
             "DATA_ADDRESS": "effort",
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "FORMATTER": "",
@@ -1285,7 +1285,7 @@
             "SORTERDIR": "",
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
-            "DATA_ADDRESS_PROPS": "",
+            "DATA_ADDRESS_PROPS": "{}",
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": ""

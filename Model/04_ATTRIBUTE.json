@@ -145,9 +145,9 @@
     "rows": [
         {
             "CREATED_ON": "2007-01-01 00:00:00",
-            "MODIFIED_ON": "2007-01-01 00:00:00",
+            "MODIFIED_ON": "2018-02-05 13:27:09",
             "CREATED_BY_USER": "",
-            "MODIFIED_BY_USER": "",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x33313500000000000000000000000000",
             "SORTABLEFLAG": "1",
             "FILTERABLEFLAG": "1",
@@ -160,7 +160,7 @@
             "DEFAULT_EDITOR_UXON": "",
             "LABEL": "UID",
             "ALIAS": "UID",
-            "DATATYPE": "0x31000000000000000000000000000000",
+            "DATATYPE": "0x11e7be1769277c6a9c0f0205857feb80",
             "DATA_ADDRESS": "uid",
             "OBJECT": "0x38380000000000000000000000000000",
             "FORMATTER": "",
@@ -175,7 +175,7 @@
             "SORTERDIR": "",
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
-            "DATA_ADDRESS_PROPS": "",
+            "DATA_ADDRESS_PROPS": "{}",
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": ""

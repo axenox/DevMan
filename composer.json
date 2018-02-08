@@ -7,8 +7,8 @@
         "app": {
             "app_uid": "0x38000000000000000000000000000000",
             "app_alias": "axenox.DevMan",
-            "model_md5": "368d4ce8653d2ff418cb5397e2452ae7",
-            "model_timestamp": "2018-02-05 11:10:06"
+            "model_md5": "466efffa20b2f7f588b9f63d673ab242",
+            "model_timestamp": "2018-02-05 13:27:09"
         }
     },
     "autoload": {

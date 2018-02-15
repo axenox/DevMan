@@ -5,7 +5,8 @@
     "menu_index": "1",
     "menu_visible": true,
     "name": "Priorities",
-    "short_description": "",
+    "description": "",
+    "intro": "",
     "replaces_page_alias": null,
     "contents": {
         "object_alias": "axenox.DevMan.PRIORITY",

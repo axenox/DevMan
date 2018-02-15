@@ -5,7 +5,8 @@
     "menu_index": "99",
     "menu_visible": true,
     "name": "Configuration",
-    "short_description": "",
+    "description": "",
+    "intro": "",
     "replaces_page_alias": null,
     "contents": ""
 }

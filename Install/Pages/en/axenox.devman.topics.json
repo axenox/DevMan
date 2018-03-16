@@ -41,7 +41,12 @@
                 "attribute_alias": "title"
             },
             {
-                "attribute_alias": "priority_avg"
+                "attribute_alias": "value"
+            },
+            {
+                "attribute_alias": "project_topics__priority__value:MAX",
+                "caption": "Prio",
+                "hint": "Maximum priority among displayed (filtered) projects"
             },
             {
                 "attribute_alias": "complexity"
@@ -58,7 +63,15 @@
                 "attribute_alias": "assigned_to__LABEL"
             },
             {
+                "attribute_alias": "project_topics__UID:COUNT",
+                "caption": "Projects"
+            },
+            {
                 "attribute_alias": "project_title_list"
+            },
+            {
+                "attribute_alias": "priority_avg",
+                "caption": "Pr.\/All"
             },
             {
                 "attribute_alias": "description",

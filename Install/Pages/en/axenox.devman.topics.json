@@ -49,7 +49,8 @@
                 "hint": "Maximum priority among displayed (filtered) projects"
             },
             {
-                "attribute_alias": "complexity"
+                "attribute_alias": "complexity",
+                "caption": "Compl."
             },
             {
                 "attribute_alias": "=StateMachineState(state, 'axenox.DevMan.topic', 'true', 'true')",
@@ -74,6 +75,11 @@
                 "caption": "Pr.\/All"
             },
             {
+                "attribute_alias": "parent_topic__UID",
+                "caption": "Parent",
+                "hint": "Parent topic ID"
+            },
+            {
                 "attribute_alias": "description",
                 "id": "topic_description",
                 "hidden": true
@@ -93,14 +99,14 @@
         ],
         "Buttons": [
             {
-                "action_alias": "exface.Core.CreateObjectDialog"
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
             },
             {
-                "action_alias": "exface.Core.EditObjectDialog",
+                "action_alias": "exface.Core.ShowObjectEditDialog",
                 "bind_to_double_click": true
             },
             {
-                "action_alias": "exface.Core.DuplicateObjectDialog",
+                "action_alias": "exface.Core.ShowObjectCopyDialog",
                 "visibility": "optional"
             },
             {
@@ -111,7 +117,7 @@
                 "caption": "Add to project",
                 "icon": "plus-circle",
                 "action": {
-                    "alias": "exface.Core.CreateObjectDialog",
+                    "alias": "exface.Core.ShowObjectCreateDialog",
                     "object_alias": "axenox.DevMan.project_topics",
                     "prefill_with_input_data": true
                 }
@@ -120,7 +126,7 @@
                 "caption": "Redmine-Ticket",
                 "icon": "plus-circle",
                 "action": {
-                    "alias": "exface.Core.CreateObjectDialog",
+                    "alias": "exface.Core.ShowObjectCreateDialog",
                     "object_alias": "axenox.RedmineConnector.ISSUE",
                     "input_rows_min": 1,
                     "input_rows_max": 1,

@@ -99,21 +99,21 @@
                     ],
                     "Buttons": [
                         {
-                            "action_alias": "exface.Core.CreateObjectDialog",
+                            "action_alias": "exface.Core.ShowObjectCreateDialog",
                             "caption": "New"
                         },
                         {
-                            "action_alias": "exface.Core.EditObjectDialog",
+                            "action_alias": "exface.Core.ShowObjectEditDialog",
                             "bind_to_double_click": true,
                             "caption": "Edit project assignment"
                         },
                         {
-                            "action_alias": "exface.Core.EditObjectDialog",
+                            "action_alias": "exface.Core.ShowObjectEditDialog",
                             "action_object_alias": "axenox.DevMan.TOPIC",
                             "caption": "Edit topic"
                         },
                         {
-                            "action_alias": "exface.Core.DuplicateObjectDialog",
+                            "action_alias": "exface.Core.ShowObjectCopyDialog",
                             "caption": "Copy"
                         },
                         {
@@ -136,14 +136,14 @@
         ],
         "Buttons": [
             {
-                "action_alias": "exface.Core.CreateObjectDialog"
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
             },
             {
-                "action_alias": "exface.Core.EditObjectDialog",
+                "action_alias": "exface.Core.ShowObjectEditDialog",
                 "bind_to_double_click": true
             },
             {
-                "action_alias": "exface.Core.DuplicateObjectDialog"
+                "action_alias": "exface.Core.ShowObjectCopyDialog"
             },
             {
                 "action_alias": "exface.Core.DeleteObject"

@@ -58,7 +58,7 @@
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "State machine model",
-            "DESCRIPTION": null
+            "DESCRIPTION": ""
         },
         {
             "CREATED_ON": "2017-06-02 09:29:46",
@@ -71,7 +71,7 @@
             "OBJECT": "0x38380000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "Save access time",
-            "DESCRIPTION": null
+            "DESCRIPTION": ""
         }
     ],
     "totals_rows": [],

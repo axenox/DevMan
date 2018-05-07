@@ -59,19 +59,6 @@
             "APP": "0x38000000000000000000000000000000",
             "NAME": "State machine model",
             "DESCRIPTION": ""
-        },
-        {
-            "CREATED_ON": "2017-06-02 09:29:46",
-            "MODIFIED_ON": "2016-04-29 14:37:21",
-            "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11e74775fce2d650b797e4b318306b9a",
-            "BEHAVIOR": "exface\/Core\/Behaviors\/TimeStampingBehavior.php",
-            "CONFIG_UXON": "{\"created_on_attribute_alias\":\"CREATED_ON\",\"updated_on_attribute_alias\":\"MODIFIED_ON\"}",
-            "OBJECT": "0x38380000000000000000000000000000",
-            "APP": "0x38000000000000000000000000000000",
-            "NAME": "Save access time",
-            "DESCRIPTION": ""
         }
     ],
     "totals_rows": [],

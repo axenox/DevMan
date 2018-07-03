@@ -256,7 +256,7 @@
         },
         {
             "CREATED_ON": "2016-03-23 06:45:27",
-            "MODIFIED_ON": "2016-11-09 12:12:28",
+            "MODIFIED_ON": "2018-07-03 08:29:46",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0ba5dd11da689840050568905af",
@@ -268,10 +268,10 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": "{}",
             "LABEL": "ID",
             "ALIAS": "UID",
-            "DATATYPE": "0x31000000000000000000000000000000",
+            "DATATYPE": "0x11e7be1769277c6a9c0f0205857feb80",
             "DATA_ADDRESS": "uid",
             "OBJECT": "0x11e5f0b9bc3b43f389840050568905af",
             "FORMATTER": "",
@@ -286,10 +286,10 @@
             "SORTERDIR": "",
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
-            "DATA_ADDRESS_PROPS": "",
+            "DATA_ADDRESS_PROPS": "{}",
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": "{}"
         },
         {
             "CREATED_ON": "2016-03-23 06:59:29",

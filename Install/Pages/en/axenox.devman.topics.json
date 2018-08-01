@@ -31,6 +31,10 @@
             {
                 "attribute_alias": "state",
                 "multi_select": true
+            },
+            {
+                "attribute_alias": "project_topics__priority",
+                "multi_select": true
             }
         ],
         "columns": [

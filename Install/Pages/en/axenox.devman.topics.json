@@ -57,8 +57,7 @@
                 "caption": "Compl."
             },
             {
-                "attribute_alias": "=StateMachineState(state, 'axenox.DevMan.topic', 'true', 'true')",
-                "caption": "Current State"
+                "attribute_alias": "state"
             },
             {
                 "attribute_alias": "effort",

@@ -74,8 +74,12 @@
             "attribute_alias": "COMMENTS"
         },
         {
-            "name": "LABEL",
-            "attribute_alias": "LABEL"
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "RELATION_CARDINALITY",
+            "attribute_alias": "RELATION_CARDINALITY"
         },
         {
             "name": "ALIAS",
@@ -173,12 +177,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "UID",
+            "COMMENTS": null,
+            "NAME": "UID",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "UID",
             "DATATYPE": "0x11e7be1769277c6a9c0f0205857feb80",
             "DATA_ADDRESS": "uid",
@@ -198,7 +203,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2017-06-02 09:12:16",
@@ -214,12 +219,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Created on",
+            "COMMENTS": null,
+            "NAME": "Created on",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "CREATED_ON",
             "DATATYPE": "0x33000000000000000000000000000000",
             "DATA_ADDRESS": "created_on",
@@ -239,7 +245,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "=NOW('Y-m-d H:i:s')",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2017-06-02 09:12:28",
@@ -255,12 +261,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Modified on",
+            "COMMENTS": null,
+            "NAME": "Modified on",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "MODIFIED_ON",
             "DATATYPE": "0x33000000000000000000000000000000",
             "DATA_ADDRESS": "modified_on",
@@ -280,7 +287,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "=NOW('Y-m-d H:i:s')",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2017-06-02 09:12:41",
@@ -296,12 +303,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": "0",
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Created by",
+            "COMMENTS": null,
+            "NAME": "Created by",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "CREATED_BY_USER",
             "DATATYPE": "0x11e8091315d97da6b5b5e4b318306b9a",
             "DATA_ADDRESS": "created_by_user_oid",
@@ -321,7 +329,7 @@
             "DATA_ADDRESS_PROPS": "{\"SQL_DATA_TYPE\":\"binary\"}",
             "DEFAULT_VALUE": "=USER('id')",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2017-06-02 09:12:49",
@@ -337,12 +345,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": "0",
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Modified by",
+            "COMMENTS": null,
+            "NAME": "Modified by",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "MODIFIED_BY_USER",
             "DATATYPE": "0x11e8091315d97da6b5b5e4b318306b9a",
             "DATA_ADDRESS": "modified_by_user_oid",
@@ -362,7 +371,7 @@
             "DATA_ADDRESS_PROPS": "{\"SQL_DATA_TYPE\":\"binary\"}",
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "=USER('id')",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         }
     ],
     "totals_rows": [],

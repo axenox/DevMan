@@ -22,8 +22,10 @@
                 "caption": "Parent project"
             },
             {
-                "attribute_alias": "title",
-                "width": 1
+                "attribute_alias": "title"
+            },
+            {
+                "attribute_alias": "category"
             },
             {
                 "attribute_alias": "UID"
@@ -57,10 +59,15 @@
                 "caption": "Compl."
             },
             {
-                "attribute_alias": "state"
+                "attribute_alias": "state",
+                "caption": "Current State"
             },
             {
-                "attribute_alias": "effort",
+                "attribute_alias": "effort_planned",
+                "footer": "SUM"
+            },
+            {
+                "attribute_alias": "effort_remaining",
                 "footer": "SUM"
             },
             {

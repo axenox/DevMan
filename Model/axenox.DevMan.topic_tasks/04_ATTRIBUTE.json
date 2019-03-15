@@ -74,8 +74,12 @@
             "attribute_alias": "COMMENTS"
         },
         {
-            "name": "LABEL",
-            "attribute_alias": "LABEL"
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "RELATION_CARDINALITY",
+            "attribute_alias": "RELATION_CARDINALITY"
         },
         {
             "name": "ALIAS",
@@ -173,12 +177,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Topic uid",
+            "COMMENTS": null,
+            "NAME": "Topic uid",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "topic_uid",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "topic_uid",
@@ -198,7 +203,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2016-03-23 06:43:26",
@@ -214,12 +219,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Task uid",
+            "COMMENTS": null,
+            "NAME": "Task uid",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "task_uid",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "task_uid",
@@ -239,7 +245,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2016-03-23 06:43:26",
@@ -255,12 +261,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Priority uid",
+            "COMMENTS": null,
+            "NAME": "Priority uid",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "priority_uid",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "priority_uid",
@@ -280,7 +287,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         }
     ],
     "totals_rows": [],

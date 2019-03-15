@@ -19,9 +19,11 @@
                 "attribute_alias": "title"
             },
             {
-                "attribute_alias": "project_topics__topic__state",
-                "multi_select": true,
-                "value": "10,20,30,50,70"
+                "attribute_alias": "state"
+            },
+            {
+                "attribute_alias": "active_flag",
+                "value": 1
             }
         ],
         "columns": [
@@ -35,9 +37,14 @@
                 "attribute_alias": "title"
             },
             {
+                "attribute_alias": "state"
+            },
+            {
+                "attribute_alias": "date_due"
+            },
+            {
                 "attribute_alias": "project_topics__topic:COUNT",
-                "caption": "Topics",
-                "align": "right"
+                "caption": "Topics"
             },
             {
                 "attribute_alias": "description"
@@ -82,7 +89,10 @@
                             "attribute_alias": "topic__complexity"
                         },
                         {
-                            "attribute_alias": "topic__effort"
+                            "attribute_alias": "topic__effort_planned"
+                        },
+                        {
+                            "attribute_alias": "topic__effort_remaining"
                         },
                         {
                             "attribute_alias": "topic__state"

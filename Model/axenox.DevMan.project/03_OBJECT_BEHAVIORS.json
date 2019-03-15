@@ -1,5 +1,5 @@
 {
-    "object_alias": "exface.Core.DATASRC",
+    "object_alias": "exface.Core.OBJECT_BEHAVIORS",
     "columns": [
         {
             "name": "CREATED_ON",
@@ -22,53 +22,43 @@
             "attribute_alias": "UID"
         },
         {
+            "name": "BEHAVIOR",
+            "attribute_alias": "BEHAVIOR"
+        },
+        {
+            "name": "CONFIG_UXON",
+            "attribute_alias": "CONFIG_UXON"
+        },
+        {
+            "name": "OBJECT",
+            "attribute_alias": "OBJECT"
+        },
+        {
             "name": "APP",
             "attribute_alias": "APP"
         },
         {
-            "name": "DEFAULT_CONNECTION",
-            "attribute_alias": "DEFAULT_CONNECTION"
+            "name": "NAME",
+            "attribute_alias": "NAME"
         },
         {
-            "name": "DEFAULT_QUERY_BUILDER",
-            "attribute_alias": "DEFAULT_QUERY_BUILDER"
-        },
-        {
-            "name": "READABLE_FLAG",
-            "attribute_alias": "READABLE_FLAG"
-        },
-        {
-            "name": "WRITABLE_FLAG",
-            "attribute_alias": "WRITABLE_FLAG"
-        },
-        {
-            "name": "BASE_OBJECT",
-            "attribute_alias": "BASE_OBJECT"
-        },
-        {
-            "name": "LABEL",
-            "attribute_alias": "LABEL"
-        },
-        {
-            "name": "ALIAS",
-            "attribute_alias": "ALIAS"
+            "name": "DESCRIPTION",
+            "attribute_alias": "DESCRIPTION"
         }
     ],
     "rows": [
         {
-            "CREATED_ON": "2011-01-01 00:00:00",
-            "MODIFIED_ON": "2019-03-12 10:56:37",
-            "CREATED_BY_USER": "",
+            "CREATED_ON": "2019-03-13 20:09:34",
+            "MODIFIED_ON": "2019-03-14 08:06:33",
+            "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x39000000000000000000000000000000",
+            "UID": "0x11e945cbe9cd58a1b95b00505689aada",
+            "BEHAVIOR": "exface\/Core\/Behaviors\/StateMachineBehavior.php",
+            "CONFIG_UXON": "{\"state_attribute_alias\":\"state\",\"states\":{\"10\":{\"name\":\"Planned\"},\"40\":{\"name\":\"Shelved\",\"color\":\"lightgray\"},\"50\":{\"name\":\"In Progress\"},\"90\":{\"name\":\"Canceled\",\"color\":\"gray\"},\"99\":{\"name\":\"Finished\"}}}",
+            "OBJECT": "0x11e5f0b9bc3b43f389840050568905af",
             "APP": "0x38000000000000000000000000000000",
-            "DEFAULT_CONNECTION": "0x31320000000000000000000000000000",
-            "DEFAULT_QUERY_BUILDER": "exface\/Core\/QueryBuilders\/MySqlBuilder.php",
-            "READABLE_FLAG": "1",
-            "WRITABLE_FLAG": "1",
-            "BASE_OBJECT": "0x38380000000000000000000000000000",
-            "LABEL": "ExFace DevMan",
-            "ALIAS": "EXF_DEVMAN"
+            "NAME": "States",
+            "DESCRIPTION": ""
         }
     ],
     "totals_rows": [],
@@ -79,7 +69,7 @@
                 "expression": "APP",
                 "comparator": "=",
                 "value": "0x38000000000000000000000000000000",
-                "object_alias": "exface.Core.DATASRC"
+                "object_alias": "exface.Core.OBJECT_BEHAVIORS"
             }
         ]
     },

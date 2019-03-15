@@ -74,8 +74,12 @@
             "attribute_alias": "COMMENTS"
         },
         {
-            "name": "LABEL",
-            "attribute_alias": "LABEL"
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "RELATION_CARDINALITY",
+            "attribute_alias": "RELATION_CARDINALITY"
         },
         {
             "name": "ALIAS",
@@ -173,12 +177,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Priority",
+            "COMMENTS": null,
+            "NAME": "Priority",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "value",
             "DATATYPE": "0x31000000000000000000000000000000",
             "DATA_ADDRESS": "value",
@@ -198,7 +203,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         },
         {
             "CREATED_ON": "2007-01-01 00:00:00",
@@ -214,12 +219,13 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "",
+            "DEFAULT_EDITOR_UXON": null,
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": "",
-            "LABEL": "Description",
+            "COMMENTS": null,
+            "NAME": "Description",
+            "RELATION_CARDINALITY": "",
             "ALIAS": "desc",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "description",
@@ -239,7 +245,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
-            "CUSTOM_DATA_TYPE": ""
+            "CUSTOM_DATA_TYPE": null
         }
     ],
     "totals_rows": [],

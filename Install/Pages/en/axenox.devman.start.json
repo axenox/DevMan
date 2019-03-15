@@ -2,13 +2,195 @@
     "id": "0x35da4e8ce55a11e78da60050568905af",
     "alias_with_namespace": "axenox.devman.start",
     "menu_parent_page_alias": "index",
-    "menu_index": "10",
+    "menu_index": "14",
     "menu_visible": true,
     "name": "DevMan",
     "description": "",
     "intro": "",
     "replaces_page_alias": null,
     "contents": {
-        "extend_widget": "[axenox.devman.topics]"
+        "widget_type": "SplitVertical",
+        "object_alias": "axenox.DevMan.project",
+        "panels": [
+            {
+                "caption": "Next due Projects",
+                "height": "40%",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "id": "projects_table",
+                        "object_alias": "axenox.DevMan.project",
+                        "filters": [
+                            {
+                                "attribute_alias": "date_due",
+                                "comparator": ">=",
+                                "value": -7
+                            },
+                            {
+                                "attribute_alias": "state",
+                                "widget_type": "InputSelect",
+                                "multi_select": true,
+                                "value": "10,50"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "date_due"
+                            },
+                            {
+                                "attribute_alias": "title"
+                            },
+                            {
+                                "attribute_alias": "objectives"
+                            },
+                            {
+                                "attribute_alias": "parent_project__LABEL"
+                            },
+                            {
+                                "attribute_alias": "project_topics__UID:COUNT",
+                                "caption": "Topics"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "date_due",
+                                "direction": "ASC"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "caption": "Current topics",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "object_alias": "axenox.DevMan.topic",
+                        "id": "topics",
+                        "filters": [
+                            {
+                                "attribute_alias": "project_topics__project",
+                                "value": "=projects_table!UID",
+                                "apply_on_change": true
+                            },
+                            {
+                                "attribute_alias": "UID"
+                            },
+                            {
+                                "attribute_alias": "title"
+                            },
+                            {
+                                "attribute_alias": "category"
+                            },
+                            {
+                                "attribute_alias": "state",
+                                "multi_select": true,
+                                "value": "10,20,30,50,70"
+                            },
+                            {
+                                "attribute_alias": "project_topics__priority",
+                                "multi_select": true
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "UID"
+                            },
+                            {
+                                "attribute_alias": "title"
+                            },
+                            {
+                                "attribute_alias": "value"
+                            },
+                            {
+                                "attribute_alias": "project_topics__priority__value:MAX",
+                                "caption": "Prio",
+                                "hint": "Maximum priority among displayed (filtered) projects"
+                            },
+                            {
+                                "attribute_alias": "complexity",
+                                "caption": "Compl."
+                            },
+                            {
+                                "attribute_alias": "state",
+                                "caption": "Current State"
+                            },
+                            {
+                                "attribute_alias": "effort_planned",
+                                "footer": "SUM"
+                            },
+                            {
+                                "attribute_alias": "effort_remaining",
+                                "footer": "SUM"
+                            },
+                            {
+                                "attribute_alias": "assigned_to__LABEL"
+                            },
+                            {
+                                "attribute_alias": "project_topics__UID:COUNT",
+                                "caption": "Projects"
+                            },
+                            {
+                                "attribute_alias": "project_title_list"
+                            },
+                            {
+                                "attribute_alias": "priority_avg",
+                                "caption": "Pr.\/All"
+                            },
+                            {
+                                "attribute_alias": "parent_topic__UID",
+                                "caption": "Parent",
+                                "hint": "Parent topic ID"
+                            },
+                            {
+                                "attribute_alias": "description",
+                                "id": "topic_description",
+                                "hidden": true
+                            },
+                            {
+                                "attribute_alias": "CREATED_ON"
+                            },
+                            {
+                                "attribute_alias": "tracker_ticket"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "UID",
+                                "direction": "DESC"
+                            }
+                        ],
+                        "Buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectCopyDialog",
+                                "visibility": "optional"
+                            },
+                            {
+                                "action_alias": "exface.Core.GoToUrl",
+                                "action_url": "https:\/\/redmine.salt-solutions.de\/issues\/[#tracker_ticket#]",
+                                "action_open_in_new_window": true,
+                                "caption": "Ticket \u00f6ffnen"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

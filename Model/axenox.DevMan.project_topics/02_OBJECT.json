@@ -77,21 +77,21 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:42:45",
-            "MODIFIED_ON": "2016-03-23 06:42:45",
+            "MODIFIED_ON": "2019-03-18 10:01:41",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9fd06f67a89840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
-            "COMMENTS": null,
-            "DOCS": null,
+            "COMMENTS": "",
+            "DOCS": "",
             "NAME": "Project topics",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Form\",\"widgets\":[{\"attribute_alias\":\"project\",\"widget_type\":\"InputComboTable\",\"filters\":[{\"attribute_alias\":\"active_flag\",\"value\":1,\"comparator\":\"==\"}]},{\"attribute_alias\":\"priority\"},{\"attribute_alias\":\"topic\",\"width\":2},{\"attribute_alias\":\"comment\",\"width\":2,\"height\":5}]}",
             "ALIAS": "project_topics",
             "DATA_ADDRESS": "dwm_topic_project_mapping"
         }

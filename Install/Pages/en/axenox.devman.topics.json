@@ -44,7 +44,11 @@
                 "attribute_alias": "UID"
             },
             {
-                "attribute_alias": "title"
+                "attribute_alias": "title",
+                "width_max": "400px"
+            },
+            {
+                "attribute_alias": "category__LABEL"
             },
             {
                 "attribute_alias": "value"
@@ -85,9 +89,8 @@
                 "caption": "Pr.\/All"
             },
             {
-                "attribute_alias": "parent_topic__UID",
-                "caption": "Parent",
-                "hint": "Parent topic ID"
+                "attribute_alias": "parent_topic__LABEL",
+                "caption": "Parent"
             },
             {
                 "attribute_alias": "description",

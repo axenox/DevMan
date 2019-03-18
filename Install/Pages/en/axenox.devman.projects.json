@@ -2,7 +2,7 @@
     "id": "0x7c1d5fb0e55a11e78b150050568905af",
     "alias_with_namespace": "axenox.devman.projects",
     "menu_parent_page_alias": "axenox.devman.start",
-    "menu_index": "0",
+    "menu_index": "2",
     "menu_visible": true,
     "name": "Projects",
     "description": "",
@@ -47,7 +47,7 @@
                 "caption": "Topics"
             },
             {
-                "attribute_alias": "description"
+                "attribute_alias": "objectives"
             }
         ],
         "row_details": {
@@ -109,26 +109,32 @@
                     ],
                     "Buttons": [
                         {
-                            "action_alias": "exface.Core.ShowObjectCreateDialog",
-                            "caption": "New"
+                            "caption": "Edit topic",
+                            "bind_to_double_click": true,
+                            "action": {
+                                "alias": "exface.Core.ShowObjectEditDialog",
+                                "object_alias": "axenox.DevMan.TOPIC",
+                                "input_mapper": {
+                                    "column_to_column_mappings": [
+                                        {
+                                            "from": "topic",
+                                            "to": "UID"
+                                        }
+                                    ]
+                                }
+                            }
                         },
                         {
                             "action_alias": "exface.Core.ShowObjectEditDialog",
-                            "bind_to_double_click": true,
                             "caption": "Edit project assignment"
                         },
                         {
-                            "action_alias": "exface.Core.ShowObjectEditDialog",
-                            "action_object_alias": "axenox.DevMan.TOPIC",
-                            "caption": "Edit topic"
-                        },
-                        {
-                            "action_alias": "exface.Core.ShowObjectCopyDialog",
-                            "caption": "Copy"
+                            "action_alias": "exface.Core.ShowObjectCreateDialog",
+                            "caption": "Add topic"
                         },
                         {
                             "action_alias": "exface.Core.DeleteObject",
-                            "caption": "Delete"
+                            "caption": "Remove from project"
                         }
                     ]
                 }

@@ -1,15 +1,15 @@
 {
-    "id": "0x4d324070e55b11e7ac570050568905af",
-    "alias_with_namespace": "axenox.devman.resources",
+    "id": "0x8110c4ea464c11e9aff700505689aada",
+    "alias_with_namespace": "axenox.devman.config-topic-categories",
     "menu_parent_page_alias": "axenox.devman.configuration",
-    "menu_index": "0",
+    "menu_index": "2",
     "menu_visible": true,
-    "name": "Resources",
+    "name": "Topic Categories",
     "description": "",
     "intro": "",
     "replaces_page_alias": null,
     "contents": {
-        "object_alias": "axenox.DevMan.resource",
+        "object_alias": "axenox.DevMan.topic_category",
         "widget_type": "DataTable",
         "columns": [
             {

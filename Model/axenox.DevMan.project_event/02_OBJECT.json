@@ -76,24 +76,24 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2016-03-23 06:40:56",
-            "MODIFIED_ON": "2019-03-21 12:22:49",
+            "CREATED_ON": "2019-03-21 09:54:45",
+            "MODIFIED_ON": "2019-03-21 10:32:14",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11e5f0b9bc3b43f389840050568905af",
+            "UID": "0x11e94bbf50eed38fb95b00505689aada",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Project",
+            "NAME": "Event",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Form\",\"widgets\":[{\"attribute_alias\":\"title\"},{\"attribute_alias\":\"parent_project\"},{\"attribute_alias\":\"objectives\",\"width\":2},{\"attribute_alias\":\"date_start\"},{\"attribute_alias\":\"date_end\"},{\"attribute_alias\":\"state\"},{\"attribute_alias\":\"description\",\"height\":20}]}",
-            "ALIAS": "project",
-            "DATA_ADDRESS": "dwm_project"
+            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Dialog\",\"widgets\":[{\"attribute_alias\":\"date\"},{\"attribute_alias\":\"project\"},{\"attribute_alias\":\"name\"},{\"attribute_alias\":\"location\"},{\"attribute_alias\":\"effort_planned\"},{\"attribute_alias\":\"effort_rem_estimated\"},{\"attribute_alias\":\"objectives\",\"width\":2},{\"attribute_alias\":\"description\",\"width\":2,\"height\":9},{\"caption\":\"Approvals\",\"widget_type\":\"DataTable\",\"object_alias\":\"axenox.DevMan.approval\",\"paginate\":false,\"height\":5,\"filters\":[{\"attribute_alias\":\"event\",\"widget_type\":\"InputHidden\",\"required\":true}],\"columns\":[{\"attribute_alias\":\"approved_on\"},{\"attribute_alias\":\"approved_by_resource__LABEL\"},{\"attribute_alias\":\"effort\"}],\"buttons\":[{\"action_alias\":\"exface.Core.ShowObjectCreateDialog\"},{\"action_alias\":\"exface.Core.ShowObjectEditDialog\",\"bind_to_double_click\":true},{\"action_alias\":\"exface.Core.DeleteObject\",\"visibility\":\"optional\"}]}]}",
+            "ALIAS": "project_event",
+            "DATA_ADDRESS": "dwm_project_event"
         }
     ],
     "totals_rows": [],

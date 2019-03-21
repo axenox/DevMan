@@ -16,6 +16,12 @@
                 "attribute_group_alias": "~VISIBLE"
             }
         ],
+        "sorters": [
+            {
+                "attribute_alias": "name",
+                "direction": "asc"
+            }
+        ],
         "buttons": [
             {
                 "action_alias": "exface.Core.ShowObjectCreateDialog"

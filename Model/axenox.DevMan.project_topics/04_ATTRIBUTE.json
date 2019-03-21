@@ -261,7 +261,7 @@
             "READABLEFLAG": "1",
             "WRITABLEFLAG": "1",
             "SYSTEMFLAG": "0",
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\": \"InputSelect\", \"selectable_options\": {\"1\": 1, \"3\": 2, \"4\": 3}}",
+            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"InputSelect\",\"selectable_options\":{\"1\":1,\"3\":2,\"4\":3}}",
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": "1",
             "DEFAULT_DISPLAY_UXON": null,

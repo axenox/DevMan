@@ -13,21 +13,21 @@
         "object_alias": "axenox.DevMan.project",
         "panels": [
             {
-                "caption": "Projects due next",
+                "caption": "Upcoming Events",
                 "height": "50%",
                 "widgets": [
                     {
                         "widget_type": "DataTable",
-                        "id": "projects_table",
-                        "object_alias": "axenox.DevMan.project",
+                        "id": "events_table",
+                        "object_alias": "axenox.DevMan.project_event",
                         "filters": [
                             {
-                                "attribute_alias": "date_due",
+                                "attribute_alias": "date",
                                 "comparator": ">=",
-                                "value": -7
+                                "value": -1
                             },
                             {
-                                "attribute_alias": "state",
+                                "attribute_alias": "project__state",
                                 "widget_type": "InputSelect",
                                 "multi_select": true,
                                 "value": "10,50"
@@ -35,111 +35,44 @@
                         ],
                         "columns": [
                             {
-                                "attribute_alias": "date_due"
+                                "attribute_alias": "date"
                             },
                             {
-                                "attribute_alias": "title"
+                                "attribute_alias": "project__LABEL"
+                            },
+                            {
+                                "attribute_alias": "name"
                             },
                             {
                                 "attribute_alias": "objectives"
                             },
                             {
-                                "attribute_alias": "parent_project__LABEL"
+                                "attribute_alias": "effort_planned",
+                                "footer": "SUM"
                             },
                             {
-                                "attribute_alias": "project_topics__UID:COUNT",
-                                "caption": "Topics"
+                                "attribute_alias": "approval__effort:SUM",
+                                "caption": "Effort Appr.",
+                                "footer": "SUM"
+                            },
+                            {
+                                "attribute_alias": "effort_remaining",
+                                "footer": "SUM"
+                            },
+                            {
+                                "attribute_alias": "location"
+                            },
+                            {
+                                "attribute_alias": "project",
+                                "hidden": true
                             }
                         ],
-                        "row_details": {
-                            "height": 8,
-                            "widgets": [
-                                {
-                                    "widget_type": "DataTable",
-                                    "object_alias": "project_topics",
-                                    "hide_header": true,
-                                    "filters": [
-                                        {
-                                            "attribute_alias": "project"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__state",
-                                            "widget_type": "InputHidden"
-                                        }
-                                    ],
-                                    "columns": [
-                                        {
-                                            "attribute_alias": "topic__UID"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__title"
-                                        },
-                                        {
-                                            "attribute_alias": "priority__value",
-                                            "caption": "Project priority"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__priority_avg",
-                                            "caption": "Avg. priority"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__project_title_list",
-                                            "caption": "Projects"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__complexity"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__effort_planned"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__effort_remaining"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__state"
-                                        },
-                                        {
-                                            "attribute_alias": "topic__assigned_to__LABEL"
-                                        }
-                                    ],
-                                    "sorters": [
-                                        {
-                                            "attribute_alias": "priority__value",
-                                            "direction": "ASC"
-                                        }
-                                    ],
-                                    "Buttons": [
-                                        {
-                                            "caption": "Edit topic",
-                                            "bind_to_double_click": true,
-                                            "action": {
-                                                "alias": "exface.Core.ShowObjectEditDialog",
-                                                "object_alias": "axenox.DevMan.TOPIC",
-                                                "input_mapper": {
-                                                    "column_to_column_mappings": [
-                                                        {
-                                                            "from": "topic",
-                                                            "to": "UID"
-                                                        }
-                                                    ]
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "action_alias": "exface.Core.ShowObjectEditDialog",
-                                            "caption": "Edit project assignment"
-                                        },
-                                        {
-                                            "action_alias": "exface.Core.DeleteObject",
-                                            "caption": "Remove from project"
-                                        }
-                                    ]
-                                }
-                            ]
+                        "row_grouper": {
+                            "group_by_attribute_alias": "date_week_no"
                         },
                         "sorters": [
                             {
-                                "attribute_alias": "date_due",
+                                "attribute_alias": "date",
                                 "direction": "ASC"
                             }
                         ],
@@ -165,7 +98,7 @@
                         "filters": [
                             {
                                 "attribute_alias": "project_topics__project",
-                                "value": "=projects_table!UID",
+                                "value": "=events_table!project",
                                 "apply_on_change": true
                             },
                             {

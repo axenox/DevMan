@@ -1,0 +1,81 @@
+{
+    "id": "0x1249305e4bd511e9a96b00505689aada",
+    "alias_with_namespace": "axenox.devman.events",
+    "menu_parent_page_alias": "axenox.devman.start",
+    "menu_index": "3",
+    "menu_visible": true,
+    "name": "Events",
+    "description": "",
+    "intro": "",
+    "replaces_page_alias": null,
+    "contents": {
+        "object_alias": "axenox.DevMan.project_event",
+        "widget_type": "DataTable",
+        "filters": [
+            {
+                "attribute_alias": "project"
+            },
+            {
+                "attribute_alias": "date",
+                "comparator": ">="
+            },
+            {
+                "attribute_alias": "date",
+                "comparator": "<="
+            },
+            {
+                "attribute_alias": "name"
+            },
+            {
+                "attribute_alias": "objectives"
+            }
+        ],
+        "columns": [
+            {
+                "attribute_alias": "date_week_no"
+            },
+            {
+                "attribute_alias": "date"
+            },
+            {
+                "attribute_alias": "project__LABEL"
+            },
+            {
+                "attribute_alias": "name"
+            },
+            {
+                "attribute_alias": "location"
+            },
+            {
+                "attribute_alias": "effort_planned"
+            },
+            {
+                "attribute_alias": "effort_remaining"
+            },
+            {
+                "attribute_alias": "objectives"
+            }
+        ],
+        "sorters": [
+            {
+                "attribute_alias": "date",
+                "direction": "desc"
+            }
+        ],
+        "buttons": [
+            {
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectEditDialog",
+                "bind_to_double_click": true
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectCopyDialog"
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject"
+            }
+        ]
+    }
+}

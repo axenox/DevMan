@@ -28,23 +28,27 @@
         ],
         "columns": [
             {
-                "attribute_alias": "parent_project__LABEL"
-            },
-            {
                 "attribute_alias": "UID"
             },
             {
                 "attribute_alias": "title"
             },
             {
-                "attribute_alias": "state"
+                "attribute_alias": "parent_project__LABEL"
             },
             {
-                "attribute_alias": "date_due"
+                "attribute_alias": "state"
             },
             {
                 "attribute_alias": "project_topics__topic:COUNT",
                 "caption": "Topics"
+            },
+            {
+                "attribute_alias": "project_event__UID:COUNT",
+                "caption": "Events"
+            },
+            {
+                "attribute_alias": "date_next_event"
             },
             {
                 "attribute_alias": "objectives"

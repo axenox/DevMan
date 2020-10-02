@@ -82,6 +82,10 @@
             "attribute_alias": "RELATION_CARDINALITY"
         },
         {
+            "name": "TYPE",
+            "attribute_alias": "TYPE"
+        },
+        {
             "name": "ALIAS",
             "attribute_alias": "ALIAS"
         },
@@ -184,6 +188,7 @@
             "COMMENTS": null,
             "NAME": "Title",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "title",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "title",
@@ -226,6 +231,7 @@
             "COMMENTS": null,
             "NAME": "Description",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "description",
             "DATATYPE": "0x31310000000000000000000000000000",
             "DATA_ADDRESS": "description",
@@ -268,6 +274,7 @@
             "COMMENTS": null,
             "NAME": "Parent project",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "parent_project",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "parent_project_uid",
@@ -310,6 +317,7 @@
             "COMMENTS": null,
             "NAME": "ID",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "UID",
             "DATATYPE": "0x11e7be1769277c6a9c0f0205857feb80",
             "DATA_ADDRESS": "uid",
@@ -352,6 +360,7 @@
             "COMMENTS": null,
             "NAME": "Project",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "LABEL",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "CONCAT([#~alias#].uid, ' ', [#~alias#].title)",
@@ -394,6 +403,7 @@
             "COMMENTS": null,
             "NAME": "State",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "state",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "state",
@@ -436,6 +446,7 @@
             "COMMENTS": "",
             "NAME": "End",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "date_end",
             "DATATYPE": "0x32000000000000000000000000000000",
             "DATA_ADDRESS": "date_end",
@@ -478,6 +489,7 @@
             "COMMENTS": "",
             "NAME": "Start",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "date_start",
             "DATATYPE": "0x32000000000000000000000000000000",
             "DATA_ADDRESS": "date_start",
@@ -520,6 +532,7 @@
             "COMMENTS": "",
             "NAME": "Active",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "active_flag",
             "DATATYPE": "0x37000000000000000000000000000000",
             "DATA_ADDRESS": "IF([#state#] NOT IN (40, 90, 99), 1, 0)",
@@ -562,6 +575,7 @@
             "COMMENTS": null,
             "NAME": "Objectives",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "objectives",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "objectives",
@@ -604,6 +618,7 @@
             "COMMENTS": "",
             "NAME": "Next Event on",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "date_next_event",
             "DATATYPE": "0x32000000000000000000000000000000",
             "DATA_ADDRESS": "(SELECT MIN([#~alias#]_dne.date) FROM dwm_project_event [#~alias#]_dne WHERE [#~alias#]_dne.project_uid = [#~alias#].uid AND [#~alias#]_dne.date > NOW())",
@@ -629,6 +644,7 @@
     "totals_rows": [],
     "filters": {
         "operator": "AND",
+        "base_object_alias": "exface.Core.ATTRIBUTE",
         "conditions": [
             {
                 "expression": "OBJECT__APP",

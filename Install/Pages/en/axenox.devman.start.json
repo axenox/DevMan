@@ -1,13 +1,17 @@
 {
-    "id": "0x35da4e8ce55a11e78da60050568905af",
+    "uid": "0x35da4e8ce55a11e78da60050568905af",
     "alias_with_namespace": "axenox.devman.start",
-    "menu_parent_page_alias": "index",
-    "menu_index": "14",
+    "menu_parent_page_selector": "0xf830f1cbba2c11e7895fe4b318306b9a",
+    "menu_index": 10,
     "menu_visible": true,
     "name": "DevMan",
     "description": "",
     "intro": "",
-    "replaces_page_alias": null,
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x00000000000000000000000000000000",
+    "created_on": "2020-06-22 10:44:39",
+    "modified_by_user_selector": "0x11ea7e29e1126ef3a7eb0050568905af",
+    "modified_on": "2020-06-23 10:38:55",
     "contents": {
         "widget_type": "NavTiles",
         "object_alias": "exface.Core.PAGE"

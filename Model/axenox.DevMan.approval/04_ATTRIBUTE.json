@@ -82,6 +82,10 @@
             "attribute_alias": "RELATION_CARDINALITY"
         },
         {
+            "name": "TYPE",
+            "attribute_alias": "TYPE"
+        },
+        {
             "name": "ALIAS",
             "attribute_alias": "ALIAS"
         },
@@ -184,6 +188,7 @@
             "COMMENTS": "",
             "NAME": "Project",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "project",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "project_uid",
@@ -226,6 +231,7 @@
             "COMMENTS": "",
             "NAME": "Topic",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "topic",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "topic_uid",
@@ -268,6 +274,7 @@
             "COMMENTS": "",
             "NAME": "Event",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "event",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "event_uid",
@@ -310,6 +317,7 @@
             "COMMENTS": "",
             "NAME": "Resource",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "resource",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "resource_uid",
@@ -352,6 +360,7 @@
             "COMMENTS": "",
             "NAME": "Effort Appr.",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "effort",
             "DATATYPE": "0x31000000000000000000000000000000",
             "DATA_ADDRESS": "effort",
@@ -394,6 +403,7 @@
             "COMMENTS": null,
             "NAME": "Description",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "description",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "description",
@@ -436,6 +446,7 @@
             "COMMENTS": "",
             "NAME": "Approved by",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "approved_by_resource",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "approved_by_resource_uid",
@@ -478,6 +489,7 @@
             "COMMENTS": "",
             "NAME": "Approved on",
             "RELATION_CARDINALITY": "",
+            "TYPE": "D",
             "ALIAS": "approved_on",
             "DATATYPE": "0x32000000000000000000000000000000",
             "DATA_ADDRESS": "created_on",
@@ -503,6 +515,7 @@
     "totals_rows": [],
     "filters": {
         "operator": "AND",
+        "base_object_alias": "exface.Core.ATTRIBUTE",
         "conditions": [
             {
                 "expression": "OBJECT__APP",

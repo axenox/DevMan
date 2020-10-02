@@ -1,13 +1,17 @@
 {
-    "id": "0x09481916d5b611e789120050568905af",
+    "uid": "0x09481916d5b611e789120050568905af",
     "alias_with_namespace": "axenox.devman.topics",
-    "menu_parent_page_alias": "axenox.devman.start",
-    "menu_index": "1",
+    "menu_parent_page_selector": "0x35da4e8ce55a11e78da60050568905af",
+    "menu_index": 1,
     "menu_visible": true,
     "name": "Topics",
     "description": "",
     "intro": "",
-    "replaces_page_alias": null,
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x00000000000000000000000000000000",
+    "created_on": "2020-06-22 10:44:39",
+    "modified_by_user_selector": "0x11ea7e29e1126ef3a7eb0050568905af",
+    "modified_on": "2020-09-28 16:27:47",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.topic",
@@ -123,6 +127,9 @@
                 "visibility": "optional"
             },
             {
+                "widget_type": "StateMenuButton"
+            },
+            {
                 "action_alias": "exface.Core.DeleteObject",
                 "visibility": "optional"
             },
@@ -134,121 +141,6 @@
                     "object_alias": "axenox.DevMan.project_topics",
                     "prefill_with_input_data": true
                 }
-            },
-            {
-                "caption": "Redmine-Ticket",
-                "icon": "plus-circle",
-                "action": {
-                    "alias": "exface.Core.ShowObjectCreateDialog",
-                    "object_alias": "axenox.RedmineConnector.ISSUE",
-                    "input_rows_min": 1,
-                    "input_rows_max": 1,
-                    "prefill_with_input_data": true,
-                    "input_mappers": [
-                        {
-                            "from_object_alias": "axenox.DevMan.topic",
-                            "column_mappings": [
-                                {
-                                    "from": "description",
-                                    "to": "DESCRIPTION"
-                                },
-                                {
-                                    "from": "LABEL",
-                                    "to": "SUBJECT"
-                                },
-                                {
-                                    "from": "UID",
-                                    "to": "topic__UID"
-                                },
-                                {
-                                    "from": "MODIFIED_ON",
-                                    "to": "topic__MODIFIED_ON"
-                                }
-                            ]
-                        }
-                    ],
-                    "widget": {
-                        "widget_type": "Dialog",
-                        "object_alias": "axenox.RedmineConnector.ISSUE",
-                        "widgets": [
-                            {
-                                "attribute_alias": "SUBJECT",
-                                "width": 2
-                            },
-                            {
-                                "attribute_alias": "DESCRIPTION",
-                                "width": 2,
-                                "height": 10
-                            },
-                            {
-                                "attribute_alias": "ASSIGNED_TO"
-                            },
-                            {
-                                "attribute_alias": "PROJECT",
-                                "value": 186
-                            },
-                            {
-                                "attribute_alias": "PARENT_ISSUE"
-                            },
-                            {
-                                "attribute_alias": "PRIORITY",
-                                "value": 4
-                            },
-                            {
-                                "attribute_alias": "topic__UID",
-                                "widget_type": "InputHidden"
-                            },
-                            {
-                                "attribute_alias": "topic__MODIFIED_ON",
-                                "widget_type": "InputHidden"
-                            }
-                        ],
-                        "buttons": [
-                            {
-                                "caption": "Ticket anlegen",
-                                "align": "opposite",
-                                "visibility": "promoted",
-                                "action": {
-                                    "alias": "exface.Core.ActionChain",
-                                    "actions": [
-                                        {
-                                            "alias": "axenox.RedmineConnector.CreateIssue"
-                                        },
-                                        {
-                                            "alias": "exface.Core.UpdateData",
-                                            "object_alias": "axenox.DevMan.topic",
-                                            "input_mappers": [
-                                                {
-                                                    "from_object_alias": "axenox.RedmineConnector.ISSUE",
-                                                    "column_mappings": [
-                                                        {
-                                                            "from": "topic__UID",
-                                                            "to": "UID"
-                                                        },
-                                                        {
-                                                            "from": "topic__MODIFIED_ON",
-                                                            "to": "MODIFIED_ON"
-                                                        },
-                                                        {
-                                                            "from": "ID",
-                                                            "to": "tracker_ticket"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "action_alias": "exface.Core.GoToUrl",
-                "action_url": "https:\/\/redmine.salt-solutions.de\/issues\/[#tracker_ticket#]",
-                "action_open_in_new_window": true,
-                "caption": "Ticket \u00f6ffnen"
             }
         ]
     }

@@ -54,7 +54,28 @@
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e945cbe9cd58a1b95b00505689aada",
             "BEHAVIOR": "exface\/Core\/Behaviors\/StateMachineBehavior.php",
-            "CONFIG_UXON": "{\"state_attribute_alias\":\"state\",\"states\":{\"10\":{\"name\":\"Planned\"},\"40\":{\"name\":\"Shelved\",\"color\":\"lightgray\"},\"50\":{\"name\":\"In Progress\"},\"90\":{\"name\":\"Canceled\",\"color\":\"gray\"},\"99\":{\"name\":\"Finished\"}}}",
+            "CONFIG_UXON": {
+                "state_attribute_alias": "state",
+                "states": {
+                    "10": {
+                        "name": "Planned"
+                    },
+                    "40": {
+                        "name": "Shelved",
+                        "color": "lightgray"
+                    },
+                    "50": {
+                        "name": "In Progress"
+                    },
+                    "90": {
+                        "name": "Canceled",
+                        "color": "gray"
+                    },
+                    "99": {
+                        "name": "Finished"
+                    }
+                }
+            },
             "OBJECT": "0x11e5f0b9bc3b43f389840050568905af",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "States",

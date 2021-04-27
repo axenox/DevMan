@@ -96,7 +96,34 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Form\",\"widgets\":[{\"attribute_alias\":\"title\"},{\"attribute_alias\":\"parent_project\"},{\"attribute_alias\":\"objectives\",\"width\":2},{\"attribute_alias\":\"date_start\"},{\"attribute_alias\":\"date_end\"},{\"attribute_alias\":\"state\"},{\"attribute_alias\":\"description\",\"height\":20}]}",
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Form",
+                "widgets": [
+                    {
+                        "attribute_alias": "title"
+                    },
+                    {
+                        "attribute_alias": "parent_project"
+                    },
+                    {
+                        "attribute_alias": "objectives",
+                        "width": 2
+                    },
+                    {
+                        "attribute_alias": "date_start"
+                    },
+                    {
+                        "attribute_alias": "date_end"
+                    },
+                    {
+                        "attribute_alias": "state"
+                    },
+                    {
+                        "attribute_alias": "description",
+                        "height": 20
+                    }
+                ]
+            },
             "ALIAS": "project",
             "DATA_ADDRESS": "dwm_project"
         }

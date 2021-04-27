@@ -96,7 +96,38 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Form\",\"widgets\":[{\"attribute_alias\":\"date\"},{\"attribute_alias\":\"project\"},{\"attribute_alias\":\"name\"},{\"attribute_alias\":\"location\"},{\"attribute_alias\":\"effort_planned\"},{\"attribute_alias\":\"effort_remaining\"},{\"attribute_alias\":\"objectives\",\"width\":2},{\"attribute_alias\":\"description\",\"width\":2,\"height\":5}]}",
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Form",
+                "widgets": [
+                    {
+                        "attribute_alias": "date"
+                    },
+                    {
+                        "attribute_alias": "project"
+                    },
+                    {
+                        "attribute_alias": "name"
+                    },
+                    {
+                        "attribute_alias": "location"
+                    },
+                    {
+                        "attribute_alias": "effort_planned"
+                    },
+                    {
+                        "attribute_alias": "effort_remaining"
+                    },
+                    {
+                        "attribute_alias": "objectives",
+                        "width": 2
+                    },
+                    {
+                        "attribute_alias": "description",
+                        "width": 2,
+                        "height": 5
+                    }
+                ]
+            },
             "ALIAS": "approval",
             "DATA_ADDRESS": "dwm_approval"
         }

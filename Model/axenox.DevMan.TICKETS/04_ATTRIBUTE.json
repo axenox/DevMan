@@ -86,6 +86,10 @@
             "attribute_alias": "TYPE"
         },
         {
+            "name": "COPYABLEFLAG",
+            "attribute_alias": "COPYABLEFLAG"
+        },
+        {
             "name": "ALIAS",
             "attribute_alias": "ALIAS"
         },
@@ -189,6 +193,7 @@
             "NAME": "Topic",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
+            "COPYABLEFLAG": "1",
             "ALIAS": "topic",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "topic_uid",
@@ -232,6 +237,7 @@
             "NAME": "Ticket id",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
+            "COPYABLEFLAG": "1",
             "ALIAS": "ticket",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "ticket_id",

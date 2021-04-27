@@ -96,7 +96,76 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Dialog\",\"widgets\":[{\"attribute_alias\":\"date\"},{\"attribute_alias\":\"project\"},{\"attribute_alias\":\"name\"},{\"attribute_alias\":\"location\"},{\"attribute_alias\":\"effort_planned\"},{\"attribute_alias\":\"effort_rem_estimated\"},{\"attribute_alias\":\"objectives\",\"width\":2},{\"attribute_alias\":\"description\",\"width\":2,\"height\":9},{\"caption\":\"Approvals\",\"widget_type\":\"DataTable\",\"object_alias\":\"axenox.DevMan.approval\",\"paginate\":false,\"height\":5,\"filters\":[{\"attribute_alias\":\"event\",\"widget_type\":\"InputHidden\",\"required\":true}],\"columns\":[{\"attribute_alias\":\"approved_on\"},{\"attribute_alias\":\"approved_by_resource__LABEL\"},{\"attribute_alias\":\"effort\"}],\"buttons\":[{\"action_alias\":\"exface.Core.ShowObjectCreateDialog\"},{\"action_alias\":\"exface.Core.ShowObjectEditDialog\",\"bind_to_double_click\":true},{\"action_alias\":\"exface.Core.DeleteObject\",\"visibility\":\"optional\"}]}]}",
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "attribute_alias": "date"
+                    },
+                    {
+                        "attribute_alias": "project"
+                    },
+                    {
+                        "attribute_alias": "name"
+                    },
+                    {
+                        "attribute_alias": "location"
+                    },
+                    {
+                        "attribute_alias": "effort_planned"
+                    },
+                    {
+                        "attribute_alias": "effort_rem_estimated"
+                    },
+                    {
+                        "attribute_alias": "objectives",
+                        "width": 2
+                    },
+                    {
+                        "attribute_alias": "description",
+                        "width": 2,
+                        "height": 9
+                    },
+                    {
+                        "caption": "Approvals",
+                        "widget_type": "DataTable",
+                        "object_alias": "axenox.DevMan.approval",
+                        "paginate": false,
+                        "height": 5,
+                        "filters": [
+                            {
+                                "attribute_alias": "event",
+                                "widget_type": "InputHidden",
+                                "required": true
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "approved_on"
+                            },
+                            {
+                                "attribute_alias": "approved_by_resource__LABEL"
+                            },
+                            {
+                                "attribute_alias": "effort"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
+                            },
+                            {
+                                "action_alias": "exface.Core.DeleteObject",
+                                "visibility": "optional"
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "project_event",
             "DATA_ADDRESS": "dwm_project_event"
         }

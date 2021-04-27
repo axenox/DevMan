@@ -96,7 +96,34 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": "{\"widget_type\":\"Form\",\"widgets\":[{\"attribute_alias\":\"project\",\"widget_type\":\"InputComboTable\",\"filters\":[{\"attribute_alias\":\"active_flag\",\"value\":1,\"comparator\":\"==\"}]},{\"attribute_alias\":\"priority\"},{\"attribute_alias\":\"topic\",\"width\":2},{\"attribute_alias\":\"comment\",\"width\":2,\"height\":5}]}",
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Form",
+                "widgets": [
+                    {
+                        "attribute_alias": "project",
+                        "widget_type": "InputComboTable",
+                        "filters": [
+                            {
+                                "attribute_alias": "active_flag",
+                                "value": 1,
+                                "comparator": "=="
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_alias": "priority"
+                    },
+                    {
+                        "attribute_alias": "topic",
+                        "width": 2
+                    },
+                    {
+                        "attribute_alias": "comment",
+                        "width": 2,
+                        "height": 5
+                    }
+                ]
+            },
             "ALIAS": "project_topics",
             "DATA_ADDRESS": "dwm_topic_project_mapping"
         }

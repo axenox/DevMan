@@ -86,6 +86,10 @@
             "attribute_alias": "TYPE"
         },
         {
+            "name": "COPYABLEFLAG",
+            "attribute_alias": "COPYABLEFLAG"
+        },
+        {
             "name": "ALIAS",
             "attribute_alias": "ALIAS"
         },
@@ -189,6 +193,7 @@
             "NAME": "Topic uid",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
+            "COPYABLEFLAG": "1",
             "ALIAS": "topic_uid",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "topic_uid",
@@ -232,6 +237,7 @@
             "NAME": "Task uid",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
+            "COPYABLEFLAG": "1",
             "ALIAS": "task_uid",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "task_uid",
@@ -275,6 +281,7 @@
             "NAME": "Priority uid",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
+            "COPYABLEFLAG": "1",
             "ALIAS": "priority_uid",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "priority_uid",

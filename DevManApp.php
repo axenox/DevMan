@@ -1,5 +1,4 @@
 <?php
-
 namespace axenox\DevMan;
 
 use exface\Core\Interfaces\InstallerInterface;

@@ -3,9 +3,7 @@
 namespace axenox\DevMan;
 
 use exface\Core\Interfaces\InstallerInterface;
-use exface\Core\CommonLogic\AppInstallers\SqlSchemaInstaller;
 use exface\Core\CommonLogic\Model\App;
-use exface\Core\Exceptions\Model\MetaObjectNotFoundError;
 use exface\Core\CommonLogic\AppInstallers\MySqlDatabaseInstaller;
 
 class DevManApp extends App

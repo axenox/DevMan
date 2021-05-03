@@ -11,82 +11,133 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
     "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2019-05-10 10:32:16",
+    "modified_on": "2021-05-03 13:58:52",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.project",
         "panels": [
             {
-                "caption": "Upcoming Events",
                 "height": "50%",
                 "widgets": [
                     {
-                        "widget_type": "DataTable",
-                        "id": "events_table",
-                        "object_alias": "axenox.DevMan.project_event",
-                        "filters": [
+                        "widget_type": "SplitHorizontal",
+                        "panels": [
                             {
-                                "attribute_alias": "date",
-                                "comparator": ">=",
-                                "value": -1
+                                "caption": "Current bugs",
+                                "width": "50%",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.topic",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "type__bug_flag",
+                                                "hidden": true,
+                                                "value": 1
+                                            },
+                                            {
+                                                "attribute_alias": "state",
+                                                "input_widget": {
+                                                    "widget_type": "InputSelect",
+                                                    "multi_select": true
+                                                },
+                                                "value": 10
+                                            },
+                                            {
+                                                "attribute_alias": "project_topics__project"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "priority_avg"
+                                            },
+                                            {
+                                                "attribute_alias": "project_title_list"
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
-                                "attribute_alias": "project__state",
-                                "widget_type": "InputSelect",
-                                "multi_select": true,
-                                "value": "10,50"
-                            }
-                        ],
-                        "columns": [
-                            {
-                                "attribute_alias": "date"
-                            },
-                            {
-                                "attribute_alias": "project__LABEL"
-                            },
-                            {
-                                "attribute_alias": "name"
-                            },
-                            {
-                                "attribute_alias": "objectives"
-                            },
-                            {
-                                "attribute_alias": "effort_planned",
-                                "footer": "SUM"
-                            },
-                            {
-                                "attribute_alias": "approval__effort:SUM",
-                                "caption": "Effort Appr.",
-                                "footer": "SUM"
-                            },
-                            {
-                                "attribute_alias": "effort_remaining",
-                                "footer": "SUM"
-                            },
-                            {
-                                "attribute_alias": "location"
-                            },
-                            {
-                                "attribute_alias": "project",
-                                "hidden": true
-                            }
-                        ],
-                        "row_grouper": {
-                            "group_by_attribute_alias": "date_week_no"
-                        },
-                        "sorters": [
-                            {
-                                "attribute_alias": "date",
-                                "direction": "ASC"
-                            }
-                        ],
-                        "buttons": [
-                            {
-                                "action_alias": "exface.Core.ShowObjectCreateDialog"
-                            },
-                            {
-                                "action_alias": "exface.Core.ShowObjectEditDialog",
-                                "bind_to_double_click": true
+                                "caption": "Next Milestones",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "id": "milestones_table",
+                                        "object_alias": "axenox.DevMan.milestone",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "date",
+                                                "comparator": ">=",
+                                                "value": -1
+                                            },
+                                            {
+                                                "attribute_alias": "project__state",
+                                                "widget_type": "InputSelect",
+                                                "multi_select": true,
+                                                "value": "10,50"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "date"
+                                            },
+                                            {
+                                                "attribute_alias": "project__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "objectives"
+                                            },
+                                            {
+                                                "attribute_alias": "effort_planned_h",
+                                                "footer": "SUM"
+                                            },
+                                            {
+                                                "attribute_alias": "approval__effort:SUM",
+                                                "caption": "Effort Appr.",
+                                                "footer": "SUM"
+                                            },
+                                            {
+                                                "attribute_alias": "effort_remaining_h",
+                                                "footer": "SUM"
+                                            },
+                                            {
+                                                "attribute_alias": "location"
+                                            },
+                                            {
+                                                "attribute_alias": "project",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "row_grouper": {
+                                            "group_by_attribute_alias": "date_week_no"
+                                        },
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "date",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -102,17 +153,17 @@
                         "filters": [
                             {
                                 "attribute_alias": "project_topics__project",
-                                "value": "=events_table!project",
+                                "value": "=milestones_table!project",
                                 "apply_on_change": true
                             },
                             {
-                                "attribute_alias": "UID"
+                                "attribute_alias": "id"
                             },
                             {
                                 "attribute_alias": "title"
                             },
                             {
-                                "attribute_alias": "category"
+                                "attribute_alias": "type"
                             },
                             {
                                 "attribute_alias": "state",
@@ -126,14 +177,14 @@
                         ],
                         "columns": [
                             {
-                                "attribute_alias": "UID"
+                                "attribute_alias": "id"
                             },
                             {
                                 "attribute_alias": "title",
                                 "width_max": "400px"
                             },
                             {
-                                "attribute_alias": "category__LABEL"
+                                "attribute_alias": "type__LABEL"
                             },
                             {
                                 "attribute_alias": "value"
@@ -152,18 +203,18 @@
                                 "caption": "Current State"
                             },
                             {
-                                "attribute_alias": "effort_planned",
+                                "attribute_alias": "effort_planned_h",
                                 "footer": "SUM"
                             },
                             {
-                                "attribute_alias": "effort_remaining",
+                                "attribute_alias": "effort_remaining_h",
                                 "footer": "SUM"
                             },
                             {
                                 "attribute_alias": "assigned_to__LABEL"
                             },
                             {
-                                "attribute_alias": "project_topics__UID:COUNT",
+                                "attribute_alias": "project_topics__id:COUNT",
                                 "caption": "Projects"
                             },
                             {
@@ -174,7 +225,7 @@
                                 "caption": "Pr.\/All"
                             },
                             {
-                                "attribute_alias": "parent_topic__UID",
+                                "attribute_alias": "parent_topic__id",
                                 "caption": "Parent",
                                 "hint": "Parent topic ID"
                             },
@@ -184,15 +235,12 @@
                                 "hidden": true
                             },
                             {
-                                "attribute_alias": "CREATED_ON"
-                            },
-                            {
-                                "attribute_alias": "tracker_ticket"
+                                "attribute_alias": "created_on"
                             }
                         ],
                         "sorters": [
                             {
-                                "attribute_alias": "UID",
+                                "attribute_alias": "id",
                                 "direction": "DESC"
                             }
                         ],
@@ -207,12 +255,6 @@
                             {
                                 "action_alias": "exface.Core.ShowObjectCopyDialog",
                                 "visibility": "optional"
-                            },
-                            {
-                                "action_alias": "exface.Core.GoToUrl",
-                                "action_url": "https:\/\/redmine.salt-solutions.de\/issues\/[#tracker_ticket#]",
-                                "action_open_in_new_window": true,
-                                "caption": "Ticket \u00f6ffnen"
                             }
                         ]
                     }

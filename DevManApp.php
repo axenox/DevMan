@@ -6,22 +6,24 @@ use exface\Core\Interfaces\InstallerInterface;
 use exface\Core\CommonLogic\AppInstallers\SqlSchemaInstaller;
 use exface\Core\CommonLogic\Model\App;
 use exface\Core\Exceptions\Model\MetaObjectNotFoundError;
+use exface\Core\CommonLogic\AppInstallers\MySqlDatabaseInstaller;
 
 class DevManApp extends App
 {
-
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \exface\Core\CommonLogic\Model\App::getInstaller()
+     */
     public function getInstaller(InstallerInterface $injected_installer = null)
     {
         $installer = parent::getInstaller($injected_installer);
         
-        $schema_installer = new SqlSchemaInstaller($this->getSelector());
-        $schema_installer->setLastUpdateIdConfigOption('LAST_PERFORMED_MODEL_SOURCE_UPDATE_ID');
-        try {
-            $schema_installer->setDataConnection($this->getWorkbench()->model()->getObject('axenox.DevMan.topic')->getDataConnection());
-            $installer->addInstaller($schema_installer);
-        } catch (MetaObjectNotFoundError $e) {
-            $this->getWorkbench()->getLogger()->warning('Cannot init SqlSchemInstaller for app ' . $this->getAliasWithNamespace . ': no model there yet!');
-        }
+        $sqlInstaller = new MySqlDatabaseInstaller($this->getSelector());
+        $sqlInstaller
+        ->setFoldersWithMigrations(['InitDB','Migrations'])
+        ->setDataSourceSelector('0x11eab5facf6370bab5fa0205857feb80');
+        $installer->addInstaller($sqlInstaller);
         
         return $installer;
     }

@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-05-03 11:32:23",
+            "MODIFIED_ON": "2021-05-03 15:03:00",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -111,10 +111,10 @@
                             {
                                 "attribute_alias": "id",
                                 "widget_type": "InputHidden",
-                                "id": "topic_id"
+                                "id": "field_topic_id"
                             },
                             {
-                                "attribute_alias": "category"
+                                "attribute_alias": "type"
                             },
                             {
                                 "attribute_alias": "parent_topic"
@@ -126,13 +126,20 @@
                                 "attribute_alias": "complexity"
                             },
                             {
-                                "attribute_alias": "effort_plan_estimated_h"
+                                "widget_type": "InlineGroup",
+                                "caption": "Effort plan \/ remaining",
+                                "separator": "\/",
+                                "widgets": [
+                                    {
+                                        "attribute_alias": "effort_plan_estimated_h"
+                                    },
+                                    {
+                                        "attribute_alias": "effort_rem_estimated_h"
+                                    }
+                                ]
                             },
                             {
                                 "attribute_alias": "assigned_to"
-                            },
-                            {
-                                "attribute_alias": "effort_rem_estimated_h"
                             },
                             {
                                 "widget_type": "DataSpreadSheet",
@@ -144,7 +151,8 @@
                                     {
                                         "attribute_alias": "topic",
                                         "required": true,
-                                        "hidden": true
+                                        "hidden": true,
+                                        "value": "=field_topic_id"
                                     }
                                 ],
                                 "columns": [
@@ -179,7 +187,8 @@
                                     {
                                         "attribute_alias": "parent_topic",
                                         "required": true,
-                                        "hidden": true
+                                        "hidden": true,
+                                        "value": "=field_topic_id"
                                     }
                                 ],
                                 "columns": [

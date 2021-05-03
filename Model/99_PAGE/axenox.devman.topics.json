@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
     "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-04-30 17:47:49",
+    "modified_on": "2021-05-03 13:35:38",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.topic",
@@ -29,7 +29,7 @@
                 "attribute_alias": "title"
             },
             {
-                "attribute_alias": "category"
+                "attribute_alias": "type"
             },
             {
                 "attribute_alias": "id"
@@ -52,7 +52,7 @@
                 "width_max": "400px"
             },
             {
-                "attribute_alias": "category__LABEL"
+                "attribute_alias": "type__LABEL"
             },
             {
                 "attribute_alias": "value"
@@ -71,11 +71,11 @@
                 "caption": "Current State"
             },
             {
-                "attribute_alias": "effort_planned",
+                "attribute_alias": "effort_planned_h",
                 "footer": "SUM"
             },
             {
-                "attribute_alias": "effort_remaining",
+                "attribute_alias": "effort_remaining_h",
                 "footer": "SUM"
             },
             {
@@ -103,10 +103,6 @@
             },
             {
                 "attribute_alias": "created_on"
-            },
-            {
-                "attribute_alias": "topic_tickets__id:COUNT",
-                "caption": "Tickets"
             }
         ],
         "sorters": [
@@ -124,8 +120,22 @@
                 "bind_to_double_click": true
             },
             {
-                "action_alias": "exface.Core.ShowObjectCopyDialog",
-                "visibility": "optional"
+                "action_alias": "exface.Core.ShowObjectCopyDialog"
+            },
+            {
+                "caption": "Set parent",
+                "action": {
+                    "alias": "exface.Core.ShowMassEditDialog",
+                    "dialog": {
+                        "height": "auto",
+                        "width": 1,
+                        "widgets": [
+                            {
+                                "attribute_alias": "parent_topic"
+                            }
+                        ]
+                    }
+                }
             },
             {
                 "widget_type": "StateMenuButton"

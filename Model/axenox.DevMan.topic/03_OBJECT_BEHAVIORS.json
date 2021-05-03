@@ -49,9 +49,9 @@
     "rows": [
         {
             "CREATED_ON": "2017-04-03 13:51:12",
-            "MODIFIED_ON": "2020-09-28 16:20:24",
+            "MODIFIED_ON": "2021-05-03 14:10:36",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ea7e29e1126ef3a7eb0050568905af",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
             "BEHAVIOR": "exface\/Core\/Behaviors\/StateMachineBehavior.php",
             "CONFIG_UXON": {
@@ -72,7 +72,7 @@
                         "color": "orange"
                     },
                     "40": {
-                        "name": "Shelved\/Failed",
+                        "name": "Shelved",
                         "color": "lightgrey"
                     },
                     "50": {
@@ -96,7 +96,7 @@
             },
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "APP": "0x38000000000000000000000000000000",
-            "NAME": "State machine model",
+            "NAME": "Topic states",
             "DESCRIPTION": ""
         }
     ],

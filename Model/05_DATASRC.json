@@ -57,7 +57,7 @@
     "rows": [
         {
             "CREATED_ON": "2011-01-01 00:00:00",
-            "MODIFIED_ON": "2019-03-12 10:56:37",
+            "MODIFIED_ON": "2021-04-30 16:33:32",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x39000000000000000000000000000000",
@@ -67,8 +67,8 @@
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
             "BASE_OBJECT": "0x38380000000000000000000000000000",
-            "LABEL": "ExFace DevMan",
-            "ALIAS": "EXF_DEVMAN"
+            "LABEL": "DevMan DB",
+            "ALIAS": "DEVMAN_DB"
         }
     ],
     "totals_rows": [],

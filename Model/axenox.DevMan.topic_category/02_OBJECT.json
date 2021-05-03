@@ -98,7 +98,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": null,
             "ALIAS": "topic_category",
-            "DATA_ADDRESS": "dwm_topic_category"
+            "DATA_ADDRESS": "topic_category"
         }
     ],
     "totals_rows": [],

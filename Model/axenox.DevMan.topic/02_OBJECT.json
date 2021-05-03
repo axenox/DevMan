@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2019-03-16 18:36:56",
+            "MODIFIED_ON": "2021-05-03 11:32:23",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -97,22 +97,21 @@
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
-                "widget_type": "Tabs",
-                "tabs": [
+                "widget_type": "Dialog",
+                "maximized": true,
+                "columns_in_grid": 3,
+                "widgets": [
                     {
-                        "caption": "Topic",
+                        "attribute_alias": "title",
+                        "width": 3
+                    },
+                    {
+                        "widget_type": "WidgetGroup",
                         "widgets": [
                             {
-                                "attribute_alias": "UID",
+                                "attribute_alias": "id",
                                 "widget_type": "InputHidden",
                                 "id": "topic_id"
-                            },
-                            {
-                                "attribute_alias": "title",
-                                "width": 2
-                            },
-                            {
-                                "attribute_alias": "description"
                             },
                             {
                                 "attribute_alias": "category"
@@ -127,115 +126,84 @@
                                 "attribute_alias": "complexity"
                             },
                             {
-                                "attribute_alias": "effort_plan_estimated"
+                                "attribute_alias": "effort_plan_estimated_h"
                             },
                             {
                                 "attribute_alias": "assigned_to"
                             },
                             {
-                                "attribute_alias": "effort_rem_estimated"
+                                "attribute_alias": "effort_rem_estimated_h"
                             },
                             {
-                                "attribute_alias": "tracker_ticket"
-                            },
-                            {
-                                "caption": "Project Assignments",
-                                "widget_type": "DataTable",
+                                "widget_type": "DataSpreadSheet",
                                 "object_alias": "axenox.DevMan.project_topics",
-                                "hide_footer": true,
-                                "paginate": false,
+                                "hide_header": true,
+                                "caption": "Project assignments",
+                                "height": 8,
                                 "filters": [
                                     {
                                         "attribute_alias": "topic",
-                                        "widget_type": "InputHidden",
-                                        "required": true
+                                        "required": true,
+                                        "hidden": true
                                     }
                                 ],
                                 "columns": [
                                     {
-                                        "attribute_alias": "project__UID"
+                                        "attribute_alias": "project",
+                                        "cell_widget": {
+                                            "widget_type": "InputComboTable",
+                                            "lazy_loading": false
+                                        }
                                     },
                                     {
-                                        "attribute_alias": "project__title"
-                                    },
-                                    {
-                                        "attribute_alias": "priority__value",
-                                        "footer": "AVG"
+                                        "attribute_alias": "priority",
+                                        "cell_widget": {
+                                            "widget_type": "InputComboTable",
+                                            "lazy_loading": false
+                                        }
                                     },
                                     {
                                         "attribute_alias": "comment"
                                     }
+                                ]
+                            },
+                            {
+                                "caption": "Subtopics",
+                                "widget_type": "DataTable",
+                                "object_alias": "axenox.DevMan.topic",
+                                "hide_header": true,
+                                "hide_footer": true,
+                                "paginate": false,
+                                "height": 8,
+                                "filters": [
+                                    {
+                                        "attribute_alias": "parent_topic",
+                                        "required": true,
+                                        "hidden": true
+                                    }
                                 ],
-                                "buttons": [
+                                "columns": [
                                     {
-                                        "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                        "attribute_alias": "id"
                                     },
                                     {
-                                        "action_alias": "exface.Core.ShowObjectEditDialog",
-                                        "bind_to_double_click": true
-                                    },
-                                    {
-                                        "action_alias": "exface.Core.ShowObjectCopyDialog"
-                                    },
-                                    {
-                                        "action_alias": "exface.Core.DeleteObject"
+                                        "attribute_alias": "title"
                                     }
                                 ]
                             }
                         ]
                     },
                     {
-                        "caption": "Subtopics",
-                        "widgets": [
-                            {
-                                "widget_type": "DataTable",
-                                "do_not_prefill": true,
-                                "filters": [
-                                    {
-                                        "attribute_alias": "parent_topic",
-                                        "widget_type": "InputHidden",
-                                        "required": true,
-                                        "value": "=topic_id"
-                                    }
-                                ],
-                                "columns": [
-                                    {
-                                        "attribute_alias": "UID"
-                                    },
-                                    {
-                                        "attribute_alias": "title"
-                                    },
-                                    {
-                                        "attribute_alias": "state"
-                                    },
-                                    {
-                                        "attribute_alias": "effort_planned",
-                                        "footer": "SUM"
-                                    },
-                                    {
-                                        "attribute_alias": "effort_remaining",
-                                        "footer": "SUM"
-                                    }
-                                ],
-                                "sorters": [
-                                    {
-                                        "attribute_alias": "priority_avg",
-                                        "direction": "asc"
-                                    }
-                                ],
-                                "buttons": [
-                                    {
-                                        "action_alias": "exface.Core.ShowObjectEditDialog",
-                                        "bind_to_double_click": true
-                                    }
-                                ]
-                            }
-                        ]
+                        "attribute_alias": "description",
+                        "height": "100%",
+                        "width": 2,
+                        "widget_type": "InputMarkdown",
+                        "hide_caption": true
                     }
                 ]
             },
             "ALIAS": "topic",
-            "DATA_ADDRESS": "dwm_topic"
+            "DATA_ADDRESS": "topic"
         }
     ],
     "totals_rows": [],

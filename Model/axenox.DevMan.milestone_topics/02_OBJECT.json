@@ -80,16 +80,16 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2017-05-19 14:21:57",
-            "MODIFIED_ON": "2017-05-19 14:25:58",
+            "CREATED_ON": "2021-04-30 16:40:00",
+            "MODIFIED_ON": "2021-04-30 16:40:00",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11e73c9e784bdf168820e4b318306b9a",
+            "UID": "0x11eb87c5f1497b0087c5025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
             "COMMENTS": null,
             "DOCS": null,
-            "NAME": "Tickets",
+            "NAME": "Milestone topics",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
@@ -97,8 +97,8 @@
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": null,
-            "ALIAS": "TICKETS",
-            "DATA_ADDRESS": "dwm_tickets"
+            "ALIAS": "milestone_topics",
+            "DATA_ADDRESS": "milestone_topics"
         }
     ],
     "totals_rows": [],

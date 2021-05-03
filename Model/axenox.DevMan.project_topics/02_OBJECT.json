@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:42:45",
-            "MODIFIED_ON": "2019-03-18 10:01:41",
+            "MODIFIED_ON": "2021-04-30 11:37:15",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9fd06f67a89840050568905af",
@@ -100,15 +100,7 @@
                 "widget_type": "Form",
                 "widgets": [
                     {
-                        "attribute_alias": "project",
-                        "widget_type": "InputComboTable",
-                        "filters": [
-                            {
-                                "attribute_alias": "active_flag",
-                                "value": 1,
-                                "comparator": "=="
-                            }
-                        ]
+                        "attribute_alias": "project"
                     },
                     {
                         "attribute_alias": "priority"
@@ -125,7 +117,7 @@
                 ]
             },
             "ALIAS": "project_topics",
-            "DATA_ADDRESS": "dwm_topic_project_mapping"
+            "DATA_ADDRESS": "project_topics"
         }
     ],
     "totals_rows": [],

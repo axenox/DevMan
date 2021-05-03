@@ -98,7 +98,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": null,
             "ALIAS": "resource",
-            "DATA_ADDRESS": "dwm_resource"
+            "DATA_ADDRESS": "resource"
         }
     ],
     "totals_rows": [],

@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2019-03-21 10:00:51",
-            "MODIFIED_ON": "2019-03-21 10:00:51",
+            "MODIFIED_ON": "2021-04-30 11:33:53",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e94bc02b03100cb95b00505689aada",
@@ -96,40 +96,9 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": {
-                "widget_type": "Form",
-                "widgets": [
-                    {
-                        "attribute_alias": "date"
-                    },
-                    {
-                        "attribute_alias": "project"
-                    },
-                    {
-                        "attribute_alias": "name"
-                    },
-                    {
-                        "attribute_alias": "location"
-                    },
-                    {
-                        "attribute_alias": "effort_planned"
-                    },
-                    {
-                        "attribute_alias": "effort_remaining"
-                    },
-                    {
-                        "attribute_alias": "objectives",
-                        "width": 2
-                    },
-                    {
-                        "attribute_alias": "description",
-                        "width": 2,
-                        "height": 5
-                    }
-                ]
-            },
+            "DEFAULT_EDITOR_UXON": null,
             "ALIAS": "approval",
-            "DATA_ADDRESS": "dwm_approval"
+            "DATA_ADDRESS": "approval"
         }
     ],
     "totals_rows": [],

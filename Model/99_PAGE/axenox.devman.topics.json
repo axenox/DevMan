@@ -10,20 +10,20 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
-    "modified_by_user_selector": "0x11ea7e29e1126ef3a7eb0050568905af",
-    "modified_on": "2020-09-28 16:27:47",
+    "modified_by_user_selector": "0x31000000000000000000000000000000",
+    "modified_on": "2021-04-30 17:47:49",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.topic",
         "id": "topics",
+        "multi_select": true,
         "filters": [
             {
                 "attribute_alias": "project_topics__project",
                 "multi_select": true
             },
             {
-                "attribute_alias": "project_topics__project__parent_project",
-                "caption": "Parent project"
+                "attribute_alias": "project_topics__project__client"
             },
             {
                 "attribute_alias": "title"
@@ -32,7 +32,7 @@
                 "attribute_alias": "category"
             },
             {
-                "attribute_alias": "UID"
+                "attribute_alias": "id"
             },
             {
                 "attribute_alias": "state",
@@ -45,7 +45,7 @@
         ],
         "columns": [
             {
-                "attribute_alias": "UID"
+                "attribute_alias": "id"
             },
             {
                 "attribute_alias": "title",
@@ -82,7 +82,7 @@
                 "attribute_alias": "assigned_to__LABEL"
             },
             {
-                "attribute_alias": "project_topics__UID:COUNT",
+                "attribute_alias": "project_topics__id:COUNT",
                 "caption": "Projects"
             },
             {
@@ -102,15 +102,16 @@
                 "hidden": true
             },
             {
-                "attribute_alias": "CREATED_ON"
+                "attribute_alias": "created_on"
             },
             {
-                "attribute_alias": "tracker_ticket"
+                "attribute_alias": "topic_tickets__id:COUNT",
+                "caption": "Tickets"
             }
         ],
         "sorters": [
             {
-                "attribute_alias": "UID",
+                "attribute_alias": "id",
                 "direction": "DESC"
             }
         ],

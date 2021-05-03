@@ -19,7 +19,7 @@ class DevManApp extends App
         $sqlInstaller = new MySqlDatabaseInstaller($this->getSelector());
         $sqlInstaller
         ->setFoldersWithMigrations(['InitDB','Migrations'])
-        ->setDataSourceSelector('0x11eab5facf6370bab5fa0205857feb80');
+        ->setDataSourceSelector('0x39000000000000000000000000000000');
         $installer->addInstaller($sqlInstaller);
         
         return $installer;

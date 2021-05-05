@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-05-05 12:45:51",
+            "MODIFIED_ON": "2021-05-05 15:10:56",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -153,10 +153,13 @@
                                 "attribute_alias": "assigned_to"
                             },
                             {
+                                "attribute_alias": "milestone"
+                            },
+                            {
+                                "caption": "Project value",
                                 "widget_type": "DataSpreadSheet",
                                 "object_alias": "axenox.DevMan.project_topics",
                                 "hide_header": true,
-                                "caption": "Project assignments",
                                 "height": 8,
                                 "filters": [
                                     {

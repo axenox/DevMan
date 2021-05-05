@@ -11,9 +11,134 @@
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
     "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-03-12 08:31:11",
+    "modified_on": "2021-05-05 13:00:52",
     "contents": {
-        "widget_type": "NavTiles",
-        "object_alias": "exface.Core.PAGE"
+        "widget_type": "SplitVertical",
+        "object_alias": "axenox.DevMan.topic",
+        "panels": [
+            {
+                "height": "50%",
+                "widgets": [
+                    {
+                        "widget_type": "SplitHorizontal",
+                        "panels": [
+                            {
+                                "width": "50%",
+                                "caption": "Assigned to me",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "assigned_to__user",
+                                                "value": "=USER('UID')",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "effort_planned_h"
+                                            },
+                                            {
+                                                "attribute_alias": "effort_plan_estimated_h"
+                                            },
+                                            {
+                                                "attribute_alias": "effort_real_h"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "state",
+                                                "direction": "asc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Topics I created",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "created_by_user",
+                                                "value": "=USER('UID')",
+                                                "hidden": true
+                                            },
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "state",
+                                                "input_widget": {
+                                                    "widget_type": "InputSelect",
+                                                    "multi_select": true
+                                                }
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "id",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "widgets": [
+                    {
+                        "widget_type": "SplitHorizontal",
+                        "panels": [
+                            {
+                                "width": "33%",
+                                "widgets": []
+                            },
+                            {
+                                "widgets": []
+                            },
+                            {
+                                "width": "33%",
+                                "widgets": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }

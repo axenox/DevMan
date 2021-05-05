@@ -525,7 +525,7 @@
         },
         {
             "CREATED_ON": "2019-03-21 10:09:37",
-            "MODIFIED_ON": "2019-03-21 10:09:37",
+            "MODIFIED_ON": "2021-05-05 15:03:56",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e94bc1643446bfb95b00505689aada",
@@ -548,7 +548,7 @@
             "COPYABLEFLAG": "0",
             "ALIAS": "date_week_no",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
-            "DATA_ADDRESS": "(WEEK(date, 3))",
+            "DATA_ADDRESS": "(WEEK([#date#], 3))",
             "OBJECT": "0x11e94bbf50eed38fb95b00505689aada",
             "FORMATTER": "",
             "DISPLAYORDER": "1",

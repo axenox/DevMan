@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-05-05 15:10:56",
+            "MODIFIED_ON": "2021-05-05 18:05:58",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -126,14 +126,6 @@
                                 "attribute_alias": "complexity"
                             },
                             {
-                                "object_alias": "axenox.DevMan.topic_tags",
-                                "attribute_alias": "tag",
-                                "widget_type": "InputTags",
-                                "required": false,
-                                "multi_select": true,
-                                "caption": "Tags"
-                            },
-                            {
                                 "widget_type": "InlineGroup",
                                 "caption": "Effort plan \/ remaining \/ spent",
                                 "separator": "\/",
@@ -156,11 +148,19 @@
                                 "attribute_alias": "milestone"
                             },
                             {
-                                "caption": "Project value",
+                                "object_alias": "axenox.DevMan.topic_tags",
+                                "attribute_alias": "tag",
+                                "widget_type": "InputTags",
+                                "required": false,
+                                "multi_select": true,
+                                "caption": "Tags"
+                            },
+                            {
+                                "caption": "Project priority",
                                 "widget_type": "DataSpreadSheet",
                                 "object_alias": "axenox.DevMan.project_topics",
                                 "hide_header": true,
-                                "height": 8,
+                                "height": 5,
                                 "filters": [
                                     {
                                         "attribute_alias": "topic",
@@ -196,7 +196,7 @@
                                 "hide_header": true,
                                 "hide_footer": true,
                                 "paginate": false,
-                                "height": 8,
+                                "height": 11,
                                 "filters": [
                                     {
                                         "attribute_alias": "parent_topic",

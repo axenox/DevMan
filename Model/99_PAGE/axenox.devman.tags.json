@@ -1,20 +1,20 @@
 {
-    "uid": "0x8110c4ea464c11e9aff700505689aada",
-    "alias_with_namespace": "axenox.devman.config-topic-types",
+    "uid": "0x11ebbaf755235568baf7025041000001",
+    "alias_with_namespace": "axenox.devman.tags",
     "menu_parent_page_selector": "0x42d6c29ae55b11e78dad0050568905af",
-    "menu_index": 1,
+    "menu_index": 4,
     "menu_visible": true,
-    "name": "Topic types",
+    "name": "Tags",
     "description": "",
     "intro": "",
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
-    "created_on": "1970-01-01 01:00:00",
+    "created_on": "2021-05-03 21:18:24",
     "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-05-03 21:18:40",
+    "modified_on": "2021-05-03 21:18:30",
     "contents": {
-        "object_alias": "axenox.DevMan.topic_type",
         "widget_type": "DataTable",
+        "object_alias": "axenox.DevMan.tag",
         "columns": [
             {
                 "attribute_group_alias": "~VISIBLE"
@@ -32,7 +32,8 @@
                 "action_alias": "exface.Core.ShowObjectCopyDialog"
             },
             {
-                "action_alias": "exface.Core.DeleteObject"
+                "action_alias": "exface.Core.DeleteObject",
+                "visibility": "optional"
             }
         ]
     }

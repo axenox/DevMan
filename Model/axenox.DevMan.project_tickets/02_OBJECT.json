@@ -80,25 +80,44 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2019-03-14 10:54:55",
-            "MODIFIED_ON": "2021-05-03 13:47:59",
+            "CREATED_ON": "2016-03-23 06:42:45",
+            "MODIFIED_ON": "2021-04-30 11:37:15",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11e946479810eaacb95b00505689aada",
+            "UID": "0x11e5f0b9fd06f67a89840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Topic type",
+            "NAME": "Project tickets",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
-            "ALIAS": "topic_type",
-            "DATA_ADDRESS": "topic_type"
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Form",
+                "widgets": [
+                    {
+                        "attribute_alias": "project"
+                    },
+                    {
+                        "attribute_alias": "priority"
+                    },
+                    {
+                        "attribute_alias": "ticket",
+                        "width": 2
+                    },
+                    {
+                        "attribute_alias": "comment",
+                        "width": 2,
+                        "height": 5
+                    }
+                ]
+            },
+            "ALIAS": "project_tickets",
+            "DATA_ADDRESS": "project_tickets"
         }
     ],
     "totals_rows": [],

@@ -1,10 +1,10 @@
 {
     "uid": "0x09481916d5b611e789120050568905af",
-    "alias_with_namespace": "axenox.devman.topics",
+    "alias_with_namespace": "axenox.devman.tickets",
     "menu_parent_page_selector": "0x35da4e8ce55a11e78da60050568905af",
     "menu_index": 2,
     "menu_visible": true,
-    "name": "Topics",
+    "name": "Tickets",
     "description": "",
     "intro": "",
     "replaces_page_selector": null,
@@ -14,7 +14,7 @@
     "modified_on": "2021-05-05 18:02:19",
     "contents": {
         "widget_type": "DataTable",
-        "object_alias": "axenox.DevMan.topic",
+        "object_alias": "axenox.DevMan.ticket",
         "multi_select": true,
         "filters": [
             {
@@ -24,14 +24,14 @@
                 "attribute_alias": "title"
             },
             {
-                "attribute_alias": "project_topics__project",
+                "attribute_alias": "project_tickets__project",
                 "input_widget": {
                     "widget_type": "InputComboTable",
                     "multi_select": true
                 }
             },
             {
-                "attribute_alias": "project_topics__project__client"
+                "attribute_alias": "project_tickets__project__client"
             },
             {
                 "attribute_alias": "state",
@@ -48,20 +48,20 @@
                 }
             },
             {
-                "attribute_alias": "topic_tags__tag",
+                "attribute_alias": "ticket_tags__tag",
                 "input_widget": {
                     "widget_type": "InputTags"
                 }
             },
             {
-                "attribute_alias": "project_topics__priority",
+                "attribute_alias": "project_tickets__priority",
                 "input_widget": {
                     "multi_select": true,
                     "widget_type": "InputComboTable"
                 }
             },
             {
-                "attribute_alias": "subtopic_flag",
+                "attribute_alias": "subticket_flag",
                 "value": 0
             }
         ],
@@ -80,7 +80,7 @@
                 "attribute_alias": "value"
             },
             {
-                "attribute_alias": "project_topics__priority__value:MAX",
+                "attribute_alias": "project_tickets__priority__value:MAX",
                 "caption": "Prio",
                 "hint": "Maximum priority among displayed (filtered) projects"
             },
@@ -104,7 +104,7 @@
                 "attribute_alias": "assigned_to__LABEL"
             },
             {
-                "attribute_alias": "project_topics__id:COUNT",
+                "attribute_alias": "project_tickets__id:COUNT",
                 "caption": "Projects"
             },
             {
@@ -115,16 +115,16 @@
                 "caption": "Pr.\/All"
             },
             {
-                "attribute_alias": "topic_tags__tag__LABEL:LIST",
+                "attribute_alias": "ticket_tags__tag__LABEL:LIST",
                 "caption": "Tags"
             },
             {
-                "attribute_alias": "parent_topic__LABEL",
+                "attribute_alias": "parent_ticket__LABEL",
                 "caption": "Parent"
             },
             {
                 "attribute_alias": "description",
-                "id": "topic_description",
+                "id": "ticket_description",
                 "hidden": true
             },
             {
@@ -160,7 +160,7 @@
                         "width": 1,
                         "widgets": [
                             {
-                                "attribute_alias": "parent_topic"
+                                "attribute_alias": "parent_ticket"
                             }
                         ]
                     }
@@ -171,16 +171,16 @@
                 "icon": "tag",
                 "action": {
                     "alias": "exface.Core.ShowObjectCreateDialog",
-                    "object_alias": "axenox.DevMan.topic_tags",
+                    "object_alias": "axenox.DevMan.ticket_tags",
                     "prefill_with_input_data": true,
                     "widget": {
                         "widget_type": "Dialog",
-                        "object_alias": "axenox.DevMan.topic_tags",
+                        "object_alias": "axenox.DevMan.ticket_tags",
                         "height": "auto",
                         "width": 1,
                         "widgets": [
                             {
-                                "attribute_alias": "topic",
+                                "attribute_alias": "ticket",
                                 "widget_type": "InputComboTable",
                                 "multi_select": true,
                                 "disabled": true
@@ -204,16 +204,16 @@
                 "icon": "plus-circle",
                 "action": {
                     "alias": "exface.Core.ShowObjectCreateDialog",
-                    "object_alias": "axenox.DevMan.project_topics",
+                    "object_alias": "axenox.DevMan.project_tickets",
                     "prefill_with_input_data": true,
                     "widget": {
                         "widget_type": "Dialog",
-                        "object_alias": "axenox.DevMan.project_topics",
+                        "object_alias": "axenox.DevMan.project_tickets",
                         "height": "auto",
                         "width": 1,
                         "widgets": [
                             {
-                                "attribute_alias": "topic",
+                                "attribute_alias": "ticket",
                                 "widget_type": "InputComboTable",
                                 "multi_select": true,
                                 "disabled": true

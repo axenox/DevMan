@@ -14,7 +14,7 @@
     "modified_on": "2021-05-10 11:10:03",
     "contents": {
         "widget_type": "SplitVertical",
-        "object_alias": "axenox.DevMan.topic",
+        "object_alias": "axenox.DevMan.ticket",
         "panels": [
             {
                 "height": "50%",
@@ -68,7 +68,7 @@
                                 ]
                             },
                             {
-                                "caption": "Topics I created",
+                                "caption": "Tickets I created",
                                 "widgets": [
                                     {
                                         "widget_type": "DataTable",

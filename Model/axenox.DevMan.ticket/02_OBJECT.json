@@ -89,7 +89,7 @@
             "WRITABLE_FLAG": "1",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Topic",
+            "NAME": "Ticket",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
@@ -111,13 +111,13 @@
                             {
                                 "attribute_alias": "id",
                                 "widget_type": "InputHidden",
-                                "id": "field_topic_id"
+                                "id": "field_ticket_id"
                             },
                             {
                                 "attribute_alias": "type"
                             },
                             {
-                                "attribute_alias": "parent_topic"
+                                "attribute_alias": "parent_ticket"
                             },
                             {
                                 "attribute_alias": "state"
@@ -148,7 +148,7 @@
                                 "attribute_alias": "milestone"
                             },
                             {
-                                "object_alias": "axenox.DevMan.topic_tags",
+                                "object_alias": "axenox.DevMan.ticket_tags",
                                 "attribute_alias": "tag",
                                 "widget_type": "InputTags",
                                 "required": false,
@@ -158,15 +158,15 @@
                             {
                                 "caption": "Project priority",
                                 "widget_type": "DataSpreadSheet",
-                                "object_alias": "axenox.DevMan.project_topics",
+                                "object_alias": "axenox.DevMan.project_tickets",
                                 "hide_header": true,
                                 "height": 5,
                                 "filters": [
                                     {
-                                        "attribute_alias": "topic",
+                                        "attribute_alias": "ticket",
                                         "required": true,
                                         "hidden": true,
-                                        "value": "=field_topic_id"
+                                        "value": "=field_ticket_id"
                                     }
                                 ],
                                 "columns": [
@@ -190,19 +190,19 @@
                                 ]
                             },
                             {
-                                "caption": "Subtopics",
+                                "caption": "Subtickets",
                                 "widget_type": "DataTable",
-                                "object_alias": "axenox.DevMan.topic",
+                                "object_alias": "axenox.DevMan.ticket",
                                 "hide_header": true,
                                 "hide_footer": true,
                                 "paginate": false,
                                 "height": 11,
                                 "filters": [
                                     {
-                                        "attribute_alias": "parent_topic",
+                                        "attribute_alias": "parent_ticket",
                                         "required": true,
                                         "hidden": true,
-                                        "value": "=field_topic_id"
+                                        "value": "=field_ticket_id"
                                     }
                                 ],
                                 "columns": [
@@ -225,8 +225,8 @@
                     }
                 ]
             },
-            "ALIAS": "topic",
-            "DATA_ADDRESS": "topic"
+            "ALIAS": "ticket",
+            "DATA_ADDRESS": "ticket"
         }
     ],
     "totals_rows": [],

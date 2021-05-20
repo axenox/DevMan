@@ -1,10 +1,10 @@
 {
     "uid": "0x8110c4ea464c11e9aff700505689aada",
-    "alias_with_namespace": "axenox.devman.config-topic-types",
+    "alias_with_namespace": "axenox.devman.config-ticket-types",
     "menu_parent_page_selector": "0x42d6c29ae55b11e78dad0050568905af",
     "menu_index": 1,
     "menu_visible": true,
-    "name": "Topic types",
+    "name": "Ticket types",
     "description": "",
     "intro": "",
     "replaces_page_selector": null,
@@ -13,7 +13,7 @@
     "modified_by_user_selector": "0x31000000000000000000000000000000",
     "modified_on": "2021-05-03 21:18:40",
     "contents": {
-        "object_alias": "axenox.DevMan.topic_type",
+        "object_alias": "axenox.DevMan.ticket_type",
         "widget_type": "DataTable",
         "columns": [
             {

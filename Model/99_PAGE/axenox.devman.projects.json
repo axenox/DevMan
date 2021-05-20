@@ -44,8 +44,8 @@
                 "attribute_alias": "state"
             },
             {
-                "attribute_alias": "project_topics__topic:COUNT",
-                "caption": "Topics"
+                "attribute_alias": "project_tickets__ticket:COUNT",
+                "caption": "Tickets"
             },
             {
                 "attribute_alias": "milestone__id:COUNT",
@@ -63,50 +63,50 @@
             "widgets": [
                 {
                     "widget_type": "DataTable",
-                    "object_alias": "project_topics",
+                    "object_alias": "project_tickets",
                     "hide_header": true,
                     "filters": [
                         {
                             "attribute_alias": "project"
                         },
                         {
-                            "attribute_alias": "topic__state",
+                            "attribute_alias": "ticket__state",
                             "widget_type": "InputHidden"
                         }
                     ],
                     "columns": [
                         {
-                            "attribute_alias": "topic__id"
+                            "attribute_alias": "ticket__id"
                         },
                         {
-                            "attribute_alias": "topic__title"
+                            "attribute_alias": "ticket__title"
                         },
                         {
                             "attribute_alias": "priority__value",
                             "caption": "Project priority"
                         },
                         {
-                            "attribute_alias": "topic__priority_avg",
+                            "attribute_alias": "ticket__priority_avg",
                             "caption": "Avg. priority"
                         },
                         {
-                            "attribute_alias": "topic__project_title_list",
+                            "attribute_alias": "ticket__project_title_list",
                             "caption": "Projects"
                         },
                         {
-                            "attribute_alias": "topic__complexity"
+                            "attribute_alias": "ticket__complexity"
                         },
                         {
-                            "attribute_alias": "topic__effort_planned_h"
+                            "attribute_alias": "ticket__effort_planned_h"
                         },
                         {
-                            "attribute_alias": "topic__effort_remaining_h"
+                            "attribute_alias": "ticket__effort_remaining_h"
                         },
                         {
-                            "attribute_alias": "topic__state"
+                            "attribute_alias": "ticket__state"
                         },
                         {
-                            "attribute_alias": "topic__assigned_to__LABEL"
+                            "attribute_alias": "ticket__assigned_to__LABEL"
                         }
                     ],
                     "sorters": [
@@ -117,7 +117,7 @@
                     ],
                     "Buttons": [
                         {
-                            "caption": "Edit topic",
+                            "caption": "Edit ticket",
                             "bind_to_double_click": true,
                             "action": {
                                 "alias": "exface.Core.ShowObjectEditDialog",
@@ -125,7 +125,7 @@
                                 "input_mapper": {
                                     "column_to_column_mappings": [
                                         {
-                                            "from": "topic",
+                                            "from": "ticket",
                                             "to": "id"
                                         }
                                     ]
@@ -138,7 +138,7 @@
                         },
                         {
                             "action_alias": "exface.Core.ShowObjectCreateDialog",
-                            "caption": "Add topic"
+                            "caption": "Add ticket"
                         },
                         {
                             "action_alias": "exface.Core.DeleteObject",
@@ -174,8 +174,8 @@
             },
             {
                 "action_alias": "exface.Core.GoToPage",
-                "action_page_alias": "axenox.devman.topics",
-                "caption": "Topics"
+                "action_page_alias": "axenox.devman.tickets",
+                "caption": "Tickets"
             }
         ]
     }

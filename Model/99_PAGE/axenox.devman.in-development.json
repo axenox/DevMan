@@ -28,7 +28,7 @@
                                 "widgets": [
                                     {
                                         "widget_type": "DataTable",
-                                        "object_alias": "axenox.DevMan.topic",
+                                        "object_alias": "axenox.DevMan.ticket",
                                         "filters": [
                                             {
                                                 "attribute_alias": "type__bug_flag",
@@ -44,7 +44,7 @@
                                                 "value": 10
                                             },
                                             {
-                                                "attribute_alias": "project_topics__project"
+                                                "attribute_alias": "project_tickets__project"
                                             }
                                         ],
                                         "columns": [
@@ -144,15 +144,15 @@
                 ]
             },
             {
-                "caption": "Topics being worked on",
+                "caption": "Tickets being worked on",
                 "widgets": [
                     {
                         "widget_type": "DataTable",
-                        "object_alias": "axenox.DevMan.topic",
-                        "id": "topics",
+                        "object_alias": "axenox.DevMan.ticket",
+                        "id": "tickets",
                         "filters": [
                             {
-                                "attribute_alias": "project_topics__project",
+                                "attribute_alias": "project_tickets__project",
                                 "value": "=milestones_table!project",
                                 "apply_on_change": true
                             },
@@ -171,7 +171,7 @@
                                 "value": "20,30,50,70"
                             },
                             {
-                                "attribute_alias": "project_topics__priority",
+                                "attribute_alias": "project_tickets__priority",
                                 "multi_select": true
                             }
                         ],
@@ -190,7 +190,7 @@
                                 "attribute_alias": "value"
                             },
                             {
-                                "attribute_alias": "project_topics__priority__value:MAX",
+                                "attribute_alias": "project_tickets__priority__value:MAX",
                                 "caption": "Prio",
                                 "hint": "Maximum priority among displayed (filtered) projects"
                             },
@@ -214,7 +214,7 @@
                                 "attribute_alias": "assigned_to__LABEL"
                             },
                             {
-                                "attribute_alias": "project_topics__id:COUNT",
+                                "attribute_alias": "project_tickets__id:COUNT",
                                 "caption": "Projects"
                             },
                             {
@@ -225,13 +225,13 @@
                                 "caption": "Pr.\/All"
                             },
                             {
-                                "attribute_alias": "parent_topic__id",
+                                "attribute_alias": "parent_ticket__id",
                                 "caption": "Parent",
-                                "hint": "Parent topic ID"
+                                "hint": "Parent ticket ID"
                             },
                             {
                                 "attribute_alias": "description",
-                                "id": "topic_description",
+                                "id": "ticket_description",
                                 "hidden": true
                             },
                             {

@@ -2,7 +2,7 @@
     "uid": "0x11ebbaf755235568baf7025041000001",
     "alias_with_namespace": "axenox.devman.tags",
     "menu_parent_page_selector": "0x42d6c29ae55b11e78dad0050568905af",
-    "menu_index": 4,
+    "menu_index": 3,
     "menu_visible": true,
     "name": "Tags",
     "description": "",
@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-05-03 21:18:24",
     "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-05-03 21:18:30",
+    "modified_on": "2021-05-20 18:05:02",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.tag",

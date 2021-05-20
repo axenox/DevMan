@@ -171,8 +171,7 @@
                                 "value": "20,30,50,70"
                             },
                             {
-                                "attribute_alias": "project_tickets__priority",
-                                "multi_select": true
+                                "attribute_alias": "project_tickets__priority"
                             }
                         ],
                         "columns": [
@@ -190,7 +189,7 @@
                                 "attribute_alias": "value"
                             },
                             {
-                                "attribute_alias": "project_tickets__priority__value:MAX",
+                                "attribute_alias": "project_tickets__priority:MAX",
                                 "caption": "Prio",
                                 "hint": "Maximum priority among displayed (filtered) projects"
                             },

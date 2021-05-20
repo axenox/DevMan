@@ -82,7 +82,7 @@
                             "attribute_alias": "ticket__title"
                         },
                         {
-                            "attribute_alias": "priority__value",
+                            "attribute_alias": "priority",
                             "caption": "Project priority"
                         },
                         {
@@ -111,7 +111,7 @@
                     ],
                     "sorters": [
                         {
-                            "attribute_alias": "priority__value",
+                            "attribute_alias": "priority",
                             "direction": "ASC"
                         }
                     ],

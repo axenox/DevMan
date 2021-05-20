@@ -6,10 +6,10 @@
 
 CREATE TABLE IF NOT EXISTS `approval` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `project_id` int NOT NULL,
   `topic_id` int DEFAULT NULL,
   `milestone_id` int DEFAULT NULL,
@@ -31,10 +31,10 @@ CREATE TABLE IF NOT EXISTS `approval` (
 
 CREATE TABLE IF NOT EXISTS `client` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   PRIMARY KEY (`id`) USING BTREE,
@@ -49,10 +49,10 @@ CREATE TABLE IF NOT EXISTS `client` (
 
 CREATE TABLE IF NOT EXISTS `milestone` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(50) NOT NULL,
   `project_id` int NOT NULL,
   `description` text,
@@ -73,10 +73,10 @@ CREATE TABLE IF NOT EXISTS `milestone` (
 
 CREATE TABLE IF NOT EXISTS `milestone_topics` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `milestone_id` int NOT NULL DEFAULT '0',
   `topic_id` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`) USING BTREE,
@@ -91,10 +91,10 @@ CREATE TABLE IF NOT EXISTS `milestone_topics` (
 
 CREATE TABLE IF NOT EXISTS `priority` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `value` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
@@ -109,10 +109,10 @@ CREATE TABLE IF NOT EXISTS `priority` (
 
 CREATE TABLE IF NOT EXISTS `project` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `client_id` int NOT NULL DEFAULT '0',
   `title` varchar(128) NOT NULL,
   `objectives` varchar(250) DEFAULT NULL,
@@ -132,10 +132,10 @@ CREATE TABLE IF NOT EXISTS `project` (
 
 CREATE TABLE IF NOT EXISTS `project_topics` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `project_id` int NOT NULL,
   `topic_id` int NOT NULL,
   `priority_id` int NOT NULL,
@@ -153,10 +153,10 @@ CREATE TABLE IF NOT EXISTS `project_topics` (
 
 CREATE TABLE IF NOT EXISTS `resource` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   `user_oid` binary(16) DEFAULT NULL,
@@ -172,10 +172,10 @@ CREATE TABLE IF NOT EXISTS `resource` (
 
 CREATE TABLE IF NOT EXISTS `topic` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `title` varchar(128) NOT NULL,
   `description` text,
   `topic_type_id` int NOT NULL,
@@ -198,10 +198,10 @@ CREATE TABLE IF NOT EXISTS `topic` (
 
 CREATE TABLE IF NOT EXISTS `topic_type` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `modified_on` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `created_by_user_oid` binary(16) DEFAULT NULL,
-  `modified_by_user_oid` binary(16) DEFAULT NULL,
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_oid` binary(16) NOT NULL,
+  `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   `bug_flag` tinyint(1) NOT NULL DEFAULT '0',

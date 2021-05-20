@@ -8,8 +8,8 @@
 
 CREATE TABLE IF NOT EXISTS `application` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS `application` (
 
 CREATE TABLE IF NOT EXISTS `application_features` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `application_id` int NOT NULL,
@@ -47,8 +47,8 @@ CREATE TABLE IF NOT EXISTS `application_features` (
 
 CREATE TABLE IF NOT EXISTS `application_test_scenarios` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `application_id` int NOT NULL,
@@ -66,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `application_test_scenarios` (
 
 CREATE TABLE IF NOT EXISTS `feature` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) NOT NULL,
@@ -87,8 +87,8 @@ CREATE TABLE IF NOT EXISTS `feature` (
 
 CREATE TABLE IF NOT EXISTS `module` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -106,8 +106,8 @@ CREATE TABLE IF NOT EXISTS `module` (
 
 CREATE TABLE IF NOT EXISTS `test_case` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) NOT NULL,
@@ -126,8 +126,8 @@ CREATE TABLE IF NOT EXISTS `test_case` (
 
 CREATE TABLE IF NOT EXISTS `test_log` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `test_case_id` int NOT NULL,
@@ -153,8 +153,8 @@ CREATE TABLE IF NOT EXISTS `test_log` (
 
 CREATE TABLE IF NOT EXISTS `test_plan` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -173,8 +173,8 @@ CREATE TABLE IF NOT EXISTS `test_plan` (
 
 CREATE TABLE IF NOT EXISTS `test_plan_cases` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `priority_id` int NOT NULL,
@@ -192,8 +192,8 @@ CREATE TABLE IF NOT EXISTS `test_plan_cases` (
 
 CREATE TABLE IF NOT EXISTS `test_scenario` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -211,8 +211,8 @@ CREATE TABLE IF NOT EXISTS `test_scenario` (
 
 CREATE TABLE IF NOT EXISTS `test_scenario_cases` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `test_scenario_id` int NOT NULL,
@@ -230,8 +230,8 @@ CREATE TABLE IF NOT EXISTS `test_scenario_cases` (
 CREATE TABLE IF NOT EXISTS `test_type` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `created_on` datetime NOT NULL DEFAULT NOW(),
-  `modified_on` datetime NOT NULL DEFAULT NOW(),
+  `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   PRIMARY KEY (`id`),

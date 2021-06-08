@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `installation` (
 
 ALTER TABLE `test_log`
 	CHANGE COLUMN `tested_installation` `tested_installation_id` INT(10) NOT NULL AFTER `test_case_id`,
-	CHANGE COLUMN `tested_version` `tested_workbench_version` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci' AFTER `tested_installation_i`;
+	CHANGE COLUMN `tested_version` `tested_workbench_version` VARCHAR(50) NOT NULL COLLATE 'utf8_general_ci' AFTER `tested_installation_id`;
 
 
 -- DOWN

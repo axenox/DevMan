@@ -19,6 +19,7 @@ class DevManApp extends App
         $sqlInstaller = new MySqlDatabaseInstaller($this->getSelector());
         $sqlInstaller
         ->setFoldersWithMigrations(['InitDB','Migrations'])
+        ->setFoldersWithStaticSql(['Views'])
         ->setDataSourceSelector('0x39000000000000000000000000000000');
         $installer->addInstaller($sqlInstaller);
         

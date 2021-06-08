@@ -1,0 +1,81 @@
+{
+    "uid": "0x11eba3d7a564e2dca3d7025041000001",
+    "alias_with_namespace": "axenox.devman.test-log",
+    "menu_parent_page_selector": "0x11eb95f1427f2f7495f1025041000001",
+    "menu_index": 0,
+    "menu_visible": true,
+    "name": "Test log",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x31000000000000000000000000000000",
+    "created_on": "2021-06-07 16:50:05",
+    "modified_by_user_selector": "0x31000000000000000000000000000000",
+    "modified_on": "2021-06-07 16:50:05",
+    "contents": {
+        "widget_type": "DataTable",
+        "object_alias": "axenox.DevMan.test_log",
+        "filters": [
+            {
+                "attribute_alias": "test_case__feature"
+            },
+            {
+                "attribute_alias": "test_case"
+            },
+            {
+                "attribute_alias": "tested_installation"
+            },
+            {
+                "attribute_alias": "tested_by_resource"
+            }
+        ],
+        "columns": [
+            {
+                "attribute_alias": "test_case__LABEL"
+            },
+            {
+                "attribute_alias": "tested_installation__LABEL"
+            },
+            {
+                "attribute_alias": "tested_on"
+            },
+            {
+                "attribute_alias": "test_ok_flag"
+            },
+            {
+                "attribute_alias": "tested_by_resource__LABEL"
+            },
+            {
+                "attribute_alias": "test_plan__LABEL"
+            },
+            {
+                "attribute_alias": "effort",
+                "footer": "SUM"
+            },
+            {
+                "attribute_alias": "comment"
+            },
+            {
+                "attribute_alias": "ticket__id"
+            }
+        ],
+        "sorters": [
+            {
+                "attribute_alias": "tested_on",
+                "direction": "desc"
+            }
+        ],
+        "buttons": [
+            {
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectEditDialog",
+                "bind_to_double_click": true
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject"
+            }
+        ]
+    }
+}

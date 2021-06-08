@@ -81,14 +81,14 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-07 14:43:39",
+            "MODIFIED_ON": "2021-05-28 15:54:16",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
-            "COMMENTS": null,
-            "DOCS": null,
+            "COMMENTS": "",
+            "DOCS": "",
             "NAME": "Feature",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
@@ -96,7 +96,240 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "widget_type": "Tabs",
+                        "tabs": [
+                            {
+                                "caption": "Feature",
+                                "widgets": [
+                                    {
+                                        "widget_type": "SplitVertical",
+                                        "panels": [
+                                            {
+                                                "height": 3,
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "WidgetGroup",
+                                                        "width": "max",
+                                                        "widgets": [
+                                                            {
+                                                                "attribute_alias": "id",
+                                                                "widget_type": "InputHidden",
+                                                                "id": "uid_field"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "name",
+                                                                "width": 2
+                                                            },
+                                                            {
+                                                                "attribute_alias": "module"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "parent_feature"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "caption": "Test cases",
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "DataTable",
+                                                        "object_alias": "axenox.DevMan.test_case",
+                                                        "filters": [
+                                                            {
+                                                                "attribute_alias": "feature",
+                                                                "comparator": "==",
+                                                                "required": true,
+                                                                "input_widget": {
+                                                                    "widget_type": "InputHidden"
+                                                                }
+                                                            },
+                                                            {
+                                                                "attribute_alias": "id"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "name"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "last_test_ok"
+                                                            }
+                                                        ],
+                                                        "sorters": [
+                                                            {
+                                                                "attribute_alias": "created_on",
+                                                                "direction": "desc"
+                                                            }
+                                                        ],
+                                                        "columns": [
+                                                            {
+                                                                "attribute_alias": "id"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "name"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "last_test_time"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "last_test_by__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "last_test_ok"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_log__effort:AVG",
+                                                                "footer": "SUM"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_case_covers[test_case]__id:COUNT",
+                                                                "caption": "Covers",
+                                                                "hint": "Covers other test cases"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_case_covers[covers_test_case]__id:COUNT",
+                                                                "caption": "Covered by",
+                                                                "hint": "Covered by other test cases"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_scenario_cases__test_scenario:COUNT",
+                                                                "caption": "Scenarios"
+                                                            }
+                                                        ],
+                                                        "buttons": [
+                                                            {
+                                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                                            },
+                                                            {
+                                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                                "bind_to_double_click": true
+                                                            },
+                                                            {
+                                                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                                            },
+                                                            {
+                                                                "action_alias": "exface.Core.DeleteObject"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Description",
+                                "columns_in_grid": 1,
+                                "widgets": [
+                                    {
+                                        "widget_type": "WidgetGroup",
+                                        "caption": "Description",
+                                        "width": "max",
+                                        "height": "50%",
+                                        "widgets": [
+                                            {
+                                                "attribute_alias": "description",
+                                                "widget_type": "InputMarkdown",
+                                                "height": "100%",
+                                                "width": "100%",
+                                                "hide_caption": true
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "caption": "Test setup",
+                                        "widget_type": "WidgetGroup",
+                                        "width": "max",
+                                        "height": "50%",
+                                        "widgets": [
+                                            {
+                                                "attribute_alias": "test_setup",
+                                                "width": "100%",
+                                                "height": "100%",
+                                                "hide_caption": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Tickets",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.feature_tickets",
+                                        "row_grouper": {
+                                            "group_by_attribute_alias": "ticket__type__LABEL"
+                                        },
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "feature",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "input_widget": {
+                                                    "widget_type": "InputHidden"
+                                                }
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "ticket__type__LABEL",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "ticket__id"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket__type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket__title"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket__state"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket__priority_avg"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket__project_title_list"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "caption": "Add",
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=uid_field",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "caption": "Remove",
+                                                "icon": "minus"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "feature",
             "DATA_ADDRESS": "feature"
         }

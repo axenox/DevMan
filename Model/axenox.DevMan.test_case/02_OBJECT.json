@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-20 16:59:55",
+            "MODIFIED_ON": "2021-05-28 15:32:22",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
@@ -96,7 +96,178 @@
             "SHORT_DESCRIPTION": "An atomic test to be performed as a whole",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "widget_type": "Tabs",
+                        "tabs": [
+                            {
+                                "caption": "Test case",
+                                "widgets": [
+                                    {
+                                        "attribute_alias": "id",
+                                        "widget_type": "InputHidden",
+                                        "id": "field_test_case_id"
+                                    },
+                                    {
+                                        "attribute_alias": "name",
+                                        "width": "max"
+                                    },
+                                    {
+                                        "attribute_alias": "feature"
+                                    },
+                                    {
+                                        "attribute_alias": "effort_planned"
+                                    },
+                                    {
+                                        "widget_type": "WidgetGroup",
+                                        "caption": "Description",
+                                        "width": "max",
+                                        "widgets": [
+                                            {
+                                                "attribute_alias": "description",
+                                                "height": 18,
+                                                "hide_caption": true,
+                                                "width": "max"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Relations",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_case_covers",
+                                        "caption": "Covers other test cases",
+                                        "height": "50%",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_case",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "covers_test_case__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "covers_test_case__feature__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "covers_test_case__feature__module__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "covers_test_case__feature__module__application__LABEL"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "caption": "Add",
+                                                "input_widget_id": "field_test_case_id",
+                                                "action": {
+                                                    "alias": "exface.Core.ShowObjectCreateDialog",
+                                                    "prefill_with_input_data": true,
+                                                    "prefill_with_filter_context": false,
+                                                    "input_mapper": {
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "id",
+                                                                "to": "test_case"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=field_test_case_id",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "caption": "Remove",
+                                                "icon": "minus"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_case_covers",
+                                        "caption": "Covered by",
+                                        "height": "50%",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "covers_test_case",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "test_case__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__feature__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__feature__module__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__feature__module__application__LABEL"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "caption": "Add",
+                                                "input_widget_id": "field_test_case_id",
+                                                "action": {
+                                                    "alias": "exface.Core.ShowObjectCreateDialog",
+                                                    "prefill_with_input_data": true,
+                                                    "prefill_with_filter_context": false,
+                                                    "input_mapper": {
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "id",
+                                                                "to": "covers_test_case"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=field_test_case_id",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "caption": "Remove",
+                                                "icon": "minus"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "test_case",
             "DATA_ADDRESS": "test_case"
         }

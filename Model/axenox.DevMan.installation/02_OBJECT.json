@@ -80,79 +80,25 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-07 16:59:59",
+            "CREATED_ON": "2021-05-27 19:20:00",
+            "MODIFIED_ON": "2021-05-27 19:20:00",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11eb99efd979f59899ef025041000001",
+            "UID": "0x11ebab78c48c6362ab78747827435ce5",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
-            "COMMENTS": "",
-            "DOCS": "",
-            "NAME": "Test log",
+            "COMMENTS": null,
+            "DOCS": null,
+            "NAME": "Installation",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": {
-                "widget_type": "Dialog",
-                "number_of_columns": 2,
-                "widgets": [
-                    {
-                        "attribute_alias": "test_case",
-                        "id": "test_case_selector"
-                    },
-                    {
-                        "attribute_alias": "tested_on",
-                        "widget_type": "Input"
-                    },
-                    {
-                        "attribute_alias": "tested_installation"
-                    },
-                    {
-                        "attribute_alias": "tested_workbench_version"
-                    },
-                    {
-                        "attribute_alias": "test_ok_flag"
-                    },
-                    {
-                        "attribute_alias": "tested_by_resource"
-                    },
-                    {
-                        "attribute_alias": "effort"
-                    },
-                    {
-                        "attribute_alias": "test_plan",
-                        "widget_type": "InputComboTable",
-                        "filters": [
-                            {
-                                "attribute_alias": "test_plan_cases__test_case",
-                                "value": "=test_case_selector!UID"
-                            },
-                            {
-                                "attribute_alias": "closed_flag",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    {
-                        "attribute_alias": "ticket"
-                    },
-                    {
-                        "attribute_alias": "comment",
-                        "widget_type": "Input"
-                    },
-                    {
-                        "attribute_alias": "test_description",
-                        "width": 2,
-                        "height": 15
-                    }
-                ]
-            },
-            "ALIAS": "test_log",
-            "DATA_ADDRESS": "test_log"
+            "DEFAULT_EDITOR_UXON": null,
+            "ALIAS": "installation",
+            "DATA_ADDRESS": "installation"
         }
     ],
     "totals_rows": [],

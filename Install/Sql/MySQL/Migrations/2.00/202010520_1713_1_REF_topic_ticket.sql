@@ -30,6 +30,9 @@ ALTER TABLE `approval`
 	
 ALTER TABLE `request_requirement`
 	CHANGE COLUMN `topic_id` `ticket_id` INT(10) NULL DEFAULT NULL AFTER `comment`;
+	
+ALTER TABLE `test_log`
+	CHANGE COLUMN `topic_id` `ticket_id` INT(10) NULL DEFAULT NULL AFTER `test_description`;
 
 -- DOWN
 
@@ -63,3 +66,6 @@ ALTER TABLE `approval`
 	
 ALTER TABLE `request_requirement`
 	CHANGE COLUMN `ticket_id` `topic_id` INT(10) NULL DEFAULT NULL AFTER `comment`;
+	
+ALTER TABLE `test_log`
+	CHANGE COLUMN `ticket_id` `topic_id` INT(10) NULL DEFAULT NULL AFTER `test_description`;

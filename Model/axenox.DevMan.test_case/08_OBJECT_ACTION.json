@@ -167,14 +167,14 @@
         },
         {
             "CREATED_ON": "2021-05-20 19:07:10",
-            "MODIFIED_ON": "2021-06-07 17:02:05",
+            "MODIFIED_ON": "2021-06-09 15:26:12",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebb63fd0785640b63f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
             "ALIAS": "TestCaseLogDialog",
-            "NAME": "History",
+            "NAME": "Test log",
             "SHORT_DESCRIPTION": "Opens a dialog showing the test log for a test case",
             "CONFIG_UXON": {
                 "widget": {
@@ -183,10 +183,12 @@
                         "title_attribute_alias": "id",
                         "widgets": [
                             {
-                                "attribute_alias": "name"
+                                "attribute_alias": "name",
+                                "width": "max"
                             },
                             {
-                                "attribute_alias": "feature__LABEL"
+                                "attribute_alias": "feature__LABEL",
+                                "width": "max"
                             }
                         ]
                     },

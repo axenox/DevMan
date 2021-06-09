@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-09 09:24:58",
+            "MODIFIED_ON": "2021-06-09 15:23:25",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eba4f6d97a1d84a4f6025041000001",
@@ -141,7 +141,7 @@
                                         "attribute_alias": "test_case__feature"
                                     },
                                     {
-                                        "attribute_alias": "test_case__last_test_ok"
+                                        "attribute_alias": "test_case__test_case_status__test_status"
                                     }
                                 ],
                                 "sorters": [
@@ -165,13 +165,13 @@
                                         "attribute_alias": "test_case__name"
                                     },
                                     {
-                                        "attribute_alias": "test_case__last_test_time"
+                                        "attribute_alias": "test_case__test_case_status__test_status"
                                     },
                                     {
-                                        "attribute_alias": "test_case__last_test_by__LABEL"
+                                        "attribute_alias": "test_case__test_case_status__last_test_time"
                                     },
                                     {
-                                        "attribute_alias": "test_case__last_test_ok"
+                                        "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
                                     },
                                     {
                                         "attribute_alias": "test_case__effort_planned",

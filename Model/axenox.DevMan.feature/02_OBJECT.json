@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-09 09:59:48",
+            "MODIFIED_ON": "2021-06-09 15:24:15",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
@@ -156,7 +156,7 @@
                                                                 "attribute_alias": "name"
                                                             },
                                                             {
-                                                                "attribute_alias": "last_test_ok"
+                                                                "attribute_alias": "test_case_status__test_status"
                                                             }
                                                         ],
                                                         "sorters": [
@@ -173,13 +173,13 @@
                                                                 "attribute_alias": "name"
                                                             },
                                                             {
-                                                                "attribute_alias": "last_test_time"
+                                                                "attribute_alias": "test_case_status__test_status"
                                                             },
                                                             {
-                                                                "attribute_alias": "last_test_by__LABEL"
+                                                                "attribute_alias": "test_case_status__last_test_time"
                                                             },
                                                             {
-                                                                "attribute_alias": "last_test_ok"
+                                                                "attribute_alias": "test_case_status__last_test_by__LABEL"
                                                             },
                                                             {
                                                                 "attribute_alias": "test_log__effort:AVG",

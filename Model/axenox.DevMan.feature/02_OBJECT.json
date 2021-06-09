@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-28 15:54:16",
+            "MODIFIED_ON": "2021-06-09 09:59:48",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
@@ -252,6 +252,68 @@
                                                 "width": "100%",
                                                 "height": "100%",
                                                 "hide_caption": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Change log",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.feature_change",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "feature",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "active_since",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "summary"
+                                            },
+                                            {
+                                                "attribute_alias": "active_since"
+                                            },
+                                            {
+                                                "attribute_alias": "app_version"
+                                            },
+                                            {
+                                                "attribute_alias": "change_id"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "caption": "Add",
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=uid_field",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "caption": "Remove",
+                                                "icon": "minus"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
                                             }
                                         ]
                                     }

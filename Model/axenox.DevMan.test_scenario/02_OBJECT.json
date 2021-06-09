@@ -81,14 +81,14 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-07 14:43:39",
+            "MODIFIED_ON": "2021-06-09 09:24:58",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eba4f6d97a1d84a4f6025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
-            "COMMENTS": null,
-            "DOCS": null,
+            "COMMENTS": "",
+            "DOCS": "",
             "NAME": "Test scenario",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
@@ -96,7 +96,126 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "SplitVertical",
+                "panels": [
+                    {
+                        "height": 2,
+                        "widgets": [
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "description",
+                                "height": 2,
+                                "width": 1
+                            },
+                            {
+                                "attribute_alias": "test_type"
+                            }
+                        ]
+                    },
+                    {
+                        "caption": "Test cases",
+                        "widgets": [
+                            {
+                                "widget_type": "DataTable",
+                                "object_alias": "axenox.DevMan.test_scenario_cases",
+                                "multi_select": true,
+                                "row_grouper": {
+                                    "group_by_attribute_alias": "test_case__feature__LABEL"
+                                },
+                                "filters": [
+                                    {
+                                        "attribute_alias": "test_scenario",
+                                        "hidden": true,
+                                        "required": true
+                                    },
+                                    {
+                                        "attribute_alias": "test_case"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__feature__module"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__feature"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__last_test_ok"
+                                    }
+                                ],
+                                "sorters": [
+                                    {
+                                        "attribute_alias": "test_case__feature__name",
+                                        "direction": "asc"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__id",
+                                        "direction": "asc"
+                                    }
+                                ],
+                                "columns": [
+                                    {
+                                        "attribute_alias": "test_case__id"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__feature__LABEL"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__name"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__last_test_time"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__last_test_by__LABEL"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__last_test_ok"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__effort_planned",
+                                        "footer": "SUM"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__test_log__effort:AVG",
+                                        "footer": "SUM"
+                                    }
+                                ],
+                                "buttons": [
+                                    {
+                                        "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                        "caption": "Add case"
+                                    },
+                                    {
+                                        "action_alias": "exface.Core.DeleteObject",
+                                        "caption": "Remove case",
+                                        "icon": "minus"
+                                    },
+                                    {
+                                        "action_alias": "exface.Core.ShowObjectEditDialog",
+                                        "bind_to_double_click": true
+                                    },
+                                    {
+                                        "action": {
+                                            "alias": "axenox.DevMan.TestCasesAddToPlanDialog",
+                                            "object_alias": "axenox.DevMan.test_case",
+                                            "input_mapper": {
+                                                "column_to_column_mappings": [
+                                                    {
+                                                        "from": "test_case__id",
+                                                        "to": "id"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "test_scenario",
             "DATA_ADDRESS": "test_scenario"
         }

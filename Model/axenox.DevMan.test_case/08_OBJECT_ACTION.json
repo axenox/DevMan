@@ -193,7 +193,7 @@
                     "widgets": [
                         {
                             "widget_type": "DataTable",
-                            "object_alias": "axenox.DevMan.test_log_covers",
+                            "object_alias": "axenox.DevMan.test_log_coverage",
                             "filters": [
                                 {
                                     "attribute_alias": "test_case",

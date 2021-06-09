@@ -186,12 +186,12 @@
                                                                 "footer": "SUM"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_covers[test_case]__id:COUNT",
+                                                                "attribute_alias": "test_case_coverage[test_case]__id:COUNT",
                                                                 "caption": "Covers",
                                                                 "hint": "Covers other test cases"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_covers[covers_test_case]__id:COUNT",
+                                                                "attribute_alias": "test_case_coverage[covers_test_case]__id:COUNT",
                                                                 "caption": "Covered by",
                                                                 "hint": "Covered by other test cases"
                                                             },

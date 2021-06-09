@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW test_log_covers AS
+CREATE OR REPLACE VIEW test_log_coverage AS
 
 SELECT 
 	tl.tested_on,
@@ -23,4 +23,4 @@ SELECT
 	0 AS tested_directly
 FROM
 	test_log tl
-	INNER JOIN test_case_covers tcc ON tl.test_case_id = tcc.test_case_id;
+	INNER JOIN test_case_coverage tcc ON tl.test_case_id = tcc.test_case_id;

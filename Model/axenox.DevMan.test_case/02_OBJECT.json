@@ -140,7 +140,7 @@
                                 "widgets": [
                                     {
                                         "widget_type": "DataTable",
-                                        "object_alias": "axenox.DevMan.test_case_covers",
+                                        "object_alias": "axenox.DevMan.test_case_coverage",
                                         "caption": "Covers other test cases",
                                         "height": "50%",
                                         "filters": [
@@ -202,7 +202,7 @@
                                     },
                                     {
                                         "widget_type": "DataTable",
-                                        "object_alias": "axenox.DevMan.test_case_covers",
+                                        "object_alias": "axenox.DevMan.test_case_coverage",
                                         "caption": "Covered by",
                                         "height": "50%",
                                         "filters": [

@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-27 19:19:43",
-            "MODIFIED_ON": "2021-05-27 21:59:25",
+            "MODIFIED_ON": "2021-06-11 14:41:56",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebab45ba8e4b14ab45747827435ce5",
@@ -89,7 +89,7 @@
             "WRITABLE_FLAG": "1",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Test case covers",
+            "NAME": "Test case coverage",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",

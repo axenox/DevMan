@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-10 22:20:03",
+            "MODIFIED_ON": "2021-06-11 13:03:55",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
@@ -109,7 +109,7 @@
                                         "widget_type": "SplitVertical",
                                         "panels": [
                                             {
-                                                "height": 3,
+                                                "height": 4,
                                                 "widgets": [
                                                     {
                                                         "widget_type": "WidgetGroup",
@@ -129,6 +129,9 @@
                                                             },
                                                             {
                                                                 "attribute_alias": "parent_feature"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "priority"
                                                             }
                                                         ]
                                                     }
@@ -139,7 +142,10 @@
                                                 "widgets": [
                                                     {
                                                         "widget_type": "DataTable",
-                                                        "object_alias": "axenox.DevMan.test_case",
+                                                        "object_alias": "axenox.DevMan.feature_test_cases",
+                                                        "row_grouper": {
+                                                            "group_by_attribute_alias": "direct_flag"
+                                                        },
                                                         "filters": [
                                                             {
                                                                 "attribute_alias": "feature",
@@ -150,69 +156,115 @@
                                                                 }
                                                             },
                                                             {
-                                                                "attribute_alias": "id"
+                                                                "attribute_alias": "test_case"
                                                             },
                                                             {
-                                                                "attribute_alias": "name"
-                                                            },
-                                                            {
-                                                                "attribute_alias": "test_case_status__test_status"
+                                                                "attribute_alias": "test_case__test_case_status__test_status",
+                                                                "input_widget": {
+                                                                    "widget_type": "InputSelect",
+                                                                    "multi_select": true
+                                                                }
                                                             }
                                                         ],
                                                         "sorters": [
                                                             {
-                                                                "attribute_alias": "created_on",
+                                                                "attribute_alias": "direct_flag",
+                                                                "direction": "desc"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_case__created_on",
                                                                 "direction": "desc"
                                                             }
                                                         ],
                                                         "columns": [
                                                             {
-                                                                "attribute_alias": "id"
+                                                                "attribute_alias": "test_case"
                                                             },
                                                             {
-                                                                "attribute_alias": "name"
+                                                                "attribute_alias": "test_case__name"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_status__test_status"
+                                                                "attribute_alias": "test_case__priority"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_status__last_test_time"
+                                                                "attribute_alias": "test_case__test_case_status__test_status"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_status__last_test_by_resource__LABEL"
+                                                                "attribute_alias": "test_case__test_case_status__last_test_time"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_log__effort:AVG",
+                                                                "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_case__test_log__effort:AVG",
                                                                 "footer": "SUM"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_coverage[test_case]__id:COUNT",
+                                                                "attribute_alias": "test_case__test_case_coverage[test_case]__id:COUNT",
                                                                 "caption": "Covers",
                                                                 "hint": "Covers other test cases"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case_coverage[covers_test_case]__id:COUNT",
+                                                                "attribute_alias": "test_case__test_case_coverage[covers_test_case]__id:COUNT",
                                                                 "caption": "Covered by",
                                                                 "hint": "Covered by other test cases"
                                                             },
                                                             {
-                                                                "attribute_alias": "test_scenario_cases__test_scenario:COUNT",
+                                                                "attribute_alias": "test_case__test_scenario_cases__test_scenario:COUNT",
                                                                 "caption": "Scenarios"
                                                             }
                                                         ],
                                                         "buttons": [
                                                             {
-                                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                                                "action": {
+                                                                    "alias": "exface.Core.ShowObjectCreateDialog",
+                                                                    "object_alias": "axenox.DevMan.test_case",
+                                                                    "prefill_with_input_data": true
+                                                                },
+                                                                "input_widget_id": "uid_field"
                                                             },
                                                             {
-                                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                                "action": {
+                                                                    "alias": "exface.Core.ShowObjectEditDialog",
+                                                                    "object_alias": "axenox.DevMan.test_case",
+                                                                    "input_mapper": {
+                                                                        "column_to_column_mappings": [
+                                                                            {
+                                                                                "from": "test_case",
+                                                                                "to": "id"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
                                                                 "bind_to_double_click": true
                                                             },
                                                             {
-                                                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                                                "action": {
+                                                                    "alias": "exface.Core.ShowObjectCopyDialog",
+                                                                    "object_alias": "axenox.DevMan.test_case",
+                                                                    "input_mapper": {
+                                                                        "column_to_column_mappings": [
+                                                                            {
+                                                                                "from": "test_case",
+                                                                                "to": "id"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
                                                             },
                                                             {
-                                                                "action_alias": "exface.Core.DeleteObject"
+                                                                "action": {
+                                                                    "alias": "exface.Core.DeleteObject",
+                                                                    "object_alias": "axenox.DevMan.test_case",
+                                                                    "input_mapper": {
+                                                                        "column_to_column_mappings": [
+                                                                            {
+                                                                                "from": "test_case",
+                                                                                "to": "id"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
                                                             }
                                                         ]
                                                     }

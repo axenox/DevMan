@@ -664,7 +664,7 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2021-06-08 14:54:46",
+            "MODIFIED_ON": "2021-06-11 14:34:04",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
@@ -730,69 +730,120 @@
                     },
                     "widgets": [
                         {
-                            "attribute_alias": "test_case",
-                            "id": "test_case_field",
-                            "widget_type": "InputHidden"
-                        },
-                        {
-                            "attribute_alias": "test_case__LABEL",
-                            "widget_type": "InputHidden"
-                        },
-                        {
-                            "attribute_alias": "tested_installation",
-                            "id": "tested_installation_field",
-                            "widget_type": "InputComboTable",
-                            "required": true,
-                            "table": {
-                                "object_alias": "axenox.DevMan.installation",
-                                "columns": [
-                                    {
-                                        "attribute_group_alias": "~DEFAULT_DISPLAY"
-                                    },
-                                    {
-                                        "attribute_alias": "current_workbench_version"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "attribute_alias": "tested_workbench_version",
-                            "value": "=tested_installation_field!current_workbench_version"
-                        },
-                        {
-                            "attribute_alias": "effort"
-                        },
-                        {
-                            "attribute_alias": "test_plan",
-                            "widget_type": "InputComboTable",
-                            "required": false,
-                            "filters": [
+                            "widget_type": "Tabs",
+                            "tabs": [
                                 {
-                                    "attribute_alias": "test_plan_cases__test_case",
-                                    "value": "=test_case_field!id"
+                                    "caption": "Test",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case",
+                                            "id": "test_case_field",
+                                            "widget_type": "InputHidden"
+                                        },
+                                        {
+                                            "attribute_alias": "test_case__LABEL",
+                                            "widget_type": "InputHidden"
+                                        },
+                                        {
+                                            "attribute_alias": "tested_installation",
+                                            "id": "tested_installation_field",
+                                            "widget_type": "InputComboTable",
+                                            "required": true,
+                                            "table": {
+                                                "object_alias": "axenox.DevMan.installation",
+                                                "columns": [
+                                                    {
+                                                        "attribute_group_alias": "~DEFAULT_DISPLAY"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "current_workbench_version"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "current_build_time"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "widget_type": "InlineGroup",
+                                            "caption": "Tested version \/ build time",
+                                            "separator": "\/",
+                                            "widgets": [
+                                                {
+                                                    "attribute_alias": "tested_workbench_version",
+                                                    "value": "=tested_installation_field!current_workbench_version",
+                                                    "width": "50px"
+                                                },
+                                                {
+                                                    "attribute_alias": "tested_build_time",
+                                                    "value": "=tested_installation_field!current_build_time"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "attribute_alias": "effort"
+                                        },
+                                        {
+                                            "attribute_alias": "test_plan",
+                                            "widget_type": "InputComboTable",
+                                            "required": false,
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_plan_cases__test_case",
+                                                    "value": "=test_case_field!id"
+                                                },
+                                                {
+                                                    "attribute_alias": "closed_flag",
+                                                    "value": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "attribute_alias": "tested_by_resource",
+                                            "value": "=USER('resource__id')"
+                                        },
+                                        {
+                                            "attribute_alias": "tested_on",
+                                            "value": 0
+                                        },
+                                        {
+                                            "attribute_alias": "ticket",
+                                            "width": "max"
+                                        },
+                                        {
+                                            "attribute_alias": "test_description",
+                                            "width": 2,
+                                            "height": 15
+                                        }
+                                    ]
                                 },
                                 {
-                                    "attribute_alias": "closed_flag",
-                                    "value": 0
+                                    "caption": "Feature setup",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__feature__test_setup",
+                                            "widget_type": "InputMarkdown",
+                                            "hide_caption": true,
+                                            "readonly": true,
+                                            "width": "max",
+                                            "height": "100%"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Module setup",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__feature__module__test_setup",
+                                            "widget_type": "InputMarkdown",
+                                            "readonly": true,
+                                            "hide_caption": true,
+                                            "width": "max",
+                                            "height": "100%"
+                                        }
+                                    ]
                                 }
                             ]
-                        },
-                        {
-                            "attribute_alias": "tested_by_resource",
-                            "value": "=USER('resource__id')"
-                        },
-                        {
-                            "attribute_alias": "tested_on",
-                            "value": 0
-                        },
-                        {
-                            "attribute_alias": "ticket",
-                            "width": "max"
-                        },
-                        {
-                            "attribute_alias": "test_description",
-                            "width": 2,
-                            "height": 15
                         }
                     ],
                     "buttons": [

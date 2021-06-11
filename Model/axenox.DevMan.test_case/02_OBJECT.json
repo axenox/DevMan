@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-09 15:19:38",
+            "MODIFIED_ON": "2021-06-11 13:02:56",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
@@ -116,6 +116,9 @@
                                     },
                                     {
                                         "attribute_alias": "feature"
+                                    },
+                                    {
+                                        "attribute_alias": "priority"
                                     },
                                     {
                                         "attribute_alias": "effort_planned"

@@ -1,7 +1,7 @@
 -- UP
 
 ALTER TABLE `application`
-	CHANGE COLUMN `latest_version` `latest_version` VARCHAR(20) NOT NULL DEFAULT '' COLLATE 'utf8_general_ci' AFTER `description`;
+	ADD COLUMN `latest_version` VARCHAR(20) NOT NULL DEFAULT '' COLLATE 'utf8_general_ci' AFTER `description`;
 
 CREATE TABLE IF NOT EXISTS `feature_change` (
   `id` int NOT NULL AUTO_INCREMENT,

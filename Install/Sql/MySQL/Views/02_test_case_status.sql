@@ -3,8 +3,10 @@ CREATE OR REPLACE VIEW test_case_status AS
 SELECT
 	tmp.*,
 	CASE
-		WHEN tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time) AND tlc2.test_ok_flag = 1 THEN 'PASS'
-		WHEN tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time) AND tlc2.test_ok_flag = 0 THEN 'FAIL'
+		WHEN tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time) AND tlc2.test_ok_flag = 1 AND tlc2.tested_directly = 1 THEN 'PASS'
+		WHEN tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time) AND tlc2.test_ok_flag = 1 AND tlc2.tested_directly = 0 THEN 'COVERED'
+		WHEN tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time) AND tlc2.test_ok_flag = 0 AND tlc2.tested_directly = 1 THEN 'FAIL'
+		WHEN tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time) AND tlc2.test_ok_flag = 0 AND tlc2.tested_directly = 0 THEN 'FAIL_COVER'
 		ELSE 'TODO'
 	END AS test_status,
 	tlc2.test_log_id AS last_test_log_id,

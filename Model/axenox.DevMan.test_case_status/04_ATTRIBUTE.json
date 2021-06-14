@@ -481,7 +481,7 @@
         },
         {
             "CREATED_ON": "2021-06-09 15:05:57",
-            "MODIFIED_ON": "2021-06-11 11:14:23",
+            "MODIFIED_ON": "2021-06-14 10:58:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebbfa96e6c744abfa9025041000001",
@@ -501,9 +501,10 @@
             "DEFAULT_DISPLAY_UXON": {
                 "widget_type": "ColorIndicator",
                 "color_scale": {
-                    "100": "green",
                     "FAIL": "orangered",
+                    "FAIL_COVER": "orange",
                     "PASS": "lightgreen",
+                    "COVERED": "lightgreen",
                     "TODO": "yellow"
                 }
             },
@@ -532,12 +533,13 @@
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": {
-                "length_max": "4",
                 "show_values": false,
                 "values": {
-                    "FAIL": "Fail",
-                    "PASS": "Pass",
-                    "TODO": "ToDo"
+                    "FAIL": "Failed",
+                    "FAIL_COVER": "Failed coverage",
+                    "PASS": "Passed",
+                    "TODO": "ToDo",
+                    "COVERED": "Covered"
                 }
             }
         },

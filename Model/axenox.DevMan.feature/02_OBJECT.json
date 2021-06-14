@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-11 13:03:55",
+            "MODIFIED_ON": "2021-06-14 13:57:39",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
@@ -128,7 +128,16 @@
                                                                 "attribute_alias": "module"
                                                             },
                                                             {
-                                                                "attribute_alias": "parent_feature"
+                                                                "attribute_alias": "parent_feature",
+                                                                "widget_type": "InputComboTable",
+                                                                "table_object_alias": "axenox.DevMan.feature",
+                                                                "filters": [
+                                                                    {
+                                                                        "attribute_alias": "id",
+                                                                        "value": "=uid_field",
+                                                                        "comparator": "!=="
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "attribute_alias": "priority"

@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-11 13:02:56",
+            "MODIFIED_ON": "2021-06-23 10:37:15",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -98,6 +98,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
                 "widget_type": "Dialog",
+                "hide_header": false,
                 "widgets": [
                     {
                         "widget_type": "Tabs",

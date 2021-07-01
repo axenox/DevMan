@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-05-05 18:05:58",
+            "MODIFIED_ON": "2021-07-01 18:21:41",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -218,10 +218,44 @@
                     },
                     {
                         "attribute_alias": "description",
-                        "height": "100%",
+                        "height": 18,
                         "width": 2,
                         "widget_type": "InputMarkdown",
                         "hide_caption": true
+                    },
+                    {
+                        "caption": "Attachments",
+                        "widget_type": "ImageGallery",
+                        "object_alias": "axenox.DevMan.ticket_file",
+                        "image_url_attribute_alias": "PATHNAME_RELATIVE",
+                        "image_title_attribute_alias": "FILENAME",
+                        "zoomable": true,
+                        "hide_header": false,
+                        "width": 2,
+                        "filters": [
+                            {
+                                "attribute_alias": "ticket",
+                                "hidden": true,
+                                "required": true,
+                                "comparator": "=="
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "ticket",
+                                "value": "=field_ticket_id",
+                                "hidden": true
+                            }
+                        ],
+                        "uploader": {
+                            "filename_attribute": "FILENAME",
+                            "file_content_attribute": "CONTENTS"
+                        },
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.DeleteObject"
+                            }
+                        ]
                     }
                 ]
             },

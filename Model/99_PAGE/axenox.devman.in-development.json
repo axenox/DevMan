@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-06-21 18:10:21",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-07-13 17:27:56",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.project",
@@ -44,6 +44,9 @@
                                                 "value": 10
                                             },
                                             {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            },
+                                            {
                                                 "attribute_alias": "project_tickets__project"
                                             }
                                         ],
@@ -59,6 +62,12 @@
                                             },
                                             {
                                                 "attribute_alias": "project_title_list"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "id",
+                                                "direction": "desc"
                                             }
                                         ],
                                         "buttons": [

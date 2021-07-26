@@ -1,0 +1,96 @@
+{
+    "object_alias": "exface.Core.ATTRIBUTE_COMPOUND",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "ATTRIBUTE",
+            "attribute_alias": "ATTRIBUTE"
+        },
+        {
+            "name": "COMPOUND_ATTRIBUTE",
+            "attribute_alias": "COMPOUND_ATTRIBUTE"
+        },
+        {
+            "name": "SEQUENCE_INDEX",
+            "attribute_alias": "SEQUENCE_INDEX"
+        },
+        {
+            "name": "VALUE_PREFIX",
+            "attribute_alias": "VALUE_PREFIX"
+        },
+        {
+            "name": "VALUE_SUFFIX",
+            "attribute_alias": "VALUE_SUFFIX"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2021-07-02 14:30:19",
+            "MODIFIED_ON": "2021-07-02 14:30:19",
+            "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "UID": "0x11eb9be74367d5269be7005056bee7c0",
+            "ATTRIBUTE": "0x11eb8ca704a3ccf08ca7747827435ce5",
+            "COMPOUND_ATTRIBUTE": "0x11eb98d535f8d02098d5005056bee7c0",
+            "SEQUENCE_INDEX": "0",
+            "VALUE_PREFIX": "",
+            "VALUE_SUFFIX": "-"
+        },
+        {
+            "CREATED_ON": "2021-07-02 14:30:41",
+            "MODIFIED_ON": "2021-07-02 14:30:41",
+            "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "UID": "0x11eba1ee50b216f6a1ee005056bee7c0",
+            "ATTRIBUTE": "0x11eb9c2604a3f69e9c26747827435ce5",
+            "COMPOUND_ATTRIBUTE": "0x11eb98d535f8d02098d5005056bee7c0",
+            "SEQUENCE_INDEX": "1",
+            "VALUE_PREFIX": "",
+            "VALUE_SUFFIX": ""
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.ATTRIBUTE_COMPOUND",
+        "conditions": [
+            {
+                "expression": "COMPOUND_ATTRIBUTE__OBJECT__APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.ATTRIBUTE_COMPOUND"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

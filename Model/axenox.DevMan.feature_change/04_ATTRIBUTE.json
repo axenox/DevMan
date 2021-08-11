@@ -349,7 +349,7 @@
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_VALUE": "=NOW()",
+            "DEFAULT_VALUE": "=Now()",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": null
         },

@@ -394,7 +394,7 @@
                         },
                         {
                             "attribute_alias": "tested_by_resource",
-                            "value": "=USER('resource__id')"
+                            "value": "=User('resource__id')"
                         },
                         {
                             "attribute_alias": "tested_on",
@@ -829,7 +829,7 @@
                                         },
                                         {
                                             "attribute_alias": "tested_by_resource",
-                                            "value": "=USER('resource__id')"
+                                            "value": "=User('resource__id')"
                                         },
                                         {
                                             "attribute_alias": "tested_on",

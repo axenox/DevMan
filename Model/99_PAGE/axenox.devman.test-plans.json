@@ -93,12 +93,12 @@
                 "footer": "SUM"
             },
             {
-                "calculation": "=DATE(test_log__tested_on:MIN)",
+                "calculation": "=Date(test_log__tested_on:MIN)",
                 "caption": "First test",
                 "align": "right"
             },
             {
-                "attribute_alias": "=DATE(test_log__tested_on:MAX)",
+                "attribute_alias": "=Date(test_log__tested_on:MAX)",
                 "caption": "Last test",
                 "align": "right"
             },

@@ -31,7 +31,7 @@
                                         "filters": [
                                             {
                                                 "attribute_alias": "assigned_to__user",
-                                                "value": "=USER('UID')",
+                                                "value": "=User('UID')",
                                                 "hidden": true
                                             }
                                         ],
@@ -82,7 +82,7 @@
                                         "filters": [
                                             {
                                                 "attribute_alias": "created_by_user",
-                                                "value": "=USER('UID')",
+                                                "value": "=User('UID')",
                                                 "hidden": true
                                             },
                                             {

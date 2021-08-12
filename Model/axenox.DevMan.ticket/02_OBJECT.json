@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-08-11 14:56:12",
+            "MODIFIED_ON": "2021-08-12 12:50:06",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -117,13 +117,27 @@
                                 "attribute_alias": "type"
                             },
                             {
-                                "attribute_alias": "parent_ticket"
+                                "attribute_alias": "assigned_to"
+                            },
+                            {
+                                "object_alias": "axenox.DevMan.ticket_tags",
+                                "attribute_alias": "tag",
+                                "widget_type": "InputTags",
+                                "required": false,
+                                "multi_select": true,
+                                "caption": "Tags"
                             },
                             {
                                 "attribute_alias": "state"
                             },
                             {
+                                "attribute_alias": "parent_ticket"
+                            },
+                            {
                                 "attribute_alias": "complexity"
+                            },
+                            {
+                                "attribute_alias": "milestone"
                             },
                             {
                                 "widget_type": "InlineGroup",
@@ -140,20 +154,6 @@
                                         "attribute_alias": "effort_real_h"
                                     }
                                 ]
-                            },
-                            {
-                                "attribute_alias": "assigned_to"
-                            },
-                            {
-                                "attribute_alias": "milestone"
-                            },
-                            {
-                                "object_alias": "axenox.DevMan.ticket_tags",
-                                "attribute_alias": "tag",
-                                "widget_type": "InputTags",
-                                "required": false,
-                                "multi_select": true,
-                                "caption": "Tags"
                             },
                             {
                                 "caption": "Project priority",

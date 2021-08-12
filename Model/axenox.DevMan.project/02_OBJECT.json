@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:40:56",
-            "MODIFIED_ON": "2021-04-30 16:42:01",
+            "MODIFIED_ON": "2021-08-12 10:51:49",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9bc3b43f389840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -97,30 +97,109 @@
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
-                "widget_type": "Form",
+                "widget_type": "Dialog",
                 "widgets": [
                     {
-                        "attribute_alias": "title"
-                    },
-                    {
-                        "attribute_alias": "client"
-                    },
-                    {
-                        "attribute_alias": "objectives",
-                        "width": 2
-                    },
-                    {
-                        "attribute_alias": "date_start"
-                    },
-                    {
-                        "attribute_alias": "date_end"
-                    },
-                    {
-                        "attribute_alias": "state"
-                    },
-                    {
-                        "attribute_alias": "description",
-                        "height": 20
+                        "widget_type": "Tabs",
+                        "tabs": [
+                            {
+                                "caption": "Project",
+                                "widgets": [
+                                    {
+                                        "attribute_alias": "id",
+                                        "widget_type": "InputHidden",
+                                        "id": "project_id_field"
+                                    },
+                                    {
+                                        "attribute_alias": "title"
+                                    },
+                                    {
+                                        "attribute_alias": "client"
+                                    },
+                                    {
+                                        "attribute_alias": "objectives",
+                                        "width": 2
+                                    },
+                                    {
+                                        "attribute_alias": "date_start"
+                                    },
+                                    {
+                                        "attribute_alias": "date_end"
+                                    },
+                                    {
+                                        "attribute_alias": "state"
+                                    },
+                                    {
+                                        "attribute_alias": "description",
+                                        "height": "max"
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Milestones",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.milestone",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "project",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "date"
+                                            },
+                                            {
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "objectives"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket__id:COUNT",
+                                                "caption": "Tickets"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "date",
+                                                "direction": "asc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=project_id_field",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "visibility": "optional"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },

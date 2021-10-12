@@ -29,7 +29,7 @@ class WebhookFacade extends AbstractHttpFacade
         $ds->addRow($row);
         $ds->dataCreate();
         $id = $ds->getRow(0)['id'];
-        $action  = ActionFactory::createFromString($exface, 'axenox.DevMan.ProcessWebhookMessage');
+        $action = ActionFactory::createFromString($exface, 'axenox.DevMan.ProcessWebhookMessage');
         $action->process($id);
         return new Response(200);
     }

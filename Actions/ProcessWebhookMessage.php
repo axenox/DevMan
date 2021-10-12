@@ -11,6 +11,7 @@ use exface\Core\Exceptions\Actions\ActionInputMissingError;
 use exface\Core\Factories\DataSheetFactory;
 use exface\Core\Exceptions\Actions\ActionInputInvalidObjectError;
 use exface\Core\Interfaces\Actions\iCanBeCalledFromCLI;
+use exface\Core\Factories\ConditionGroupFactory;
 
 class ProcessWebhookMessage extends AbstractActionDeferred implements iCanBeCalledFromCLI
 {
@@ -33,22 +34,49 @@ class ProcessWebhookMessage extends AbstractActionDeferred implements iCanBeCall
                 $failed++;
             }
         }
-        yield "Webhook messages processed. {$successful} messages successful processed, {$failed} messages failed to process!";
+        yield "Webhook messages processed. {$successful} messages successfully processed, {$failed} messages failed to process!";
     }
     
     public function process(int $id): bool
     {
         $msgDs = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.webhook_log');
         $msgDs->getColumns()->addFromExpression('message');
+        $msgDs->getColumns()->addFromExpression('receive_datetime');
         $msgDs->getFilters()->addConditionFromString('id', $id, EXF_COMPARATOR_EQUALS);
         $msgDs->dataRead();
         if ($msgDs->isEmpty()) {
             return false;
         }
         $msgJson = $msgDs->getRow(0)['message'];
+        $receiveTime = $msgDs->getRow(0)['receive_datetime'];
         $msgArray = json_decode($msgJson, true);
-        //TODO get files names from message
-        
+        if (! $msgArray['commits'] || empty($msgArray['commits'])) {
+            return true;
+        }
+        $featureChangeDs = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.feature_change');
+        foreach ($msgArray['commits'] as $commit) {
+            $commitMsg = $commit['message'];
+            $changeId = $commit['id'];
+            $files = array_merge($commit['modified'], $commit['removed'], $commit['added']);
+            $featureDs = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.feature');
+            $featureDs->getColumns()->addFromUidAttribute();
+            $filterGroup = ConditionGroupFactory::createForDataSheet($featureDs, EXF_LOGICAL_OR);
+            foreach ($files as $f) {
+                $filterGroup->addConditionFromExpression('connected_files', trim($f), EXF_COMPARATOR_IN);
+            }
+            $featureDs->getFilters()->addNestedGroup($filterGroup);
+            $featureDs->dataRead();
+            foreach ($featureDs->getRows() as $row) {
+                //TODO add app version
+                $featureChangeDs->addRow([
+                    'change_id' => $changeId,
+                    'summary' => $commitMsg,
+                    'active_since' =>$receiveTime,
+                    'feature' =>$row[$featureDs->getUidColumnName()]
+                ]);
+            }
+        }
+        $featureChangeDs->dataCreate();
         return true;
     }
     

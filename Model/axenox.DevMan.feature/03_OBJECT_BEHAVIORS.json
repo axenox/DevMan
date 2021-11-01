@@ -1,0 +1,114 @@
+{
+    "object_alias": "exface.Core.OBJECT_BEHAVIORS",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "BEHAVIOR",
+            "attribute_alias": "BEHAVIOR"
+        },
+        {
+            "name": "CONFIG_UXON",
+            "attribute_alias": "CONFIG_UXON"
+        },
+        {
+            "name": "OBJECT",
+            "attribute_alias": "OBJECT"
+        },
+        {
+            "name": "APP",
+            "attribute_alias": "APP"
+        },
+        {
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "DESCRIPTION",
+            "attribute_alias": "DESCRIPTION"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2021-10-11 08:01:47",
+            "MODIFIED_ON": "2021-10-11 09:06:18",
+            "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "UID": "0x11ecaf6fb7d2cc2eaf6f005056bee7c0",
+            "BEHAVIOR": "exface\/core\/Behaviors\/CallActionBehavior.php",
+            "CONFIG_UXON": {
+                "event_alias": "exface.Core.DataSheet.OnCreateData",
+                "action": {
+                    "alias": "exface.core.CreateData",
+                    "object_alias": "axenox.DevMan.test_case",
+                    "input_mappers": [
+                        {
+                            "from_object_alias": "axenox.DevMan.feature",
+                            "column_to_column_mappings": [
+                                {
+                                    "from": "id",
+                                    "to": "feature"
+                                },
+                                {
+                                    "from": "priority",
+                                    "to": "priority"
+                                },
+                                {
+                                    "from": "name",
+                                    "to": "name"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "OBJECT": "0x11ebaf1ed97424b0af1e025041000001",
+            "APP": "0x38000000000000000000000000000000",
+            "NAME": "Default test case for every feature",
+            "DESCRIPTION": "Creates a default test case every time a new feature is created"
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.OBJECT_BEHAVIORS",
+        "conditions": [
+            {
+                "expression": "APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.OBJECT_BEHAVIORS"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

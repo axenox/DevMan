@@ -81,14 +81,14 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-07 14:43:39",
+            "MODIFIED_ON": "2021-10-10 22:29:31",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebbc8ed979d040bc8e025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
-            "COMMENTS": null,
-            "DOCS": null,
+            "COMMENTS": "",
+            "DOCS": "",
             "NAME": "Module",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
@@ -96,7 +96,27 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "attribute_alias": "name"
+                    },
+                    {
+                        "attribute_alias": "application"
+                    },
+                    {
+                        "attribute_alias": "description",
+                        "height": "max",
+                        "width": "max"
+                    },
+                    {
+                        "attribute_alias": "test_setup",
+                        "height": "max",
+                        "width": "max"
+                    }
+                ]
+            },
             "ALIAS": "module",
             "DATA_ADDRESS": "module"
         }

@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-07-02 14:39:41",
+            "MODIFIED_ON": "2021-10-14 11:30:26",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
@@ -165,7 +165,7 @@
                                                                 }
                                                             },
                                                             {
-                                                                "attribute_alias": "test_case"
+                                                                "attribute_alias": "test_case__name"
                                                             },
                                                             {
                                                                 "attribute_alias": "test_case__test_case_status__test_status",
@@ -187,7 +187,7 @@
                                                         ],
                                                         "columns": [
                                                             {
-                                                                "attribute_alias": "test_case"
+                                                                "attribute_alias": "test_case__id"
                                                             },
                                                             {
                                                                 "attribute_alias": "test_case__name"
@@ -197,6 +197,9 @@
                                                             },
                                                             {
                                                                 "attribute_alias": "test_case__test_case_status__test_status"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_case__feature__module__application__LABEL"
                                                             },
                                                             {
                                                                 "attribute_alias": "test_case__test_case_status__last_test_time"
@@ -390,9 +393,6 @@
                                     {
                                         "widget_type": "DataTable",
                                         "object_alias": "axenox.DevMan.feature_tickets",
-                                        "row_grouper": {
-                                            "group_by_attribute_alias": "ticket__type__LABEL"
-                                        },
                                         "filters": [
                                             {
                                                 "attribute_alias": "feature",
@@ -405,7 +405,7 @@
                                         ],
                                         "sorters": [
                                             {
-                                                "attribute_alias": "ticket__type__LABEL",
+                                                "attribute_alias": "ticket__id",
                                                 "direction": "desc"
                                             }
                                         ],

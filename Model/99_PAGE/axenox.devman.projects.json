@@ -10,172 +10,266 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-06-08 17:07:27",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-11-01 11:15:07",
     "contents": {
-        "widget_type": "DataTable",
+        "widget_type": "SplitHorizontal",
         "object_alias": "axenox.DevMan.project",
-        "filters": [
+        "panels": [
             {
-                "attribute_alias": "title"
-            },
-            {
-                "attribute_alias": "client"
-            },
-            {
-                "attribute_alias": "state"
-            },
-            {
-                "attribute_alias": "active_flag",
-                "value": 1
-            }
-        ],
-        "columns": [
-            {
-                "attribute_alias": "id"
-            },
-            {
-                "attribute_alias": "title"
-            },
-            {
-                "attribute_alias": "client__LABEL"
-            },
-            {
-                "attribute_alias": "state"
-            },
-            {
-                "attribute_alias": "project_tickets__ticket:COUNT",
-                "caption": "Tickets"
-            },
-            {
-                "attribute_alias": "milestone__id:COUNT",
-                "caption": "Milestones"
-            },
-            {
-                "attribute_alias": "date_next_milestone"
-            },
-            {
-                "attribute_alias": "objectives"
-            }
-        ],
-        "row_details": {
-            "height": 8,
-            "widgets": [
-                {
-                    "widget_type": "DataTable",
-                    "object_alias": "project_tickets",
-                    "hide_header": true,
-                    "filters": [
-                        {
-                            "attribute_alias": "project"
-                        },
-                        {
-                            "attribute_alias": "ticket__state",
-                            "widget_type": "InputHidden"
-                        }
-                    ],
-                    "columns": [
-                        {
-                            "attribute_alias": "ticket__id"
-                        },
-                        {
-                            "attribute_alias": "ticket__title"
-                        },
-                        {
-                            "attribute_alias": "priority",
-                            "caption": "Project priority"
-                        },
-                        {
-                            "attribute_alias": "ticket__priority_avg",
-                            "caption": "Avg. priority"
-                        },
-                        {
-                            "attribute_alias": "ticket__project_title_list",
-                            "caption": "Projects"
-                        },
-                        {
-                            "attribute_alias": "ticket__complexity"
-                        },
-                        {
-                            "attribute_alias": "ticket__effort_planned_h"
-                        },
-                        {
-                            "attribute_alias": "ticket__effort_remaining_h"
-                        },
-                        {
-                            "attribute_alias": "ticket__state"
-                        },
-                        {
-                            "attribute_alias": "ticket__assigned_to__LABEL"
-                        }
-                    ],
-                    "sorters": [
-                        {
-                            "attribute_alias": "priority",
-                            "direction": "ASC"
-                        }
-                    ],
-                    "Buttons": [
-                        {
-                            "caption": "Edit ticket",
-                            "bind_to_double_click": true,
-                            "action": {
-                                "alias": "exface.Core.ShowObjectEditDialog",
-                                "object_alias": "axenox.DevMan.ticket",
-                                "input_mapper": {
-                                    "column_to_column_mappings": [
-                                        {
-                                            "from": "ticket",
-                                            "to": "id"
-                                        }
-                                    ]
-                                }
+                "width": "50%",
+                "widgets": [
+                    {
+                        "widget_type": "SplitVertical",
+                        "panels": [
+                            {
+                                "caption": "Projects",
+                                "height": "60%",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "id": "projects_table",
+                                        "nowrap": false,
+                                        "paginate": false,
+                                        "row_grouper": {
+                                            "group_by_attribute_alias": "client__LABEL"
+                                        },
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "client"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "active_flag",
+                                                "value": 1
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "client__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket_progress"
+                                            },
+                                            {
+                                                "attribute_alias": "project_tickets__ticket__done_flag:COUNT_IF(== 0)",
+                                                "caption": "Open T.",
+                                                "hint": "Unfinished tickets"
+                                            },
+                                            {
+                                                "attribute_alias": "milestone__id:COUNT",
+                                                "caption": "Milestones"
+                                            },
+                                            {
+                                                "attribute_alias": "date_next_milestone"
+                                            },
+                                            {
+                                                "attribute_alias": "objectives"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "client__LABEL",
+                                                "direction": "ASC"
+                                            },
+                                            {
+                                                "attribute_alias": "title",
+                                                "direction": "ASC"
+                                            }
+                                        ],
+                                        "Buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.GoToPage",
+                                                "action_page_alias": "axenox.devman.tickets",
+                                                "caption": "Tickets"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Milestones",
+                                "collapsed": true,
+                                "collapsible": true,
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.milestone",
+                                        "paginate": false,
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "project",
+                                                "hidden": true,
+                                                "apply_on_change": true,
+                                                "value": "=projects_table!id",
+                                                "comparator": "=="
+                                            },
+                                            {
+                                                "attribute_alias": "date",
+                                                "widget_type": "RangeFilter",
+                                                "value_from": -1
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "date"
+                                            },
+                                            {
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "location"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "date",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "visibility": "optional"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
+                        ]
+                    }
+                ]
+            },
+            {
+                "caption": "Tickets",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "object_alias": "project_tickets",
+                        "row_grouper": {
+                            "group_by_attribute_alias": "priority"
                         },
-                        {
-                            "action_alias": "exface.Core.ShowObjectEditDialog",
-                            "caption": "Edit project assignment"
-                        },
-                        {
-                            "action_alias": "exface.Core.ShowObjectCreateDialog",
-                            "caption": "Add ticket"
-                        },
-                        {
-                            "action_alias": "exface.Core.DeleteObject",
-                            "caption": "Remove from project"
-                        }
-                    ]
-                }
-            ]
-        },
-        "sorters": [
-            {
-                "attribute_alias": "client__LABEL",
-                "direction": "ASC"
-            },
-            {
-                "attribute_alias": "title",
-                "direction": "ASC"
-            }
-        ],
-        "Buttons": [
-            {
-                "action_alias": "exface.Core.ShowObjectCreateDialog"
-            },
-            {
-                "action_alias": "exface.Core.ShowObjectEditDialog",
-                "bind_to_double_click": true
-            },
-            {
-                "action_alias": "exface.Core.ShowObjectCopyDialog"
-            },
-            {
-                "action_alias": "exface.Core.DeleteObject"
-            },
-            {
-                "action_alias": "exface.Core.GoToPage",
-                "action_page_alias": "axenox.devman.tickets",
-                "caption": "Tickets"
+                        "filters": [
+                            {
+                                "attribute_alias": "project",
+                                "value": "=projects_table!id",
+                                "hidden": true,
+                                "apply_on_change": true,
+                                "required": true,
+                                "comparator": "=="
+                            },
+                            {
+                                "attribute_alias": "ticket__done_flag",
+                                "value": 0
+                            },
+                            {
+                                "attribute_alias": "ticket__state"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "ticket__id"
+                            },
+                            {
+                                "calculation": "=Left(ticket__title, 50)"
+                            },
+                            {
+                                "attribute_alias": "ticket__state"
+                            },
+                            {
+                                "attribute_alias": "ticket__assigned_to__LABEL"
+                            },
+                            {
+                                "attribute_alias": "priority",
+                                "caption": "Project priority"
+                            },
+                            {
+                                "attribute_alias": "ticket__priority_avg",
+                                "caption": "Avg. priority"
+                            },
+                            {
+                                "attribute_alias": "ticket__project_title_list",
+                                "caption": "Projects"
+                            },
+                            {
+                                "attribute_alias": "ticket__complexity"
+                            },
+                            {
+                                "attribute_alias": "ticket__effort_planned_h"
+                            },
+                            {
+                                "attribute_alias": "ticket__effort_remaining_h"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "priority",
+                                "direction": "ASC"
+                            }
+                        ],
+                        "Buttons": [
+                            {
+                                "caption": "Edit ticket",
+                                "bind_to_double_click": true,
+                                "action": {
+                                    "alias": "exface.Core.ShowObjectEditDialog",
+                                    "object_alias": "axenox.DevMan.ticket",
+                                    "input_mapper": {
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "ticket",
+                                                "to": "id"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "caption": "Edit project assignment"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                "caption": "Add ticket"
+                            },
+                            {
+                                "action_alias": "exface.Core.DeleteObject",
+                                "caption": "Remove from project"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-08-12 12:50:06",
+            "MODIFIED_ON": "2021-11-01 10:45:36",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -126,6 +126,14 @@
                                 "required": false,
                                 "multi_select": true,
                                 "caption": "Tags"
+                            },
+                            {
+                                "object_alias": "axenox.DevMan.feature_tickets",
+                                "attribute_alias": "feature",
+                                "widget_type": "InputComboTable",
+                                "caption": "Main feature",
+                                "required": false,
+                                "multi_select": false
                             },
                             {
                                 "attribute_alias": "state"
@@ -196,7 +204,7 @@
                                 "hide_header": true,
                                 "hide_footer": true,
                                 "paginate": false,
-                                "height": 11,
+                                "height": 5,
                                 "lazy_loading_action": {
                                     "alias": "exface.core.ReadData",
                                     "update_filter_context": false

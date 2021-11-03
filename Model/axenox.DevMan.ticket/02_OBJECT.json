@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-11-01 10:45:36",
+            "MODIFIED_ON": "2021-11-01 23:00:19",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -223,6 +223,53 @@
                                     },
                                     {
                                         "attribute_alias": "title"
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Comments",
+                                "widget_type": "DataTable",
+                                "object_alias": "axenox.DevMan.ticket_log",
+                                "hide_header": false,
+                                "hide_footer": true,
+                                "paginate": false,
+                                "height": 7,
+                                "nowrap": false,
+                                "filters": [
+                                    {
+                                        "attribute_alias": "ticket",
+                                        "required": true,
+                                        "hidden": true,
+                                        "value": "=field_ticket_id"
+                                    }
+                                ],
+                                "columns": [
+                                    {
+                                        "attribute_alias": "time"
+                                    },
+                                    {
+                                        "attribute_alias": "resource__LABEL"
+                                    },
+                                    {
+                                        "attribute_alias": "comment"
+                                    }
+                                ],
+                                "sorters": [
+                                    {
+                                        "attribute_alias": "time",
+                                        "direction": "desc"
+                                    }
+                                ],
+                                "buttons": [
+                                    {
+                                        "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                    },
+                                    {
+                                        "action_alias": "exface.Core.ShowObjectEditDialog",
+                                        "bind_to_double_click": true
+                                    },
+                                    {
+                                        "action_alias": "exface.Core.DeleteObject"
                                     }
                                 ]
                             }

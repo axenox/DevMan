@@ -23,15 +23,27 @@ class WebhookFacade extends AbstractHttpFacade
         $exface = $this->getWorkbench();        
         
         $msg = $request->getBody()->__toString();
+        try {
+            $json = json_decode($msg, true);
+            if ($json['repository']) {
+                $repo = $json['repository']['html_url'] ?? $json['repository']['name'];
+            }
+        } catch (\Throwable $e) {
+            $repo = '';
+            $this->getWorkbench()->getLogger()->logException($e);
+        }
+        
         $ds = DataSheetFactory::createFromObjectIdOrAlias($exface, 'axenox.DevMan.webhook_log');
         $ds->getColumns()->addMultiple([
             'id',
             'message',
-            'receive_datetime'
+            'received_on',
+            'repo_url'
         ]);
         $ds->addRow([
             'message' => $msg,
-            'receive_datetime' => DateTimeDataType::now()
+            'received_on' => DateTimeDataType::now(),
+            'repo_url' => $repo
         ]);
         $ds->dataCreate();
         $id = $ds->getRow(0)['id'];

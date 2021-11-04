@@ -9,7 +9,7 @@ ALTER TABLE webhook_log
 	ADD COLUMN `ignored` TINYINT NOT NULL DEFAULT '0' AFTER `processed`,
 	ADD COLUMN `failed` TINYINT NOT NULL DEFAULT '0' AFTER `ignored`,
 	ADD COLUMN `failed_message` VARCHAR(250) NULL AFTER `failed`,
-	ADD COLUMN `failed_log_id` VARCHAR(10) NULL AFTER `failed_message`
+	ADD COLUMN `failed_log_id` VARCHAR(10) NULL AFTER `failed_message`,
 	ADD COLUMN `repo_url` VARCHAR(250) NULL AFTER `message`;
 
 UPDATE webhook_log SET `created_on` = `receive_datetime`,  `modified_on` = `receive_datetime`;

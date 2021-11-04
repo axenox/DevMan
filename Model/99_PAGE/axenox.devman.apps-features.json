@@ -165,7 +165,7 @@
                                 "caption": "Tickets"
                             },
                             {
-                                "attribute_alias": "feature_change__active_since:MAX",
+                                "attribute_alias": "feature_update__active_since:MAX",
                                 "caption": "Last change"
                             }
                         ],

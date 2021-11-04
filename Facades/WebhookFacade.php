@@ -8,8 +8,8 @@ use exface\Core\Factories\DataSheetFactory;
 use exface\Core\DataTypes\StringDataType;
 use GuzzleHttp\Psr7\Response;
 use exface\Core\Factories\ActionFactory;
-use axenox\DevMan\Actions\ProcessWebhookMessage;
 use exface\Core\DataTypes\DateTimeDataType;
+use axenox\DevMan\Actions\ProcessVcsUpdate;
 
 class WebhookFacade extends AbstractHttpFacade
 {
@@ -48,10 +48,9 @@ class WebhookFacade extends AbstractHttpFacade
         $ds->dataCreate();
         $id = $ds->getRow(0)['id'];
         
-        /*
-        $action = ActionFactory::createFromString($exface, ProcessWebhookMessage::class);
-        $action->process($id);
-        */
+        $action = ActionFactory::createFromString($exface, ProcessVcsUpdate::class);
+        $action->processGitPush($id);
+        
         return new Response(200);
     }
     

@@ -17,7 +17,7 @@ FROM (
 		SELECT 
 			tc.id AS test_case_id,
 			(f.priority * IFNULL(tc.priority, 1)) AS priority_weighted,
-			(SELECT MAX(fc.active_since) FROM feature_change fc WHERE fc.feature_id = tc.feature_id) AS last_change_time,
+			(SELECT MAX(fc.active_since) FROM feature_update fc WHERE fc.feature_id = tc.feature_id) AS last_change_time,
 			(SELECT MAX(tlc.tested_on) FROM test_log_coverage tlc WHERE tlc.test_case_id = tc.id) AS last_test_time
 		FROM
 			test_case tc

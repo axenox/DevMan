@@ -15,7 +15,7 @@ FROM (
 			tpc.id AS test_plan_cases_id,
 			tpc.test_plan_id,
 			tc.id AS test_case_id,
-			(SELECT MAX(fc.active_since) FROM feature_change fc WHERE fc.feature_id = tc.feature_id) AS last_change_time,
+			(SELECT MAX(fc.active_since) FROM feature_update fc WHERE fc.feature_id = tc.feature_id) AS last_change_time,
 			(SELECT MAX(tl.tested_on) FROM test_log tl WHERE tl.test_case_id = tc.id) AS last_test_time
 		FROM
 			test_plan_cases tpc

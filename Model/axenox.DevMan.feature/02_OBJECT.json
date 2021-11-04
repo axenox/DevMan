@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-10-14 11:30:26",
+            "MODIFIED_ON": "2021-11-04 15:29:27",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -326,11 +326,11 @@
                                 ]
                             },
                             {
-                                "caption": "Change log",
+                                "caption": "Files",
                                 "widgets": [
                                     {
                                         "widget_type": "DataTable",
-                                        "object_alias": "axenox.DevMan.feature_change",
+                                        "object_alias": "axenox.DevMan.feature_files",
                                         "filters": [
                                             {
                                                 "attribute_alias": "feature",
@@ -341,22 +341,13 @@
                                         ],
                                         "sorters": [
                                             {
-                                                "attribute_alias": "active_since",
-                                                "direction": "desc"
+                                                "attribute_alias": "application_file__filepath",
+                                                "direction": "asc"
                                             }
                                         ],
                                         "columns": [
                                             {
-                                                "attribute_alias": "summary"
-                                            },
-                                            {
-                                                "attribute_alias": "active_since"
-                                            },
-                                            {
-                                                "attribute_alias": "app_version"
-                                            },
-                                            {
-                                                "attribute_alias": "change_id"
+                                                "attribute_alias": "application_file__filepath"
                                             }
                                         ],
                                         "buttons": [
@@ -378,10 +369,6 @@
                                                 "action_alias": "exface.Core.DeleteObject",
                                                 "caption": "Remove",
                                                 "icon": "minus"
-                                            },
-                                            {
-                                                "action_alias": "exface.Core.ShowObjectEditDialog",
-                                                "bind_to_double_click": true
                                             }
                                         ]
                                     }

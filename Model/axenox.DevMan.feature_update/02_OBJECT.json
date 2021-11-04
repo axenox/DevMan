@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-06-09 09:40:15",
-            "MODIFIED_ON": "2021-06-09 09:56:12",
+            "MODIFIED_ON": "2021-11-04 15:08:41",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaafaee49caecaafa025041000001",
@@ -89,8 +89,8 @@
             "WRITABLE_FLAG": "1",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Feature change",
-            "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
+            "NAME": "Feature update",
+            "INHERIT_DATA_SOURCE_BASE_OBJECT": "0",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
@@ -132,8 +132,8 @@
                     }
                 ]
             },
-            "ALIAS": "feature_change",
-            "DATA_ADDRESS": "feature_change"
+            "ALIAS": "feature_update",
+            "DATA_ADDRESS": "feature_update"
         }
     ],
     "totals_rows": [],

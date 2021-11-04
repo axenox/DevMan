@@ -13,6 +13,11 @@ use exface\Core\Exceptions\Actions\ActionInputInvalidObjectError;
 use exface\Core\Interfaces\Actions\iCanBeCalledFromCLI;
 use exface\Core\Factories\ConditionGroupFactory;
 
+/**
+ * 
+ * @author andrej.kabachnik
+ *
+ */
 class ProcessWebhookMessage extends AbstractActionDeferred implements iCanBeCalledFromCLI
 {
     private $targetIds = null;

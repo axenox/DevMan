@@ -1,6 +1,4 @@
 <?php
-
-
 namespace axenox\DevMan\Facades;
 
 use exface\Core\Facades\AbstractHttpFacade\AbstractHttpFacade;
@@ -10,6 +8,8 @@ use exface\Core\Factories\DataSheetFactory;
 use exface\Core\DataTypes\StringDataType;
 use GuzzleHttp\Psr7\Response;
 use exface\Core\Factories\ActionFactory;
+use axenox\DevMan\Actions\ProcessWebhookMessage;
+use exface\Core\DataTypes\DateTimeDataType;
 
 class WebhookFacade extends AbstractHttpFacade
 {
@@ -21,16 +21,25 @@ class WebhookFacade extends AbstractHttpFacade
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $exface = $this->getWorkbench();        
+        
         $msg = $request->getBody()->__toString();
         $ds = DataSheetFactory::createFromObjectIdOrAlias($exface, 'axenox.DevMan.webhook_log');
-        $row = [
-            'message' => addslashes(StringDataType::encodeUTF8($msg))
-        ];
-        $ds->addRow($row);
+        $ds->getColumns()->addMultiple([
+            'id',
+            'message',
+            'receive_datetime'
+        ]);
+        $ds->addRow([
+            'message' => $msg,
+            'receive_datetime' => DateTimeDataType::now()
+        ]);
         $ds->dataCreate();
         $id = $ds->getRow(0)['id'];
-        $action = ActionFactory::createFromString($exface, 'axenox.DevMan.ProcessWebhookMessage');
+        
+        /*
+        $action = ActionFactory::createFromString($exface, ProcessWebhookMessage::class);
         $action->process($id);
+        */
         return new Response(200);
     }
     
@@ -41,8 +50,6 @@ class WebhookFacade extends AbstractHttpFacade
      */
     public function getUrlRouteDefault(): string
     {
-        return 'api/webhook';
+        return 'api/devman/webhook';
     }
-
-    
 }

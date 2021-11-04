@@ -3,4 +3,6 @@
 	<buildpathentry kind="src" path=""/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 	<buildpathentry external="true" kind="lib" path="C:/wamp/www/exface/exface/vendor/exface/Core"/>
+	<buildpathentry external="true" kind="lib" path="C:/wamp/www/exface/exface/vendor/psr"/>
+	<buildpathentry external="true" kind="lib" path="c:/wamp/www/exface/exface/vendor/guzzlehttp/psr7/src"/>
 </buildpath>

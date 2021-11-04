@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-09-02 15:14:12",
-            "MODIFIED_ON": "2021-09-02 15:24:10",
+            "MODIFIED_ON": "2021-11-04 10:09:04",
             "CREATED_BY_USER": "0x11e8fe1c902c8ebea23ee4b318306b9a",
-            "MODIFIED_BY_USER": "0x11e8fe1c902c8ebea23ee4b318306b9a",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ec909eab223a3c909e025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -96,7 +96,23 @@
             "SHORT_DESCRIPTION": "Log of all received webhook messages",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "attribute_alias": "receive_datetime"
+                    },
+                    {
+                        "attribute_alias": "processed"
+                    },
+                    {
+                        "attribute_alias": "message",
+                        "width": "max",
+                        "height": "max",
+                        "hide_caption": true
+                    }
+                ]
+            },
             "ALIAS": "webhook_log",
             "DATA_ADDRESS": "webhook_log"
         }

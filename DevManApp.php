@@ -4,6 +4,9 @@ namespace axenox\DevMan;
 use exface\Core\Interfaces\InstallerInterface;
 use exface\Core\CommonLogic\Model\App;
 use exface\Core\CommonLogic\AppInstallers\MySqlDatabaseInstaller;
+use exface\Core\Facades\AbstractHttpFacade\HttpFacadeInstaller;
+use exface\Core\Factories\FacadeFactory;
+use axenox\DevMan\Facades\WebhookFacade;
 
 class DevManApp extends App
 {
@@ -22,6 +25,11 @@ class DevManApp extends App
         ->setFoldersWithStaticSql(['Views'])
         ->setDataSourceSelector('0x39000000000000000000000000000000');
         $installer->addInstaller($sqlInstaller);
+        
+        // Proxy facade
+        $tplInstaller = new HttpFacadeInstaller($this->getSelector());
+        $tplInstaller->setFacade(FacadeFactory::createFromString(WebhookFacade::class, $this->getWorkbench()));
+        $installer->addInstaller($tplInstaller);
         
         return $installer;
     }

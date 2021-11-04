@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-11-02 10:32:30",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-11-03 18:46:36",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.ticket",
@@ -37,7 +37,17 @@
                 "attribute_alias": "state",
                 "input_widget": {
                     "widget_type": "InputSelect",
-                    "multi_select": true
+                    "multi_select": true,
+                    "values": [
+                        10,
+                        20,
+                        30,
+                        35,
+                        40,
+                        50,
+                        70,
+                        80
+                    ]
                 }
             },
             {

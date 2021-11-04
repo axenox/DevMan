@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-02 10:28:12",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-11-03 14:38:13",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-11-04 09:09:57",
     "contents": {
         "object_alias": "axenox.DevMan.resource",
         "widget_type": "SplitHorizontal",
@@ -124,7 +124,12 @@
                         ],
                         "buttons": [
                             {
-                                "action_alias": "exface.Core.UpdateData"
+                                "action_alias": "exface.Core.UpdateData",
+                                "visibility": "promoted"
+                            },
+                            {
+                                "action_alias": "exface.core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
                             }
                         ]
                     }

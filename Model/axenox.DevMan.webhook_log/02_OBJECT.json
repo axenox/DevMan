@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-09-02 15:14:12",
-            "MODIFIED_ON": "2021-11-04 10:09:04",
+            "MODIFIED_ON": "2021-11-04 10:47:05",
             "CREATED_BY_USER": "0x11e8fe1c902c8ebea23ee4b318306b9a",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ec909eab223a3c909e025041000001",
@@ -90,7 +90,7 @@
             "COMMENTS": "",
             "DOCS": "",
             "NAME": "Webhook Log",
-            "INHERIT_DATA_SOURCE_BASE_OBJECT": "0",
+            "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "Log of all received webhook messages",
@@ -100,10 +100,13 @@
                 "widget_type": "Dialog",
                 "widgets": [
                     {
-                        "attribute_alias": "receive_datetime"
+                        "attribute_alias": "repo_url"
                     },
                     {
-                        "attribute_alias": "processed"
+                        "attribute_alias": "received_on"
+                    },
+                    {
+                        "attribute_alias": "ignored"
                     },
                     {
                         "attribute_alias": "message",

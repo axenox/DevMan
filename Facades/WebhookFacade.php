@@ -49,9 +49,12 @@ class WebhookFacade extends AbstractHttpFacade
         $id = $ds->getRow(0)['id'];
         
         $action = ActionFactory::createFromString($exface, ProcessVcsUpdate::class);
-        $action->processWebhook($id);
-        
-        return new Response(200);
+        $output = '';
+        foreach ($action->processWebhook($id) as $msg) {
+            // Ignore ouput
+            // $output .= $msg;   
+        }
+        return new Response(200, [], $output);
     }
     
     /**

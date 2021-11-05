@@ -212,21 +212,29 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         $filesSheet->getFilters()->addConditionFromString('application', $applicationId);
         $filesSheet->dataRead();
         
+        // Map all files, that are already being tracked, to this VCS update
         $updatedFiles = [];
         $vcsUpdateFilesSheet = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.vcs_update_files');
         foreach ($filesSheet->getRows() as $row) {
             $vcsUpdateFilesSheet->addRow([
                 'vcs_update' => $vcsUpdateId,
-                'application_file' => $row['id']
+                'application_file' => $row['id'],
+                'deleted_flag' => in_array($row['filepath'], $deletedFiles) ? 1 : 0
             ]);
             $updatedFiles[] = $row['filepath'];
             yield self::INDENT . 'Updating file ' . $row['filepath'] . PHP_EOL;
         }
         
+        // See if any files from the update are left
+        // If so, add them to the app and map them to the VCS update too
         $newFiles = array_diff($allFiles, $updatedFiles);
         $newFilesSheet = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.application_file');
         $newFilesSheet->getColumns()->addFromUidAttribute();
         foreach ($newFiles as $filepath) {
+            // Don't add files, that are not known yet and get deleted from the VCS
+            if (in_array($filepath, $deletedFiles)) {
+                continue;
+            }
             $newFilesSheet->addRow([
                 'application' => $applicationId,
                 'filepath' => $filepath
@@ -236,17 +244,20 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         if (! $newFilesSheet->isEmpty()) {
             $newFilesSheet->dataCreate(false, $transaction);
         }
-        
         foreach ($newFilesSheet->getUidColumn()->getValues() as $newFileId) {
             $vcsUpdateFilesSheet->addRow([
                 'vcs_update' => $vcsUpdateId,
-                'application_file' => $newFileId
+                'application_file' => $newFileId,
+                'deleted_flag' => in_array($filepath, $deletedFiles) ? 1 : 0
             ]);
         }
+        
+        // Create the mapping data if any
         if (! $vcsUpdateFilesSheet->isEmpty()) {
             $vcsUpdateFilesSheet->dataCreate(false, $transaction);
         }
         
+        // Mark application files deleted if required
         if (! empty($deletedFiles)) {
             $deletedFilesSheet = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.application_file');
             $deletedFilesSheet->addRow([

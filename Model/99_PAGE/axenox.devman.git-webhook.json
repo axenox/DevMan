@@ -1,17 +1,17 @@
 {
     "uid": "0x11ec9a397b1aeaa69a39025041000001",
-    "alias_with_namespace": "axenox.devman.git-webhook-log",
+    "alias_with_namespace": "axenox.devman.git-webhook",
     "menu_parent_page_selector": "0x42d6c29ae55b11e78dad0050568905af",
     "menu_index": 0,
     "menu_visible": true,
-    "name": "Git webhook log",
+    "name": "Git webhook",
     "description": "",
     "intro": "",
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-04 10:06:22",
     "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-11-04 16:45:07",
+    "modified_on": "2021-11-05 09:45:16",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.webhook_log",
@@ -30,6 +30,9 @@
             },
             {
                 "attribute_alias": "repo_url"
+            },
+            {
+                "calculation": "=Left(result, 60)"
             },
             {
                 "attribute_alias": "processed"

@@ -2,7 +2,6 @@
 namespace axenox\DevMan\Actions;
 
 use exface\Core\CommonLogic\AbstractActionDeferred;
-use exface\Core\CommonLogic\Generator;
 use exface\Core\Interfaces\DataSources\DataTransactionInterface;
 use exface\Core\Interfaces\Tasks\ResultMessageStreamInterface;
 use exface\Core\Interfaces\Tasks\TaskInterface;
@@ -11,13 +10,14 @@ use exface\Core\Exceptions\Actions\ActionInputMissingError;
 use exface\Core\Factories\DataSheetFactory;
 use exface\Core\Exceptions\Actions\ActionInputInvalidObjectError;
 use exface\Core\Interfaces\Actions\iCanBeCalledFromCLI;
-use exface\Core\Factories\ConditionGroupFactory;
 use exface\Core\DataTypes\ComparatorDataType;
 use exface\Core\Exceptions\Actions\ActionRuntimeError;
 use exface\Core\DataTypes\DateTimeDataType;
 use exface\Core\DataTypes\JsonDataType;
 use exface\Core\Interfaces\Actions\iModifyData;
 use exface\Core\DataTypes\BooleanDataType;
+use exface\Core\Interfaces\Exceptions\ExceptionInterface;
+use exface\Core\CommonLogic\Constants\Icons;
 
 /**
  * 
@@ -26,23 +26,57 @@ use exface\Core\DataTypes\BooleanDataType;
  */
 class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFromCLI, iModifyData
 {
+    const INDENT = '  ';
+    
     private $targetIds = null;
     
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \exface\Core\CommonLogic\AbstractAction::init()
+     */
+    protected function init()
+    {
+        parent::init();
+        $this->setIcon(Icons::COGS);
+    }
+    
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \exface\Core\CommonLogic\AbstractActionDeferred::performImmediately()
+     */
     protected function performImmediately(TaskInterface $task, DataTransactionInterface $transaction, ResultMessageStreamInterface $result): array
     {
         return [$this->getTargetIds($task), $transaction];
     }
 
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \exface\Core\CommonLogic\AbstractActionDeferred::performDeferred()
+     */
     protected function performDeferred(array $ids = [], DataTransactionInterface $transaction = null): \Generator
     {
         foreach ($ids as $id) {
-            yield from $this->processGitPush($id, $transaction);
+            yield from $this->processWebhook($id, $transaction);
         }
         yield PHP_EOL . "Done.";
     }
     
-    public function processGitPush(int $webhookLogId, DataTransactionInterface $transaction = null) : \Generator
+    /**
+     * 
+     * @param int $webhookLogId
+     * @param DataTransactionInterface $transaction
+     * @return \Generator
+     */
+    public function processWebhook(int $webhookLogId, DataTransactionInterface $transaction = null) : \Generator
     {
+        $processed = false;
+        $result = '';
+        $errorMessage = '';
+        $errorLogId = null;
+        
         if ($transaction === null) {
             $transaction = $this->getWorkbench()->data()->startTransaction();
             $autoCommit = true;
@@ -53,25 +87,71 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         $webhookLogSheet = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.webhook_log');
         $webhookLogSheet->getColumns()->addFromSystemAttributes();
         $webhookLogSheet->getColumns()->addMultiple([
-            'message', 
+            'message',
             'repo_url',
-            'processed'
+            'processed',
+            'ignored'
         ]);
         $webhookLogSheet->getFilters()->addConditionFromString('id', $webhookLogId, EXF_COMPARATOR_EQUALS);
         $webhookLogSheet->dataRead();
-        if ($webhookLogSheet->isEmpty()) {
-            yield 'Webhook log item with id "' . $webhookLogId . '" not found!' . PHP_EOL;
-            return;
+        
+        switch (true) {
+            case $webhookLogSheet->isEmpty():
+                $errorMessage .= 'Webhook log item with id "' . $webhookLogId . '" not found!' . PHP_EOL;
+                $processed = false;
+                break;
+            case BooleanDataType::cast($webhookLogSheet->getCellValue('processed', 0)) === true:
+                yield 'Skipping log item with id "' . $webhookLogId . '" as it was processed already!' . PHP_EOL;
+                return;
+            case BooleanDataType::cast($webhookLogSheet->getCellValue('ignored', 0)) === true:
+                yield 'Skipping log item with id "' . $webhookLogId . '" as it is marked to be ignored!' . PHP_EOL;
+                return;
+            // IDEA add further cases here if there are will be other types of messages accept for Git push
+            default:
+                try {
+                    $generator = $this->processGitPush($webhookLogSheet->getCellValue('message', 0), $webhookLogId, $transaction);
+                    foreach ($generator as $yield) {
+                        $result .= $yield;
+                        yield $yield;
+                    }
+                    $processed = $generator->getReturn();
+                } catch (\Throwable $e) {
+                    $errorMessage = $e->getMessage();
+                    if ($e instanceof ExceptionInterface) {
+                        $errorLogId = $e->getId();
+                    }
+                    yield 'FAILED processing Git push message: ' . $errorMessage . PHP_EOL;
+                    $processed = false;
+                }
+                break;
         }
         
-        if (BooleanDataType::cast($webhookLogSheet->getCellValue('processed', 0)) === true) {
-            yield 'Skipping log item with id "' . $webhookLogId . '" as it was processed already!' . PHP_EOL;
-            return;
+        $logUpdateSheet = $webhookLogSheet->copy();
+        $logUpdateSheet->getColumns()->removeByKey('message')->removeByKey('repo_url');
+        $logUpdateSheet->setCellValue('processed', 0, ($processed ? 1 : 0));
+        $logUpdateSheet->setCellValue('result', 0, $result);
+        $logUpdateSheet->setCellValue('failed', 0, ($errorMessage !== '' ? 1 : 0));
+        $logUpdateSheet->setCellValue('failed_message', 0, $errorMessage);
+        $logUpdateSheet->setCellValue('failed_log_id', 0, $errorLogId);
+        $logUpdateSheet->dataUpdate(false, $transaction);
+        
+        if ($autoCommit) {
+            $transaction->commit();
         }
-        
-        $json = JsonDataType::decodeJson($webhookLogSheet->getCellValue('message', 0));
-        
-        $repoUrl = $webhookLogSheet->getCellValue('repo_url', 0) ?? $json['repository']['html_url'];
+    }
+    
+    /**
+     * 
+     * @param string $message
+     * @param int $webhookLogId
+     * @param DataTransactionInterface $transaction
+     * @throws ActionRuntimeError
+     * @return \Generator
+     */
+    protected function processGitPush(string $message, int $webhookLogId, DataTransactionInterface $transaction = null) : \Generator
+    {
+        $json = JsonDataType::decodeJson($message);
+        $repoUrl = $json['repository']['html_url'];
         $applicationId = $this->getApplicationId($repoUrl);
         if (! $applicationId) {
             throw new ActionRuntimeError($this, 'No application found for repository URL "' . $repoUrl . '"!');
@@ -79,7 +159,7 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         
         if (! $json['commits'] || empty($json['commits'])) {
             yield 'Skipping log item with id "' . $webhookLogId . '" as it does not contain any commits!' . PHP_EOL;
-            return;
+            return false;
         }
         
         $branch = str_replace('refs/heads/', '', $json['ref']);
@@ -101,18 +181,13 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
             $updateDs->dataCreate(false, $transaction);
             $vcsUpdateId = $updateDs->getUidColumn()->getValue(0);
             
-            yield 'Processing Git commit ' . $commit['id'] . ': ' . $commit['message'] . PHP_EOL;
+            yield 'Processing Git commit "' . $commit['message'] . PHP_EOL;
+            yield self::INDENT . 'Commit hash: ' . $commit['id'] . PHP_EOL;
+            yield self::INDENT . 'Added files: ' . count($commit['added'] ?? []) . PHP_EOL;
+            yield self::INDENT . 'Modified files: ' . count($commit['modified'] ?? []) . PHP_EOL;
+            yield self::INDENT . 'Removed files: ' . count($commit['removed'] ?? []) . PHP_EOL;
             
             yield from $this->processFiles(array_merge($commit['modified'], $commit['added']), $commit['removed'], $applicationId, $vcsUpdateId, $transaction);
-        }
-        
-        $logUpdateSheet = $webhookLogSheet->copy();
-        $logUpdateSheet->getColumns()->removeByKey('message')->removeByKey('repo_url');
-        $logUpdateSheet->setCellValue('processed', 0, 1);
-        $logUpdateSheet->dataUpdate(false, $transaction);
-        
-        if ($autoCommit) {
-            $transaction->commit();
         }
         
         return true;
@@ -145,6 +220,7 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
                 'application_file' => $row['id']
             ]);
             $updatedFiles[] = $row['filepath'];
+            yield self::INDENT . 'Updating file ' . $row['filepath'] . PHP_EOL;
         }
         
         $newFiles = array_diff($allFiles, $updatedFiles);
@@ -155,10 +231,10 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
                 'application' => $applicationId,
                 'filepath' => $filepath
             ]);
+            yield self::INDENT . 'Adding file ' . $filepath . PHP_EOL;
         }
         if (! $newFilesSheet->isEmpty()) {
             $newFilesSheet->dataCreate(false, $transaction);
-            yield '  Found ' . $newFilesSheet->countRows() . ' new files' . PHP_EOL;
         }
         
         foreach ($newFilesSheet->getUidColumn()->getValues() as $newFileId) {
@@ -169,7 +245,6 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         }
         if (! $vcsUpdateFilesSheet->isEmpty()) {
             $vcsUpdateFilesSheet->dataCreate(false, $transaction);
-            yield '  Registered updates on ' . $vcsUpdateFilesSheet->countRows() . ' files' . PHP_EOL;
         }
         
         if (! empty($deletedFiles)) {
@@ -181,10 +256,15 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
             $deletedFilesSheet->getFilters()->addConditionFromValueArray('filepath', $deletedFiles);
             $deletedFilesSheet->getFilters()->addConditionFromString('application', $applicationId);
             $deletedFilesSheet->dataUpdate(false, $transaction);
-            yield '  ' . 'Marked ' . count($deletedFiles) . ' as deleted.' . PHP_EOL;
+            yield self::INDENT . 'Marking ' . count($deletedFiles) . ' as deleted.' . PHP_EOL;
         }
     }
     
+    /**
+     * 
+     * @param string $repoUrl
+     * @return string|NULL
+     */
     protected function getApplicationId(string $repoUrl) : ?string
     {
         $ds = DataSheetFactory::createFromObjectIdOrAlias($this->getWorkbench(), 'axenox.DevMan.application');
@@ -243,6 +323,11 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         return $this->targetIds;
     }
     
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \exface\Core\Interfaces\Actions\iCanBeCalledFromCLI::getCliArguments()
+     */
     public function getCliArguments(): array
     {
         return [
@@ -250,6 +335,11 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
         ];
     }
     
+    /**
+     * 
+     * {@inheritDoc}
+     * @see \exface\Core\Interfaces\Actions\iCanBeCalledFromCLI::getCliOptions()
+     */
     public function getCliOptions(): array
     {
         return [];

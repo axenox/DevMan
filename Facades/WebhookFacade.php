@@ -11,6 +11,14 @@ use exface\Core\Factories\ActionFactory;
 use exface\Core\DataTypes\DateTimeDataType;
 use axenox\DevMan\Actions\ProcessVcsUpdate;
 
+/**
+ * Web service to receive webhooks from version control systems (e.g. Git)
+ * 
+ * See https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#push
+ * 
+ * @author Ralf Mulansky
+ *
+ */
 class WebhookFacade extends AbstractHttpFacade
 {
     /**

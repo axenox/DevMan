@@ -80,16 +80,16 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2021-05-27 19:20:00",
-            "MODIFIED_ON": "2021-11-05 17:55:26",
+            "CREATED_ON": "2021-11-05 18:45:20",
+            "MODIFIED_ON": "2021-11-06 22:14:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11ebab78c48c6362ab78747827435ce5",
+            "UID": "0x11ec8670255d34ee8670747827435ce5",
             "READABLE_FLAG": "1",
-            "WRITABLE_FLAG": "1",
+            "WRITABLE_FLAG": "0",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Installation",
+            "NAME": "Server software",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
@@ -97,8 +97,8 @@
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": null,
-            "ALIAS": "installation",
-            "DATA_ADDRESS": "installation"
+            "ALIAS": "server_software",
+            "DATA_ADDRESS": "server_software"
         }
     ],
     "totals_rows": [],

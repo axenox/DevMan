@@ -80,25 +80,51 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2021-05-27 19:20:00",
-            "MODIFIED_ON": "2021-11-05 17:55:26",
+            "CREATED_ON": "2021-11-05 17:54:50",
+            "MODIFIED_ON": "2021-11-08 10:04:56",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11ebab78c48c6362ab78747827435ce5",
+            "UID": "0x11ec85ea1773336285ea747827435ce5",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Installation",
+            "NAME": "Server software log",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": "1",
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
-            "ALIAS": "installation",
-            "DATA_ADDRESS": "installation"
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "width": 1,
+                "columns_in_grid": 1,
+                "height": "auto",
+                "maximized": false,
+                "widgets": [
+                    {
+                        "attribute_alias": "server"
+                    },
+                    {
+                        "attribute_alias": "software"
+                    },
+                    {
+                        "attribute_alias": "version"
+                    },
+                    {
+                        "attribute_alias": "installed_on"
+                    },
+                    {
+                        "attribute_alias": "update_interval_months"
+                    },
+                    {
+                        "attribute_alias": "uninstalled_on"
+                    }
+                ]
+            },
+            "ALIAS": "server_software_log",
+            "DATA_ADDRESS": "server_software_log"
         }
     ],
     "totals_rows": [],

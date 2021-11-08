@@ -1,0 +1,150 @@
+{
+    "uid": "0x11ec870050143e788700025041000001",
+    "alias_with_namespace": "axenoxdevmansprints",
+    "menu_parent_page_selector": "0x35da4e8ce55a11e78da60050568905af",
+    "menu_index": 8,
+    "menu_visible": true,
+    "name": "Sprints",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x31000000000000000000000000000000",
+    "created_on": "2021-11-08 15:08:13",
+    "modified_by_user_selector": "0x31000000000000000000000000000000",
+    "modified_on": "2021-11-08 15:41:58",
+    "contents": {
+        "object_alias": "axenox.DevMan.sprint",
+        "widget_type": "SplitHorizontal",
+        "panels": [
+            {
+                "caption": "Sprints",
+                "width": "40%",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "id": "sprints_table",
+                        "filters": [
+                            {
+                                "attribute_alias": "start_on",
+                                "widget_type": "RangeFilter",
+                                "value_from": "-3w"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "start_on"
+                            },
+                            {
+                                "attribute_alias": "end_on"
+                            },
+                            {
+                                "attribute_alias": "ticket__id:COUNT",
+                                "caption": "Tickets"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "start_on",
+                                "direction": "asc"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.DeleteObject",
+                                "visibility": "optional"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "caption": "Tickets",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "object_alias": "axenox.DevMan.ticket",
+                        "filters": [
+                            {
+                                "attribute_alias": "sprint",
+                                "hidden": true,
+                                "required": true,
+                                "apply_on_change": true,
+                                "comparator": "==",
+                                "value": "=sprints_table!id"
+                            },
+                            {
+                                "attribute_alias": "title"
+                            },
+                            {
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "attribute_alias": "project_tickets__project"
+                            },
+                            {
+                                "attribute_alias": "ticket_tags__tag"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "attribute_alias": "title"
+                            },
+                            {
+                                "attribute_alias": "priority_avg"
+                            },
+                            {
+                                "attribute_alias": "project_title_list"
+                            },
+                            {
+                                "attribute_alias": "ticket_tags__tag__name:LIST_DISTINCT",
+                                "caption": "Tags"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                "caption": "Add"
+                            },
+                            {
+                                "action_alias": "exface.Core.DeleteObject",
+                                "caption": "Remove"
+                            },
+                            {
+                                "caption": "Edit ticket",
+                                "bind_to_double_click": true,
+                                "action": {
+                                    "alias": "exface.Core.ShowObjectEditDialog",
+                                    "object_alias": "axenox.DevMan.ticket",
+                                    "input_mapper": {
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "ticket",
+                                                "to": "id"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

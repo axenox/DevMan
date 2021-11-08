@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-11-05 17:54:50",
-            "MODIFIED_ON": "2021-11-08 10:00:23",
+            "MODIFIED_ON": "2021-11-08 12:35:21",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ecb9011772bd42b901747827435ce5",
@@ -100,18 +100,41 @@
                 "widget_type": "Dialog",
                 "widgets": [
                     {
-                        "attribute_alias": "id",
-                        "id": "uid_field",
-                        "widget_type": "InputHidden"
+                        "widget_type": "WidgetGroup",
+                        "widgets": [
+                            {
+                                "attribute_alias": "id",
+                                "id": "uid_field",
+                                "widget_type": "InputHidden"
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "client"
+                            },
+                            {
+                                "attribute_alias": "url"
+                            },
+                            {
+                                "attribute_alias": "public"
+                            }
+                        ]
                     },
                     {
-                        "attribute_alias": "name"
-                    },
-                    {
-                        "attribute_alias": "client"
-                    },
-                    {
-                        "attribute_alias": "url"
+                        "widget_type": "WidgetGroup",
+                        "caption": "Hardware",
+                        "widgets": [
+                            {
+                                "attribute_alias": "cpu"
+                            },
+                            {
+                                "attribute_alias": "ram_gb"
+                            },
+                            {
+                                "attribute_alias": "storage_gb"
+                            }
+                        ]
                     },
                     {
                         "widget_type": "DataTableResponsive",

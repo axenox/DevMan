@@ -10,15 +10,15 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-08 15:08:13",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-11-08 15:41:58",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-11-09 16:00:29",
     "contents": {
         "object_alias": "axenox.DevMan.sprint",
         "widget_type": "SplitHorizontal",
         "panels": [
             {
                 "caption": "Sprints",
-                "width": "40%",
+                "width": "30%",
                 "widgets": [
                     {
                         "widget_type": "DataTable",
@@ -43,6 +43,9 @@
                             {
                                 "attribute_alias": "ticket__id:COUNT",
                                 "caption": "Tickets"
+                            },
+                            {
+                                "attribute_alias": "description"
                             }
                         ],
                         "sorters": [
@@ -76,6 +79,10 @@
                     {
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.ticket",
+                        "paginate": false,
+                        "row_grouper": {
+                            "group_by_attribute_alias": "type__LABEL"
+                        },
                         "filters": [
                             {
                                 "attribute_alias": "sprint",
@@ -103,7 +110,16 @@
                                 "attribute_alias": "id"
                             },
                             {
-                                "attribute_alias": "title"
+                                "calculation": "=Left(title, 80)"
+                            },
+                            {
+                                "attribute_alias": "type__LABEL"
+                            },
+                            {
+                                "attribute_alias": "state"
+                            },
+                            {
+                                "attribute_alias": "assigned_to__LABEL"
                             },
                             {
                                 "attribute_alias": "priority_avg"
@@ -128,18 +144,7 @@
                             {
                                 "caption": "Edit ticket",
                                 "bind_to_double_click": true,
-                                "action": {
-                                    "alias": "exface.Core.ShowObjectEditDialog",
-                                    "object_alias": "axenox.DevMan.ticket",
-                                    "input_mapper": {
-                                        "column_to_column_mappings": [
-                                            {
-                                                "from": "ticket",
-                                                "to": "id"
-                                            }
-                                        ]
-                                    }
-                                }
+                                "action_alias": "exface.Core.ShowObjectEditDialog"
                             }
                         ]
                     }

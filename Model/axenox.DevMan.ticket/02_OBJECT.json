@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-11-08 15:30:47",
+            "MODIFIED_ON": "2021-11-09 16:06:47",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -131,9 +131,9 @@
                                 "object_alias": "axenox.DevMan.feature_tickets",
                                 "attribute_alias": "feature",
                                 "widget_type": "InputComboTable",
-                                "caption": "Main feature",
+                                "caption": "Features",
                                 "required": false,
-                                "multi_select": false
+                                "multi_select": true
                             },
                             {
                                 "attribute_alias": "state"

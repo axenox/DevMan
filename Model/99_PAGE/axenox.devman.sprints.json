@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-08 15:08:13",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-11-16 22:53:31",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-11-17 10:16:42",
     "contents": {
         "object_alias": "axenox.DevMan.sprint",
         "widget_type": "SplitHorizontal",
@@ -35,9 +35,6 @@
                             },
                             {
                                 "attribute_alias": "start_on"
-                            },
-                            {
-                                "attribute_alias": "end_on"
                             },
                             {
                                 "attribute_alias": "ticket_progress"
@@ -82,6 +79,7 @@
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.ticket",
                         "paginate": false,
+                        "multi_select": true,
                         "row_grouper": {
                             "group_by_attribute_alias": "state"
                         },
@@ -131,19 +129,31 @@
                                 "caption": "Tags"
                             }
                         ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "state",
+                                "direction": "asc"
+                            },
+                            {
+                                "attribute_alias": "sprint_pos",
+                                "direction": "asc"
+                            }
+                        ],
                         "buttons": [
                             {
                                 "action_alias": "exface.Core.ShowObjectCreateDialog",
-                                "caption": "Add"
-                            },
-                            {
-                                "action_alias": "exface.Core.DeleteObject",
-                                "caption": "Remove"
+                                "caption": "Create ticket"
                             },
                             {
                                 "caption": "Edit ticket",
                                 "bind_to_double_click": true,
                                 "action_alias": "exface.Core.ShowObjectEditDialog"
+                            },
+                            {
+                                "widget_type": "StateMenuButton"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.TicketMoveToSprintDialog"
                             }
                         ]
                     }

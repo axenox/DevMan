@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2021-11-09 16:06:47",
+            "MODIFIED_ON": "2021-11-17 10:09:32",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -235,7 +235,10 @@
                                         "attribute_alias": "id"
                                     },
                                     {
-                                        "attribute_alias": "title"
+                                        "calculation": "=Left(title, 60)"
+                                    },
+                                    {
+                                        "attribute_alias": "type__LABEL"
                                     },
                                     {
                                         "attribute_alias": "state"
@@ -300,6 +303,29 @@
                                 "action_alias": "exface.Core.DeleteObject"
                             }
                         ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "caption": "Add subticket",
+                        "close_dialog": false,
+                        "action": {
+                            "alias": "exface.core.ShowObjectCreateDialog",
+                            "prefill_with_input_data": true,
+                            "input_mapper": {
+                                "inherit_columns": false,
+                                "column_to_column_mappings": [
+                                    {
+                                        "from": "id",
+                                        "to": "parent_ticket"
+                                    },
+                                    {
+                                        "from": "type",
+                                        "to": "type"
+                                    }
+                                ]
+                            }
+                        }
                     }
                 ]
             },

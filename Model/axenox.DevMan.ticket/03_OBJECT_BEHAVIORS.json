@@ -49,7 +49,7 @@
     "rows": [
         {
             "CREATED_ON": "2017-04-03 13:51:12",
-            "MODIFIED_ON": "2021-05-03 14:10:36",
+            "MODIFIED_ON": "2021-11-18 13:19:46",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
@@ -58,6 +58,10 @@
                 "state_attribute_alias": "state",
                 "default_state": 10,
                 "states": {
+                    "5": {
+                        "name": "Shelved",
+                        "color": "lightgrey"
+                    },
                     "10": {
                         "name": "New"
                     },
@@ -65,18 +69,20 @@
                         "name": "Approved"
                     },
                     "30": {
-                        "name": "Ready to start"
-                    },
-                    "35": {
-                        "name": "Need fix",
-                        "color": "orange"
+                        "name": "Analyzing"
                     },
                     "40": {
-                        "name": "Shelved",
-                        "color": "lightgrey"
+                        "name": "Analyzed"
                     },
                     "50": {
                         "name": "In Progress"
+                    },
+                    "55": {
+                        "name": "Need fix",
+                        "color": "orange"
+                    },
+                    "60": {
+                        "name": "Ready to test"
                     },
                     "70": {
                         "name": "Testing"
@@ -86,11 +92,15 @@
                         "color": "orangered"
                     },
                     "90": {
-                        "name": "Canceled",
+                        "name": "Cancelled",
+                        "color": "gray"
+                    },
+                    "95": {
+                        "name": "Obsolete",
                         "color": "gray"
                     },
                     "99": {
-                        "name": "Completed"
+                        "name": "Done"
                     }
                 }
             },

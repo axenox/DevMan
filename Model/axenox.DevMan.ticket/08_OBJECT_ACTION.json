@@ -90,6 +90,71 @@
             "APP": "0x38000000000000000000000000000000",
             "USE_IN_OBJECT_BASKET_FLAG": "0",
             "DOCS": ""
+        },
+        {
+            "CREATED_ON": "2021-11-18 13:57:46",
+            "MODIFIED_ON": "2021-11-18 16:05:08",
+            "CREATED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "UID": "0x11eca6b121203c8ca6b1025041000001",
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ALIAS": "TicketLinksDialog",
+            "NAME": "External Links",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "icon": "link",
+                "dialog": {
+                    "object_alias": "axenox.DevMan.external_ticket_link",
+                    "widgets": [
+                        {
+                            "widget_type": "DataTable",
+                            "filters": [
+                                {
+                                    "attribute_alias": "ticket"
+                                }
+                            ],
+                            "columns": [
+                                {
+                                    "attribute_alias": "external_ticket_id"
+                                },
+                                {
+                                    "attribute_alias": "external_system__LABEL"
+                                },
+                                {
+                                    "attribute_alias": "comment"
+                                },
+                                {
+                                    "attribute_alias": "url"
+                                }
+                            ],
+                            "buttons": [
+                                {
+                                    "action": {
+                                        "alias": "exface.Core.GoToUrl",
+                                        "url": "[#url#]",
+                                        "open_in_new_window": true
+                                    },
+                                    "bind_to_double_click": true
+                                },
+                                {
+                                    "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                },
+                                {
+                                    "action_alias": "exface.Core.ShowObjectEditDialog"
+                                },
+                                {
+                                    "action_alias": "exface.Core.DeleteObject"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": "0",
+            "DOCS": ""
         }
     ],
     "totals_rows": [],

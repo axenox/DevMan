@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-08 15:08:13",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-11-18 16:18:35",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2021-11-18 16:40:26",
     "contents": {
         "object_alias": "axenox.DevMan.sprint",
         "widget_type": "SplitHorizontal",
@@ -155,6 +155,9 @@
                             },
                             {
                                 "widget_type": "StateMenuButton"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.TicketLinksDialog"
                             },
                             {
                                 "action_alias": "axenox.DevMan.TicketMoveToSprintDialog"

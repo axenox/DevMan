@@ -61,7 +61,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-11-08 11:51:01",
-            "MODIFIED_ON": "2021-11-08 11:55:55",
+            "MODIFIED_ON": "2021-11-25 12:42:22",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ec95d6c34e8eb495d6005056bee7c0",
@@ -96,6 +96,9 @@
                                 },
                                 {
                                     "attribute_alias": "summary"
+                                },
+                                {
+                                    "attribute_alias": "vcs_update__application__package_url"
                                 },
                                 {
                                     "attribute_alias": "vcs_update__vcs_url",

@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-11-04 13:26:39",
-            "MODIFIED_ON": "2021-11-04 13:28:38",
+            "MODIFIED_ON": "2021-11-26 18:43:31",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ecb42f75f4eb46b42f025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -96,7 +96,89 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "attribute_alias": "id",
+                        "id": "uid_field",
+                        "widget_type": "InputHidden"
+                    },
+                    {
+                        "attribute_alias": "name",
+                        "width": "max"
+                    },
+                    {
+                        "attribute_alias": "author_name"
+                    },
+                    {
+                        "attribute_alias": "branch"
+                    },
+                    {
+                        "attribute_alias": "vcs_url",
+                        "widget_type": "InputHidden"
+                    },
+                    {
+                        "widget_type": "DataTableResponsive",
+                        "caption": "Files",
+                        "object_alias": "axenox.DevMan.vcs_update_files",
+                        "hide_header": false,
+                        "width": "max",
+                        "height": "max",
+                        "filters": [
+                            {
+                                "attribute_alias": "vcs_update",
+                                "required": true,
+                                "value": "=uid_field",
+                                "hidden": true
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "application_file__filepath"
+                            },
+                            {
+                                "attribute_alias": "deleted_flag"
+                            },
+                            {
+                                "attribute_alias": "application_file__feature_files__feature__LABEL:LIST_DISTINCT",
+                                "caption": "Features"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "caption": "Add feature",
+                                "action": {
+                                    "alias": "exface.core.ShowObjectCreateDialog",
+                                    "object_alias": "axenox.DevMan.feature_files",
+                                    "prefill_with_filter_context": false,
+                                    "prefill_with_input_data": true,
+                                    "input_rows_min": 1,
+                                    "input_rows_max": 1,
+                                    "input_mapper": {
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "application_file",
+                                                "to": "application_file"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "buttons": [
+                    {
+                        "caption": "VCS details",
+                        "action": {
+                            "alias": "exface.core.GoToUrl",
+                            "url": "[#vcs_url#]",
+                            "open_in_new_window": true
+                        }
+                    }
+                ]
+            },
             "ALIAS": "vcs_update",
             "DATA_ADDRESS": "vcs_update"
         }

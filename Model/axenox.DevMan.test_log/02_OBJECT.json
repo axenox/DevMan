@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-07 16:59:59",
+            "MODIFIED_ON": "2021-11-26 21:52:58",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb99efd979f59899ef025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -112,7 +112,18 @@
                         "attribute_alias": "tested_installation"
                     },
                     {
-                        "attribute_alias": "tested_workbench_version"
+                        "widget_type": "InlineGroup",
+                        "caption": "Tested version \/ build time",
+                        "separator": "\/",
+                        "widgets": [
+                            {
+                                "attribute_alias": "tested_workbench_version",
+                                "width": "50px"
+                            },
+                            {
+                                "attribute_alias": "tested_build_time"
+                            }
+                        ]
                     },
                     {
                         "attribute_alias": "test_ok_flag"

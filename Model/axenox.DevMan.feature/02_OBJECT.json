@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-11-25 12:34:37",
+            "MODIFIED_ON": "2021-11-26 19:03:35",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
@@ -351,6 +351,10 @@
                                             },
                                             {
                                                 "attribute_alias": "application_file__application__app_alias"
+                                            },
+                                            {
+                                                "attribute_alias": "application_file__vcs_update_files__vcs_update__update_time:MAX",
+                                                "caption": "Last update"
                                             }
                                         ],
                                         "buttons": [

@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-11-26 19:03:35",
+            "MODIFIED_ON": "2021-12-01 23:18:25",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -359,8 +359,31 @@
                                         ],
                                         "buttons": [
                                             {
-                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
                                                 "caption": "Add",
+                                                "action": {
+                                                    "alias": "exface.Core.ShowObjectCreateDialog",
+                                                    "dialog": {
+                                                        "width": 1,
+                                                        "height": "auto",
+                                                        "widgets": [
+                                                            {
+                                                                "attribute_alias": "feature"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "application_file",
+                                                                "widget_type": "InputComboTable",
+                                                                "multi_select": true
+                                                            }
+                                                        ],
+                                                        "buttons": [
+                                                            {
+                                                                "action_alias": "exface.Core.CreateData",
+                                                                "visibility": "promoted",
+                                                                "align": "opposite"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
                                                 "disabled_if": {
                                                     "operator": "AND",
                                                     "conditions": [

@@ -255,7 +255,7 @@
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_VALUE": "=User('resource_id')",
+            "DEFAULT_VALUE": "=User('resource')",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": null
         },

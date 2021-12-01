@@ -16,7 +16,7 @@ SELECT
 			COUNT(tcs.test_case_id) AS cases_total
 		FROM feature f
 			LEFT JOIN (
-				test_case_status tcs
-				INNER JOIN test_case tc ON tc.id = tcs.test_case_id
-			) ON tc.feature_id = f.id 
+				feature_test_cases ftcs
+				INNER JOIN test_case_status tcs ON tcs.test_case_id = ftcs.test_case_id
+			) ON ftcs.feature_id = f.id 
 		GROUP BY f.id) tmp

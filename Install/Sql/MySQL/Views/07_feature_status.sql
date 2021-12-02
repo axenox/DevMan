@@ -9,14 +9,14 @@ SELECT
 	FROM (
 		SELECT 
 			f.id AS feature_id,
-			SUM(tcs.test_ok_flag) AS cases_ok,
-			SUM(IF(tcs.test_status != 'TODO' AND tcs.test_ok_flag = 0, 1, 0)) AS cases_failed,
+			SUM(IF(tcs.test_status IN ('PASS', 'COVERED'), 1, 0)) AS cases_ok,
+			SUM(IF(tcs.test_status IN ('FAIL', 'FAIL_COVER'), 1, 0)) AS cases_failed,
 			SUM(IF(tcs.test_status != 'TODO', 1, 0)) AS cases_tested,
 			SUM(IF(tcs.test_status = 'TODO', 1, 0)) AS cases_todo,
 			COUNT(tcs.test_case_id) AS cases_total
 		FROM feature f
 			LEFT JOIN (
-				feature_test_cases ftcs
-				INNER JOIN test_case_status tcs ON tcs.test_case_id = ftcs.test_case_id
-			) ON ftcs.feature_id = f.id 
+				test_case tc
+				INNER JOIN test_case_status tcs ON tcs.test_case_id = tc.id
+			) ON tc.feature_id = f.id 
 		GROUP BY f.id) tmp

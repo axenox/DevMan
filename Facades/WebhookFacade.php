@@ -10,6 +10,7 @@ use GuzzleHttp\Psr7\Response;
 use exface\Core\Factories\ActionFactory;
 use exface\Core\DataTypes\DateTimeDataType;
 use axenox\DevMan\Actions\ProcessVcsUpdate;
+use exface\Core\Exceptions\RuntimeException;
 
 /**
  * Web service to receive webhooks from version control systems (e.g. Git)
@@ -34,10 +35,13 @@ class WebhookFacade extends AbstractHttpFacade
         try {
             $json = json_decode($msg, true);
             if ($json['repository']) {
-                $repo = $json['repository']['html_url'] ?? $json['repository']['name'];
+                $repoUrl = ProcessVcsUpdate::findRepoUrlInGitWebhook($json);
+            }
+            if (! $repoUrl) {
+                throw new RuntimeException('No repo URL found in webhook data!');
             }
         } catch (\Throwable $e) {
-            $repo = '';
+            $repoUrl = '';
             $this->getWorkbench()->getLogger()->logException($e);
         }
         
@@ -51,7 +55,7 @@ class WebhookFacade extends AbstractHttpFacade
         $ds->addRow([
             'message' => $msg,
             'received_on' => DateTimeDataType::now(),
-            'repo_url' => $repo
+            'repo_url' => $repoUrl
         ]);
         $ds->dataCreate();
         $id = $ds->getRow(0)['id'];

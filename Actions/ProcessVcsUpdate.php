@@ -151,7 +151,10 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
     protected function processGitPush(string $message, int $webhookLogId, DataTransactionInterface $transaction = null) : \Generator
     {
         $json = JsonDataType::decodeJson($message);
-        $repoUrl = $json['repository']['html_url'];
+        $repoUrl = self::findRepoUrlInGitWebhook($json);
+        if (! $repoUrl) {
+            throw new ActionRuntimeError($this, 'No repo URL found in webhook data!');
+        }
         $applicationId = $this->getApplicationId($repoUrl);
         if (! $applicationId) {
             throw new ActionRuntimeError($this, 'No application found for repository URL "' . $repoUrl . '"!');
@@ -354,5 +357,15 @@ class ProcessVcsUpdate extends AbstractActionDeferred implements iCanBeCalledFro
     public function getCliOptions(): array
     {
         return [];
+    }
+    
+    /**
+     * 
+     * @param array $json
+     * @return string|NULL
+     */
+    public static function findRepoUrlInGitWebhook(array $json) : ?string
+    {
+        return $json['repository']['html_url'] ?? $json['repository']['homepage'];
     }
 }

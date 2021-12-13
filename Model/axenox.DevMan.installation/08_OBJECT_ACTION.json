@@ -61,27 +61,40 @@
     "rows": [
         {
             "CREATED_ON": "2021-06-11 14:12:30",
-            "MODIFIED_ON": "2021-06-11 14:12:30",
+            "MODIFIED_ON": "2021-12-10 15:31:50",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb8b064bbe9da68b06025041000001",
             "OBJECT": "0x11ebab78c48c6362ab78747827435ce5",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/UpdateData.php",
+            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
             "ALIAS": "InstallationBuildUpdate",
-            "NAME": "Update build",
+            "NAME": "Set build time",
             "SHORT_DESCRIPTION": "",
             "CONFIG_UXON": {
                 "object_alias": "axenox.DevMan.installation",
                 "input_object_alias": "axenox.DevMan.installation",
                 "input_rows_min": 1,
-                "input_rows_max": null,
-                "icon": "truck",
-                "input_mapper": {
-                    "inherit_columns_only_for_system_attributes": true,
-                    "column_to_column_mappings": [
+                "input_rows_max": 1,
+                "icon": "wrench",
+                "dialog": {
+                    "width": 1,
+                    "height": "auto",
+                    "widgets": [
                         {
-                            "from": "=Now()",
-                            "to": "build_time"
+                            "widget_type": "Message",
+                            "type": "warning",
+                            "text": "All changes made to installed apps up to this time will be regarded as required for testing!"
+                        },
+                        {
+                            "attribute_alias": "current_build_time",
+                            "value": "=Now()"
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "action_alias": "exface.core.UpdateData",
+                            "visibility": "promoted",
+                            "align": "opposite"
                         }
                     ]
                 }

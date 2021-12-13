@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-05-20 08:51:05",
     "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2021-11-30 11:49:44",
+    "modified_on": "2021-12-11 10:16:43",
     "contents": {
         "object_alias": "axenox.DevMan.application",
         "widget_type": "SplitHorizontal",
@@ -81,7 +81,9 @@
                                 "attribute_alias": "application",
                                 "hidden": true,
                                 "apply_on_change": true,
-                                "value": "=applications_table!id"
+                                "value": "=applications_table!id",
+                                "comparator": "==",
+                                "required": true
                             },
                             {
                                 "attribute_alias": "name"
@@ -137,7 +139,9 @@
                                 "attribute_alias": "module__application",
                                 "hidden": true,
                                 "apply_on_change": true,
-                                "value": "=applications_table!id"
+                                "value": "=applications_table!id",
+                                "comparator": "==",
+                                "required": true
                             },
                             {
                                 "attribute_alias": "module",

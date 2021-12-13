@@ -664,9 +664,9 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2021-12-12 09:23:32",
+            "MODIFIED_ON": "2021-12-13 11:30:04",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
@@ -881,6 +881,7 @@
                                                             "paginate": false,
                                                             "hide_header": true,
                                                             "hide_footer": true,
+                                                            "nowrap": false,
                                                             "filters": [
                                                                 {
                                                                     "attribute_alias": "test_case",
@@ -907,7 +908,7 @@
                                                             "buttons": [
                                                                 {
                                                                     "action": {
-                                                                        "alias": "exface.core.ShowObjectEditDialog",
+                                                                        "alias": "exface.core.ShowObjectInfoDialog",
                                                                         "object_alias": "axenox.DevMan.test_case",
                                                                         "input_mapper": {
                                                                             "column_to_column_mappings": [

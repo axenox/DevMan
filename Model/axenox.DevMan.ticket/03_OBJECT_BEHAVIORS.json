@@ -49,9 +49,9 @@
     "rows": [
         {
             "CREATED_ON": "2017-04-03 13:51:12",
-            "MODIFIED_ON": "2021-11-18 13:19:46",
+            "MODIFIED_ON": "2022-01-03 10:31:15",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
             "BEHAVIOR": "exface\/Core\/Behaviors\/StateMachineBehavior.php",
             "CONFIG_UXON": {
@@ -64,6 +64,9 @@
                     },
                     "10": {
                         "name": "New"
+                    },
+                    "15": {
+                        "name": "In discussion"
                     },
                     "20": {
                         "name": "Approved"

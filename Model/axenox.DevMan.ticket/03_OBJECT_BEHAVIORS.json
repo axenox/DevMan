@@ -111,6 +111,47 @@
             "APP": "0x38000000000000000000000000000000",
             "NAME": "Ticket states",
             "DESCRIPTION": ""
+        },
+        {
+            "CREATED_ON": "2022-01-24 13:38:34",
+            "MODIFIED_ON": "2022-02-07 22:27:04",
+            "CREATED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "UID": "0x11eca9f18beca532a9f1025041000001",
+            "BEHAVIOR": "exface\/Core\/Behaviors\/NotifyingBehavior.php",
+            "CONFIG_UXON": {
+                "notify_on_event": "exface.Core.DataSheet.OnCreateData",
+                "notifications": [
+                    {
+                        "channel": "axenox.DevMan.teams_channel",
+                        "card": {
+                            "@type": "MessageCard",
+                            "@context": "https:\/\/schema.org\/extensions",
+                            "summary": "Ticket [#~data:id#] \"[#~data:title#]\" created",
+                            "title": "New ticket [#~data:id#] created",
+                            "sections": [
+                                {
+                                    "text": "[#~data:title#]",
+                                    "facts": [
+                                        {
+                                            "name": "Author:",
+                                            "value": "[#~data:created_by_user__LABEL#]"
+                                        },
+                                        {
+                                            "name": "Type:",
+                                            "value": "[#~data:type__LABEL#]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "APP": "0x38000000000000000000000000000000",
+            "NAME": "Notify on create",
+            "DESCRIPTION": ""
         }
     ],
     "totals_rows": [],

@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:42:45",
-            "MODIFIED_ON": "2021-04-30 11:37:15",
+            "MODIFIED_ON": "2022-01-25 08:42:13",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9fd06f67a89840050568905af",
             "READABLE_FLAG": "1",
             "WRITABLE_FLAG": "1",
@@ -97,8 +97,13 @@
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
-                "widget_type": "Form",
+                "widget_type": "Dialog",
+                "height": "auto",
+                "width": 1,
                 "widgets": [
+                    {
+                        "attribute_alias": "ticket"
+                    },
                     {
                         "attribute_alias": "project"
                     },
@@ -106,12 +111,7 @@
                         "attribute_alias": "priority"
                     },
                     {
-                        "attribute_alias": "ticket",
-                        "width": 2
-                    },
-                    {
                         "attribute_alias": "comment",
-                        "width": 2,
                         "height": 5
                     }
                 ]

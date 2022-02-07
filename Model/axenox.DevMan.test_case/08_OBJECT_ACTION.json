@@ -110,7 +110,7 @@
                 }
             },
             "APP": "0x38000000000000000000000000000000",
-            "USE_IN_OBJECT_BASKET_FLAG": "1",
+            "USE_IN_OBJECT_BASKET_FLAG": 1,
             "DOCS": ""
         },
         {
@@ -162,7 +162,7 @@
                 }
             },
             "APP": "0x38000000000000000000000000000000",
-            "USE_IN_OBJECT_BASKET_FLAG": "1",
+            "USE_IN_OBJECT_BASKET_FLAG": 1,
             "DOCS": ""
         },
         {
@@ -296,7 +296,7 @@
                 }
             },
             "APP": "0x38000000000000000000000000000000",
-            "USE_IN_OBJECT_BASKET_FLAG": "1",
+            "USE_IN_OBJECT_BASKET_FLAG": 1,
             "DOCS": ""
         },
         {
@@ -659,7 +659,7 @@
                 }
             },
             "APP": "0x38000000000000000000000000000000",
-            "USE_IN_OBJECT_BASKET_FLAG": "0",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
             "DOCS": ""
         },
         {
@@ -1112,7 +1112,7 @@
                 }
             },
             "APP": "0x38000000000000000000000000000000",
-            "USE_IN_OBJECT_BASKET_FLAG": "0",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
             "DOCS": ""
         }
     ],

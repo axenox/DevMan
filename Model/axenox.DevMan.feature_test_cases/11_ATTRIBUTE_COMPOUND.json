@@ -51,7 +51,7 @@
             "UID": "0x11eb9be74367d5269be7005056bee7c0",
             "ATTRIBUTE": "0x11eb8ca704a3ccf08ca7747827435ce5",
             "COMPOUND_ATTRIBUTE": "0x11eb98d535f8d02098d5005056bee7c0",
-            "SEQUENCE_INDEX": "0",
+            "SEQUENCE_INDEX": 0,
             "VALUE_PREFIX": "",
             "VALUE_SUFFIX": "-"
         },
@@ -63,7 +63,7 @@
             "UID": "0x11eba1ee50b216f6a1ee005056bee7c0",
             "ATTRIBUTE": "0x11eb9c2604a3f69e9c26747827435ce5",
             "COMPOUND_ATTRIBUTE": "0x11eb98d535f8d02098d5005056bee7c0",
-            "SEQUENCE_INDEX": "1",
+            "SEQUENCE_INDEX": 1,
             "VALUE_PREFIX": "",
             "VALUE_SUFFIX": ""
         }

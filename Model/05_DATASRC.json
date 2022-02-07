@@ -64,8 +64,8 @@
             "APP": "0x38000000000000000000000000000000",
             "DEFAULT_CONNECTION": "0x31320000000000000000000000000000",
             "DEFAULT_QUERY_BUILDER": "exface\/Core\/QueryBuilders\/MySqlBuilder.php",
-            "READABLE_FLAG": "1",
-            "WRITABLE_FLAG": "1",
+            "READABLE_FLAG": 1,
+            "WRITABLE_FLAG": 1,
             "BASE_OBJECT": "0x38380000000000000000000000000000",
             "LABEL": "DevMan DB",
             "ALIAS": "DEVMAN_DB"

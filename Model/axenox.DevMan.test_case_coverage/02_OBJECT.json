@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-27 19:19:43",
-            "MODIFIED_ON": "2021-06-11 14:41:56",
+            "MODIFIED_ON": "2022-02-10 16:30:55",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebab45ba8e4b14ab45747827435ce5",
@@ -96,7 +96,25 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "width": 1,
+                "columns_in_grid": 1,
+                "height": "auto",
+                "maximized": false,
+                "widgets": [
+                    {
+                        "attribute_alias": "test_case"
+                    },
+                    {
+                        "attribute_alias": "covers_test_case",
+                        "caption": "Covers case"
+                    },
+                    {
+                        "attribute_alias": "comment"
+                    }
+                ]
+            },
             "ALIAS": "test_case_coverage",
             "DATA_ADDRESS": "test_case_coverage"
         }

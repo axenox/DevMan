@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
-    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2021-11-04 09:13:42",
+    "modified_by_user_selector": "0x31000000000000000000000000000000",
+    "modified_on": "2022-02-10 17:02:07",
     "contents": {
         "widget_type": "SplitHorizontal",
         "object_alias": "axenox.DevMan.project",
@@ -176,10 +176,7 @@
                 "widgets": [
                     {
                         "widget_type": "DataTable",
-                        "object_alias": "project_tickets",
-                        "row_grouper": {
-                            "group_by_attribute_alias": "priority"
-                        },
+                        "object_alias": "axenox.DevMan.project_tickets",
                         "filters": [
                             {
                                 "attribute_alias": "project",
@@ -237,8 +234,12 @@
                         ],
                         "sorters": [
                             {
+                                "attribute_alias": "position",
+                                "direction": "asc"
+                            },
+                            {
                                 "attribute_alias": "priority",
-                                "direction": "ASC"
+                                "direction": "asc"
                             },
                             {
                                 "attribute_alias": "id",
@@ -269,6 +270,9 @@
                             {
                                 "action_alias": "exface.Core.DeleteObject",
                                 "caption": "Remove from project"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.ProjectTicketsReorderDialog"
                             }
                         ]
                     }

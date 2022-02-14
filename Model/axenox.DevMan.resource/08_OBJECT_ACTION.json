@@ -60,43 +60,43 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2022-02-10 16:58:40",
-            "MODIFIED_ON": "2022-02-10 21:12:50",
-            "CREATED_BY_USER": "0x31000000000000000000000000000000",
+            "CREATED_ON": "2022-02-10 21:33:37",
+            "MODIFIED_ON": "2022-02-11 10:15:06",
+            "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
-            "UID": "0x11ecb10a50a8b5c6b10a025041000001",
-            "OBJECT": "0x11e5f0b9fd06f67a89840050568905af",
+            "UID": "0x11ec8d71b9a4d1ec8d71005056bee7c0",
+            "OBJECT": "0x11e6c6ab62ffaac2a3e40205857feb80",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
-            "ALIAS": "ProjectTicketsReorderDialog",
+            "ALIAS": "ResourceTicketsReorderDialog",
             "NAME": "Reorder",
             "SHORT_DESCRIPTION": "",
             "CONFIG_UXON": {
                 "icon": "sort",
                 "effected_objects": [
-                    "axenox.DevMan.project_tickets"
+                    "axenox.DevMan.ticket"
                 ],
                 "dialog": {
                     "widgets": [
                         {
-                            "object_alias": "axenox.DevMan.project_tickets",
+                            "object_alias": "axenox.DevMan.ticket",
                             "widget_type": "DataTree",
-                            "tree_parent_id_attribute_alias": "project",
+                            "tree_parent_id_attribute_alias": "parent_ticket",
                             "tree_root_uid": "NULL",
                             "tree_expanded": true,
                             "paginate": false,
                             "row_reorder": {
-                                "order_index_attribute_alias": "position",
+                                "order_index_attribute_alias": "assigned_at_pos",
                                 "order_direction": "asc"
                             },
                             "filters": [
                                 {
-                                    "attribute_alias": "project",
+                                    "attribute_alias": "assigned_to",
                                     "required": true
                                 }
                             ],
                             "columns": [
                                 {
-                                    "attribute_alias": "position",
+                                    "attribute_alias": "assigned_at_pos",
                                     "hidden": true
                                 },
                                 {
@@ -104,31 +104,27 @@
                                     "hidden": true
                                 },
                                 {
-                                    "attribute_alias": "ticket__LABEL"
+                                    "attribute_alias": "LABEL"
                                 },
                                 {
-                                    "attribute_alias": "ticket__type__LABEL"
+                                    "attribute_alias": "type__LABEL"
                                 },
                                 {
-                                    "attribute_alias": "ticket__state"
+                                    "attribute_alias": "state"
                                 },
                                 {
-                                    "attribute_alias": "ticket__assigned_to__LABEL"
+                                    "attribute_alias": "priority_avg"
                                 },
                                 {
-                                    "attribute_alias": "priority",
-                                    "caption": "Project priority"
+                                    "attribute_alias": "project_title_list"
                                 },
                                 {
-                                    "attribute_alias": "ticket__project_title_list"
-                                },
-                                {
-                                    "attribute_alias": "ticket__complexity"
+                                    "attribute_alias": "sprint__LABEL"
                                 }
                             ],
                             "sorters": [
                                 {
-                                    "attribute_alias": "position",
+                                    "attribute_alias": "assigned_at_pos",
                                     "direction": "asc"
                                 }
                             ]

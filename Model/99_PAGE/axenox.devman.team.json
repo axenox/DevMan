@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-02 10:28:12",
     "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2021-11-04 09:09:57",
+    "modified_on": "2022-02-11 10:07:34",
     "contents": {
         "object_alias": "axenox.DevMan.resource",
         "widget_type": "SplitHorizontal",
@@ -67,10 +67,9 @@
                 "caption": "Backlog",
                 "widgets": [
                     {
-                        "widget_type": "DataSpreadSheet",
+                        "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.ticket",
-                        "allow_to_add_rows": false,
-                        "allow_to_delete_rows": false,
+                        "multi_select": true,
                         "filters": [
                             {
                                 "attribute_alias": "assigned_to",
@@ -93,24 +92,25 @@
                         ],
                         "columns": [
                             {
-                                "attribute_alias": "assigned_at_pos"
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "calculation": "=Left(title, 60)"
+                            },
+                            {
+                                "attribute_alias": "type__LABEL"
                             },
                             {
                                 "attribute_alias": "state"
                             },
                             {
-                                "attribute_alias": "id",
-                                "editable": false
-                            },
-                            {
-                                "attribute_alias": "title",
-                                "editable": false
-                            },
-                            {
-                                "attribute_alias": "priority_avg"
+                                "attribute_alias": "sprint__LABEL"
                             },
                             {
                                 "attribute_alias": "project_title_list"
+                            },
+                            {
+                                "attribute_alias": "priority_avg"
                             },
                             {
                                 "attribute_alias": "value"
@@ -124,12 +124,26 @@
                         ],
                         "buttons": [
                             {
-                                "action_alias": "exface.Core.UpdateData",
-                                "visibility": "promoted"
+                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                "caption": "Create ticket"
                             },
                             {
-                                "action_alias": "exface.core.ShowObjectEditDialog",
-                                "bind_to_double_click": true
+                                "caption": "Edit ticket",
+                                "bind_to_double_click": true,
+                                "action_alias": "exface.Core.ShowObjectEditDialog"
+                            },
+                            {
+                                "caption": "Copy ticket",
+                                "action_alias": "exface.core.ShowObjectCopyDialog"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.ResourceTicketsReorderDialog"
+                            },
+                            {
+                                "widget_type": "StateMenuButton"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.TicketMoveToSprintDialog"
                             }
                         ]
                     }

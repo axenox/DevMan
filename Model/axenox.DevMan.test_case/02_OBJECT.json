@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-12-11 10:31:27",
+            "MODIFIED_ON": "2022-02-12 15:59:35",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
@@ -203,6 +203,9 @@
                                                 "caption": "Covered test case"
                                             },
                                             {
+                                                "attribute_alias": "comment"
+                                            },
+                                            {
                                                 "attribute_alias": "covers_test_case__feature__LABEL"
                                             },
                                             {
@@ -255,6 +258,10 @@
                                                 "action_alias": "exface.Core.DeleteObject",
                                                 "caption": "Remove",
                                                 "icon": "minus"
+                                            },
+                                            {
+                                                "action_alias": "exface.core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
                                             }
                                         ]
                                     },
@@ -277,6 +284,9 @@
                                             {
                                                 "attribute_alias": "test_case__name",
                                                 "caption": "Covering test case"
+                                            },
+                                            {
+                                                "attribute_alias": "comment"
                                             },
                                             {
                                                 "attribute_alias": "test_case__feature__LABEL"
@@ -331,6 +341,10 @@
                                                 "action_alias": "exface.Core.DeleteObject",
                                                 "caption": "Remove",
                                                 "icon": "minus"
+                                            },
+                                            {
+                                                "action_alias": "exface.core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
                                             }
                                         ]
                                     }

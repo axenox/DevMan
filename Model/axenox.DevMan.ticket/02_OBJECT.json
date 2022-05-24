@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2022-02-10 21:13:18",
+            "MODIFIED_ON": "2022-05-24 12:11:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -295,14 +295,8 @@
                             }
                         ],
                         "uploader": {
-                            "filename_attribute": "FILENAME",
-                            "file_content_attribute": "CONTENTS"
-                        },
-                        "buttons": [
-                            {
-                                "action_alias": "exface.Core.DeleteObject"
-                            }
-                        ]
+                            "instant_upload": false
+                        }
                     }
                 ],
                 "buttons": [

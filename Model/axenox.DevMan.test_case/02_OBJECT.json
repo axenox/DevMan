@@ -165,15 +165,9 @@
                                                         "hidden": true
                                                     }
                                                 ],
-                                                "uploader": {
-                                                    "filename_attribute": "FILENAME",
-                                                    "file_content_attribute": "CONTENTS"
-                                                },
-                                                "buttons": [
-                                                    {
-                                                        "action_alias": "exface.Core.DeleteObject"
-                                                    }
-                                                ]
+						                        "uploader": {
+						                            "instant_upload": false
+						                        }
                                             }
                                         ]
                                     }

@@ -24,10 +24,11 @@ class WebhookFacade extends AbstractHttpFacade
 {
     /**
      * 
-     * {@inheritDoc}
-     * @see \Psr\Http\Server\RequestHandlerInterface::handle()
+     * @param ServerRequestInterface $request
+     * @throws RuntimeException
+     * @return ResponseInterface
      */
-    public function handle(ServerRequestInterface $request): ResponseInterface
+    protected function createResponse(ServerRequestInterface $request) : ResponseInterface
     {
         $exface = $this->getWorkbench();        
         

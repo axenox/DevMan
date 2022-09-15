@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
     "created_on": "2021-11-26 16:04:02",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-12-01 13:20:18",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2022-09-12 14:16:57",
     "contents": {
         "object_alias": "axenox.DevMan.vcs_update",
         "widget_type": "SplitHorizontal",
@@ -70,7 +70,7 @@
                                 "bind_to_double_click": true
                             },
                             {
-                                "caption": "VCS details",
+                                "caption": "View in VCS",
                                 "action": {
                                     "alias": "exface.core.GoToUrl",
                                     "url": "[#vcs_url#]",

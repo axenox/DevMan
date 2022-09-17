@@ -578,6 +578,56 @@
             "CUSTOM_DATA_TYPE": {
                 "length_max": 100
             }
+        },
+        {
+            "CREATED_ON": "2022-09-17 09:38:10",
+            "MODIFIED_ON": "2022-09-17 09:38:10",
+            "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "UID": "0x11edb653ae0ee6ccb653005056bee7c0",
+            "SORTABLEFLAG": 1,
+            "FILTERABLEFLAG": 1,
+            "AGGREGATABLEFLAG": 1,
+            "DEFAULT_AGGREGATE_FUNCTION": "",
+            "VALUE_LIST_DELIMITER": ",",
+            "READABLEFLAG": 1,
+            "WRITABLEFLAG": 0,
+            "SYSTEMFLAG": 0,
+            "DEFAULT_EDITOR_UXON": null,
+            "COPY_WITH_RELATED_OBJECT": 0,
+            "DELETE_WITH_RELATED_OBJECT": 0,
+            "DEFAULT_DISPLAY_UXON": null,
+            "COMMENTS": "",
+            "NAME": "Operation",
+            "RELATION_CARDINALITY": "",
+            "TYPE": "D",
+            "COPYABLEFLAG": 0,
+            "ALIAS": "operation",
+            "DATATYPE": "0x11e7c3960c3586c38001e4b318306b9a",
+            "DATA_ADDRESS": "(CASE\n  WHEN [#name#] LIKE 'Merge %' THEN 'merge'\n  ELSE 'commit'\nEND)",
+            "OBJECT": "0x11ecb42f75f4eb46b42f025041000001",
+            "FORMATTER": "",
+            "DISPLAYORDER": null,
+            "LABELFLAG": 0,
+            "UIDFLAG": 0,
+            "HIDDENFLAG": 0,
+            "EDITABLEFLAG": 0,
+            "REQUIREDFLAG": 1,
+            "RELATED_OBJ": "",
+            "SORTERPOS": null,
+            "SORTERDIR": "",
+            "RELATED_OBJ_ATTR": "",
+            "SHORT_DESCRIPTION": "",
+            "DATA_ADDRESS_PROPS": null,
+            "DEFAULT_VALUE": "",
+            "FIXED_VALUE": "",
+            "CUSTOM_DATA_TYPE": {
+                "show_values": false,
+                "values": {
+                    "commit": "Commit",
+                    "merge": "Merge"
+                }
+            }
         }
     ],
     "totals_rows": [],

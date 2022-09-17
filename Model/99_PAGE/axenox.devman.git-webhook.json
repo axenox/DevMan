@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-04 10:06:22",
     "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2022-09-12 14:24:07",
+    "modified_on": "2022-09-17 09:36:29",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.webhook_log",
@@ -22,6 +22,14 @@
             },
             {
                 "attribute_alias": "repo_url"
+            },
+            {
+                "attribute_alias": "message",
+                "input_widget": {
+                    "widget_type": "Input",
+                    "width": 1,
+                    "height": 1
+                }
             }
         ],
         "columns": [

@@ -165,9 +165,9 @@
                                                         "hidden": true
                                                     }
                                                 ],
-						                        "uploader": {
-						                            "instant_upload": false
-						                        }
+                                                "uploader": {
+                                                    "instant_upload": false
+                                                }
                                             }
                                         ]
                                     }

@@ -1,0 +1,159 @@
+{
+    "object_alias": "exface.Core.OBJECT_ACTION",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "OBJECT",
+            "attribute_alias": "OBJECT"
+        },
+        {
+            "name": "ACTION_PROTOTYPE",
+            "attribute_alias": "ACTION_PROTOTYPE"
+        },
+        {
+            "name": "ALIAS",
+            "attribute_alias": "ALIAS"
+        },
+        {
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "SHORT_DESCRIPTION",
+            "attribute_alias": "SHORT_DESCRIPTION"
+        },
+        {
+            "name": "CONFIG_UXON",
+            "attribute_alias": "CONFIG_UXON"
+        },
+        {
+            "name": "APP",
+            "attribute_alias": "APP"
+        },
+        {
+            "name": "USE_IN_OBJECT_BASKET_FLAG",
+            "attribute_alias": "USE_IN_OBJECT_BASKET_FLAG"
+        },
+        {
+            "name": "DOCS",
+            "attribute_alias": "DOCS"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2022-11-02 15:19:55",
+            "MODIFIED_ON": "2022-11-02 15:36:34",
+            "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "UID": "0x11ed98516c5187bc9851005056be9fa0",
+            "OBJECT": "0x11eba4f6d97a1d84a4f6025041000001",
+            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ALIAS": "TestScenarioEditStepsDialog",
+            "NAME": "Edit steps",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "input_object_alias": "axenox.DevMan.test_scenario",
+                "icon": "pencil-square-o",
+                "dialog": {
+                    "width": 2,
+                    "height": "80%",
+                    "object_alias": "axenox.DevMan.test_scenario",
+                    "widgets": [
+                        {
+                            "attribute_alias": "id",
+                            "widget_type": "InputHidden"
+                        },
+                        {
+                            "widget_type": "DataSpreadSheet",
+                            "object_alias": "axenox.DevMan.test_scenario_cases",
+                            "object_relation_path_to_parent": "test_scenario",
+                            "row_number_attribute_alias": "sequence",
+                            "allow_to_drag_rows": true,
+                            "filters": [
+                                {
+                                    "attribute_alias": "test_scenario",
+                                    "required": true,
+                                    "hidden": true
+                                }
+                            ],
+                            "columns": [
+                                {
+                                    "attribute_alias": "summary"
+                                },
+                                {
+                                    "attribute_alias": "test_case",
+                                    "cell_widget": {
+                                        "widget_type": "InputComboTable",
+                                        "lazy_loading": false
+                                    }
+                                }
+                            ],
+                            "sorters": [
+                                {
+                                    "attribute_alias": "sequence",
+                                    "direction": "asc"
+                                }
+                            ]
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "action_alias": "exface.core.SaveData",
+                            "visibility": "promoted",
+                            "align": "opposite"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.OBJECT_ACTION",
+        "conditions": [
+            {
+                "expression": "APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.OBJECT_ACTION"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

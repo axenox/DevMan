@@ -664,9 +664,9 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2021-12-13 11:30:04",
+            "MODIFIED_ON": "2022-11-02 16:05:22",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
@@ -710,6 +710,64 @@
                     },
                     {
                         "from_object_alias": "axenox.DevMan.feature_test_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.test_scenario_cases",
                         "column_to_column_mappings": [
                             {
                                 "from": "test_case",
@@ -896,7 +954,7 @@
                                                                     "attribute_alias": "covers_test_case__name"
                                                                 },
                                                                 {
-                                                                    "attribute_alias": "covers_test_case__feature__module__application__LABEL"
+                                                                    "attribute_alias": "comment"
                                                                 }
                                                             ],
                                                             "sorters": [

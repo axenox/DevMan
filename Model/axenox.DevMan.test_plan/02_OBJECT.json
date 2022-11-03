@@ -81,14 +81,14 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-07 14:43:39",
+            "MODIFIED_ON": "2022-11-02 14:41:41",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb8430d97a024a8430025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
-            "COMMENTS": null,
-            "DOCS": null,
+            "COMMENTS": "",
+            "DOCS": "",
             "NAME": "Test plan",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": 1,
             "DATA_SOURCE": "0x39000000000000000000000000000000",
@@ -96,7 +96,88 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "attribute_alias": "id",
+                        "id": "uid_field",
+                        "widget_type": "InputHidden"
+                    },
+                    {
+                        "attribute_alias": "name"
+                    },
+                    {
+                        "attribute_alias": "description",
+                        "width": "max",
+                        "height": 6
+                    },
+                    {
+                        "widget_type": "DataTableResponsive",
+                        "caption": "Test cases",
+                        "object_alias": "axenox.DevMan.test_plan_cases",
+                        "hide_header": false,
+                        "width": "max",
+                        "height": "max",
+                        "filters": [
+                            {
+                                "attribute_alias": "test_plan",
+                                "required": true,
+                                "value": "=uid_field",
+                                "hidden": true
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "test_case__id"
+                            },
+                            {
+                                "attribute_alias": "test_case__LABEL"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                "caption": "=Translate('exface.Core', 'ACTION.GENERIC.ADD')",
+                                "disabled_if": {
+                                    "operator": "AND",
+                                    "conditions": [
+                                        {
+                                            "value_left": "=uid_field",
+                                            "comparator": "==",
+                                            "value_right": ""
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "action_alias": "exface.Core.DeleteObject",
+                                "caption": "=Translate('exface.Core', 'ACTION.GENERIC.REMOVE')"
+                            },
+                            {
+                                "bind_to_double_click": true,
+                                "action": {
+                                    "alias": "exface.core.ShowObjectEditDialog",
+                                    "object_alias": "axenox.DevMan.test_case",
+                                    "input_mapper": {
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "test_case",
+                                                "to": "id"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "action": {
+                                    "alias": "axenox.DevMan.TestCaseStartDialog"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "test_plan",
             "DATA_ADDRESS": "test_plan"
         }

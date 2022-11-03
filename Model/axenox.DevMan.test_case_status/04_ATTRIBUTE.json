@@ -437,9 +437,9 @@
         },
         {
             "CREATED_ON": "2021-06-09 15:05:57",
-            "MODIFIED_ON": "2021-06-14 10:58:52",
+            "MODIFIED_ON": "2022-11-02 17:27:57",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebbfa96e6c744abfa9025041000001",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -459,6 +459,7 @@
                 "color_scale": {
                     "FAIL": "orangered",
                     "FAIL_COVER": "orange",
+                    "RETEST": "orange",
                     "PASS": "lightgreen",
                     "COVERED": "lightgreen",
                     "TODO": "yellow"
@@ -495,6 +496,7 @@
                     "FAIL_COVER": "Failed coverage",
                     "PASS": "Passed",
                     "TODO": "ToDo",
+                    "RETEST": "Retest",
                     "COVERED": "Covered"
                 }
             }

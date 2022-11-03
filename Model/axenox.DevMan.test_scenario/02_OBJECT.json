@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-06-09 15:23:25",
+            "MODIFIED_ON": "2022-11-02 16:02:37",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eba4f6d97a1d84a4f6025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -100,18 +100,26 @@
                 "widget_type": "SplitVertical",
                 "panels": [
                     {
-                        "height": 2,
+                        "height": 3,
                         "widgets": [
+                            {
+                                "attribute_alias": "id",
+                                "widget_type": "InputHidden",
+                                "id": "scenario_id_field"
+                            },
                             {
                                 "attribute_alias": "name"
                             },
                             {
                                 "attribute_alias": "description",
-                                "height": 2,
+                                "height": 3,
                                 "width": 1
                             },
                             {
                                 "attribute_alias": "test_type"
+                            },
+                            {
+                                "attribute_alias": "application"
                             }
                         ]
                     },
@@ -121,10 +129,7 @@
                             {
                                 "widget_type": "DataTable",
                                 "object_alias": "axenox.DevMan.test_scenario_cases",
-                                "multi_select": true,
-                                "row_grouper": {
-                                    "group_by_attribute_alias": "test_case__feature__LABEL"
-                                },
+                                "freeze_columns": 2,
                                 "filters": [
                                     {
                                         "attribute_alias": "test_scenario",
@@ -132,37 +137,24 @@
                                         "required": true
                                     },
                                     {
-                                        "attribute_alias": "test_case"
-                                    },
-                                    {
-                                        "attribute_alias": "test_case__feature__module"
-                                    },
-                                    {
-                                        "attribute_alias": "test_case__feature"
-                                    },
-                                    {
-                                        "attribute_alias": "test_case__test_case_status__test_status"
+                                        "attribute_alias": "test_case__LABEL"
                                     }
                                 ],
                                 "sorters": [
                                     {
-                                        "attribute_alias": "test_case__feature__name",
-                                        "direction": "asc"
-                                    },
-                                    {
-                                        "attribute_alias": "test_case__id",
+                                        "attribute_alias": "sequence",
                                         "direction": "asc"
                                     }
                                 ],
                                 "columns": [
                                     {
-                                        "attribute_alias": "test_case__id"
+                                        "attribute_alias": "sequence"
                                     },
                                     {
-                                        "attribute_alias": "test_case__feature__LABEL"
+                                        "attribute_alias": "summary"
                                     },
                                     {
-                                        "attribute_alias": "test_case__name"
+                                        "attribute_alias": "test_case__LABEL"
                                     },
                                     {
                                         "attribute_alias": "test_case__test_case_status__test_status"
@@ -172,6 +164,13 @@
                                     },
                                     {
                                         "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__test_case_coverage[test_case]__id:COUNT",
+                                        "caption": "Covers"
+                                    },
+                                    {
+                                        "attribute_alias": "test_case__feature__LABEL"
                                     },
                                     {
                                         "attribute_alias": "test_case__effort_planned",
@@ -184,30 +183,78 @@
                                 ],
                                 "buttons": [
                                     {
-                                        "action_alias": "exface.Core.ShowObjectCreateDialog",
-                                        "caption": "Add case"
+                                        "action_alias": "axenox.DevMan.TestScenarioEditStepsDialog",
+                                        "input_widget_id": "scenario_id_field"
                                     },
                                     {
-                                        "action_alias": "exface.Core.DeleteObject",
-                                        "caption": "Remove case",
-                                        "icon": "minus"
-                                    },
-                                    {
-                                        "action_alias": "exface.Core.ShowObjectEditDialog",
-                                        "bind_to_double_click": true
-                                    },
-                                    {
+                                        "caption": "Edit case",
+                                        "bind_to_double_click": true,
                                         "action": {
-                                            "alias": "axenox.DevMan.TestCasesAddToPlanDialog",
+                                            "alias": "exface.core.ShowObjectEditDialog",
                                             "object_alias": "axenox.DevMan.test_case",
                                             "input_mapper": {
                                                 "column_to_column_mappings": [
                                                     {
-                                                        "from": "test_case__id",
+                                                        "from": "test_case",
                                                         "to": "id"
                                                     }
                                                 ]
                                             }
+                                        },
+                                        "disabled_if": {
+                                            "operator": "AND",
+                                            "conditions": [
+                                                {
+                                                    "value_left": "=~input!test_case__LABEL",
+                                                    "comparator": "==",
+                                                    "value_right": ""
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "caption": "Create case",
+                                        "action": {
+                                            "alias": "exface.core.ShowObjectCreateDialog",
+                                            "object_alias": "axenox.DevMan.test_case"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Copy case",
+                                        "action": {
+                                            "alias": "exface.core.ShowObjectCopyDialog",
+                                            "object_alias": "axenox.DevMan.test_case",
+                                            "input_mapper": {
+                                                "column_to_column_mappings": [
+                                                    {
+                                                        "from": "test_case",
+                                                        "to": "id"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "disabled_if": {
+                                            "operator": "AND",
+                                            "conditions": [
+                                                {
+                                                    "value_left": "=~input!test_case__LABEL",
+                                                    "comparator": "==",
+                                                    "value_right": ""
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "action_alias": "axenox.DevMan.TestCaseStartDialog",
+                                        "disabled_if": {
+                                            "operator": "AND",
+                                            "conditions": [
+                                                {
+                                                    "value_left": "=~input!test_case__LABEL",
+                                                    "comparator": "==",
+                                                    "value_right": ""
+                                                }
+                                            ]
                                         }
                                     }
                                 ]

@@ -664,7 +664,7 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2022-11-02 16:05:22",
+            "MODIFIED_ON": "2022-11-24 16:34:29",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
@@ -917,6 +917,7 @@
                                                             "image_url_attribute_alias": "PATHNAME_RELATIVE",
                                                             "image_title_attribute_alias": "FILENAME",
                                                             "zoomable": true,
+                                                            "zoom_on_click": true,
                                                             "hide_header": true,
                                                             "filters": [
                                                                 {

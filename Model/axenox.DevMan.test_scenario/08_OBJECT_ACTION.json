@@ -61,7 +61,7 @@
     "rows": [
         {
             "CREATED_ON": "2022-11-02 15:19:55",
-            "MODIFIED_ON": "2022-11-02 15:36:34",
+            "MODIFIED_ON": "2022-11-24 10:53:56",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ed98516c5187bc9851005056be9fa0",
@@ -90,6 +90,7 @@
                             "object_relation_path_to_parent": "test_scenario",
                             "row_number_attribute_alias": "sequence",
                             "allow_to_drag_rows": true,
+                            "nowrap": false,
                             "filters": [
                                 {
                                     "attribute_alias": "test_scenario",

@@ -1,25 +1,23 @@
 {
-	"name" : "axenox/devman",
-	"require" : {
-		"exface/core" : "^1.0",
-		"axenox/notifier" : "^1.0"
-	},
-	"extra" : {
-		"app" : {
-			"app_uid" : "0x38000000000000000000000000000000",
-			"app_alias" : "axenox.DevMan",
-			"model_md5" : "f07bd48373debbf68afd9311af70e8cd",
-			"model_timestamp" : "2022-02-10 17:13:06"
-		}
-	},
-	"autoload" : {
-		"psr-4" : {
-			"axenox\\DevMan\\" : ""
-		},
-		"exclude-from-classmap" : [
-			"/Config/",
-			"/Translations/",
-			"/Model/"
-		]
-	}
+    "name": "axenox/devman",
+    "require": {
+        "exface/core": "^1.0",
+        "axenox/notifier": "^1.0"
+    },
+    "extra": {
+        "app": {
+            "app_uid": "0x38000000000000000000000000000000",
+            "app_alias": "axenox.DevMan"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "axenox\\DevMan\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Config/",
+            "/Translations/",
+            "/Model/"
+        ]
+    }
 }

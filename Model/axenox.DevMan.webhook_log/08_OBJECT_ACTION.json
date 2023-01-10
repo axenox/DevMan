@@ -75,7 +75,7 @@
                 "input_object_alias": "axenox.DevMan.webhook_log",
                 "icon": "retweet",
                 "input_mapper": {
-                    "inherit_columns_only_for_system_attributes": true,
+                    "inherit_columns": "own_system_attributes",
                     "column_to_column_mappings": [
                         {
                             "from": "=0",

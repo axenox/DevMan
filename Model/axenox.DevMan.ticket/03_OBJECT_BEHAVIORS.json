@@ -44,6 +44,14 @@
         {
             "name": "DESCRIPTION",
             "attribute_alias": "DESCRIPTION"
+        },
+        {
+            "name": "DISABLED_FLAG",
+            "attribute_alias": "DISABLED_FLAG"
+        },
+        {
+            "name": "PRIORITY",
+            "attribute_alias": "PRIORITY"
         }
     ],
     "rows": [
@@ -110,7 +118,9 @@
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "Ticket states",
-            "DESCRIPTION": ""
+            "DESCRIPTION": "",
+            "DISABLED_FLAG": 0,
+            "PRIORITY": null
         },
         {
             "CREATED_ON": "2022-01-24 13:38:34",
@@ -151,7 +161,9 @@
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "Notify on create",
-            "DESCRIPTION": ""
+            "DESCRIPTION": "",
+            "DISABLED_FLAG": 0,
+            "PRIORITY": null
         }
     ],
     "totals_rows": [],

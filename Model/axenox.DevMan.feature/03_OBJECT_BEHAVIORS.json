@@ -44,6 +44,14 @@
         {
             "name": "DESCRIPTION",
             "attribute_alias": "DESCRIPTION"
+        },
+        {
+            "name": "DISABLED_FLAG",
+            "attribute_alias": "DISABLED_FLAG"
+        },
+        {
+            "name": "PRIORITY",
+            "attribute_alias": "PRIORITY"
         }
     ],
     "rows": [
@@ -83,7 +91,9 @@
             "OBJECT": "0x11ebaf1ed97424b0af1e025041000001",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "Default test case for every feature",
-            "DESCRIPTION": "Creates a default test case every time a new feature is created"
+            "DESCRIPTION": "Creates a default test case every time a new feature is created",
+            "DISABLED_FLAG": 0,
+            "PRIORITY": null
         }
     ],
     "totals_rows": [],

@@ -1,0 +1,188 @@
+{
+    "uid": "0x11eda98cfef1eb94a98c005056be9fa0",
+    "alias_with_namespace": "axenox.devman.status",
+    "menu_parent_page_selector": "0x35da4e8ce55a11e78da60050568905af",
+    "menu_index": 2,
+    "menu_visible": true,
+    "name": "Status",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "created_on": "2023-04-22 10:59:31",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2023-05-16 07:46:30",
+    "contents": {
+        "widget_type": "SplitHorizontal",
+        "object_alias": "axenox.DevMan.project",
+        "panels": [
+            {
+                "width": "70%",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "caption": "Projects",
+                        "object_alias": "axenox.DevMan.project",
+                        "id": "table_projects",
+                        "nowrap": false,
+                        "filters": [
+                            {
+                                "attribute_alias": "active_flag",
+                                "value": 1
+                            },
+                            {
+                                "attribute_alias": "client"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "client__LABEL"
+                            },
+                            {
+                                "attribute_alias": "title"
+                            },
+                            {
+                                "attribute_alias": "project_report_latest__streetlight",
+                                "caption": "Ind."
+                            },
+                            {
+                                "attribute_alias": "project_report_latest__date"
+                            },
+                            {
+                                "attribute_alias": "project_report_latest__summary"
+                            },
+                            {
+                                "attribute_alias": "project_tickets_active__ticket__assigned_to__LABEL:LIST_DISTINCT"
+                            },
+                            {
+                                "attribute_alias": "project_report_latest__outlook"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "client__importance",
+                                "direction": "desc"
+                            },
+                            {
+                                "attribute_alias": "title",
+                                "direction": "asc"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "caption": "New report",
+                                "action": {
+                                    "alias": "exface.Core.ShowObjectCreateDialog",
+                                    "object_alias": "axenox.DevMan.project_report",
+                                    "prefill_with_input_data": true
+                                }
+                            },
+                            {
+                                "bind_to_double_click": true,
+                                "caption": "Current report",
+                                "action": {
+                                    "alias": "exface.core.ShowObjectEditDialog",
+                                    "object_alias": "axenox.DevMan.project_report",
+                                    "input_mapper": {
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "project_report_latest__id",
+                                                "to": "id"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "action_alias": "exface.core.ShowObjectCreateDialog",
+                                "caption": "New project"
+                            },
+                            {
+                                "action_alias": "exface.core.ShowObjectEditDialog",
+                                "caption": "Edit project"
+                            },
+                            {
+                                "caption": "New client",
+                                "action": {
+                                    "alias": "exface.Core.ShowObjectCreateDialog",
+                                    "object_alias": "axenox.DevMan.client"
+                                }
+                            },
+                            {
+                                "caption": "Edit client",
+                                "action": {
+                                    "alias": "exface.core.ShowObjectEditDialog",
+                                    "object_alias": "axenox.DevMan.client",
+                                    "input_mapper": {
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "client",
+                                                "to": "id"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "caption": "Reports for selected project",
+                        "object_alias": "axenox.DevMan.project_report",
+                        "nowrap": false,
+                        "filters": [
+                            {
+                                "attribute_alias": "project",
+                                "value": "=table_projects!id",
+                                "comparator": "==",
+                                "apply_on_change": true,
+                                "hidden": true,
+                                "required": true
+                            },
+                            {
+                                "attribute_alias": "date",
+                                "widget_type": "RangeFilter"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "date"
+                            },
+                            {
+                                "attribute_alias": "streetlight"
+                            },
+                            {
+                                "attribute_alias": "summary"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "date",
+                                "direction": "desc"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "bind_to_double_click": true,
+                                "action_alias": "exface.core.ShowObjectEditDialog"
+                            },
+                            {
+                                "action_alias": "exface.core.ShowObjectCopyDialog"
+                            },
+                            {
+                                "action_alias": "exface.core.DeleteObject"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

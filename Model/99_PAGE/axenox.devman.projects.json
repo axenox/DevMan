@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
     "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2022-02-10 21:20:21",
+    "modified_on": "2023-04-22 10:57:33",
     "contents": {
         "widget_type": "SplitHorizontal",
         "object_alias": "axenox.DevMan.project",
@@ -57,18 +57,18 @@
                                                 "attribute_alias": "client__LABEL"
                                             },
                                             {
-                                                "attribute_alias": "ticket_progress"
-                                            },
-                                            {
-                                                "attribute_alias": "project_tickets__ticket__done_flag:COUNT_IF(== 0)",
-                                                "caption": "Open T.",
-                                                "hint": "Unfinished tickets"
+                                                "attribute_alias": "project_report_latest__streetlight"
                                             },
                                             {
                                                 "attribute_alias": "date_next_milestone"
                                             },
                                             {
                                                 "attribute_alias": "objectives"
+                                            },
+                                            {
+                                                "attribute_alias": "project_tickets__ticket__done_flag:COUNT_IF(== 0)",
+                                                "caption": "Open T.",
+                                                "hint": "Unfinished tickets"
                                             }
                                         ],
                                         "sorters": [

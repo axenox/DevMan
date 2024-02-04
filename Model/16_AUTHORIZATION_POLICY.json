@@ -68,6 +68,10 @@
         {
             "name": "TARGET_FACADE",
             "attribute_alias": "TARGET_FACADE"
+        },
+        {
+            "name": "TARGET_APP",
+            "attribute_alias": "TARGET_APP"
         }
     ],
     "rows": [
@@ -88,7 +92,8 @@
             "CONDITION_UXON": null,
             "TARGET_ACTION_MODEL": "",
             "TARGET_ACTION_PROTOTYPE": "",
-            "TARGET_FACADE": "axenox\/DevMan\/Facades\/WebhookFacade.php"
+            "TARGET_FACADE": "axenox\/DevMan\/Facades\/WebhookFacade.php",
+            "TARGET_APP": ""
         }
     ],
     "totals_rows": [],

@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-11-26 21:52:58",
+            "MODIFIED_ON": "2024-01-18 10:43:50",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ee945cf6a870d4945c005056be9fa0",
             "UID": "0x11eb99efd979f59899ef025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -158,7 +158,9 @@
                     {
                         "attribute_alias": "test_description",
                         "width": 2,
-                        "height": 15
+                        "height": 15,
+                        "widget_type": "InputMarkdown",
+                        "editor_mode": "wysiwyg"
                     }
                 ]
             },

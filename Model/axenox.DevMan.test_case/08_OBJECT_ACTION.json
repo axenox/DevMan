@@ -115,9 +115,9 @@
         },
         {
             "CREATED_ON": "2021-05-20 19:01:34",
-            "MODIFIED_ON": "2021-05-20 19:01:34",
+            "MODIFIED_ON": "2024-01-08 14:28:30",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11ed995cb1942f38995c005056be9fa0",
             "UID": "0x11ebb724085c2268b724025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
@@ -141,6 +141,10 @@
                             "options_object_alias": "axenox.DevMan.test_case",
                             "multi_select": true,
                             "height": 8,
+                            "width": 2
+                        },
+                        {
+                            "attribute_alias": "summary",
                             "width": 2
                         }
                     ],
@@ -664,7 +668,7 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2022-11-24 16:34:29",
+            "MODIFIED_ON": "2024-01-11 09:28:17",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
@@ -907,6 +911,8 @@
                                                         },
                                                         {
                                                             "attribute_alias": "test_description",
+                                                            "widget_type": "InputMarkdown",
+                                                            "editor_mode": "wysiwyg",
                                                             "width": "max",
                                                             "height": 10
                                                         },
@@ -1166,6 +1172,58 @@
                                     ]
                                 }
                             }
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "CREATED_ON": "2024-01-24 08:34:35",
+            "MODIFIED_ON": "2024-01-25 11:31:09",
+            "CREATED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
+            "UID": "0x11ee9d0905df8a149d09005056be9fa0",
+            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
+            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ALIAS": "TestCaseMarkAsToDo",
+            "NAME": "Mark as ToDo",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "icon": "undo",
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.test_case",
+                    "height": "auto",
+                    "width": 1,
+                    "header": {
+                        "title_attribute_alias": "LABEL"
+                    },
+                    "widgets": [
+                        {
+                            "widget_type": "Message",
+                            "value": "Mark this test case as ToDo? The test status will be overwritten!"
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "action": {
+                                "alias": "exface.core.UpdateData",
+                                "input_mapper": {
+                                    "column_to_column_mappings": [
+                                        {
+                                            "from": "=NOW()",
+                                            "to": "test_now_time"
+                                        }
+                                    ]
+                                }
+                            },
+                            "visibility": "promoted",
+                            "align": "opposite"
                         }
                     ]
                 }

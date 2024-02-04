@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
     "created_on": "2022-09-12 14:16:37",
     "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2023-08-16 14:10:06",
+    "modified_on": "2023-12-28 18:06:32",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.vcs_update",
@@ -20,13 +20,28 @@
         },
         "filters": [
             {
+                "attribute_alias": "created_on",
+                "widget_type": "RangeFilter"
+            },
+            {
                 "attribute_alias": "operation"
             },
             {
                 "attribute_alias": "name"
             },
             {
-                "attribute_alias": "application"
+                "attribute_alias": "application",
+                "input_widget": {
+                    "widget_type": "InputComboTable",
+                    "multi_select": true
+                }
+            },
+            {
+                "attribute_alias": "application__client",
+                "input_widget": {
+                    "widget_type": "InputComboTable",
+                    "multi_select": true
+                }
             },
             {
                 "attribute_alias": "vcs_update_files__application_file__filepath"

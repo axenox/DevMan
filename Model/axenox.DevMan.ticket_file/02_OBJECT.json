@@ -95,7 +95,9 @@
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "0x11e6afd8efb4743f8943e4b318306b9a",
-            "DATA_ADDRESS_PROPS": "{\"delete_empty_folders\":\"true\"}",
+            "DATA_ADDRESS_PROPS": {
+                "delete_empty_folders": "true"
+            },
             "DEFAULT_EDITOR_UXON": null,
             "ALIAS": "ticket_file",
             "DATA_ADDRESS": "data\/axenox.DevMan\/TicketFiles\/[#ticket#]\/*.*"

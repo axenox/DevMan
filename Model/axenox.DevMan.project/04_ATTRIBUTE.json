@@ -748,7 +748,9 @@
             "SORTERDIR": "",
             "RELATED_OBJ_ATTR": "",
             "SHORT_DESCRIPTION": "",
-            "DATA_ADDRESS_PROPS": "{\"SQL_JOIN_ON\":\"[#~left_alias#].id = [#~right_alias#].project_id \\nAND [#~right_alias#].date = (\\n    SELECT \\n        MAX([#~right_alias#]_m.date) \\n    FROM project_report [#~right_alias#]_m \\n    WHERE [#~right_alias#]_m.project_id = [#~left_alias#].id\\n)\"}",
+            "DATA_ADDRESS_PROPS": {
+                "SQL_JOIN_ON": "[#~left_alias#].id = [#~right_alias#].project_id \nAND [#~right_alias#].date = (\n    SELECT \n        MAX([#~right_alias#]_m.date) \n    FROM project_report [#~right_alias#]_m \n    WHERE [#~right_alias#]_m.project_id = [#~left_alias#].id\n)"
+            },
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": null

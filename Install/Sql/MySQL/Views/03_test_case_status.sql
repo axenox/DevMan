@@ -3,6 +3,7 @@ CREATE OR REPLACE VIEW test_case_status AS
 SELECT
 	tmp.*,
 	CASE
+		WHEN tmp.retest_required_time IS NOT NULL AND tmp.last_test_time < tmp.retest_required_time THEN 'TODO'
 		WHEN tlc2.test_ok_flag != 0 AND NOT(tmp.last_test_time IS NOT NULL AND (tmp.last_change_time IS NULL OR tmp.last_change_time < tlc2.tested_build_time)) THEN 'TODO'
 		WHEN tlc2.test_ok_flag = 1 AND tlc2.tested_directly = 1 THEN 'PASS'
 		WHEN tlc2.test_ok_flag = 1 AND tlc2.tested_directly = 0 THEN 'COVERED'
@@ -16,6 +17,7 @@ SELECT
 FROM (
 		SELECT 
 			tc.id AS test_case_id,
+			tc.retest_required_time,
 			(f.priority * IFNULL(tc.priority, 1)) AS priority_weighted,
 			(SELECT MAX(fc.active_since) FROM feature_update fc WHERE fc.feature_id = tc.feature_id) AS last_change_time,
 			(SELECT MAX(tlc.tested_on) FROM test_log_coverage tlc WHERE tlc.test_case_id = tc.id) AS last_test_time

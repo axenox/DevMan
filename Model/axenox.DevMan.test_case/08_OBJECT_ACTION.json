@@ -1182,7 +1182,7 @@
         },
         {
             "CREATED_ON": "2024-01-24 08:34:35",
-            "MODIFIED_ON": "2024-01-25 11:31:09",
+            "MODIFIED_ON": "2024-02-07 11:10:27",
             "CREATED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
             "MODIFIED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
             "UID": "0x11ee9d0905df8a149d09005056be9fa0",
@@ -1217,7 +1217,7 @@
                                     "column_to_column_mappings": [
                                         {
                                             "from": "=NOW()",
-                                            "to": "test_now_time"
+                                            "to": "retest_required_time"
                                         }
                                     ]
                                 }

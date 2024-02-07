@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2022-11-02 16:02:37",
+            "MODIFIED_ON": "2024-02-07 16:18:41",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eba4f6d97a1d84a4f6025041000001",
@@ -220,6 +220,10 @@
                                         }
                                     },
                                     {
+                                        "caption": "Add existing case",
+                                        "action_alias": "exface.core.ShowObjectCreateDialog"
+                                    },
+                                    {
                                         "caption": "Copy case",
                                         "action": {
                                             "alias": "exface.core.ShowObjectCopyDialog",
@@ -256,6 +260,11 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "caption": "Remove case",
+                                        "icon": "minus",
+                                        "action_alias": "exface.core.DeleteObject"
                                     }
                                 ]
                             }

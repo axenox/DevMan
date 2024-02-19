@@ -10,12 +10,16 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-06-07 16:50:05",
-    "modified_by_user_selector": "0x31000000000000000000000000000000",
-    "modified_on": "2021-12-01 13:20:18",
+    "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
+    "modified_on": "2024-02-19 13:46:10",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.test_log",
         "filters": [
+            {
+                "attribute_alias": "tested_on",
+                "widget_type": "RangeFilter"
+            },
             {
                 "attribute_alias": "test_case__feature"
             },
@@ -27,6 +31,9 @@
             },
             {
                 "attribute_alias": "tested_by_resource"
+            },
+            {
+                "attribute_alias": "sprint"
             }
         ],
         "columns": [

@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
     "created_on": "2024-02-16 09:59:53",
     "modified_by_user_selector": "0x11eb87a6463eb30c87a6005056bee7c0",
-    "modified_on": "2024-02-16 11:07:37",
+    "modified_on": "2024-02-19 14:09:49",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.sprint",
@@ -20,33 +20,88 @@
                 "height": "50%",
                 "widgets": [
                     {
-                        "widget_type": "DataTable",
-                        "object_alias": "axenox.DevMan.sprint",
-                        "filters": [
+                        "widget_type": "SplitHorizontal",
+                        "panels": [
                             {
-                                "attribute_alias": "name",
-                                "id": "filter_sprint_name"
-                            }
-                        ],
-                        "columns": [
-                            {
-                                "attribute_alias": "name"
+                                "width": "50%",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.sprint",
+                                        "id": "table_sprints",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "name",
+                                                "id": "filter_sprint_name"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__id:COUNT",
+                                                "caption": "Tests"
+                                            },
+                                            {
+                                                "attribute_alias": "start_on"
+                                            },
+                                            {
+                                                "attribute_alias": "end_on"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "start_on",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.core.ShowObjectInfoDialog",
+                                                "bind_to_double_click": true
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
-                                "attribute_alias": "test_log__id:COUNT",
-                                "caption": "Tests"
-                            }
-                        ],
-                        "sorters": [
-                            {
-                                "attribute_alias": "start_on",
-                                "direction": "desc"
-                            }
-                        ],
-                        "buttons": [
-                            {
-                                "action_alias": "exface.core.ShowObjectInfoDialog",
-                                "bind_to_double_click": true
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_log",
+                                        "aggregate_by_attribute_alias": [
+                                            "test_case__feature__module__LABEL",
+                                            "test_case__feature__module__application__LABEL"
+                                        ],
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "sprint__name",
+                                                "value": "=filter_sprint_name",
+                                                "hidden": true,
+                                                "apply_on_change": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "test_case__feature__module__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__feature__module__application__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "id:COUNT",
+                                                "caption": "Tests done"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "id:COUNT",
+                                                "direction": "desc"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -67,6 +122,13 @@
                                     "value": "=filter_sprint_name",
                                     "hidden": true,
                                     "apply_on_change": true
+                                },
+                                {
+                                    "attribute_alias": "sprint",
+                                    "value": "=table_sprints!id",
+                                    "hidden": true,
+                                    "apply_on_change": true,
+                                    "comparator": "["
                                 }
                             ],
                             "sorters": [
@@ -80,12 +142,14 @@
                             {
                                 "type": "column",
                                 "x_attribute_alias": "dates__week_date_of_mo",
-                                "y_attribute_alias": "test_cases_created:SUM"
+                                "y_attribute_alias": "test_cases_created:SUM",
+                                "y_axis_no": 0
                             },
                             {
                                 "type": "column",
                                 "x_attribute_alias": "dates__week_date_of_mo",
-                                "y_attribute_alias": "tests_done:SUM"
+                                "y_attribute_alias": "tests_done:SUM",
+                                "y_axis_no": 0
                             }
                         ]
                     }

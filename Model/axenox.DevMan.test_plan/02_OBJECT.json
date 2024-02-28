@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2022-11-02 14:41:41",
+            "MODIFIED_ON": "2024-02-28 11:47:17",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb8430d97a024a8430025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -100,79 +100,172 @@
                 "widget_type": "Dialog",
                 "widgets": [
                     {
-                        "attribute_alias": "id",
-                        "id": "uid_field",
-                        "widget_type": "InputHidden"
-                    },
-                    {
-                        "attribute_alias": "name"
-                    },
-                    {
-                        "attribute_alias": "description",
-                        "width": "max",
-                        "height": 6
-                    },
-                    {
-                        "widget_type": "DataTableResponsive",
-                        "caption": "Test cases",
-                        "object_alias": "axenox.DevMan.test_plan_cases",
-                        "hide_header": false,
-                        "width": "max",
-                        "height": "max",
-                        "filters": [
+                        "widget_type": "Tabs",
+                        "tabs": [
                             {
-                                "attribute_alias": "test_plan",
-                                "required": true,
-                                "value": "=uid_field",
-                                "hidden": true
-                            }
-                        ],
-                        "columns": [
-                            {
-                                "attribute_alias": "test_case__id"
-                            },
-                            {
-                                "attribute_alias": "test_case__LABEL"
-                            }
-                        ],
-                        "buttons": [
-                            {
-                                "action_alias": "exface.Core.ShowObjectCreateDialog",
-                                "caption": "=Translate('exface.Core', 'ACTION.GENERIC.ADD')",
-                                "disabled_if": {
-                                    "operator": "AND",
-                                    "conditions": [
-                                        {
-                                            "value_left": "=uid_field",
-                                            "comparator": "==",
-                                            "value_right": ""
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "action_alias": "exface.Core.DeleteObject",
-                                "caption": "=Translate('exface.Core', 'ACTION.GENERIC.REMOVE')"
-                            },
-                            {
-                                "bind_to_double_click": true,
-                                "action": {
-                                    "alias": "exface.core.ShowObjectEditDialog",
-                                    "object_alias": "axenox.DevMan.test_case",
-                                    "input_mapper": {
-                                        "column_to_column_mappings": [
+                                "caption": "Test plan",
+                                "widgets": [
+                                    {
+                                        "attribute_alias": "id",
+                                        "id": "uid_field",
+                                        "widget_type": "InputHidden"
+                                    },
+                                    {
+                                        "attribute_alias": "name"
+                                    },
+                                    {
+                                        "attribute_alias": "sprint"
+                                    },
+                                    {
+                                        "attribute_alias": "description",
+                                        "width": "max",
+                                        "height": 6
+                                    },
+                                    {
+                                        "widget_type": "DataTableResponsive",
+                                        "caption": "Test cases",
+                                        "object_alias": "axenox.DevMan.test_plan_cases",
+                                        "hide_header": false,
+                                        "width": "max",
+                                        "height": "max",
+                                        "filters": [
                                             {
-                                                "from": "test_case",
-                                                "to": "id"
+                                                "attribute_alias": "test_plan",
+                                                "required": true,
+                                                "value": "=uid_field",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "test_case__id"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__LABEL"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "caption": "=Translate('exface.Core', 'ACTION.GENERIC.ADD')",
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=uid_field",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "caption": "=Translate('exface.Core', 'ACTION.GENERIC.REMOVE')"
+                                            },
+                                            {
+                                                "bind_to_double_click": true,
+                                                "action": {
+                                                    "alias": "exface.core.ShowObjectEditDialog",
+                                                    "object_alias": "axenox.DevMan.test_case",
+                                                    "input_mapper": {
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "test_case",
+                                                                "to": "id"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "alias": "axenox.DevMan.TestCaseStartDialog"
+                                                }
                                             }
                                         ]
                                     }
-                                }
+                                ]
                             },
                             {
-                                "action": {
-                                    "alias": "axenox.DevMan.TestCaseStartDialog"
-                                }
+                                "caption": "Ext. Tickets",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.external_test_link",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_plan",
+                                                "required": true,
+                                                "hidden": true,
+                                                "comparator": "=="
+                                            },
+                                            {
+                                                "attribute_alias": "external_system"
+                                            },
+                                            {
+                                                "attribute_alias": "comment"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "external_ticket_id"
+                                            },
+                                            {
+                                                "attribute_alias": "comment"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__id",
+                                                "caption": "Main TC"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__test_status"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__last_test_time"
+                                            },
+                                            {
+                                                "attribute_alias": "external_system__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "url",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "external_ticket_id",
+                                                "direction": "asc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action": {
+                                                    "alias": "exface.Core.GoToUrl",
+                                                    "url": "[#url#]",
+                                                    "open_in_new_window": true
+                                                }
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "visibility": "optional"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }

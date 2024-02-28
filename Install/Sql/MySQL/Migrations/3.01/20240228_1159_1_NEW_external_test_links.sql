@@ -1,6 +1,6 @@
 -- UP
 
-CREATE TABLE `external_test_link` (
+CREATE TABLE IF NOT EXISTS `external_test_link` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `created_on` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_on` datetime NOT NULL DEFAULT current_timestamp(),

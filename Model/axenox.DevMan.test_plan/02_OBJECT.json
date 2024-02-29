@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2024-02-28 11:47:17",
+            "MODIFIED_ON": "2024-02-28 16:57:43",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ed995cb1942f38995c005056be9fa0",
             "UID": "0x11eb8430d97a024a8430025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -138,10 +138,32 @@
                                         ],
                                         "columns": [
                                             {
-                                                "attribute_alias": "test_case__id"
+                                                "attribute_alias": "test_case__external_test_link__external_ticket_id:LIST",
+                                                "width_max": "300px",
+                                                "caption": "Ext. Tickets"
                                             },
                                             {
-                                                "attribute_alias": "test_case__LABEL"
+                                                "attribute_alias": "comment",
+                                                "width_max": "500px"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__LABEL",
+                                                "width_max": "300px"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__test_status"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__last_test_time"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "test_case__external_test_link__external_ticket_id:LIST",
+                                                "direction": "asc"
                                             }
                                         ],
                                         "buttons": [
@@ -180,7 +202,17 @@
                                             },
                                             {
                                                 "action": {
+                                                    "alias": "axenox.DevMan.TestPlanCasesEditComment"
+                                                }
+                                            },
+                                            {
+                                                "action": {
                                                     "alias": "axenox.DevMan.TestCaseStartDialog"
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "alias": "axenox.DevMan.TestCaseMarkAsToDo"
                                                 }
                                             }
                                         ]
@@ -209,14 +241,24 @@
                                         ],
                                         "columns": [
                                             {
+                                                "attribute_alias": "test_plan",
+                                                "hidden": true
+                                            },
+                                            {
+                                                "attribute_alias": "test_case",
+                                                "hidden": true
+                                            },
+                                            {
                                                 "attribute_alias": "external_ticket_id"
                                             },
                                             {
-                                                "attribute_alias": "comment"
+                                                "attribute_alias": "comment",
+                                                "width_max": "500px"
                                             },
                                             {
-                                                "attribute_alias": "test_case__id",
-                                                "caption": "Main TC"
+                                                "attribute_alias": "test_case__LABEL",
+                                                "caption": "Main TC",
+                                                "width_max": "300px"
                                             },
                                             {
                                                 "attribute_alias": "test_case__test_case_status__test_status"
@@ -258,6 +300,40 @@
                                             },
                                             {
                                                 "action_alias": "exface.Core.ShowObjectCopyDialog"
+                                            },
+                                            {
+                                                "caption": "Add TC to Test Plan",
+                                                "icon": "arrow-right",
+                                                "disabled_if": {
+                                                    "operator": "AND",
+                                                    "conditions": [
+                                                        {
+                                                            "value_left": "=~input!test_case",
+                                                            "comparator": "==",
+                                                            "value_right": ""
+                                                        }
+                                                    ]
+                                                },
+                                                "action": {
+                                                    "alias": "exface.core.CreateData",
+                                                    "object_alias": "axenox.DevMan.test_plan_cases",
+                                                    "input_mapper": {
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "test_plan",
+                                                                "to": "test_plan"
+                                                            },
+                                                            {
+                                                                "from": "test_case",
+                                                                "to": "test_case"
+                                                            },
+                                                            {
+                                                                "from": "comment",
+                                                                "to": "comment"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
                                             },
                                             {
                                                 "action_alias": "exface.Core.DeleteObject",

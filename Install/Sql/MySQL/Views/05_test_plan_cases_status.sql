@@ -19,7 +19,7 @@ FROM (
 			(SELECT MAX(tl.tested_on) FROM test_log tl WHERE tl.test_case_id = tc.id) AS last_test_time
 		FROM
 			test_plan_cases tpc
-			INNER JOIN test_case tc ON tc.id = tpc.id
+			INNER JOIN test_case tc ON tc.id = tpc.test_case_id
 			INNER JOIN feature f ON tc.feature_id = f.id
 	) tmp
 	LEFT JOIN test_log tl2 ON tl2.test_case_id = tmp.test_case_id AND tl2.tested_on = tmp.last_test_time

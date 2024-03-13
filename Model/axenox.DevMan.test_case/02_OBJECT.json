@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2024-02-07 11:10:11",
+            "MODIFIED_ON": "2024-03-13 16:17:28",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -341,6 +341,134 @@
                                             {
                                                 "action_alias": "exface.core.ShowObjectEditDialog",
                                                 "bind_to_double_click": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Tickets",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.ticket",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_log__test_case__id",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "id",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "attribute_alias": "type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "created_on"
+                                            },
+                                            {
+                                                "attribute_alias": "created_by_user__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket_tags__tag__LABEL:LIST_DISTINCT",
+                                                "caption": "Tags"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "bind_to_double_click": true,
+                                                "caption": "Open ticket",
+                                                "action_alias": "exface.core.ShowObjectEditDialog"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Ext. Links",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.external_test_link",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_plan__test_plan_cases__test_case__id",
+                                                "required": true,
+                                                "hidden": true,
+                                                "comparator": "=="
+                                            },
+                                            {
+                                                "attribute_alias": "external_system"
+                                            },
+                                            {
+                                                "attribute_alias": "comment"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "external_ticket_id"
+                                            },
+                                            {
+                                                "attribute_alias": "test_plan__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "comment",
+                                                "width_max": "500px"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__LABEL",
+                                                "caption": "Main TC",
+                                                "width_max": "300px"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__test_status"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__test_case_status__last_test_time"
+                                            },
+                                            {
+                                                "attribute_alias": "external_system__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "url",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "external_ticket_id",
+                                                "direction": "asc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action": {
+                                                    "alias": "exface.Core.GoToUrl",
+                                                    "url": "[#url#]",
+                                                    "open_in_new_window": true
+                                                }
                                             }
                                         ]
                                     }

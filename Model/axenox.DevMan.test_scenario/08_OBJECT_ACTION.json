@@ -61,7 +61,7 @@
     "rows": [
         {
             "CREATED_ON": "2022-11-02 15:19:55",
-            "MODIFIED_ON": "2022-11-24 10:53:56",
+            "MODIFIED_ON": "2024-03-13 16:26:53",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ed98516c5187bc9851005056be9fa0",
@@ -87,7 +87,6 @@
                         {
                             "widget_type": "DataSpreadSheet",
                             "object_alias": "axenox.DevMan.test_scenario_cases",
-                            "object_relation_path_to_parent": "test_scenario",
                             "row_number_attribute_alias": "sequence",
                             "allow_to_drag_rows": true,
                             "nowrap": false,
@@ -115,14 +114,26 @@
                                     "attribute_alias": "sequence",
                                     "direction": "asc"
                                 }
+                            ],
+                            "buttons": [
+                                {
+                                    "action_alias": "exface.core.SaveData",
+                                    "hidden": true,
+                                    "id": "table_save_button"
+                                }
                             ]
                         }
                     ],
                     "buttons": [
                         {
-                            "action_alias": "exface.core.SaveData",
+                            "align": "opposite",
                             "visibility": "promoted",
-                            "align": "opposite"
+                            "close_dialog": true,
+                            "action": {
+                                "alias": "exface.core.CallWidgetFunction",
+                                "widget_id": "table_save_button",
+                                "function": "press"
+                            }
                         }
                     ]
                 }

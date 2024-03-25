@@ -1,0 +1,159 @@
+{
+    "object_alias": "exface.Core.PAGE_GROUP_PAGES",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "PAGE",
+            "attribute_alias": "PAGE"
+        },
+        {
+            "name": "PAGE_GROUP",
+            "attribute_alias": "PAGE_GROUP"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee8f4b1e17f9da8f4b005056be9fa0",
+            "PAGE": "0x11eb9751368995f49751025041000001",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee95cb1e18170895cb005056be9fa0",
+            "PAGE": "0x11ebb097e0562cd2b097747827435ce5",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee988e1e1811ae988e005056be9fa0",
+            "PAGE": "0x11eb8fba1bf2e24c8fba025041000001",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee9a1f1e1827529a1f005056be9fa0",
+            "PAGE": "0x11eebd12c0033c9ebd12005056be9fa0",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee9f3c1e1831529f3c005056be9fa0",
+            "PAGE": "0x11ebbb0dbfc220a2bb0d025041000001",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11eeacf31e182c66acf3005056be9fa0",
+            "PAGE": "0x11eeb351aa6c06f6b351005056be9fa0",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11eeb7211e180c86b721005056be9fa0",
+            "PAGE": "0x11eba3d7a564e2dca3d7025041000001",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11eeb91b1e17d3c4b91b005056be9fa0",
+            "PAGE": "0x11eb95f1427f2f7495f1025041000001",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:45:52",
+            "MODIFIED_ON": "2024-03-22 13:45:52",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11eeba931e182234ba93005056be9fa0",
+            "PAGE": "0x11ee8867e83671348867005056be9fa0",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:52:05",
+            "MODIFIED_ON": "2024-03-22 13:52:05",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee8e8dfc79c9108e8d005056be9fa0",
+            "PAGE": "0x09481916d5b611e789120050568905af",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:52:27",
+            "MODIFIED_ON": "2024-03-22 13:52:27",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ee91f10988d2b891f1005056be9fa0",
+            "PAGE": "0x35da4e8ce55a11e78da60050568905af",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.PAGE_GROUP_PAGES",
+        "conditions": [
+            {
+                "expression": "PAGE__APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.PAGE_GROUP_PAGES"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

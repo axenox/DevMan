@@ -94,6 +94,26 @@
             "TARGET_ACTION_PROTOTYPE": "",
             "TARGET_FACADE": "axenox\/DevMan\/Facades\/WebhookFacade.php",
             "TARGET_APP": ""
+        },
+        {
+            "CREATED_ON": "2024-03-22 13:47:16",
+            "MODIFIED_ON": "2024-03-25 15:58:42",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11eea1d1507bad54a1d1005056be9fa0",
+            "NAME": "Testing pages for \"Tester\"",
+            "DESCRIPTION": "",
+            "EFFECT": "P",
+            "APP": "0x38000000000000000000000000000000",
+            "AUTHORIZATION_POINT": "0x11ea5ede96e738f6b9920205857feb80",
+            "TARGET_PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "TARGET_USER_ROLE": "0x11ee8d6f32d7409c8d6f005056be9fa0",
+            "TARGET_OBJECT": "",
+            "CONDITION_UXON": null,
+            "TARGET_ACTION_MODEL": "",
+            "TARGET_ACTION_PROTOTYPE": "",
+            "TARGET_FACADE": "",
+            "TARGET_APP": ""
         }
     ],
     "totals_rows": [],

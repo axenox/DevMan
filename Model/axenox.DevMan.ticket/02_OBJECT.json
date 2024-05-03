@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2024-04-02 16:53:42",
+            "MODIFIED_ON": "2024-05-03 12:56:29",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eeb5e96f6eb832b5e9005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -275,7 +275,6 @@
                         "caption": "Attachments",
                         "widget_type": "ImageGallery",
                         "object_alias": "axenox.DevMan.ticket_file",
-                        "image_url_attribute_alias": "PATHNAME_RELATIVE",
                         "image_title_attribute_alias": "FILENAME",
                         "zoomable": true,
                         "hide_header": false,

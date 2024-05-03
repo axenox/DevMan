@@ -305,7 +305,7 @@
         },
         {
             "CREATED_ON": "2022-11-02 15:08:00",
-            "MODIFIED_ON": "2024-03-14 10:53:34",
+            "MODIFIED_ON": "2024-03-26 11:17:59",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ed9fd3c25fda0c9fd3005056be9fa0",
@@ -336,7 +336,7 @@
             "UIDFLAG": 0,
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
-            "REQUIREDFLAG": 1,
+            "REQUIREDFLAG": 0,
             "RELATED_OBJ": "",
             "SORTERPOS": null,
             "SORTERDIR": "",

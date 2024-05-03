@@ -81,14 +81,14 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-05-07 14:43:39",
+            "MODIFIED_ON": "2024-03-26 11:18:12",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eb91e0d97a288891e0025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
-            "COMMENTS": null,
-            "DOCS": null,
+            "COMMENTS": "",
+            "DOCS": "",
             "NAME": "Test scenario cases",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": 1,
             "DATA_SOURCE": "0x39000000000000000000000000000000",
@@ -96,7 +96,25 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "height": "auto",
+                "width": 1,
+                "widgets": [
+                    {
+                        "attribute_alias": "test_scenario"
+                    },
+                    {
+                        "attribute_alias": "sequence"
+                    },
+                    {
+                        "attribute_alias": "test_case"
+                    },
+                    {
+                        "attribute_alias": "summary"
+                    }
+                ]
+            },
             "ALIAS": "test_scenario_cases",
             "DATA_ADDRESS": "test_scenario_cases"
         }

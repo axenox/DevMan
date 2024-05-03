@@ -1,0 +1,69 @@
+{
+    "uid": "0x11eea03beebb2dcca03b005056be9fa0",
+    "alias_with_namespace": "axenox.devman.test-log-types",
+    "menu_parent_page_selector": "0x11eb95f1427f2f7495f1025041000001",
+    "menu_index": 7,
+    "menu_visible": true,
+    "name": "Test log types",
+    "description": "View and edit test log types",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11eea844784bd96ca844005056be9fa0",
+    "created_on": "2024-04-04 11:23:01",
+    "modified_by_user_selector": "0x11eea844784bd96ca844005056be9fa0",
+    "modified_on": "2024-04-04 11:24:32",
+    "contents": {
+        "object_alias": "axenox.DevMan.test_log_type",
+        "widget_type": "DataTable",
+        "filters": [
+            {
+                "attribute_alias": "name"
+            },
+            {
+                "attribute_alias": "explanation"
+            }
+        ],
+        "columns": [
+            {
+                "attribute_alias": "name"
+            },
+            {
+                "attribute_alias": "explanation"
+            },
+            {
+                "attribute_alias": "created_by_user__LABEL"
+            },
+            {
+                "attribute_alias": "modified_by_user__LABEL"
+            },
+            {
+                "attribute_alias": "created_on"
+            },
+            {
+                "attribute_alias": "modified_on"
+            }
+        ],
+        "sorters": [
+            {
+                "attribute_alias": "name",
+                "direction": "asc"
+            }
+        ],
+        "buttons": [
+            {
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectEditDialog",
+                "bind_to_double_click": true
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectCopyDialog"
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject",
+                "visibility": "optional"
+            }
+        ]
+    }
+}

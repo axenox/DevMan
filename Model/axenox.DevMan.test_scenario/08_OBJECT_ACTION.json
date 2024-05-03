@@ -61,9 +61,9 @@
     "rows": [
         {
             "CREATED_ON": "2022-11-02 15:19:55",
-            "MODIFIED_ON": "2024-03-13 16:26:53",
+            "MODIFIED_ON": "2024-04-03 11:02:47",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ed98516c5187bc9851005056be9fa0",
             "OBJECT": "0x11eba4f6d97a1d84a4f6025041000001",
             "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
@@ -89,6 +89,7 @@
                             "object_alias": "axenox.DevMan.test_scenario_cases",
                             "row_number_attribute_alias": "sequence",
                             "allow_to_drag_rows": true,
+                            "allow_to_delete_rows": false,
                             "nowrap": false,
                             "filters": [
                                 {

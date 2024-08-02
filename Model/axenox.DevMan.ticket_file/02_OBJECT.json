@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-07-01 18:16:08",
-            "MODIFIED_ON": "2021-07-01 18:16:48",
+            "MODIFIED_ON": "2024-08-02 11:46:18",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebb44ba5c19676b44b025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -100,7 +100,7 @@
             },
             "DEFAULT_EDITOR_UXON": null,
             "ALIAS": "ticket_file",
-            "DATA_ADDRESS": "data\/axenox.DevMan\/TicketFiles\/[#ticket#]\/*.*"
+            "DATA_ADDRESS": "data\/axenox.DevMan\/TicketFiles\/[#ticket#]\/*"
         }
     ],
     "totals_rows": [],

@@ -81,7 +81,7 @@
     "rows": [
         {
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2024-05-03 12:56:29",
+            "MODIFIED_ON": "2024-08-02 11:46:57",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -322,7 +322,8 @@
                         }
                     },
                     {
-                        "action_alias": "axenox.DevMan.TicketLinksDialog"
+                        "action_alias": "axenox.DevMan.TicketLinksDialog",
+                        "close_dialog": false
                     }
                 ]
             },

@@ -61,7 +61,7 @@
     "rows": [
         {
             "CREATED_ON": "2022-11-02 15:19:55",
-            "MODIFIED_ON": "2024-04-03 11:02:47",
+            "MODIFIED_ON": "2024-07-11 17:25:33",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ed98516c5187bc9851005056be9fa0",
@@ -82,7 +82,8 @@
                     "widgets": [
                         {
                             "attribute_alias": "id",
-                            "widget_type": "InputHidden"
+                            "widget_type": "InputHidden",
+                            "id": "scenarioId"
                         },
                         {
                             "widget_type": "DataSpreadSheet",
@@ -107,6 +108,14 @@
                                     "cell_widget": {
                                         "widget_type": "InputComboTable",
                                         "lazy_loading": false
+                                    }
+                                },
+                                {
+                                    "attribute_alias": "test_scenario",
+                                    "hidden": true,
+                                    "cell_widget": {
+                                        "widget_type": "Input",
+                                        "value": "=scenarioId"
                                     }
                                 }
                             ],

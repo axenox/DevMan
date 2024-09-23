@@ -61,17 +61,9 @@
             "TIME_ZONE": null,
             "LABEL": "DevMan local",
             "CONNECTOR": "exface\/Core\/DataConnectors\/MySqlConnector.php",
-            "CONFIG": {
-                "host": "127.0.0.1",
-                "dbase": "devman",
-                "user": "root",
-                "character_set": "utf8",
-                "password": "",
-                "relation_matcher": "\/(?<alias>(?<table>.*))_(?<key>id)\/i"
-            },
+            "CONFIG": "$$~~i2X6ooBguLYG\/oAPFGZdTzPKv96J64sMmpJflAHHRjQFBaEUdbrtoB7r1K97zU2iaKcH2g8+qt4gZ2lqT9mY9kj33T1zKAxgZPUoxScX\/vVRd0pn7acM5tjit5ILj2EqQmONXQtypNUR8M+sW+XLAxbXHkl7P9W4QakoWvlarP3btZouBwxI4dqkeodMdFc+5lJk2E+kYukw1soBzf0ueLbhbXDN5YKfvTJLjh\/1caaUnUL77HaTvurL0v8=",
             "READONLY": 0,
-            "ALIAS": "DEVMAN_LOCAL",
-            "FILTER_CONTEXT": null
+            "ALIAS": "DEVMAN_LOCAL"
         }
     ],
     "totals_rows": [],

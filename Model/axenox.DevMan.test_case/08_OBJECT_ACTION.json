@@ -665,9 +665,9 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2024-05-03 13:02:22",
+            "MODIFIED_ON": "2024-09-10 17:31:00",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
@@ -924,7 +924,8 @@
                                                             "image_title_attribute_alias": "FILENAME",
                                                             "zoomable": true,
                                                             "zoom_on_click": true,
-                                                            "hide_header": true,
+                                                            "hide_header": false,
+                                                            "download_enabled": true,
                                                             "filters": [
                                                                 {
                                                                     "attribute_alias": "test_case",

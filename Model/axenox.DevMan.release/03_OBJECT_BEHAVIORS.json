@@ -1,0 +1,120 @@
+{
+    "object_alias": "exface.Core.OBJECT_BEHAVIORS",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "BEHAVIOR",
+            "attribute_alias": "BEHAVIOR"
+        },
+        {
+            "name": "CONFIG_UXON",
+            "attribute_alias": "CONFIG_UXON"
+        },
+        {
+            "name": "OBJECT",
+            "attribute_alias": "OBJECT"
+        },
+        {
+            "name": "APP",
+            "attribute_alias": "APP"
+        },
+        {
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "DESCRIPTION",
+            "attribute_alias": "DESCRIPTION"
+        },
+        {
+            "name": "DISABLED_FLAG",
+            "attribute_alias": "DISABLED_FLAG"
+        },
+        {
+            "name": "PRIORITY",
+            "attribute_alias": "PRIORITY"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2024-09-25 14:11:15",
+            "MODIFIED_ON": "2024-09-25 14:28:57",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11efadab43a82636adab005056be9fa0",
+            "BEHAVIOR": "exface\/core\/Behaviors\/StateMachineBehavior.php",
+            "CONFIG_UXON": {
+                "state_attribute_alias": "state",
+                "hide_state_ids": true,
+                "states": {
+                    "10": {
+                        "name": "Planned"
+                    },
+                    "20": {
+                        "name": "In development"
+                    },
+                    "60": {
+                        "name": "Testing"
+                    },
+                    "100": {
+                        "name": "Released"
+                    },
+                    "101": {
+                        "name": "Out of support",
+                        "color": "lightgray"
+                    }
+                }
+            },
+            "OBJECT": "0x11ef9a416381deba9a41005056be9fa0",
+            "APP": "0x38000000000000000000000000000000",
+            "NAME": "Release state model",
+            "DESCRIPTION": "",
+            "DISABLED_FLAG": 0,
+            "PRIORITY": null
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.OBJECT_BEHAVIORS",
+        "conditions": [
+            {
+                "expression": "APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.OBJECT_BEHAVIORS"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

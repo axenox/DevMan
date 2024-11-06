@@ -1,0 +1,181 @@
+{
+    "object_alias": "exface.Core.OBJECT_ACTION",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "OBJECT",
+            "attribute_alias": "OBJECT"
+        },
+        {
+            "name": "ACTION_PROTOTYPE",
+            "attribute_alias": "ACTION_PROTOTYPE"
+        },
+        {
+            "name": "ALIAS",
+            "attribute_alias": "ALIAS"
+        },
+        {
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "SHORT_DESCRIPTION",
+            "attribute_alias": "SHORT_DESCRIPTION"
+        },
+        {
+            "name": "CONFIG_UXON",
+            "attribute_alias": "CONFIG_UXON"
+        },
+        {
+            "name": "APP",
+            "attribute_alias": "APP"
+        },
+        {
+            "name": "USE_IN_OBJECT_BASKET_FLAG",
+            "attribute_alias": "USE_IN_OBJECT_BASKET_FLAG"
+        },
+        {
+            "name": "DOCS",
+            "attribute_alias": "DOCS"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2024-10-16 10:54:49",
+            "MODIFIED_ON": "2024-10-16 11:20:54",
+            "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "UID": "0x11ef97584d3f5da29758005056be9fa0",
+            "OBJECT": "0x11eb8430d97a024a8430025041000001",
+            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ALIAS": "TestPlanEditStepsDialog",
+            "NAME": "Edit steps",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "input_object_alias": "axenox.DevMan.test_plan",
+                "icon": "pencil-square-o",
+                "dialog": {
+                    "width": 2,
+                    "height": "80%",
+                    "object_alias": "axenox.DevMan.test_plan",
+                    "widgets": [
+                        {
+                            "attribute_alias": "id",
+                            "widget_type": "InputHidden",
+                            "id": "planId"
+                        },
+                        {
+                            "widget_type": "DataSpreadSheet",
+                            "object_alias": "axenox.DevMan.test_plan_cases",
+                            "row_number_attribute_alias": "priority",
+                            "allow_to_drag_rows": true,
+                            "allow_to_delete_rows": true,
+                            "nowrap": false,
+                            "filters": [
+                                {
+                                    "attribute_alias": "test_plan",
+                                    "required": true,
+                                    "hidden": true
+                                }
+                            ],
+                            "columns": [
+                                {
+                                    "attribute_alias": "comment"
+                                },
+                                {
+                                    "attribute_alias": "test_case",
+                                    "cell_widget": {
+                                        "widget_type": "InputComboTable",
+                                        "lazy_loading": false
+                                    }
+                                },
+                                {
+                                    "attribute_alias": "test_plan",
+                                    "hidden": true,
+                                    "cell_widget": {
+                                        "widget_type": "Input",
+                                        "value": "=planId"
+                                    }
+                                }
+                            ],
+                            "sorters": [
+                                {
+                                    "attribute_alias": "priority",
+                                    "direction": "asc"
+                                }
+                            ],
+                            "buttons": [
+                                {
+                                    "action_alias": "exface.core.SaveData",
+                                    "hidden": true,
+                                    "id": "table_save_button"
+                                }
+                            ]
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "align": "opposite",
+                            "visibility": "promoted",
+                            "close_dialog": true,
+                            "action": {
+                                "alias": "exface.core.CallWidgetFunction",
+                                "widget_id": "table_save_button",
+                                "function": "press"
+                            }
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.OBJECT_ACTION",
+        "conditions": [
+            {
+                "expression": "APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.OBJECT_ACTION"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

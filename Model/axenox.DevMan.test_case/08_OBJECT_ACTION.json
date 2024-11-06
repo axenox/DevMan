@@ -665,9 +665,9 @@
         },
         {
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2024-09-10 17:31:00",
+            "MODIFIED_ON": "2024-11-06 10:16:20",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
@@ -706,6 +706,10 @@
                             {
                                 "from": "description",
                                 "to": "test_description"
+                            },
+                            {
+                                "from": "login_data",
+                                "to": "test_case__login_data"
                             }
                         ]
                     },
@@ -735,6 +739,10 @@
                             {
                                 "from": "test_case__description",
                                 "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
                             }
                         ]
                     },
@@ -764,6 +772,10 @@
                             {
                                 "from": "test_case__description",
                                 "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
                             }
                         ]
                     },
@@ -793,6 +805,10 @@
                             {
                                 "from": "test_case__description",
                                 "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
                             }
                         ]
                     }
@@ -915,7 +931,7 @@
                                                             "widget_type": "InputMarkdown",
                                                             "editor_mode": "wysiwyg",
                                                             "width": "max",
-                                                            "height": 10
+                                                            "height": 12
                                                         },
                                                         {
                                                             "caption": "Test case attachments",
@@ -992,6 +1008,19 @@
                                                     ]
                                                 }
                                             ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Login data",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__login_data",
+                                            "widget_type": "InputMarkdown",
+                                            "width": "max",
+                                            "height": "max",
+                                            "hide_caption": true,
+                                            "editor_mode": "wysiwyg"
                                         }
                                     ]
                                 },
@@ -1224,6 +1253,174 @@
                             },
                             "visibility": "promoted",
                             "align": "opposite"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "CREATED_ON": "2024-11-06 10:12:40",
+            "MODIFIED_ON": "2024-11-06 10:23:57",
+            "CREATED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "UID": "0x11ef84fd45de822a84fd005056be9fa0",
+            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
+            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ALIAS": "TestCaseInfo",
+            "NAME": "Info",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "icon": "info",
+                "dialog": {
+                    "object_alias": "axenox.DevMan.test_case",
+                    "widgets": [
+                        {
+                            "widget_type": "Tabs",
+                            "tabs": [
+                                {
+                                    "caption": "Test case",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "id",
+                                            "widget_type": "InputHidden",
+                                            "id": "field_test_case_id"
+                                        },
+                                        {
+                                            "attribute_alias": "name",
+                                            "widget_type": "Display",
+                                            "width": "max"
+                                        },
+                                        {
+                                            "attribute_alias": "feature__LABEL",
+                                            "widget_type": "Display"
+                                        },
+                                        {
+                                            "widget_type": "WidgetGroup",
+                                            "caption": "Description",
+                                            "width": "max",
+                                            "height": "max",
+                                            "widgets": [
+                                                {
+                                                    "attribute_alias": "description",
+                                                    "height": "max",
+                                                    "hide_caption": true,
+                                                    "width": "max",
+                                                    "widget_type": "InputMarkdown",
+                                                    "editor_mode": "wysiwyg"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "widget_type": "WidgetGroup",
+                                            "caption": "Files",
+                                            "width": "max",
+                                            "collapsed": true,
+                                            "widgets": [
+                                                {
+                                                    "widget_type": "ImageGallery",
+                                                    "object_alias": "axenox.DevMan.test_case_file",
+                                                    "image_title_attribute_alias": "FILENAME",
+                                                    "zoomable": true,
+                                                    "hide_header": false,
+                                                    "upload_enabled": false,
+                                                    "download_enabled": true,
+                                                    "filters": [
+                                                        {
+                                                            "attribute_alias": "test_case",
+                                                            "hidden": true,
+                                                            "required": true,
+                                                            "comparator": "=="
+                                                        }
+                                                    ],
+                                                    "columns": [
+                                                        {
+                                                            "attribute_alias": "test_case",
+                                                            "value": "=field_test_case_id!id",
+                                                            "hidden": true
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Ext. Links",
+                                    "widgets": [
+                                        {
+                                            "widget_type": "DataTable",
+                                            "object_alias": "axenox.DevMan.external_test_link",
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_plan__test_plan_cases__test_case__id",
+                                                    "required": true,
+                                                    "hidden": true,
+                                                    "comparator": "=="
+                                                },
+                                                {
+                                                    "attribute_alias": "external_system"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment"
+                                                }
+                                            ],
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "external_ticket_id"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_plan__LABEL"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment",
+                                                    "width_max": "500px"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_case__LABEL",
+                                                    "caption": "Main TC",
+                                                    "width_max": "300px"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_case__test_case_status__test_status"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_case__test_case_status__last_test_time"
+                                                },
+                                                {
+                                                    "attribute_alias": "external_system__LABEL"
+                                                },
+                                                {
+                                                    "attribute_alias": "url",
+                                                    "hidden": true
+                                                }
+                                            ],
+                                            "sorters": [
+                                                {
+                                                    "attribute_alias": "external_ticket_id",
+                                                    "direction": "asc"
+                                                }
+                                            ],
+                                            "buttons": [
+                                                {
+                                                    "action": {
+                                                        "alias": "exface.Core.GoToUrl",
+                                                        "url": "[#url#]",
+                                                        "open_in_new_window": true
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

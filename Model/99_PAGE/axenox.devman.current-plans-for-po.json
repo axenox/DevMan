@@ -1,0 +1,175 @@
+{
+    "uid": "0x11efacd7d485b33eacd7005056be9fa0",
+    "alias_with_namespace": "axenox.devman.current-plans-for-po",
+    "menu_parent_page_selector": "0x11eb95f1427f2f7495f1025041000001",
+    "menu_index": 6,
+    "menu_visible": true,
+    "name": "Current plans for PO",
+    "description": "Test plans to see for PO-Team",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "created_on": "2024-11-06 09:19:23",
+    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "modified_on": "2024-11-06 10:56:11",
+    "contents": {
+        "widget_type": "SplitHorizontal",
+        "object_alias": "axenox.DevMan.test_case",
+        "panels": [
+            {
+                "width": "20%",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "caption": "Current test plans",
+                        "object_alias": "axenox.DevMan.test_plan",
+                        "id": "testplan_tabelle",
+                        "hide_header": false,
+                        "filters": [
+                            {
+                                "attribute_alias": "closed_flag",
+                                "value": 0,
+                                "hidden": true
+                            },
+                            {
+                                "attribute_alias": "application"
+                            },
+                            {
+                                "attribute_alias": "application__client"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "id",
+                                "direction": "desc"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "application__LABEL"
+                            },
+                            {
+                                "attribute_alias": "milestone__LABEL"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "caption": "Test cases",
+                        "object_alias": "axenox.DevMan.test_plan_cases",
+                        "id": "test_cases",
+                        "filters": [
+                            {
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "attribute_alias": "test_case__feature__module__application"
+                            },
+                            {
+                                "attribute_alias": "test_case__feature__module"
+                            },
+                            {
+                                "attribute_alias": "test_case__feature"
+                            },
+                            {
+                                "attribute_alias": "test_case__name"
+                            },
+                            {
+                                "attribute_alias": "test_plan_cases_status__test_status"
+                            },
+                            {
+                                "attribute_alias": "test_case__test_scenario_cases__test_scenario"
+                            },
+                            {
+                                "attribute_alias": "test_plan",
+                                "value": "=testplan_tabelle!id",
+                                "apply_on_change": true,
+                                "hidden": true
+                            },
+                            {
+                                "attribute_alias": "test_case__test_log__ticket"
+                            },
+                            {
+                                "attribute_alias": "test_plan__milestone"
+                            },
+                            {
+                                "attribute_alias": "test_plan__closed_flag",
+                                "value": 0,
+                                "hidden": true
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "priority",
+                                "direction": "asc"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "priority",
+                                "caption": "order"
+                            },
+                            {
+                                "attribute_alias": "test_case__id"
+                            },
+                            {
+                                "attribute_alias": "test_case__name"
+                            },
+                            {
+                                "attribute_alias": "test_case__feature__LABEL"
+                            },
+                            {
+                                "attribute_alias": "comment",
+                                "width": "400px"
+                            },
+                            {
+                                "attribute_alias": "test_case__test_case_status__test_status"
+                            },
+                            {
+                                "attribute_alias": "test_case__test_case_status__last_test_time"
+                            },
+                            {
+                                "attribute_alias": "test_case__test_log__id:COUNT",
+                                "caption": "Tests"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.core.ShowObjectInfoDialog",
+                                "caption": "Additional Info"
+                            },
+                            {
+                                "bind_to_double_click": true,
+                                "caption": "Test Case Info",
+                                "action": {
+                                    "alias": "axenox.DevMan.TestCaseInfo",
+                                    "object_alias": "axenox.DevMan.test_case",
+                                    "input_mapper": {
+                                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                                        "to_object_alias": "axenox.DevMan.test_case",
+                                        "column_to_column_mappings": [
+                                            {
+                                                "from": "test_case__id",
+                                                "to": "id"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

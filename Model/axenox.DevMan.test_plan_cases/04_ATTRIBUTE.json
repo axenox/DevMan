@@ -208,7 +208,7 @@
             "RELATED_OBJ": "0x11eb9f70d979e24c9f70025041000001",
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,
@@ -252,7 +252,7 @@
             "RELATED_OBJ": "0x11eb8430d97a024a8430025041000001",
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,
@@ -261,9 +261,9 @@
         },
         {
             "CREATED_ON": "2021-05-20 17:57:29",
-            "MODIFIED_ON": "2021-05-20 17:57:48",
+            "MODIFIED_ON": "2024-10-16 11:28:26",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11eb8fc614b836188fc6025041000001",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -293,17 +293,16 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": 1,
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": {
-                "min": 0,
-                "max": 9
+                "min": 0
             }
         },
         {
@@ -343,7 +342,7 @@
             "RELATED_OBJ": "0x31343400000000000000000000000000",
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": {
                 "SQL_DATA_TYPE": "binary"
@@ -354,9 +353,9 @@
         },
         {
             "CREATED_ON": "2024-02-28 13:30:47",
-            "MODIFIED_ON": "2024-02-28 13:30:54",
+            "MODIFIED_ON": "2024-10-16 15:43:34",
             "CREATED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
-            "MODIFIED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee9bd433101a889bd4005056be9fa0",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -366,10 +365,16 @@
             "READABLEFLAG": 1,
             "WRITABLEFLAG": 1,
             "SYSTEMFLAG": 0,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "InputText",
+                "height": "150px"
+            },
             "COPY_WITH_RELATED_OBJECT": 0,
             "DELETE_WITH_RELATED_OBJECT": 0,
-            "DEFAULT_DISPLAY_UXON": null,
+            "DEFAULT_DISPLAY_UXON": {
+                "widget_type": "Text",
+                "height": "150px"
+            },
             "COMMENTS": "",
             "NAME": "Comment",
             "RELATION_CARDINALITY": "",
@@ -386,10 +391,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",

@@ -81,9 +81,9 @@
     "rows": [
         {
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2024-05-03 13:01:57",
+            "MODIFIED_ON": "2024-11-06 09:52:55",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -94,7 +94,7 @@
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "An atomic test to be performed as a whole",
-            "PARENT_OBJECT": "",
+            "PARENT_OBJECT": null,
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
                 "widget_type": "Dialog",
@@ -143,6 +143,7 @@
                                         "widget_type": "WidgetGroup",
                                         "caption": "Files",
                                         "width": "max",
+                                        "collapsed": true,
                                         "widgets": [
                                             {
                                                 "widget_type": "ImageGallery",
@@ -171,6 +172,19 @@
                                                 }
                                             }
                                         ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Login data",
+                                "widgets": [
+                                    {
+                                        "widget_type": "InputMarkdown",
+                                        "width": "max",
+                                        "height": "max",
+                                        "attribute_alias": "login_data",
+                                        "hide_caption": true,
+                                        "editor_mode": "wysiwyg"
                                     }
                                 ]
                             },

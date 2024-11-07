@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
     "created_on": "2024-11-06 09:19:23",
-    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
-    "modified_on": "2024-11-06 10:56:11",
+    "modified_by_user_selector": "0x11eea844784bd96ca844005056be9fa0",
+    "modified_on": "2024-11-07 11:58:38",
     "contents": {
         "widget_type": "SplitHorizontal",
         "object_alias": "axenox.DevMan.test_case",
@@ -36,6 +36,9 @@
                             },
                             {
                                 "attribute_alias": "application__client"
+                            },
+                            {
+                                "attribute_alias": "sprint"
                             }
                         ],
                         "sorters": [
@@ -53,6 +56,9 @@
                             },
                             {
                                 "attribute_alias": "application__LABEL"
+                            },
+                            {
+                                "attribute_alias": "sprint__LABEL"
                             },
                             {
                                 "attribute_alias": "milestone__LABEL"

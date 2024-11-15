@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-05-20 18:55:42",
-    "modified_by_user_selector": "0x11eea844784bd96ca844005056be9fa0",
-    "modified_on": "2024-11-06 17:58:19",
+    "modified_by_user_selector": "0x11ee96cbe2775e2496cb005056be9fa0",
+    "modified_on": "2024-11-15 16:51:53",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.test_case",
@@ -56,6 +56,9 @@
             },
             {
                 "attribute_alias": "external_test_link__external_ticket_id"
+            },
+            {
+                "attribute_alias": "modified_by_user"
             }
         ],
         "sorters": [

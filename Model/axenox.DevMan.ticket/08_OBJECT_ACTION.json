@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.OBJECT_ACTION",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -60,13 +65,14 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Ticket: Move to sprint",
             "CREATED_ON": "2021-11-17 10:05:38",
             "MODIFIED_ON": "2021-11-17 10:05:53",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11eca855881b0d30a855005056bee7c0",
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
-            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowMassEditDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
             "ALIAS": "TicketMoveToSprintDialog",
             "NAME": "Move to sprint",
             "SHORT_DESCRIPTION": "",
@@ -92,13 +98,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Ticket: External Links",
             "CREATED_ON": "2021-11-18 13:57:46",
             "MODIFIED_ON": "2021-11-18 16:05:08",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eca6b121203c8ca6b1025041000001",
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "TicketLinksDialog",
             "NAME": "External Links",
             "SHORT_DESCRIPTION": "",
@@ -157,15 +164,16 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Ticket: Set release",
             "CREATED_ON": "2024-09-23 21:52:43",
-            "MODIFIED_ON": "2024-09-25 12:07:40",
+            "MODIFIED_ON": "2025-01-26 15:52:49",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef9e6f661fa7d29e6f005056be9fa0",
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
-            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowMassEditDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
             "ALIAS": "TicketMoveToReleaseDialog",
-            "NAME": "Move to release",
+            "NAME": "Set release",
             "SHORT_DESCRIPTION": "",
             "CONFIG_UXON": {
                 "prefill_with_input_data": true,

@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.OBJECT_ACTION",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -60,13 +65,14 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Test plan: Edit steps",
             "CREATED_ON": "2024-10-16 10:54:49",
             "MODIFIED_ON": "2024-10-16 11:20:54",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ef97584d3f5da29758005056be9fa0",
             "OBJECT": "0x11eb8430d97a024a8430025041000001",
-            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
             "ALIAS": "TestPlanEditStepsDialog",
             "NAME": "Edit steps",
             "SHORT_DESCRIPTION": "",
@@ -144,6 +150,175 @@
                                 "widget_id": "table_save_button",
                                 "function": "press"
                             }
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test plan: Mark All Test cases as ToDo",
+            "CREATED_ON": "2024-12-16 11:09:26",
+            "MODIFIED_ON": "2024-12-16 11:31:28",
+            "CREATED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "UID": "0x11efaf68d4d06ba2af68005056be9fa0",
+            "OBJECT": "0x11eb8430d97a024a8430025041000001",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
+            "ALIAS": "TestPlanMarkAllToDo",
+            "NAME": "Mark All Test cases as ToDo",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "icon": "exclamation-triangle",
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "input_object_alias": "axenox.DevMan.test_plan",
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.test_plan",
+                    "height": "auto",
+                    "width": 1,
+                    "header": {
+                        "title_attribute_alias": "LABEL"
+                    },
+                    "widgets": [
+                        {
+                            "attribute_alias": "id",
+                            "widget_type": "InputHidden"
+                        },
+                        {
+                            "widget_type": "Message",
+                            "value": "Mark all test cases in this plan as ToDo? The status will be overwitten!"
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "caption": "Mark cases as ToDo",
+                            "icon": "exclamation-triangle",
+                            "visibility": "promoted",
+                            "align": "opposite",
+                            "action": {
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "No test plan selected!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "id",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "alias": "exface.Core.ActionChain",
+                                "input_rows_min": 1,
+                                "input_rows_max": 1,
+                                "input_object_alias": "axenox.DevMan.test_plan",
+                                "actions": [
+                                    {
+                                        "alias": "exface.core.ReadData",
+                                        "object_alias": "axenox.DevMan.test_plan_cases",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.test_plan",
+                                            "to_object_alias": "axenox.DevMan.test_plan_cases",
+                                            "column_to_column_mappings": [
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "id",
+                                                    "create_row_in_empty_data": false
+                                                },
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "test_case",
+                                                    "create_row_in_empty_data": false
+                                                },
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "test_case__modified_on",
+                                                    "create_row_in_empty_data": false
+                                                }
+                                            ],
+                                            "column_to_filter_mappings": [
+                                                {
+                                                    "from": "id",
+                                                    "to": "test_plan"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "alias": "exface.core.UpdateData",
+                                        "object_alias": "axenox.DevMan.test_case",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.test_plan_cases",
+                                            "to_object_alias": "axenox.DevMan.test_case",
+                                            "inherit_filters": "none",
+                                            "column_to_column_mappings": [
+                                                {
+                                                    "from": "test_case",
+                                                    "to": "id"
+                                                },
+                                                {
+                                                    "from": "test_case__modified_on",
+                                                    "to": "modified_on"
+                                                },
+                                                {
+                                                    "from": "=NOW()",
+                                                    "to": "retest_required_time"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test plan: Mark as closed",
+            "CREATED_ON": "2025-01-14 18:23:16",
+            "MODIFIED_ON": "2025-01-14 18:25:02",
+            "CREATED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "UID": "0x11ef8c4c3e1b0fa08c4c005056be9fa0",
+            "OBJECT": "0x11eb8430d97a024a8430025041000001",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
+            "ALIAS": "TestPlanMarkAsClosed",
+            "NAME": "Mark as closed",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "icon": "window-close",
+                "input_rows_min": 1,
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.test_plan",
+                    "height": "auto",
+                    "width": 1,
+                    "header": {
+                        "title_attribute_alias": "LABEL"
+                    },
+                    "widgets": [
+                        {
+                            "widget_type": "Message",
+                            "value": "Mark this test case as closed? This means the test plan is complete and it will no longer show under \"Current Test Plans\"."
+                        },
+                        {
+                            "attribute_alias": "closed_flag"
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "action_alias": "exface.core.UpdateData",
+                            "visibility": "promoted",
+                            "align": "opposite"
                         }
                     ]
                 }

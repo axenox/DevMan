@@ -253,7 +253,7 @@
                             },
                             {
                                 "attribute_alias": "priority_avg",
-                                "caption": "Pr.\/All"
+                                "caption": "Pr./All"
                             },
                             {
                                 "attribute_alias": "parent_ticket__id",

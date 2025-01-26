@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.OBJECT_ACTION",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -60,13 +65,14 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Project tickets: Reorder",
             "CREATED_ON": "2022-02-10 16:58:40",
             "MODIFIED_ON": "2022-02-10 21:12:50",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ecb10a50a8b5c6b10a025041000001",
             "OBJECT": "0x11e5f0b9fd06f67a89840050568905af",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "ProjectTicketsReorderDialog",
             "NAME": "Reorder",
             "SHORT_DESCRIPTION": "",

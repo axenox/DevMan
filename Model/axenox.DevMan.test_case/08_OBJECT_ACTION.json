@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.OBJECT_ACTION",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -60,13 +65,14 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Test case: Add to test plan",
             "CREATED_ON": "2021-05-20 19:00:45",
             "MODIFIED_ON": "2021-05-20 19:00:45",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11eba191eada4634a191025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "TestCasesAddToPlanDialog",
             "NAME": "Add to test plan",
             "SHORT_DESCRIPTION": "Opens a dialog to add one or more test cases to a test plan",
@@ -114,13 +120,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Test case: Add to scenario",
             "CREATED_ON": "2021-05-20 19:01:34",
             "MODIFIED_ON": "2024-03-26 11:21:33",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebb724085c2268b724025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "TestCasesAddToScenarioDialog",
             "NAME": "Add to scenario",
             "SHORT_DESCRIPTION": "Opens a dialog to add one or more test cases to a test scenario.",
@@ -166,13 +173,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Test case: Test log",
             "CREATED_ON": "2021-05-20 19:07:10",
             "MODIFIED_ON": "2024-03-13 15:03:19",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ebb63fd0785640b63f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "TestCaseLogDialog",
             "NAME": "Test log",
             "SHORT_DESCRIPTION": "Opens a dialog showing the test log for a test case",
@@ -301,13 +309,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Test case: Perform test",
             "CREATED_ON": "2021-06-07 15:04:36",
             "MODIFIED_ON": "2021-06-08 12:27:54",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
             "UID": "0x11ebb23ae99a4460b23a025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "TestCaseStartDialog2",
             "NAME": "Perform test",
             "SHORT_DESCRIPTION": "",
@@ -498,8 +507,8 @@
                                         },
                                         {
                                             "widget_type": "InlineGroup",
-                                            "caption": "Effort plan \/ remaining \/ spent",
-                                            "separator": "\/",
+                                            "caption": "Effort plan / remaining / spent",
+                                            "separator": "/",
                                             "widgets": [
                                                 {
                                                     "attribute_alias": "effort_plan_estimated_h"
@@ -664,13 +673,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Test case: Perform test",
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2024-11-06 10:16:20",
+            "MODIFIED_ON": "2024-11-29 12:10:18",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/Core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
             "ALIAS": "TestCaseStartDialog",
             "NAME": "Perform test",
             "SHORT_DESCRIPTION": "",
@@ -776,6 +786,10 @@
                             {
                                 "from": "test_case__login_data",
                                 "to": "test_case__login_data"
+                            },
+                            {
+                                "from": "comment",
+                                "to": "_test_plan_comment"
                             }
                         ]
                     },
@@ -878,8 +892,8 @@
                                                         },
                                                         {
                                                             "widget_type": "InlineGroup",
-                                                            "caption": "Tested version \/ build time",
-                                                            "separator": "\/",
+                                                            "caption": "Tested version / build time",
+                                                            "separator": "/",
                                                             "widgets": [
                                                                 {
                                                                     "attribute_alias": "tested_workbench_version",
@@ -911,6 +925,12 @@
                                                             ]
                                                         },
                                                         {
+                                                            "widget_type": "Text",
+                                                            "width": 2,
+                                                            "caption": "Additional Info",
+                                                            "data_column_name": "_test_plan_comment"
+                                                        },
+                                                        {
                                                             "attribute_alias": "tested_by_resource",
                                                             "value": "=User('resource__id')"
                                                         },
@@ -928,6 +948,7 @@
                                                         },
                                                         {
                                                             "attribute_alias": "test_description",
+                                                            "caption": "Test log",
                                                             "widget_type": "InputMarkdown",
                                                             "editor_mode": "wysiwyg",
                                                             "width": "max",
@@ -1211,13 +1232,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Test case: Mark as ToDo",
             "CREATED_ON": "2024-01-24 08:34:35",
             "MODIFIED_ON": "2024-03-26 11:28:17",
             "CREATED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
             "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "UID": "0x11ee9d0905df8a149d09005056be9fa0",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
             "ALIAS": "TestCaseMarkAsToDo",
             "NAME": "Mark as ToDo",
             "SHORT_DESCRIPTION": "",
@@ -1262,13 +1284,14 @@
             "DOCS": ""
         },
         {
+            "_EXPORT_SUMMARY": "Test case: Info",
             "CREATED_ON": "2024-11-06 10:12:40",
             "MODIFIED_ON": "2024-11-06 10:23:57",
             "CREATED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11ef84fd45de822a84fd005056be9fa0",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
             "ALIAS": "TestCaseInfo",
             "NAME": "Info",
             "SHORT_DESCRIPTION": "",

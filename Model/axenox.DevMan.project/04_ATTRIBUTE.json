@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.ATTRIBUTE",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -172,6 +177,7 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Title [title]",
             "CREATED_ON": "2016-03-23 06:41:02",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -205,10 +211,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 1,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -216,6 +222,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Description [description]",
             "CREATED_ON": "2016-03-23 06:41:02",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -253,10 +260,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -264,6 +271,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Project-# [id]",
             "CREATED_ON": "2016-03-23 06:45:27",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -297,10 +305,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 0,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -308,6 +316,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Project [LABEL]",
             "CREATED_ON": "2016-03-23 06:59:29",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -341,10 +350,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 0,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -352,6 +361,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "State [state]",
             "CREATED_ON": "2019-03-13 20:06:01",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -385,10 +395,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 1,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -396,6 +406,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "End [date_end]",
             "CREATED_ON": "2019-03-13 20:06:01",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -429,10 +440,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -440,6 +451,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Start [date_start]",
             "CREATED_ON": "2019-03-13 20:06:01",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -473,10 +485,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -484,6 +496,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Active [active_flag]",
             "CREATED_ON": "2019-03-14 07:58:30",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -517,10 +530,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 0,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -528,6 +541,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Objectives [objectives]",
             "CREATED_ON": "2019-03-14 10:14:41",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -561,10 +575,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -572,6 +586,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Next milestone [date_next_milestone]",
             "CREATED_ON": "2019-03-21 12:19:47",
             "MODIFIED_ON": "2022-02-10 21:21:10",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -605,10 +620,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 0,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -616,6 +631,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Client [client]",
             "CREATED_ON": "2021-04-30 16:39:06",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -652,7 +668,7 @@
             "RELATED_OBJ": "0x11ebbeadbd656ad8bead025041000001",
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",
@@ -660,6 +676,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Progress (%) [ticket_progress]",
             "CREATED_ON": "2021-11-01 11:14:37",
             "MODIFIED_ON": "2022-01-25 08:43:52",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -688,7 +705,12 @@
             "COPYABLEFLAG": 0,
             "ALIAS": "ticket_progress",
             "DATATYPE": "0x11eba058909b49cca058025041000001",
-            "DATA_ADDRESS": "(SELECT\n    100 * AVG([#~alias#]_prt.state >= 90)\nFROM project_tickets [#~alias#]_prpt INNER JOIN ticket [#~alias#]_prt ON [#~alias#]_prt.id = [#~alias#]_prpt.ticket_id WHERE [#~alias#]_prpt.project_id = [#~alias#].id)",
+            "DATA_ADDRESS": [
+                "// Multiline text delimited by `\n`",
+                "(SELECT",
+                "    100 * AVG([#~alias#]_prt.state >= 90)",
+                "FROM project_tickets [#~alias#]_prpt INNER JOIN ticket [#~alias#]_prt ON [#~alias#]_prt.id = [#~alias#]_prpt.ticket_id WHERE [#~alias#]_prpt.project_id = [#~alias#].id)"
+            ],
             "OBJECT": "0x11e5f0b9bc3b43f389840050568905af",
             "FORMATTER": "",
             "DISPLAYORDER": null,
@@ -697,10 +719,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 0,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": "",
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": "",

@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.OBJECT_ACTION",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -60,13 +65,14 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Test plan cases: Edit comment",
             "CREATED_ON": "2024-02-28 16:52:25",
             "MODIFIED_ON": "2024-11-27 10:23:59",
             "CREATED_BY_USER": "0x11ed995cb1942f38995c005056be9fa0",
             "MODIFIED_BY_USER": "0x11ee96cbe2775e2496cb005056be9fa0",
             "UID": "0x11ee97e25e5e0aee97e2005056be9fa0",
             "OBJECT": "0x11ebb782d97a0e84b782025041000001",
-            "ACTION_PROTOTYPE": "exface\/core\/Actions\/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
             "ALIAS": "TestPlanCasesEditComment",
             "NAME": "Edit comment",
             "SHORT_DESCRIPTION": "",

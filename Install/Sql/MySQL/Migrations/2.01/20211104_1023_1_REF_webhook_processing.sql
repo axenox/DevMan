@@ -12,7 +12,7 @@ ALTER TABLE webhook_log
 	ADD COLUMN `failed_log_id` VARCHAR(10) NULL AFTER `failed_message`,
 	ADD COLUMN `repo_url` VARCHAR(250) NULL AFTER `message`;
 
-UPDATE webhook_log SET `created_on` = `receive_datetime`,  `modified_on` = `receive_datetime`;
+UPDATE webhook_log SET `created_on` = `received_on`,  `modified_on` = `received_on`;
 
 -- DOWN
 
@@ -27,5 +27,3 @@ ALTER TABLE webhook_log
 	DROP COLUMN `failed_message`,
 	DROP COLUMN `failed_log_id`,
 	DROP COLUMN `repo_url`;
-
-UPDATE webhook_log SET `created_on` = `receive_datetime`,  `modified_on` = `receive_datetime`;

@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.PAGE_GROUP_PAGES",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -32,6 +37,7 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Testing / Test cases",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -41,6 +47,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Test plans",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -50,6 +57,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Test scenarios",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -59,6 +67,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Test Sprints",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -68,6 +77,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Apps & features",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -77,6 +87,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Test scenarios",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -86,6 +97,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Test log",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -95,6 +107,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Testing",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -104,6 +117,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Reports",
             "CREATED_ON": "2024-03-22 13:45:52",
             "MODIFIED_ON": "2024-03-22 13:45:52",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -113,6 +127,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / Tickets",
             "CREATED_ON": "2024-03-22 13:52:05",
             "MODIFIED_ON": "2024-03-22 13:52:05",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -122,6 +137,7 @@
             "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
         },
         {
+            "_EXPORT_SUMMARY": "Testing / DevMan",
             "CREATED_ON": "2024-03-22 13:52:27",
             "MODIFIED_ON": "2024-03-22 13:52:27",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",

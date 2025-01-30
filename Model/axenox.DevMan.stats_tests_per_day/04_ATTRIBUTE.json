@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.ATTRIBUTE",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -172,6 +177,7 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Test cases created [test_cases_created]",
             "CREATED_ON": "2024-02-16 10:43:39",
             "MODIFIED_ON": "2024-02-16 10:43:39",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -205,10 +211,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,
@@ -216,6 +222,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Tests done [tests_done]",
             "CREATED_ON": "2024-02-16 10:43:39",
             "MODIFIED_ON": "2024-02-16 10:43:39",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -249,10 +256,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,
@@ -260,6 +267,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Date [date]",
             "CREATED_ON": "2024-02-16 10:44:25",
             "MODIFIED_ON": "2024-02-16 10:44:25",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -293,10 +301,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 1,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,
@@ -304,6 +312,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Dates [dates]",
             "CREATED_ON": "2024-02-16 10:44:53",
             "MODIFIED_ON": "2024-02-16 10:44:53",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -340,7 +349,7 @@
             "RELATED_OBJ": "0x11ee86ba1150f35c86ba005056be9fa0",
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,
@@ -348,6 +357,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Sprint [sprint]",
             "CREATED_ON": "2024-02-16 10:46:39",
             "MODIFIED_ON": "2024-02-16 10:46:39",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -384,7 +394,7 @@
             "RELATED_OBJ": "0x11eca2b1c7aa9b36a2b1025041000001",
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": 0,
@@ -392,6 +402,7 @@
             "CUSTOM_DATA_TYPE": null
         },
         {
+            "_EXPORT_SUMMARY": "Test cases done [test_cases_done]",
             "CREATED_ON": "2024-02-16 11:00:48",
             "MODIFIED_ON": "2024-02-16 11:00:48",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -425,10 +436,10 @@
             "HIDDENFLAG": 0,
             "EDITABLEFLAG": 1,
             "REQUIREDFLAG": 0,
-            "RELATED_OBJ": "",
+            "RELATED_OBJ": null,
             "SORTERPOS": null,
             "SORTERDIR": null,
-            "RELATED_OBJ_ATTR": "",
+            "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_VALUE": null,

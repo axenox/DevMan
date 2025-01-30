@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.AUTHORIZATION_POLICY",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "NAME"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -76,26 +81,7 @@
     ],
     "rows": [
         {
-            "CREATED_ON": "2022-12-12 16:03:20",
-            "MODIFIED_ON": "2022-12-12 16:03:20",
-            "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11ed810b1e219a84810b025041000001",
-            "NAME": "Git Webhooks without authentication",
-            "DESCRIPTION": "",
-            "EFFECT": "P",
-            "APP": "0x38000000000000000000000000000000",
-            "AUTHORIZATION_POINT": "0x11ea8e12097517b8801f025041000001",
-            "TARGET_PAGE_GROUP": "",
-            "TARGET_USER_ROLE": "",
-            "TARGET_OBJECT": "",
-            "CONDITION_UXON": null,
-            "TARGET_ACTION_MODEL": "",
-            "TARGET_ACTION_PROTOTYPE": "",
-            "TARGET_FACADE": "axenox\/DevMan\/Facades\/WebhookFacade.php",
-            "TARGET_APP": ""
-        },
-        {
+            "_EXPORT_SUMMARY": "Testing pages for \"Tester\"",
             "CREATED_ON": "2024-03-22 13:47:16",
             "MODIFIED_ON": "2024-03-25 15:58:42",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
@@ -108,12 +94,12 @@
             "AUTHORIZATION_POINT": "0x11ea5ede96e738f6b9920205857feb80",
             "TARGET_PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
             "TARGET_USER_ROLE": "0x11ee8d6f32d7409c8d6f005056be9fa0",
-            "TARGET_OBJECT": "",
+            "TARGET_OBJECT": null,
             "CONDITION_UXON": null,
-            "TARGET_ACTION_MODEL": "",
+            "TARGET_ACTION_MODEL": null,
             "TARGET_ACTION_PROTOTYPE": "",
             "TARGET_FACADE": "",
-            "TARGET_APP": ""
+            "TARGET_APP": null
         }
     ],
     "totals_rows": [],

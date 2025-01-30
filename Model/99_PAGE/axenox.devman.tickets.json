@@ -131,7 +131,7 @@
             },
             {
                 "attribute_alias": "priority_avg",
-                "caption": "Pr.\/All"
+                "caption": "Pr./All"
             },
             {
                 "attribute_alias": "ticket_tags__tag__LABEL:LIST",

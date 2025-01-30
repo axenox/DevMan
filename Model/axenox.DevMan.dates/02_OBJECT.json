@@ -2,6 +2,11 @@
     "object_alias": "exface.Core.OBJECT",
     "columns": [
         {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
             "name": "CREATED_ON",
             "attribute_alias": "CREATED_ON"
         },
@@ -80,6 +85,7 @@
     ],
     "rows": [
         {
+            "_EXPORT_SUMMARY": "Dates [axenox.DevMan.dates]",
             "CREATED_ON": "2024-02-16 10:37:57",
             "MODIFIED_ON": "2024-02-16 10:38:11",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -94,7 +100,7 @@
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
-            "PARENT_OBJECT": "",
+            "PARENT_OBJECT": null,
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": null,
             "ALIAS": "dates",

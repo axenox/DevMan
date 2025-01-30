@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-04-30 16:49:45",
     "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2024-09-23 22:06:34",
+    "modified_on": "2024-09-27 09:12:20",
     "contents": {
         "widget_type": "SplitHorizontal",
         "object_alias": "axenox.DevMan.client",
@@ -25,7 +25,21 @@
                         "id": "clients_table",
                         "columns": [
                             {
-                                "attribute_group_alias": "~VISIBLE"
+                                "attribute_alias": "code"
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "importance"
+                            },
+                            {
+                                "attribute_alias": "installation__id:COUNT",
+                                "caption": "Installations"
+                            },
+                            {
+                                "attribute_alias": "project__id:COUNT",
+                                "caption": "Projects"
                             }
                         ],
                         "sorters": [
@@ -61,7 +75,7 @@
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.installation",
                         "row_grouper": {
-                            "group_by_attribute_alias": "client__LABEL"
+                            "group_by_attribute_alias": "client__name"
                         },
                         "filters": [
                             {
@@ -76,7 +90,7 @@
                                 "attribute_alias": "name"
                             },
                             {
-                                "attribute_alias": "client__LABEL"
+                                "attribute_alias": "client__name"
                             },
                             {
                                 "attribute_alias": "current_workbench_version"

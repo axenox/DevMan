@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `created_by_user_oid` binary(16) NOT NULL,
   `modified_by_user_oid` binary(16) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `code` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `Name unique` (`name`)

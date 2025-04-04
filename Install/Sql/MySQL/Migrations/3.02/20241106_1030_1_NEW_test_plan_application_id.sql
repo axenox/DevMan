@@ -3,8 +3,6 @@
 ALTER TABLE `test_plan`
 ADD `application_id` int(11) NULL;
 
-GO;
-
 ALTER TABLE `test_plan`
 ADD CONSTRAINT FK_application FOREIGN KEY  (application_id) REFERENCES application(id) ON DELETE RESTRICT ON UPDATE RESTRICT
 

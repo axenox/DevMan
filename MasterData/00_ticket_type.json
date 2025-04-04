@@ -1,0 +1,204 @@
+{
+    "object_alias": "axenox.DevMan.ticket_type",
+    "columns": [
+        {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "name"
+        },
+        {
+            "name": "created_on",
+            "attribute_alias": "created_on"
+        },
+        {
+            "name": "modified_on",
+            "attribute_alias": "modified_on"
+        },
+        {
+            "name": "created_by_user",
+            "attribute_alias": "created_by_user"
+        },
+        {
+            "name": "modified_by_user",
+            "attribute_alias": "modified_by_user"
+        },
+        {
+            "name": "id",
+            "attribute_alias": "id"
+        },
+        {
+            "name": "name",
+            "attribute_alias": "name"
+        },
+        {
+            "name": "description",
+            "attribute_alias": "description"
+        },
+        {
+            "name": "bug_flag",
+            "attribute_alias": "bug_flag"
+        }
+    ],
+    "rows": [
+        {
+            "_EXPORT_SUMMARY": "Feature",
+            "created_on": "2021-05-03 12:04:14",
+            "modified_on": "2021-05-03 12:04:14",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 20,
+            "name": "Feature",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Bug",
+            "created_on": "2021-05-03 12:04:21",
+            "modified_on": "2021-05-03 13:59:07",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 21,
+            "name": "Bug",
+            "description": "To be fixed",
+            "bug_flag": 1
+        },
+        {
+            "_EXPORT_SUMMARY": "Incident",
+            "created_on": "2021-05-03 12:04:33",
+            "modified_on": "2021-05-03 13:59:12",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 22,
+            "name": "Incident",
+            "description": "Reported, but not yet qualified as a bug or anything else",
+            "bug_flag": 1
+        },
+        {
+            "_EXPORT_SUMMARY": "Story",
+            "created_on": "2021-05-03 12:04:41",
+            "modified_on": "2021-05-03 12:04:41",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 23,
+            "name": "Story",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Epic",
+            "created_on": "2021-05-03 12:04:49",
+            "modified_on": "2021-05-03 12:04:49",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 24,
+            "name": "Epic",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Known Issue",
+            "created_on": "2021-05-03 13:43:24",
+            "modified_on": "2021-05-03 13:45:07",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 25,
+            "name": "Known Issue",
+            "description": "Non-critical bug: may remain unfixed for now",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "CR",
+            "created_on": "2021-05-03 13:46:22",
+            "modified_on": "2021-05-03 13:46:22",
+            "created_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x31000000000000000000000000000000",
+            "id": 26,
+            "name": "CR",
+            "description": "Change request by client",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "ToDo",
+            "created_on": "2021-07-05 17:47:31",
+            "modified_on": "2021-07-05 17:49:10",
+            "created_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "modified_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "id": 27,
+            "name": "ToDo",
+            "description": "Maintenance, installation, communication, etc.",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Refactoring",
+            "created_on": "2021-07-15 16:09:28",
+            "modified_on": "2021-07-15 16:09:28",
+            "created_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "modified_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "id": 28,
+            "name": "Refactoring",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Demo",
+            "created_on": "2021-08-12 12:18:06",
+            "modified_on": "2021-08-12 12:18:06",
+            "created_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "modified_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "id": 29,
+            "name": "Demo",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Idea",
+            "created_on": "2021-10-12 10:37:01",
+            "modified_on": "2021-10-12 10:37:01",
+            "created_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "modified_by_user": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "id": 30,
+            "name": "Idea",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Docs",
+            "created_on": "2024-03-08 09:52:07",
+            "modified_on": "2024-03-08 09:52:07",
+            "created_by_user": "0x11eea89602c1c3dca896005056be9fa0",
+            "modified_by_user": "0x11eea89602c1c3dca896005056be9fa0",
+            "id": 32,
+            "name": "Docs",
+            "description": "",
+            "bug_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "R&D",
+            "created_on": "2024-03-08 09:52:22",
+            "modified_on": "2024-03-08 09:52:22",
+            "created_by_user": "0x11eea89602c1c3dca896005056be9fa0",
+            "modified_by_user": "0x11eea89602c1c3dca896005056be9fa0",
+            "id": 33,
+            "name": "R&D",
+            "description": "",
+            "bug_flag": 0
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "axenox.DevMan.ticket_type"
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "created_on",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "id",
+            "direction": "ASC"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "object_alias": "axenox.DevMan.test_log_type",
+    "columns": [
+        {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "name"
+        },
+        {
+            "name": "created_on",
+            "attribute_alias": "created_on"
+        },
+        {
+            "name": "modified_on",
+            "attribute_alias": "modified_on"
+        },
+        {
+            "name": "created_by_user",
+            "attribute_alias": "created_by_user"
+        },
+        {
+            "name": "modified_by_user",
+            "attribute_alias": "modified_by_user"
+        },
+        {
+            "name": "id",
+            "attribute_alias": "id"
+        },
+        {
+            "name": "name",
+            "attribute_alias": "name"
+        },
+        {
+            "name": "explanation",
+            "attribute_alias": "explanation"
+        }
+    ],
+    "rows": [
+        {
+            "_EXPORT_SUMMARY": "Complete test",
+            "created_on": "2024-04-04 11:25:05",
+            "modified_on": "2024-04-04 11:25:05",
+            "created_by_user": "0x11eea844784bd96ca844005056be9fa0",
+            "modified_by_user": "0x11eea844784bd96ca844005056be9fa0",
+            "id": 1,
+            "name": "Complete test",
+            "explanation": "A  test covering the full test case without omitting any part of it."
+        },
+        {
+            "_EXPORT_SUMMARY": "Extension test",
+            "created_on": "2024-04-04 11:26:11",
+            "modified_on": "2024-04-04 11:26:11",
+            "created_by_user": "0x11eea844784bd96ca844005056be9fa0",
+            "modified_by_user": "0x11eea844784bd96ca844005056be9fa0",
+            "id": 2,
+            "name": "Extension test",
+            "explanation": "A shorter test focused only on smaller parts of the test case that changed rather than testing the entire test case again."
+        },
+        {
+            "_EXPORT_SUMMARY": "Partial test",
+            "created_on": "2024-11-06 16:35:16",
+            "modified_on": "2024-11-06 16:35:16",
+            "created_by_user": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "modified_by_user": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "id": 3,
+            "name": "Partial test",
+            "explanation": "Test will be performed in multiple parts."
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "axenox.DevMan.test_log_type"
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "created_on",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "id",
+            "direction": "ASC"
+        }
+    ]
+}

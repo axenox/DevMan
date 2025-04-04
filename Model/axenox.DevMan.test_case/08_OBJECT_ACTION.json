@@ -675,9 +675,9 @@
         {
             "_EXPORT_SUMMARY": "Test case: Perform test",
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2024-11-29 12:10:18",
+            "MODIFIED_ON": "2025-01-28 16:10:49",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
@@ -947,6 +947,11 @@
                                                             "width": "max"
                                                         },
                                                         {
+                                                            "attribute_alias": "comment",
+                                                            "widget_type": "InputText",
+                                                            "width": "max"
+                                                        },
+                                                        {
                                                             "attribute_alias": "test_description",
                                                             "caption": "Test log",
                                                             "widget_type": "InputMarkdown",
@@ -1078,8 +1083,22 @@
                         {
                             "caption": "Failed + Ticket",
                             "icon": "bug",
+                            "disabled_if_input_invalid": false,
                             "action": {
                                 "alias": "exface.Core.ActionChain",
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "Please add comment why the test failed!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "comment",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "actions": [
                                     {
                                         "alias": "exface.Core.CreateData",
@@ -1187,9 +1206,23 @@
                             "caption": "Failed",
                             "icon": "bug",
                             "close_dialog_after_action_succeeds": true,
+                            "disabled_if_input_invalid": false,
                             "action": {
                                 "alias": "exface.Core.CreateData",
                                 "ignore_related_objects_in_input_data": true,
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "Please add comment why the test failed!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "comment",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "input_mapper": {
                                     "column_to_column_mappings": [
                                         {

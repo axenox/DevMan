@@ -7,6 +7,7 @@ use exface\Core\CommonLogic\AppInstallers\MySqlDatabaseInstaller;
 use exface\Core\Facades\AbstractHttpFacade\HttpFacadeInstaller;
 use exface\Core\Factories\FacadeFactory;
 use axenox\DevMan\Facades\WebhookFacade;
+use exface\Core\CommonLogic\AppInstallers\DataInstaller;
 
 class DevManApp extends App
 {
@@ -30,6 +31,11 @@ class DevManApp extends App
         $tplInstaller = new HttpFacadeInstaller($this->getSelector());
         $tplInstaller->setFacade(FacadeFactory::createFromString(WebhookFacade::class, $this->getWorkbench()));
         $installer->addInstaller($tplInstaller);
+        
+        $dataInstaller = new DataInstaller($this->getSelector(), 'MasterData');
+        $dataInstaller->addDataToMerge('axenox.DevMan.ticket_type', 'created_on');
+        $dataInstaller->addDataToMerge('axenox.DevMan.test_log_type', 'created_on');
+        $installer->addInstaller($dataInstaller);
         
         return $installer;
     }

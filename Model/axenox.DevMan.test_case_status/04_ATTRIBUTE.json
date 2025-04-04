@@ -449,9 +449,9 @@
         {
             "_EXPORT_SUMMARY": "Test status [test_status]",
             "CREATED_ON": "2021-06-09 15:05:57",
-            "MODIFIED_ON": "2022-11-02 17:27:57",
+            "MODIFIED_ON": "2025-04-02 17:47:06",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11efbc3455aabee0bc34005056be9fa0",
             "UID": "0x11ebbfa96e6c744abfa9025041000001",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -472,6 +472,7 @@
                     "FAIL": "orangered",
                     "FAIL_COVER": "orange",
                     "RETEST": "orange",
+                    "NOT_READY": "#f189d3",
                     "PASS": "lightgreen",
                     "COVERED": "lightgreen",
                     "TODO": "yellow"
@@ -508,6 +509,7 @@
                     "FAIL_COVER": "Failed coverage",
                     "PASS": "Passed",
                     "TODO": "ToDo",
+                    "NOT_READY": "Not ready",
                     "RETEST": "Retest",
                     "COVERED": "Covered"
                 }

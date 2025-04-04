@@ -1,0 +1,146 @@
+{
+    "uid": "0x11efb9e842dd1ec6b9e8005056be9fa0",
+    "alias_with_namespace": "axenox.devman.ai-test-formatter",
+    "menu_parent_page_selector": "0x11eb95f1427f2f7495f1025041000001",
+    "menu_index": 9,
+    "menu_visible": true,
+    "name": "AI test formatter",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "created_on": "2025-01-29 13:12:08",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2025-01-29 13:18:45",
+    "contents": {
+        "object_alias": "exface.Core.DUMMY",
+        "widget_type": "SplitHorizontal",
+        "panels": [
+            {
+                "width": "50%",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "object_alias": "axenox.DevMan.test_case",
+                        "multi_select": true,
+                        "filters": [
+                            {
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "feature"
+                            },
+                            {
+                                "attribute_alias": "test_scenario_cases__test_scenario"
+                            },
+                            {
+                                "attribute_alias": "test_log__ticket"
+                            },
+                            {
+                                "attribute_alias": "external_test_link__external_ticket_id"
+                            },
+                            {
+                                "attribute_alias": "modified_by_user"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "created_on",
+                                "direction": "desc"
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "id"
+                            },
+                            {
+                                "attribute_alias": "feature__name"
+                            },
+                            {
+                                "attribute_alias": "feature__parent_feature__LABEL"
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "created_by_user__LABEL",
+                                "caption": "Written by"
+                            },
+                            {
+                                "attribute_alias": "modified_by_user__LABEL",
+                                "caption": "Last edited by"
+                            },
+                            {
+                                "attribute_alias": "=Format(modified_on)",
+                                "caption": "Last edited"
+                            },
+                            {
+                                "attribute_alias": "test_case_status__test_status"
+                            },
+                            {
+                                "attribute_alias": "test_case_status__last_test_time"
+                            },
+                            {
+                                "attribute_alias": "test_case_status__last_test_by_resource__LABEL"
+                            },
+                            {
+                                "attribute_alias": "external_test_link__LABEL:LIST_DISTINCT",
+                                "caption": "Ext. Ticket(s)",
+                                "width_max": "150px"
+                            },
+                            {
+                                "attribute_alias": "test_log__effort:AVG",
+                                "footer": "SUM"
+                            },
+                            {
+                                "attribute_alias": "test_case_coverage[test_case]__id:COUNT",
+                                "caption": "Covers",
+                                "hint": "Covers other test cases"
+                            },
+                            {
+                                "attribute_alias": "test_case_coverage[covers_test_case]__id:COUNT",
+                                "caption": "Covered by",
+                                "hint": "Covered by other test cases"
+                            },
+                            {
+                                "attribute_alias": "test_scenario_cases__test_scenario:COUNT",
+                                "caption": "Scenarios"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.TestCaseLogDialog"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.TestCasesAddToScenarioDialog"
+                            },
+                            {
+                                "action_alias": "axenox.DevMan.TestCasesAddToPlanDialog"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "caption": "Assistent",
+                "widgets": [
+                    {
+                        "object_alias": "exface.Core.DUMMY",
+                        "widget_type": "axenox.GenAI.AIChat",
+                        "agent_alias": "test_case_formatter"
+                    }
+                ]
+            }
+        ]
+    }
+}

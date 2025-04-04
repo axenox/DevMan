@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test case [axenox.DevMan.test_case]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2024-11-08 10:49:10",
+            "MODIFIED_ON": "2025-03-10 16:12:54",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -104,6 +104,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
                 "widget_type": "Dialog",
+                "width": 4,
                 "widgets": [
                     {
                         "widget_type": "Tabs",
@@ -112,70 +113,90 @@
                                 "caption": "Test case",
                                 "widgets": [
                                     {
-                                        "attribute_alias": "id",
-                                        "widget_type": "InputHidden",
-                                        "id": "field_test_case_id"
-                                    },
-                                    {
-                                        "attribute_alias": "name",
-                                        "width": "max"
-                                    },
-                                    {
-                                        "attribute_alias": "feature"
-                                    },
-                                    {
-                                        "attribute_alias": "priority"
-                                    },
-                                    {
-                                        "attribute_alias": "effort_planned"
-                                    },
-                                    {
-                                        "widget_type": "WidgetGroup",
-                                        "caption": "Description",
-                                        "width": "max",
-                                        "height": "max",
-                                        "widgets": [
+                                        "widget_type": "SplitHorizontal",
+                                        "panels": [
                                             {
-                                                "attribute_alias": "description",
-                                                "height": "max",
-                                                "hide_caption": true,
-                                                "width": "max",
-                                                "widget_type": "InputMarkdown",
-                                                "editor_mode": "wysiwyg"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "widget_type": "WidgetGroup",
-                                        "caption": "Files",
-                                        "width": "max",
-                                        "collapsed": true,
-                                        "widgets": [
+                                                "width": "60%",
+                                                "columns_in_grid": 2,
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "id",
+                                                        "widget_type": "InputHidden",
+                                                        "id": "field_test_case_id"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "name",
+                                                        "width": "max"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "feature"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "priority"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "effort_planned"
+                                                    },
+                                                    {
+                                                        "widget_type": "WidgetGroup",
+                                                        "caption": "Description",
+                                                        "width": "max",
+                                                        "height": "max",
+                                                        "widgets": [
+                                                            {
+                                                                "attribute_alias": "description",
+                                                                "height": "max",
+                                                                "hide_caption": true,
+                                                                "width": "max",
+                                                                "widget_type": "InputMarkdown",
+                                                                "editor_mode": "wysiwyg"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "widget_type": "WidgetGroup",
+                                                        "caption": "Files",
+                                                        "width": "max",
+                                                        "collapsed": true,
+                                                        "widgets": [
+                                                            {
+                                                                "widget_type": "ImageGallery",
+                                                                "object_alias": "axenox.DevMan.test_case_file",
+                                                                "image_title_attribute_alias": "FILENAME",
+                                                                "zoomable": true,
+                                                                "hide_header": false,
+                                                                "width": "max",
+                                                                "filters": [
+                                                                    {
+                                                                        "attribute_alias": "test_case",
+                                                                        "hidden": true,
+                                                                        "required": true,
+                                                                        "comparator": "=="
+                                                                    }
+                                                                ],
+                                                                "columns": [
+                                                                    {
+                                                                        "attribute_alias": "test_case",
+                                                                        "value": "=field_test_case_id!id",
+                                                                        "hidden": true
+                                                                    }
+                                                                ],
+                                                                "uploader": {
+                                                                    "instant_upload": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
                                             {
-                                                "widget_type": "ImageGallery",
-                                                "object_alias": "axenox.DevMan.test_case_file",
-                                                "image_title_attribute_alias": "FILENAME",
-                                                "zoomable": true,
-                                                "hide_header": false,
-                                                "width": "max",
-                                                "filters": [
+                                                "caption": "Anleitung",
+                                                "widgets": [
                                                     {
-                                                        "attribute_alias": "test_case",
-                                                        "hidden": true,
-                                                        "required": true,
-                                                        "comparator": "=="
+                                                        "widget_type": "Browser",
+                                                        "url": "api/docs/powerui/DevMan/Docs/Testanleitungen/Testersteller.md"
                                                     }
-                                                ],
-                                                "columns": [
-                                                    {
-                                                        "attribute_alias": "test_case",
-                                                        "value": "=field_test_case_id!id",
-                                                        "hidden": true
-                                                    }
-                                                ],
-                                                "uploader": {
-                                                    "instant_upload": false
-                                                }
+                                                ]
                                             }
                                         ]
                                     }

@@ -675,9 +675,9 @@
         {
             "_EXPORT_SUMMARY": "Test case: Perform test",
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2025-01-28 16:10:49",
+            "MODIFIED_ON": "2025-04-15 16:38:25",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
@@ -912,7 +912,8 @@
                                                         {
                                                             "attribute_alias": "test_plan",
                                                             "widget_type": "InputComboTable",
-                                                            "required": false,
+                                                            "required": true,
+                                                            "autosearch_single_suggestion": true,
                                                             "filters": [
                                                                 {
                                                                     "attribute_alias": "test_plan_cases__test_case",

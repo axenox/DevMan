@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release [axenox.DevMan.release]",
             "CREATED_ON": "2024-09-23 21:45:29",
-            "MODIFIED_ON": "2024-09-27 09:09:53",
+            "MODIFIED_ON": "2025-06-13 13:23:42",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef9a416381deba9a41005056be9fa0",
@@ -120,23 +120,28 @@
                                         "attribute_alias": "name"
                                     },
                                     {
-                                        "attribute_alias": "date_planned"
+                                        "widget_type": "WidgetGroup",
+                                        "widgets": [
+                                            {
+                                                "attribute_alias": "date_planned"
+                                            },
+                                            {
+                                                "attribute_alias": "date_staging"
+                                            },
+                                            {
+                                                "attribute_alias": "date_released"
+                                            },
+                                            {
+                                                "attribute_alias": "date_eol"
+                                            }
+                                        ]
                                     },
                                     {
                                         "attribute_alias": "client"
                                     },
                                     {
-                                        "attribute_alias": "date_released"
-                                    },
-                                    {
                                         "attribute_alias": "description",
                                         "height": 3
-                                    },
-                                    {
-                                        "attribute_alias": "date_staging"
-                                    },
-                                    {
-                                        "attribute_alias": "date_eol"
                                     },
                                     {
                                         "widget_type": "DataTable",

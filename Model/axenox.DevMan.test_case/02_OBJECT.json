@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test case [axenox.DevMan.test_case]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-03-10 16:12:54",
+            "MODIFIED_ON": "2025-06-18 11:37:28",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -534,6 +534,61 @@
                                             {
                                                 "action_alias": "exface.Core.DeleteObject",
                                                 "visibility": "optional"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Test plans",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_plan",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_plan_cases__test_case",
+                                                "value": "=field_test_case_id",
+                                                "required": true,
+                                                "hidden": true,
+                                                "apply_on_change": true,
+                                                "comparator": "=="
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "application__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "sprint__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "sprint__start_on"
+                                            },
+                                            {
+                                                "attribute_alias": "sprint__end_on"
+                                            },
+                                            {
+                                                "attribute_alias": "milestone__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "milestone__date",
+                                                "caption": "Milestone Date"
+                                            },
+                                            {
+                                                "attribute_alias": "test_plan_cases__test_case:COUNT",
+                                                "caption": "Test cases",
+                                                "footer": "SUM",
+                                                "align": "right"
+                                            },
+                                            {
+                                                "attribute_alias": "description"
                                             }
                                         ]
                                     }

@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Milestone [axenox.DevMan.milestone]",
             "CREATED_ON": "2019-03-21 09:54:45",
-            "MODIFIED_ON": "2021-05-05 15:03:59",
+            "MODIFIED_ON": "2025-06-13 13:37:13",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e94bbf50eed38fb95b00505689aada",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -106,67 +106,157 @@
                 "widget_type": "Dialog",
                 "widgets": [
                     {
-                        "attribute_alias": "date"
-                    },
-                    {
-                        "attribute_alias": "project"
-                    },
-                    {
-                        "attribute_alias": "name"
-                    },
-                    {
-                        "attribute_alias": "location"
-                    },
-                    {
-                        "attribute_alias": "effort_planned_h"
-                    },
-                    {
-                        "attribute_alias": "effort_rem_estimated_h"
-                    },
-                    {
-                        "attribute_alias": "objectives",
-                        "width": 2
-                    },
-                    {
-                        "attribute_alias": "description",
-                        "width": 2,
-                        "height": 9
-                    },
-                    {
-                        "caption": "Approvals",
-                        "widget_type": "DataTable",
-                        "object_alias": "axenox.DevMan.approval",
-                        "paginate": false,
-                        "height": 5,
-                        "filters": [
+                        "widget_type": "Tabs",
+                        "tabs": [
                             {
-                                "attribute_alias": "milestone",
-                                "widget_type": "InputHidden",
-                                "required": true
-                            }
-                        ],
-                        "columns": [
-                            {
-                                "attribute_alias": "approved_on"
+                                "caption": "Milestone",
+                                "widgets": [
+                                    {
+                                        "attribute_alias": "date"
+                                    },
+                                    {
+                                        "attribute_alias": "project"
+                                    },
+                                    {
+                                        "attribute_alias": "name"
+                                    },
+                                    {
+                                        "attribute_alias": "location"
+                                    },
+                                    {
+                                        "attribute_alias": "effort_planned_h"
+                                    },
+                                    {
+                                        "attribute_alias": "effort_rem_estimated_h"
+                                    },
+                                    {
+                                        "attribute_alias": "objectives",
+                                        "width": 2
+                                    },
+                                    {
+                                        "attribute_alias": "description",
+                                        "hide_caption": true,
+                                        "widget_type": "InputMarkdown",
+                                        "editor_mode": "wysiwyg",
+                                        "width": 2,
+                                        "height": 10
+                                    },
+                                    {
+                                        "caption": "Approvals",
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.approval",
+                                        "paginate": false,
+                                        "height": "max",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "milestone",
+                                                "widget_type": "InputHidden",
+                                                "required": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "approved_on"
+                                            },
+                                            {
+                                                "attribute_alias": "approved_by_resource__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "effort"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            },
+                                            {
+                                                "action_alias": "exface.Core.DeleteObject",
+                                                "visibility": "optional"
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
-                                "attribute_alias": "approved_by_resource__LABEL"
+                                "caption": "Tickets",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.ticket",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "milestone",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "bind_to_double_click": true,
+                                                "action_alias": "exface.core.ShowObjectEditDialog"
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
-                                "attribute_alias": "effort"
-                            }
-                        ],
-                        "buttons": [
-                            {
-                                "action_alias": "exface.Core.ShowObjectCreateDialog"
-                            },
-                            {
-                                "action_alias": "exface.Core.ShowObjectEditDialog",
-                                "bind_to_double_click": true
-                            },
-                            {
-                                "action_alias": "exface.Core.DeleteObject",
-                                "visibility": "optional"
+                                "caption": "Test plans",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_plan",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "milestone",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "application__LABEL"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.core.ShowObjectCreateDialog"
+                                            },
+                                            {
+                                                "bind_to_double_click": true,
+                                                "action_alias": "exface.core.ShowObjectEditDialog"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }

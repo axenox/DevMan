@@ -1268,9 +1268,9 @@
         {
             "_EXPORT_SUMMARY": "Test case: Mark as ToDo",
             "CREATED_ON": "2024-01-24 08:34:35",
-            "MODIFIED_ON": "2024-03-26 11:28:17",
+            "MODIFIED_ON": "2025-06-27 14:44:58",
             "CREATED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "UID": "0x11ee9d0905df8a149d09005056be9fa0",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
@@ -1280,6 +1280,7 @@
             "CONFIG_UXON": {
                 "icon": "undo",
                 "input_rows_min": 1,
+                "input_rows_max": 1,
                 "widget": {
                     "widget_type": "Dialog",
                     "object_alias": "axenox.DevMan.test_case",
@@ -1484,6 +1485,57 @@
             },
             "APP": "0x38000000000000000000000000000000",
             "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test case: Add Ext. Ticket",
+            "CREATED_ON": "2025-07-08 09:55:03",
+            "MODIFIED_ON": "2025-07-08 09:57:46",
+            "CREATED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "UID": "0x11f0b037db483aceb037005056be9fa0",
+            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
+            "ALIAS": "TestCasesAddExternalTicket",
+            "NAME": "Add Ext. Ticket",
+            "SHORT_DESCRIPTION": "Opens a dialog to add an external Ticket to one or more test cases",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "icon": "plus-circle",
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.external_test_link",
+                    "widgets": [
+                        {
+                            "attribute_alias": "external_ticket_id"
+                        },
+                        {
+                            "attribute_alias": "external_system"
+                        },
+                        {
+                            "attribute_alias": "comment"
+                        },
+                        {
+                            "attribute_alias": "test_case",
+                            "widget_type": "InputSelect",
+                            "options_object_alias": "axenox.DevMan.test_case",
+                            "multi_select": true,
+                            "height": 8,
+                            "width": 2
+                        }
+                    ],
+                    "Buttons": [
+                        {
+                            "caption": "Add to Ext. Ticket",
+                            "action_alias": "exface.Core.CreateData",
+                            "visibility": "promoted",
+                            "align": "opposite"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 1,
             "DOCS": ""
         }
     ],

@@ -67,9 +67,9 @@
         {
             "_EXPORT_SUMMARY": "Test plan: Edit steps",
             "CREATED_ON": "2024-10-16 10:54:49",
-            "MODIFIED_ON": "2024-10-16 11:20:54",
+            "MODIFIED_ON": "2025-06-25 01:19:40",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
-            "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11ef97584d3f5da29758005056be9fa0",
             "OBJECT": "0x11eb8430d97a024a8430025041000001",
             "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
@@ -82,8 +82,7 @@
                 "input_object_alias": "axenox.DevMan.test_plan",
                 "icon": "pencil-square-o",
                 "dialog": {
-                    "width": 2,
-                    "height": "80%",
+                    "maximized": true,
                     "object_alias": "axenox.DevMan.test_plan",
                     "widgets": [
                         {
@@ -111,6 +110,13 @@
                                 },
                                 {
                                     "attribute_alias": "test_case",
+                                    "cell_widget": {
+                                        "widget_type": "InputComboTable",
+                                        "lazy_loading": false
+                                    }
+                                },
+                                {
+                                    "attribute_alias": "assigned_to",
                                     "cell_widget": {
                                         "widget_type": "InputComboTable",
                                         "lazy_loading": false
@@ -285,12 +291,12 @@
         {
             "_EXPORT_SUMMARY": "Test plan: Mark as closed",
             "CREATED_ON": "2025-01-14 18:23:16",
-            "MODIFIED_ON": "2025-01-14 18:25:02",
+            "MODIFIED_ON": "2025-06-27 11:29:45",
             "CREATED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "UID": "0x11ef8c4c3e1b0fa08c4c005056be9fa0",
             "OBJECT": "0x11eb8430d97a024a8430025041000001",
-            "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
             "ALIAS": "TestPlanMarkAsClosed",
             "NAME": "Mark as closed",
             "SHORT_DESCRIPTION": "",
@@ -312,13 +318,6 @@
                         },
                         {
                             "attribute_alias": "closed_flag"
-                        }
-                    ],
-                    "buttons": [
-                        {
-                            "action_alias": "exface.core.UpdateData",
-                            "visibility": "promoted",
-                            "align": "opposite"
                         }
                     ]
                 }

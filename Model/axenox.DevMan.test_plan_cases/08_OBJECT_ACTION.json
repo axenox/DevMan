@@ -67,9 +67,9 @@
         {
             "_EXPORT_SUMMARY": "Test plan cases: Edit comment",
             "CREATED_ON": "2024-02-28 16:52:25",
-            "MODIFIED_ON": "2024-11-27 10:23:59",
+            "MODIFIED_ON": "2025-07-08 10:06:49",
             "CREATED_BY_USER": "0x11ed995cb1942f38995c005056be9fa0",
-            "MODIFIED_BY_USER": "0x11ee96cbe2775e2496cb005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11ee97e25e5e0aee97e2005056be9fa0",
             "OBJECT": "0x11ebb782d97a0e84b782025041000001",
             "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
@@ -78,7 +78,6 @@
             "SHORT_DESCRIPTION": "",
             "CONFIG_UXON": {
                 "input_rows_min": 1,
-                "input_rows_max": 1,
                 "icon": "pencil",
                 "maximize": false,
                 "dialog": {
@@ -89,6 +88,42 @@
                         }
                     ],
                     "buttons": [
+                        {
+                            "action_alias": "exface.core.UpdateData",
+                            "visibility": "promoted",
+                            "align": "opposite"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test plan cases: Assign Test Case",
+            "CREATED_ON": "2025-06-25 01:13:02",
+            "MODIFIED_ON": "2025-06-27 14:41:57",
+            "CREATED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "UID": "0x11f0831ec717bece831e005056be9fa0",
+            "OBJECT": "0x11ebb782d97a0e84b782025041000001",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
+            "ALIAS": "TestPlanCasesAssign",
+            "NAME": "Assign Test Case",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "icon": "pencil",
+                "maximize": false,
+                "dialog": {
+                    "object_alias": "axenox.DevMan.test_plan_cases",
+                    "widgets": [
+                        {
+                            "attribute_alias": "assigned_to"
+                        }
+                    ],
+                    "//buttons": [
                         {
                             "action_alias": "exface.core.UpdateData",
                             "visibility": "promoted",

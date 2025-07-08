@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Test plan [axenox.DevMan.test_plan]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-06-12 12:57:03",
+            "MODIFIED_ON": "2025-07-08 10:36:50",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11eb8430d97a024a8430025041000001",
@@ -142,7 +142,7 @@
                                         "caption": "Test cases",
                                         "object_alias": "axenox.DevMan.test_plan_cases",
                                         "hide_header": false,
-                                        "multi_select": false,
+                                        "multi_select": true,
                                         "width": "max",
                                         "height": "max",
                                         "filters": [
@@ -170,6 +170,9 @@
                                             {
                                                 "attribute_alias": "test_case__feature__LABEL",
                                                 "width": "500px"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
                                             },
                                             {
                                                 "attribute_alias": "test_case__test_case_status__test_status"
@@ -264,12 +267,33 @@
                                             },
                                             {
                                                 "action": {
+                                                    "alias": "axenox.DevMan.TestPlanCasesAssign"
+                                                }
+                                            },
+                                            {
+                                                "action": {
                                                     "alias": "axenox.DevMan.TestCaseStartDialog"
                                                 }
                                             },
                                             {
                                                 "action": {
                                                     "alias": "axenox.DevMan.TestCaseMarkAsToDo",
+                                                    "input_mapper": {
+                                                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                                                        "to_object_alias": "axenox.DevMan.test_case",
+                                                        "inherit_columns": "none",
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "test_case",
+                                                                "to": "id"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "alias": "axenox.DevMan.TestCasesAddExternalTicket",
                                                     "input_mapper": {
                                                         "from_object_alias": "axenox.DevMan.test_plan_cases",
                                                         "to_object_alias": "axenox.DevMan.test_case",

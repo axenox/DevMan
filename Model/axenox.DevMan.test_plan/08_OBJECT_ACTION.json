@@ -67,7 +67,7 @@
         {
             "_EXPORT_SUMMARY": "Test plan: Edit steps",
             "CREATED_ON": "2024-10-16 10:54:49",
-            "MODIFIED_ON": "2025-06-25 01:19:40",
+            "MODIFIED_ON": "2025-07-08 14:19:51",
             "CREATED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11ef97584d3f5da29758005056be9fa0",
@@ -97,6 +97,7 @@
                             "allow_to_drag_rows": true,
                             "allow_to_delete_rows": true,
                             "nowrap": false,
+                            "height": "99%",
                             "filters": [
                                 {
                                     "attribute_alias": "test_plan",

@@ -135,6 +135,37 @@
             "APP": "0x38000000000000000000000000000000",
             "USE_IN_OBJECT_BASKET_FLAG": 0,
             "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test plan cases: Change test plan",
+            "CREATED_ON": "2025-07-10 14:42:12",
+            "MODIFIED_ON": "2025-07-10 15:38:31",
+            "CREATED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "UID": "0x11f082894d5709b88289005056be9fa0",
+            "OBJECT": "0x11ebb782d97a0e84b782025041000001",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
+            "ALIAS": "TestPlanCasesChangeTestPlan",
+            "NAME": "Change test plan",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "input_rows_min": 1,
+                "icon": "pencil",
+                "maximize": false,
+                "dialog": {
+                    "object_alias": "axenox.DevMan.test_plan_cases",
+                    "height": "auto",
+                    "widgets": [
+                        {
+                            "attribute_alias": "test_plan",
+                            "width": "max"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
         }
     ],
     "totals_rows": [],

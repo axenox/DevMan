@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test plan [axenox.DevMan.test_plan]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-07-08 10:36:50",
+            "MODIFIED_ON": "2025-07-24 09:17:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb8430d97a024a8430025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -172,10 +172,10 @@
                                                 "width": "500px"
                                             },
                                             {
-                                                "attribute_alias": "assigned_to__LABEL"
+                                                "attribute_alias": "test_case__test_case_status__test_status"
                                             },
                                             {
-                                                "attribute_alias": "test_case__test_case_status__test_status"
+                                                "attribute_alias": "assigned_to__LABEL"
                                             },
                                             {
                                                 "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
@@ -258,6 +258,11 @@
                                             {
                                                 "action": {
                                                     "alias": "exface.core.ShowObjectEditDialog"
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "alias": "axenox.DevMan.TestPlanCasesChangeTestPlan"
                                                 }
                                             },
                                             {

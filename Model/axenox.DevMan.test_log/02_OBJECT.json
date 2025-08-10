@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Test log [axenox.DevMan.test_log]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-01-28 16:08:14",
+            "MODIFIED_ON": "2025-08-04 17:03:38",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb99efd979f59899ef025041000001",
@@ -106,6 +106,10 @@
                 "widget_type": "Dialog",
                 "number_of_columns": 2,
                 "widgets": [
+                    {
+                        "attribute_alias": "id",
+                        "id": "test_log_id"
+                    },
                     {
                         "attribute_alias": "test_case",
                         "id": "test_case_selector"
@@ -171,6 +175,40 @@
                         "height": 15,
                         "widget_type": "InputMarkdown",
                         "editor_mode": "wysiwyg"
+                    },
+                    {
+                        "width": "max",
+                        "widget_type": "WidgetGroup",
+                        "caption": "Test log attachments",
+                        "collapsed": true,
+                        "widgets": [
+                            {
+                                "widget_type": "ImageGallery",
+                                "object_alias": "axenox.DevMan.test_log_file",
+                                "image_title_attribute_alias": "FILENAME",
+                                "zoomable": true,
+                                "hide_header": false,
+                                "width": "max",
+                                "filters": [
+                                    {
+                                        "attribute_alias": "test_log",
+                                        "hidden": true,
+                                        "required": true,
+                                        "comparator": "=="
+                                    }
+                                ],
+                                "columns": [
+                                    {
+                                        "attribute_alias": "test_log",
+                                        "value": "=test_log_id",
+                                        "hidden": true
+                                    }
+                                ],
+                                "uploader": {
+                                    "instant_upload": false
+                                }
+                            }
+                        ]
                     }
                 ]
             },

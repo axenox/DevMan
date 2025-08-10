@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-05-20 18:55:42",
-    "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
-    "modified_on": "2025-07-08 09:55:18",
+    "modified_by_user_selector": "0x11eea844784bd96ca844005056be9fa0",
+    "modified_on": "2025-07-30 12:33:54",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.test_case",
@@ -62,6 +62,10 @@
             },
             {
                 "attribute_alias": "description"
+            },
+            {
+                "attribute_alias": "archived_flag",
+                "value": 0
             }
         ],
         "sorters": [
@@ -73,6 +77,9 @@
         "columns": [
             {
                 "attribute_alias": "id"
+            },
+            {
+                "attribute_alias": "feature__module__application__LABEL"
             },
             {
                 "attribute_alias": "feature__name"
@@ -108,6 +115,9 @@
                 "attribute_alias": "external_test_link__LABEL:LIST_DISTINCT",
                 "caption": "Ext. Ticket(s)",
                 "width_max": "150px"
+            },
+            {
+                "attribute_alias": "archived_flag"
             },
             {
                 "attribute_alias": "test_log__effort:AVG",
@@ -170,6 +180,9 @@
             },
             {
                 "action_alias": "axenox.DevMan.TestCasesAddExternalTicket"
+            },
+            {
+                "action_alias": "axenox.DevMan.TestCaseMarkAsArchived"
             }
         ]
     }

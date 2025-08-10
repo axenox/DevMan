@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test case [axenox.DevMan.test_case]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-06-18 11:37:28",
+            "MODIFIED_ON": "2025-07-30 12:32:22",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -589,6 +589,12 @@
                                             },
                                             {
                                                 "attribute_alias": "description"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.core.ShowObjectInfoDialog",
+                                                "bind_to_double_click": true
                                             }
                                         ]
                                     }

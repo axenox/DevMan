@@ -85,59 +85,28 @@
     ],
     "rows": [
         {
-            "_EXPORT_SUMMARY": "Test plan cases [axenox.DevMan.test_plan_cases]",
-            "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-07-30 12:43:49",
-            "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
-            "UID": "0x11ebb782d97a0e84b782025041000001",
+            "_EXPORT_SUMMARY": "Test log file [axenox.DevMan.test_log_file]",
+            "CREATED_ON": "2025-08-04 16:39:26",
+            "MODIFIED_ON": "2025-08-04 16:39:26",
+            "CREATED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "UID": "0x11f0a48bd2445c98a48b005056be9fa0",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Test plan cases",
+            "NAME": "Test log file",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": 1,
-            "DATA_SOURCE": "0x39000000000000000000000000000000",
+            "DATA_SOURCE": "0x11e6b09e2002641f8943e4b318306b9a",
             "APP": "0x38000000000000000000000000000000",
             "SHORT_DESCRIPTION": "",
-            "PARENT_OBJECT": null,
-            "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": {
-                "widget_type": "Dialog",
-                "maximized": false,
-                "columns_in_grid": 1,
-                "height": 12,
-                "widgets": [
-                    {
-                        "attribute_alias": "test_case",
-                        "widget_type": "InputComboTable",
-                        "filters": {
-                            "operator": "AND",
-                            "conditions": [
-                                {
-                                    "value_left": "archived_flag",
-                                    "comparator": "==",
-                                    "value_right": 0
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "attribute_alias": "priority"
-                    },
-                    {
-                        "attribute_alias": "test_plan"
-                    },
-                    {
-                        "attribute_alias": "comment"
-                    },
-                    {
-                        "attribute_alias": "assigned_to"
-                    }
-                ]
+            "PARENT_OBJECT": "0x11e6afd8efb4743f8943e4b318306b9a",
+            "DATA_ADDRESS_PROPS": {
+                "delete_empty_folders": "true"
             },
-            "ALIAS": "test_plan_cases",
-            "DATA_ADDRESS": "test_plan_cases"
+            "DEFAULT_EDITOR_UXON": null,
+            "ALIAS": "test_log_file",
+            "DATA_ADDRESS": "data/axenox.DevMan/TestLogFiles/[#test_log#]/*"
         }
     ],
     "totals_rows": [],

@@ -675,9 +675,9 @@
         {
             "_EXPORT_SUMMARY": "Test case: Perform test",
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2025-04-15 16:38:25",
+            "MODIFIED_ON": "2025-08-08 19:01:03",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
@@ -830,7 +830,7 @@
                 "widget": {
                     "widget_type": "Dialog",
                     "object_alias": "axenox.DevMan.test_log",
-                    "width": 3,
+                    "width": 4,
                     "header": {
                         "widgets": [
                             {
@@ -861,6 +861,11 @@
                                                     "width": "67%",
                                                     "columns_in_grid": 2,
                                                     "widgets": [
+                                                        {
+                                                            "attribute_alias": "id",
+                                                            "id": "test_log_field",
+                                                            "widget_type": "InputHidden"
+                                                        },
                                                         {
                                                             "attribute_alias": "test_case",
                                                             "id": "test_case_field",
@@ -912,7 +917,7 @@
                                                         {
                                                             "attribute_alias": "test_plan",
                                                             "widget_type": "InputComboTable",
-                                                            "required": true,
+                                                            "required": false,
                                                             "autosearch_single_suggestion": true,
                                                             "filters": [
                                                                 {
@@ -978,10 +983,54 @@
                                                                     "value": "=test_case_field"
                                                                 }
                                                             ]
+                                                        },
+                                                        {
+                                                            "widget_type": "WidgetGroup",
+                                                            "caption": "Test log attachments",
+                                                            "width": "max",
+                                                            "collapsed": true,
+                                                            "widgets": [
+                                                                {
+                                                                    "widget_type": "ImageGallery",
+                                                                    "object_alias": "axenox.DevMan.test_log_file",
+                                                                    "image_title_attribute_alias": "FILENAME",
+                                                                    "zoomable": true,
+                                                                    "hide_header": false,
+                                                                    "width": "max",
+                                                                    "filters": [
+                                                                        {
+                                                                            "attribute_alias": "test_log",
+                                                                            "hidden": true,
+                                                                            "required": true,
+                                                                            "comparator": "=="
+                                                                        }
+                                                                    ],
+                                                                    "columns": [
+                                                                        {
+                                                                            "attribute_alias": "test_log",
+                                                                            "value": "=test_log_field!id",
+                                                                            "hidden": true
+                                                                        }
+                                                                    ],
+                                                                    "uploader": {
+                                                                        "instant_upload": false
+                                                                    }
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 },
                                                 {
+                                                    "caption": "Anleitung",
+                                                    "widgets": [
+                                                        {
+                                                            "widget_type": "Browser",
+                                                            "url": "api/docs/powerui/DevMan/Docs/Testanleitungen/Tester.md"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "/*": "",
                                                     "widgets": [
                                                         {
                                                             "caption": "This test also covers",
@@ -1032,7 +1081,8 @@
                                                                 }
                                                             ]
                                                         }
-                                                    ]
+                                                    ],
+                                                    "*/": ""
                                                 }
                                             ]
                                         }
@@ -1146,13 +1196,21 @@
                                                 {
                                                     "from": "test_plan",
                                                     "to": "_test_plan"
+                                                },
+                                                {
+                                                    "from": "test_log_file",
+                                                    "to": "_test_log_file"
+                                                },
+                                                {
+                                                    "from": "comment",
+                                                    "to": "_comment"
                                                 }
                                             ]
                                         }
                                     },
                                     {
                                         "alias": "exface.Core.CreateData",
-                                        "ignore_related_objects_in_input_data": true,
+                                        "ignore_related_objects_in_input_data": false,
                                         "object_alias": "axenox.DevMan.test_log",
                                         "input_mapper": {
                                             "from_object_alias": "axenox.DevMan.ticket",
@@ -1172,6 +1230,10 @@
                                                 {
                                                     "from": "description",
                                                     "to": "test_description"
+                                                },
+                                                {
+                                                    "from": "_test_log_file",
+                                                    "to": "test_log_file"
                                                 },
                                                 {
                                                     "from": "_tested_installation",
@@ -1196,6 +1258,10 @@
                                                 {
                                                     "from": "_test_plan",
                                                     "to": "test_plan"
+                                                },
+                                                {
+                                                    "from": "_comment",
+                                                    "to": "comment"
                                                 }
                                             ]
                                         }
@@ -1210,7 +1276,7 @@
                             "disabled_if_input_invalid": false,
                             "action": {
                                 "alias": "exface.Core.CreateData",
-                                "ignore_related_objects_in_input_data": true,
+                                "ignore_related_objects_in_input_data": false,
                                 "input_invalid_if": [
                                     {
                                         "error_text": "Please add comment why the test failed!",
@@ -1225,14 +1291,49 @@
                                     }
                                 ],
                                 "input_mapper": {
+                                    "from_object_alias": "axenox.DevMan.test_log",
+                                    "to_object_alias": "axenox.DevMan.test_log",
+                                    "inherit_columns": "own_system_attributes",
                                     "column_to_column_mappings": [
                                         {
                                             "from": "=0",
                                             "to": "test_ok_flag"
                                         },
                                         {
+                                            "from": "test_description",
+                                            "to": "test_description"
+                                        },
+                                        {
+                                            "from": "tested_installation",
+                                            "to": "tested_installation"
+                                        },
+                                        {
+                                            "from": "tested_workbench_version",
+                                            "to": "tested_workbench_version"
+                                        },
+                                        {
+                                            "from": "test_case",
+                                            "to": "test_case"
+                                        },
+                                        {
+                                            "from": "tested_by_resource",
+                                            "to": "tested_by_resource"
+                                        },
+                                        {
+                                            "from": "tested_on",
+                                            "to": "tested_on"
+                                        },
+                                        {
                                             "from": "test_plan",
                                             "to": "test_plan"
+                                        },
+                                        {
+                                            "from": "test_log_file",
+                                            "to": "test_log_file"
+                                        },
+                                        {
+                                            "from": "comment",
+                                            "to": "comment"
                                         }
                                     ]
                                 }
@@ -1243,16 +1344,51 @@
                             "close_dialog_after_action_succeeds": true,
                             "action": {
                                 "alias": "exface.Core.CreateData",
-                                "ignore_related_objects_in_input_data": true,
+                                "ignore_related_objects_in_input_data": false,
                                 "input_mapper": {
+                                    "from_object_alias": "axenox.DevMan.test_log",
+                                    "to_object_alias": "axenox.DevMan.test_log",
+                                    "inherit_columns": "own_system_attributes",
                                     "column_to_column_mappings": [
                                         {
                                             "from": "=1",
                                             "to": "test_ok_flag"
                                         },
                                         {
+                                            "from": "test_description",
+                                            "to": "test_description"
+                                        },
+                                        {
+                                            "from": "tested_installation",
+                                            "to": "tested_installation"
+                                        },
+                                        {
+                                            "from": "tested_workbench_version",
+                                            "to": "tested_workbench_version"
+                                        },
+                                        {
+                                            "from": "test_case",
+                                            "to": "test_case"
+                                        },
+                                        {
+                                            "from": "tested_by_resource",
+                                            "to": "tested_by_resource"
+                                        },
+                                        {
+                                            "from": "tested_on",
+                                            "to": "tested_on"
+                                        },
+                                        {
                                             "from": "test_plan",
                                             "to": "test_plan"
+                                        },
+                                        {
+                                            "from": "test_log_file",
+                                            "to": "test_log_file"
+                                        },
+                                        {
+                                            "from": "comment",
+                                            "to": "comment"
                                         }
                                     ]
                                 }
@@ -1268,7 +1404,7 @@
         {
             "_EXPORT_SUMMARY": "Test case: Mark as ToDo",
             "CREATED_ON": "2024-01-24 08:34:35",
-            "MODIFIED_ON": "2025-06-27 14:44:58",
+            "MODIFIED_ON": "2025-07-30 12:32:18",
             "CREATED_BY_USER": "0x11ee9df6349c63589df6005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "UID": "0x11ee9d0905df8a149d09005056be9fa0",
@@ -1276,7 +1412,7 @@
             "ACTION_PROTOTYPE": "exface/core/Actions/ShowDialog.php",
             "ALIAS": "TestCaseMarkAsToDo",
             "NAME": "Mark as ToDo",
-            "SHORT_DESCRIPTION": "",
+            "SHORT_DESCRIPTION": "Reset the test status for this test case to ToDo.",
             "CONFIG_UXON": {
                 "icon": "undo",
                 "input_rows_min": 1,
@@ -1536,6 +1672,44 @@
             },
             "APP": "0x38000000000000000000000000000000",
             "USE_IN_OBJECT_BASKET_FLAG": 1,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test case: Mark as Archived",
+            "CREATED_ON": "2025-07-30 12:30:47",
+            "MODIFIED_ON": "2025-07-30 12:46:13",
+            "CREATED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "UID": "0x11f092f641bffa1a92f6005056be9fa0",
+            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
+            "ALIAS": "TestCaseMarkAsArchived",
+            "NAME": "Mark as Archived",
+            "SHORT_DESCRIPTION": "Mark the test case as outdated. The test case will no longer show up by default.",
+            "CONFIG_UXON": {
+                "icon": "archive",
+                "input_rows_min": 1,
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.test_case",
+                    "height": "auto",
+                    "width": 1,
+                    "header": {
+                        "title_attribute_alias": "LABEL"
+                    },
+                    "widgets": [
+                        {
+                            "widget_type": "Message",
+                            "value": "Mark this test case as archived? The test will no longer show up in current lists of test cases by default and can not be added to future test plans. It will however not be deleted and still show up in past test plans. Hint: For transparency, it is advised to write the reason for the archiving into the description of the test case."
+                        },
+                        {
+                            "attribute_alias": "archived_flag"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
             "DOCS": ""
         }
     ],

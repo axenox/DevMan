@@ -1,17 +1,17 @@
 {
-    "uid": "0x11eb8d28edfb8d8e8d28025041000001",
-    "alias_with_namespace": "axenox.devman.current-plans",
+    "uid": "0x11f08b7feaeef09a8b7f005056be9fa0",
+    "alias_with_namespace": "axenox.devman.future-plans",
     "menu_parent_page_selector": "0x11eb95f1427f2f7495f1025041000001",
-    "menu_index": 6,
+    "menu_index": 7,
     "menu_visible": true,
-    "name": "Current plans",
+    "name": "Future plans",
     "description": "",
     "intro": "",
     "replaces_page_selector": null,
-    "created_by_user_selector": "0x31000000000000000000000000000000",
-    "created_on": "2021-06-11 12:08:11",
+    "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "created_on": "2025-08-04 15:35:42",
     "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
-    "modified_on": "2025-08-04 16:01:33",
+    "modified_on": "2025-08-04 16:04:32",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.test_case",
@@ -27,7 +27,7 @@
                                 "widgets": [
                                     {
                                         "widget_type": "DataTable",
-                                        "caption": "Current test plans",
+                                        "caption": "Future test plans",
                                         "object_alias": "axenox.DevMan.test_plan",
                                         "id": "testplan_tabelle",
                                         "hide_header": false,
@@ -45,16 +45,29 @@
                                                 "attribute_alias": "application__client"
                                             },
                                             {
-                                                "attribute_alias": "sprint__start_on",
-                                                "value": "=Now()",
-                                                "comparator": "<=",
-                                                "hidden": true
+                                                "attribute_alias": "sprint"
                                             },
                                             {
-                                                "attribute_alias": "sprint__end_on",
-                                                "value": "=Now()",
-                                                "comparator": ">=",
-                                                "hidden": true
+                                                "hidden": true,
+                                                "caption": "Hilsfilter",
+                                                "input_widget": {
+                                                    "widget_type": "InputHidden"
+                                                },
+                                                "condition_group": {
+                                                    "operator": "OR",
+                                                    "conditions": [
+                                                        {
+                                                            "expression": "sprint__start_on",
+                                                            "value": "=Now()",
+                                                            "comparator": ">="
+                                                        },
+                                                        {
+                                                            "expression": "hasSprint",
+                                                            "value": 0,
+                                                            "comparator": "=="
+                                                        }
+                                                    ]
+                                                }
                                             }
                                         ],
                                         "sorters": [
@@ -161,44 +174,6 @@
                                         ]
                                     }
                                 ]
-                            },
-                            {
-                                "/*": "",
-                                "width": "30%",
-                                "caption": "Completion",
-                                "widgets": [
-                                    {
-                                        "widget_type": "Chart",
-                                        "object_alias": "axenox.DevMan.test_plan",
-                                        "data_widget_link": "testplan_tabelle",
-                                        "series": [
-                                            {
-                                                "x_column_id": "testplan_offen",
-                                                "type": "bar",
-                                                "stacked": true
-                                            },
-                                            {
-                                                "x_column_id": "testplan_fehler",
-                                                "type": "bar"
-                                            },
-                                            {
-                                                "x_column_id": "testplan_ok",
-                                                "type": "bar"
-                                            }
-                                        ],
-                                        "axis_x": [
-                                            {
-                                                "data_column_id": "testplan_gesamt"
-                                            }
-                                        ],
-                                        "axis_y": [
-                                            {
-                                                "attribute_alias": "name"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "*/": ""
                             }
                         ]
                     }
@@ -240,7 +215,8 @@
                                 "attribute_alias": "test_plan",
                                 "value": "=testplan_tabelle!id",
                                 "apply_on_change": true,
-                                "hidden": true
+                                "hidden": true,
+                                "required": true
                             },
                             {
                                 "attribute_alias": "test_case__test_log__ticket"

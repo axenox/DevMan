@@ -1,0 +1,174 @@
+{
+    "uid": "0x11f0953af626c4be953a002248e6305d",
+    "alias_with_namespace": "axenox.devman.current-test-cases-per-user",
+    "menu_parent_page_selector": "0x11eb95f1427f2f7495f1025041000001",
+    "menu_index": 7,
+    "menu_visible": true,
+    "name": "Current Test Cases per User",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "created_on": "2025-08-14 11:56:34",
+    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "modified_on": "2025-08-15 13:31:04",
+    "contents": {
+        "widget_type": "DataTable",
+        "object_alias": "axenox.DevMan.test_plan_cases",
+        "caption": "Test cases",
+        "id": "test_cases",
+        "row_grouper": {
+            "group_by_attribute_alias": "test_plan__LABEL"
+        },
+        "filters": [
+            {
+                "attribute_alias": "assigned_to__user",
+                "caption": "User",
+                "value": "=User('UID')"
+            },
+            {
+                "attribute_alias": "test_plan__state",
+                "value": 50,
+                "hidden": false
+            },
+            {
+                "attribute_alias": "id"
+            },
+            {
+                "attribute_alias": "test_case__feature__module__application"
+            },
+            {
+                "attribute_alias": "test_case__feature__module"
+            },
+            {
+                "attribute_alias": "test_case__feature"
+            },
+            {
+                "attribute_alias": "test_case__name"
+            },
+            {
+                "attribute_alias": "test_plan_cases_status__test_status"
+            },
+            {
+                "attribute_alias": "test_case__test_scenario_cases__test_scenario"
+            },
+            {
+                "attribute_alias": "test_plan"
+            },
+            {
+                "attribute_alias": "test_plan__milestone"
+            }
+        ],
+        "sorters": [
+            {
+                "attribute_alias": "test_plan__LABEL",
+                "direction": "asc"
+            },
+            {
+                "attribute_alias": "priority",
+                "direction": "asc"
+            }
+        ],
+        "columns": [
+            {
+                "attribute_alias": "test_plan__LABEL"
+            },
+            {
+                "attribute_alias": "priority",
+                "caption": "order"
+            },
+            {
+                "attribute_alias": "test_case__id"
+            },
+            {
+                "attribute_alias": "test_case__name"
+            },
+            {
+                "attribute_alias": "test_case__feature__LABEL"
+            },
+            {
+                "attribute_alias": "comment",
+                "width": "400px"
+            },
+            {
+                "attribute_alias": "assigned_to__LABEL"
+            },
+            {
+                "attribute_alias": "test_case__test_case_status__test_status"
+            },
+            {
+                "attribute_alias": "test_case__test_case_status__last_test_time"
+            },
+            {
+                "attribute_alias": "test_case__test_case_status__last_test_by_resource__LABEL"
+            },
+            {
+                "attribute_alias": "created_by_user__LABEL",
+                "caption": "Added by"
+            },
+            {
+                "attribute_alias": "test_case__modified_by_user__LABEL",
+                "caption": "TC Edited by"
+            }
+        ],
+        "buttons": [
+            {
+                "bind_to_double_click": true,
+                "action": {
+                    "alias": "axenox.DevMan.TestCaseStartDialog",
+                    "input_mapper": {
+                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                        "to_object_alias": "axenox.DevMan.test_case",
+                        "inherit_columns": "none",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "Id"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "action_alias": "exface.core.ShowObjectInfoDialog",
+                "caption": "Additional Info"
+            },
+            {
+                "caption": "Edit Test Case",
+                "action": {
+                    "alias": "exface.Core.ShowObjectEditDialog",
+                    "object_alias": "axenox.DevMan.test_case",
+                    "input_mapper": {
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "id"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "caption": "All test cases",
+                "action": {
+                    "alias": "exface.Core.GoToPage",
+                    "page_alias": "axenox.devman.test-cases"
+                }
+            },
+            {
+                "action": {
+                    "alias": "axenox.DevMan.TestCaseLogDialog",
+                    "object_alias": "axenox.DevMan.test_case",
+                    "input_mapper": {
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "id"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

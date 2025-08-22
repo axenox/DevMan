@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Ticket [axenox.DevMan.ticket]",
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2024-08-02 11:46:57",
+            "MODIFIED_ON": "2025-08-13 17:20:09",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -179,6 +179,19 @@
                                     },
                                     {
                                         "attribute_alias": "sprint_pos"
+                                    }
+                                ]
+                            },
+                            {
+                                "widget_type": "InlineGroup",
+                                "caption": "Created",
+                                "separator": "by",
+                                "widgets": [
+                                    {
+                                        "attribute_alias": "created_on"
+                                    },
+                                    {
+                                        "attribute_alias": "created_by_user__FULL_NAME"
                                     }
                                 ]
                             },

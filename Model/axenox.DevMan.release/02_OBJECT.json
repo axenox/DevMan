@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release [axenox.DevMan.release]",
             "CREATED_ON": "2024-09-23 21:45:29",
-            "MODIFIED_ON": "2025-06-13 13:23:42",
+            "MODIFIED_ON": "2025-08-14 14:19:06",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef9a416381deba9a41005056be9fa0",
@@ -210,6 +210,9 @@
                                             },
                                             {
                                                 "attribute_alias": "ticket__assigned_to__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "release__LABEL"
                                             }
                                         ],
                                         "buttons": [

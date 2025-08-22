@@ -65,7 +65,7 @@
     ],
     "rows": [
         {
-            "_EXPORT_SUMMARY": "Test plan cases: Edit comment",
+            "_EXPORT_SUMMARY": "Test plan cases: Edit comment [TestPlanCasesEditComment]",
             "CREATED_ON": "2024-02-28 16:52:25",
             "MODIFIED_ON": "2025-07-08 10:06:49",
             "CREATED_BY_USER": "0x11ed995cb1942f38995c005056be9fa0",
@@ -101,7 +101,7 @@
             "DOCS": ""
         },
         {
-            "_EXPORT_SUMMARY": "Test plan cases: Assign Test Case",
+            "_EXPORT_SUMMARY": "Test plan cases: Assign Test Case [TestPlanCasesAssign]",
             "CREATED_ON": "2025-06-25 01:13:02",
             "MODIFIED_ON": "2025-06-27 14:41:57",
             "CREATED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
@@ -137,7 +137,7 @@
             "DOCS": ""
         },
         {
-            "_EXPORT_SUMMARY": "Test plan cases: Change test plan",
+            "_EXPORT_SUMMARY": "Test plan cases: Change test plan [TestPlanCasesChangeTestPlan]",
             "CREATED_ON": "2025-07-10 14:42:12",
             "MODIFIED_ON": "2025-07-10 15:38:31",
             "CREATED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",

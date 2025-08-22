@@ -65,7 +65,7 @@
     ],
     "rows": [
         {
-            "_EXPORT_SUMMARY": "Ticket: Move to sprint",
+            "_EXPORT_SUMMARY": "Ticket: Move to sprint [TicketMoveToSprintDialog]",
             "CREATED_ON": "2021-11-17 10:05:38",
             "MODIFIED_ON": "2021-11-17 10:05:53",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
@@ -98,7 +98,7 @@
             "DOCS": ""
         },
         {
-            "_EXPORT_SUMMARY": "Ticket: External Links",
+            "_EXPORT_SUMMARY": "Ticket: External Links [TicketLinksDialog]",
             "CREATED_ON": "2021-11-18 13:57:46",
             "MODIFIED_ON": "2021-11-18 16:05:08",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
@@ -164,7 +164,7 @@
             "DOCS": ""
         },
         {
-            "_EXPORT_SUMMARY": "Ticket: Set release",
+            "_EXPORT_SUMMARY": "Ticket: Set release [TicketMoveToReleaseDialog]",
             "CREATED_ON": "2024-09-23 21:52:43",
             "MODIFIED_ON": "2025-01-26 15:52:49",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",

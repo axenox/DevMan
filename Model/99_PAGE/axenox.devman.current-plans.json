@@ -11,16 +11,16 @@
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-06-11 12:08:11",
     "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
-    "modified_on": "2025-08-04 16:01:33",
+    "modified_on": "2025-08-14 14:46:20",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.test_case",
         "panels": [
             {
+                "height": "40%",
                 "widgets": [
                     {
                         "widget_type": "SplitHorizontal",
-                        "height": "30%",
                         "panels": [
                             {
                                 "width": "70%",
@@ -34,8 +34,8 @@
                                         "multi_select": false,
                                         "filters": [
                                             {
-                                                "attribute_alias": "closed_flag",
-                                                "value": 0,
+                                                "attribute_alias": "state",
+                                                "value": "10,30,50",
                                                 "hidden": true
                                             },
                                             {
@@ -69,6 +69,9 @@
                                             },
                                             {
                                                 "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
                                             },
                                             {
                                                 "attribute_alias": "application__LABEL"
@@ -157,6 +160,11 @@
                                                 "attribute_alias": "=Date(test_log__tested_on:MAX)",
                                                 "caption": "Last test",
                                                 "align": "right"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "widget_type": "StateMenuButton"
                                             }
                                         ]
                                     }
@@ -249,8 +257,8 @@
                                 "attribute_alias": "test_plan__milestone"
                             },
                             {
-                                "attribute_alias": "test_plan__closed_flag",
-                                "value": 0,
+                                "attribute_alias": "test_plan__state",
+                                "value": "10,30,50",
                                 "hidden": true
                             }
                         ],

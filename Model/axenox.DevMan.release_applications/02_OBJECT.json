@@ -85,9 +85,9 @@
     ],
     "rows": [
         {
-            "_EXPORT_SUMMARY": "Released applications [axenox.DevMan.release_applications]",
+            "_EXPORT_SUMMARY": "App releases [axenox.DevMan.release_applications]",
             "CREATED_ON": "2025-08-22 08:35:42",
-            "MODIFIED_ON": "2025-08-22 08:47:39",
+            "MODIFIED_ON": "2025-08-22 09:27:05",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f08d0f39e18b028d0f002248e6305d",
@@ -95,7 +95,7 @@
             "WRITABLE_FLAG": 1,
             "COMMENTS": "",
             "DOCS": "",
-            "NAME": "Released applications",
+            "NAME": "App releases",
             "INHERIT_DATA_SOURCE_BASE_OBJECT": 1,
             "DATA_SOURCE": "0x39000000000000000000000000000000",
             "APP": "0x38000000000000000000000000000000",

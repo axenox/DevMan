@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Application [axenox.DevMan.application]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2021-11-25 12:46:52",
+            "MODIFIED_ON": "2025-08-22 09:29:05",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb9866d97356ac9866025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -109,7 +109,7 @@
                         "widget_type": "Tabs",
                         "tabs": [
                             {
-                                "caption": "General",
+                                "caption": "Application",
                                 "widgets": [
                                     {
                                         "attribute_alias": "id",
@@ -135,6 +135,46 @@
                                         "attribute_alias": "description",
                                         "width": 2,
                                         "height": "max"
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Releases",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.release_applications",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "application",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            },
+                                            {
+                                                "attribute_alias": "release"
+                                            },
+                                            {
+                                                "attribute_alias": "feature_files__feature"
+                                            },
+                                            {
+                                                "attribute_alias": "feature_files__feature"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "release__date_planned"
+                                            },
+                                            {
+                                                "attribute_alias": "release__state"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "release__date_planned",
+                                                "direction": "desc"
+                                            }
+                                        ]
                                     }
                                 ]
                             },

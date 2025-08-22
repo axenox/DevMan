@@ -35,6 +35,9 @@ CREATE TABLE `release_deployments` (
   CONSTRAINT `release_deployments_ibfk_2` FOREIGN KEY (`release_id`) REFERENCES `release` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
+ALTER TABLE `release_applications`
+ADD UNIQUE `release_id_application_id` (`release_id`, `application_id`);
+
 -- DOWN
 
 -- Do not delete tables!!!

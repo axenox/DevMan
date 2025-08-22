@@ -1,6 +1,5 @@
 -- UP
 
-DROP TABLE IF EXISTS `release_applications`;
 CREATE TABLE `release_applications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `created_on` datetime NOT NULL DEFAULT current_timestamp(),
@@ -18,7 +17,6 @@ CREATE TABLE `release_applications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci ROW_FORMAT=DYNAMIC;
 
 
-DROP TABLE IF EXISTS `release_deployments`;
 CREATE TABLE `release_deployments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `created_on` datetime NOT NULL DEFAULT current_timestamp(),

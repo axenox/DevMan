@@ -134,43 +134,68 @@
         {
             "_EXPORT_SUMMARY": "Notify on create",
             "CREATED_ON": "2022-01-24 13:38:34",
-            "MODIFIED_ON": "2022-02-07 22:27:04",
+            "MODIFIED_ON": "2025-08-22 08:09:17",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eca9f18beca532a9f1025041000001",
             "BEHAVIOR": "exface/Core/Behaviors/NotifyingBehavior.php",
             "CONFIG_UXON": {
                 "notify_on_event": "exface.Core.DataSheet.OnCreateData",
+                "notify_if_data_matches_conditions": {
+                    "operator": "AND",
+                    "conditions": [
+                        {
+                            "expression": "state",
+                            "comparator": "==",
+                            "value": 10
+                        }
+                    ]
+                },
                 "notifications": [
                     {
-                        "channel": "axenox.DevMan.teams_channel",
-                        "card": {
-                            "@type": "MessageCard",
-                            "@context": "https://schema.org/extensions",
-                            "summary": "Ticket [#~data:id#] \"[#~data:title#]\" created",
-                            "title": "New ticket [#~data:id#] created",
-                            "sections": [
-                                {
-                                    "text": "[#~data:title#]",
-                                    "facts": [
-                                        {
-                                            "name": "Author:",
-                                            "value": "[#~data:created_by_user__LABEL#]"
-                                        },
-                                        {
-                                            "name": "Type:",
-                                            "value": "[#~data:type__LABEL#]"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
+                        "template": "axenox.DevMan.teams_card_on_ticket_created"
                     }
                 ]
             },
             "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
             "APP": "0x38000000000000000000000000000000",
             "NAME": "Notify on create",
+            "DESCRIPTION": "",
+            "DISABLED_FLAG": 0,
+            "PRIORITY": null
+        },
+        {
+            "_EXPORT_SUMMARY": "Notify on ready to test",
+            "CREATED_ON": "2025-08-22 08:14:32",
+            "MODIFIED_ON": "2025-08-22 08:14:32",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f0ac3c44ee30b6ac3c002248e6305d",
+            "BEHAVIOR": "exface/Core/Behaviors/NotifyingBehavior.php",
+            "CONFIG_UXON": {
+                "notify_on_event": "exface.core.DataSheet.OnUpdateData",
+                "notify_if_attributes_change": [
+                    "state"
+                ],
+                "notify_if_data_matches_conditions": {
+                    "operator": "AND",
+                    "conditions": [
+                        {
+                            "expression": "state",
+                            "comparator": "==",
+                            "value": 60
+                        }
+                    ]
+                },
+                "notifications": [
+                    {
+                        "template": "axenox.DevMan.teams_card_on_ticket_ready_to_test"
+                    }
+                ]
+            },
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "APP": "0x38000000000000000000000000000000",
+            "NAME": "Notify on ready to test",
             "DESCRIPTION": "",
             "DISABLED_FLAG": 0,
             "PRIORITY": null

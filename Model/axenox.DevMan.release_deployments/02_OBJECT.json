@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release deployments [axenox.DevMan.release_deployments]",
             "CREATED_ON": "2025-08-22 08:35:54",
-            "MODIFIED_ON": "2025-08-22 08:49:29",
+            "MODIFIED_ON": "2025-08-22 12:52:17",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f0994c412ceef6994c002248e6305d",
@@ -102,7 +102,31 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": null,
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "height": "auto",
+                "width": 1,
+                "widgets": [
+                    {
+                        "attribute_alias": "release"
+                    },
+                    {
+                        "attribute_alias": "installation"
+                    },
+                    {
+                        "attribute_alias": "deployed_on"
+                    },
+                    {
+                        "attribute_alias": "type"
+                    },
+                    {
+                        "attribute_alias": "change_ticket"
+                    },
+                    {
+                        "attribute_alias": "description"
+                    }
+                ]
+            },
             "ALIAS": "release_deployments",
             "DATA_ADDRESS": "release_deployments"
         }

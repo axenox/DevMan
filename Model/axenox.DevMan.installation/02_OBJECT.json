@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Installation [axenox.DevMan.installation]",
             "CREATED_ON": "2021-05-27 19:20:00",
-            "MODIFIED_ON": "2025-08-22 14:07:36",
+            "MODIFIED_ON": "2025-08-22 15:16:20",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ebab78c48c6362ab78747827435ce5",
@@ -197,7 +197,8 @@
                                                 "to_object_alias": "axenox.DevMan.release",
                                                 "column_to_column_mappings": [
                                                     {
-                                                        "from": "release",
+                                                        "//": "DO NOT use `release` here because MySQL cannot use this word as alias! It will be empty!",
+                                                        "from": "release__id",
                                                         "to": "id"
                                                     }
                                                 ]

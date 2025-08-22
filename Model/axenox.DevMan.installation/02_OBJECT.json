@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Installation [axenox.DevMan.installation]",
             "CREATED_ON": "2021-05-27 19:20:00",
-            "MODIFIED_ON": "2021-12-10 15:35:06",
+            "MODIFIED_ON": "2025-08-22 09:20:46",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ebab78c48c6362ab78747827435ce5",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -102,7 +102,85 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": null,
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "widgets": [
+                    {
+                        "attribute_alias": "name"
+                    },
+                    {
+                        "widget_type": "WidgetGroup",
+                        "caption": "Description",
+                        "height": 4,
+                        "widgets": [
+                            {
+                                "attribute_alias": "description",
+                                "height": "100%",
+                                "hide_caption": true
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_alias": "client"
+                    },
+                    {
+                        "attribute_alias": "url"
+                    },
+                    {
+                        "attribute_alias": "deployer_host_alias"
+                    },
+                    {
+                        "widget_type": "WidgetGroup",
+                        "caption": "Current state",
+                        "width": 2,
+                        "widgets": [
+                            {
+                                "attribute_alias": "current_build_time"
+                            },
+                            {
+                                "attribute_alias": "current_workbench_version"
+                            }
+                        ]
+                    },
+                    {
+                        "widget_type": "WidgetGroup",
+                        "caption": "Deployments",
+                        "width": 2,
+                        "height": "max",
+                        "widgets": [
+                            {
+                                "widget_type": "DataTable",
+                                "object_alias": "axenox.DevMan.release_deployments",
+                                "height": "100%",
+                                "filters": [
+                                    {
+                                        "attribute_alias": "installation",
+                                        "comparator": "==",
+                                        "required": true,
+                                        "hidden": true
+                                    }
+                                ],
+                                "columns": [
+                                    {
+                                        "attribute_alias": "deployed_on"
+                                    },
+                                    {
+                                        "attribute_alias": "release__LABEL"
+                                    },
+                                    {
+                                        "attribute_alias": "description",
+                                        "caption": "Deployment comment"
+                                    },
+                                    {
+                                        "attribute_alias": "release__description",
+                                        "caption": "Release description"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "installation",
             "DATA_ADDRESS": "installation"
         }

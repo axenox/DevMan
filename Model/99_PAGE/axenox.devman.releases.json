@@ -11,14 +11,14 @@
     "created_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
     "created_on": "2024-09-23 22:06:28",
     "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2025-04-15 17:19:58",
+    "modified_on": "2025-08-22 09:18:47",
     "contents": {
         "object_alias": "axenox.DevMan.release",
         "widget_type": "SplitHorizontal",
         "panels": [
             {
                 "caption": "Releases",
-                "width": "50%",
+                "width": "60%",
                 "widgets": [
                     {
                         "widget_type": "DataTable",
@@ -77,8 +77,8 @@
                         ],
                         "sorters": [
                             {
-                                "attribute_alias": "name",
-                                "direction": "asc"
+                                "attribute_alias": "date_planned",
+                                "direction": "desc"
                             }
                         ],
                         "buttons": [
@@ -101,103 +101,193 @@
                 ]
             },
             {
-                "caption": "Tickets",
                 "widgets": [
                     {
-                        "widget_type": "DataTable",
-                        "object_alias": "axenox.DevMan.ticket",
-                        "paginate": false,
-                        "multi_select": true,
-                        "filters": [
+                        "widget_type": "SplitVertical",
+                        "panels": [
                             {
-                                "attribute_alias": "LABEL"
+                                "caption": "Tickets",
+                                "height": "60%",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.ticket",
+                                        "paginate": false,
+                                        "multi_select": true,
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "release_tickets__release",
+                                                "apply_on_change": true,
+                                                "comparator": "==",
+                                                "value": "=releases_table!id"
+                                            },
+                                            {
+                                                "attribute_alias": "state",
+                                                "input_widget": {
+                                                    "widget_type": "InputSelect",
+                                                    "multi_select": true
+                                                }
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to"
+                                            },
+                                            {
+                                                "attribute_alias": "project_tickets__project"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket_tags__tag"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "calculation": "=Left(title, 80)"
+                                            },
+                                            {
+                                                "attribute_alias": "type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "release__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "project_title_list"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket_tags__tag__name:LIST_DISTINCT",
+                                                "caption": "Tags"
+                                            },
+                                            {
+                                                "attribute_alias": "external_ticket_link__LABEL:LIST_DISTINCT",
+                                                "caption": "Ext. ticket"
+                                            },
+                                            {
+                                                "attribute_alias": "feature_tickets__feature__feature_test_cases__id:COUNT",
+                                                "caption": "Test cases"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "id",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectCreateDialog",
+                                                "caption": "Create ticket"
+                                            },
+                                            {
+                                                "caption": "Edit ticket",
+                                                "bind_to_double_click": true,
+                                                "action_alias": "exface.Core.ShowObjectEditDialog"
+                                            },
+                                            {
+                                                "caption": "Copy ticket",
+                                                "action_alias": "exface.core.ShowObjectCopyDialog"
+                                            },
+                                            {
+                                                "widget_type": "StateMenuButton"
+                                            },
+                                            {
+                                                "action_alias": "axenox.DevMan.TicketLinksDialog"
+                                            },
+                                            {
+                                                "action_alias": "axenox.DevMan.TicketMoveToReleaseDialog"
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
-                                "attribute_alias": "release_tickets__release",
-                                "apply_on_change": true,
-                                "comparator": "==",
-                                "value": "=releases_table!id"
-                            },
-                            {
-                                "attribute_alias": "state",
-                                "input_widget": {
-                                    "widget_type": "InputSelect",
-                                    "multi_select": true
-                                }
-                            },
-                            {
-                                "attribute_alias": "assigned_to"
-                            },
-                            {
-                                "attribute_alias": "project_tickets__project"
-                            },
-                            {
-                                "attribute_alias": "ticket_tags__tag"
-                            }
-                        ],
-                        "columns": [
-                            {
-                                "attribute_alias": "id"
-                            },
-                            {
-                                "calculation": "=Left(title, 80)"
-                            },
-                            {
-                                "attribute_alias": "type__LABEL"
-                            },
-                            {
-                                "attribute_alias": "state"
-                            },
-                            {
-                                "attribute_alias": "release__LABEL"
-                            },
-                            {
-                                "attribute_alias": "assigned_to__LABEL"
-                            },
-                            {
-                                "attribute_alias": "project_title_list"
-                            },
-                            {
-                                "attribute_alias": "ticket_tags__tag__name:LIST_DISTINCT",
-                                "caption": "Tags"
-                            },
-                            {
-                                "attribute_alias": "external_ticket_link__LABEL:LIST_DISTINCT",
-                                "caption": "Ext. ticket"
-                            },
-                            {
-                                "attribute_alias": "feature_tickets__feature__feature_test_cases__id:COUNT",
-                                "caption": "Test cases"
-                            }
-                        ],
-                        "sorters": [
-                            {
-                                "attribute_alias": "id",
-                                "direction": "desc"
-                            }
-                        ],
-                        "buttons": [
-                            {
-                                "action_alias": "exface.Core.ShowObjectCreateDialog",
-                                "caption": "Create ticket"
-                            },
-                            {
-                                "caption": "Edit ticket",
-                                "bind_to_double_click": true,
-                                "action_alias": "exface.Core.ShowObjectEditDialog"
-                            },
-                            {
-                                "caption": "Copy ticket",
-                                "action_alias": "exface.core.ShowObjectCopyDialog"
-                            },
-                            {
-                                "widget_type": "StateMenuButton"
-                            },
-                            {
-                                "action_alias": "axenox.DevMan.TicketLinksDialog"
-                            },
-                            {
-                                "action_alias": "axenox.DevMan.TicketMoveToReleaseDialog"
+                                "widgets": [
+                                    {
+                                        "widget_type": "SplitHorizontal",
+                                        "panels": [
+                                            {
+                                                "width": "50%",
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "DataTable",
+                                                        "object_alias": "axenox.DevMan.release_applications",
+                                                        "caption": "App releases",
+                                                        "filters": [
+                                                            {
+                                                                "attribute_alias": "release",
+                                                                "apply_on_change": true,
+                                                                "value": "=releases_table!id",
+                                                                "comparator": "==",
+                                                                "hidden": true
+                                                            }
+                                                        ],
+                                                        "columns": [
+                                                            {
+                                                                "attribute_alias": "application__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "release__LABEL"
+                                                            }
+                                                        ],
+                                                        "sorters": [
+                                                            {
+                                                                "attribute_alias": "release__date_planned",
+                                                                "direction": "desc"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "DataTable",
+                                                        "object_alias": "axenox.DevMan.release_deployments",
+                                                        "caption": "Deployments",
+                                                        "filters": [
+                                                            {
+                                                                "attribute_alias": "release",
+                                                                "apply_on_change": true,
+                                                                "value": "=releases_table!id",
+                                                                "comparator": "==",
+                                                                "hidden": true
+                                                            }
+                                                        ],
+                                                        "columns": [
+                                                            {
+                                                                "attribute_alias": "deployed_on"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "release__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "installation__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "description"
+                                                            }
+                                                        ],
+                                                        "sorters": [
+                                                            {
+                                                                "attribute_alias": "deployed_on",
+                                                                "direction": "desc"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }

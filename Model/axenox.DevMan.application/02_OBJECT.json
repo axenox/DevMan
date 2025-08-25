@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Application [axenox.DevMan.application]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-08-22 09:29:05",
+            "MODIFIED_ON": "2025-08-25 11:07:52",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb9866d97356ac9866025041000001",
@@ -153,17 +153,14 @@
                                             },
                                             {
                                                 "attribute_alias": "release"
-                                            },
-                                            {
-                                                "attribute_alias": "feature_files__feature"
-                                            },
-                                            {
-                                                "attribute_alias": "feature_files__feature"
                                             }
                                         ],
                                         "columns": [
                                             {
                                                 "attribute_alias": "release__date_planned"
+                                            },
+                                            {
+                                                "attribute_alias": "release__LABEL"
                                             },
                                             {
                                                 "attribute_alias": "release__state"

@@ -55,7 +55,7 @@
         {
             "_EXPORT_SUMMARY": "Teams card on ticket created",
             "CREATED_ON": "2025-08-22 08:07:48",
-            "MODIFIED_ON": "2025-08-22 08:07:48",
+            "MODIFIED_ON": "2025-08-22 17:02:55",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f085b953eb82ae85b9002248e6305d",
@@ -66,8 +66,8 @@
                 "card": {
                     "@type": "MessageCard",
                     "@context": "https://schema.org/extensions",
-                    "summary": "Ticket [#~data:id#] \"[#~data:title#]\" created",
-                    "title": "New ticket [#~data:id#] created",
+                    "summary": "New [#~data:type__LABEL#] #[#~data:id#] created",
+                    "title": "Ticket [#~data:id#] \"[#~data:title#]\" created",
                     "sections": [
                         {
                             "text": "[#~data:title#]",
@@ -77,8 +77,8 @@
                                     "value": "[#~data:created_by_user__LABEL#]"
                                 },
                                 {
-                                    "name": "Type:",
-                                    "value": "[#~data:type__LABEL#]"
+                                    "name": "Assigned to:",
+                                    "value": "[#~data:assigned_to__LABEL#]"
                                 }
                             ]
                         }
@@ -91,7 +91,7 @@
         {
             "_EXPORT_SUMMARY": "Teams card on ticket ready to test",
             "CREATED_ON": "2025-08-22 08:14:23",
-            "MODIFIED_ON": "2025-08-22 08:14:23",
+            "MODIFIED_ON": "2025-08-22 17:02:49",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f090163f61a6aa9016002248e6305d",
@@ -102,8 +102,8 @@
                 "card": {
                     "@type": "MessageCard",
                     "@context": "https://schema.org/extensions",
-                    "summary": "Ticket [#~data:id#] \"[#~data:title#]\" is ready to test",
-                    "title": "Ready to test #[#~data:id#]",
+                    "summary": "Ready to test #[#~data:id#]",
+                    "title": "Ticket [#~data:id#] \"[#~data:title#]\" is ready to test",
                     "sections": [
                         {
                             "text": "[#~data:title#]",

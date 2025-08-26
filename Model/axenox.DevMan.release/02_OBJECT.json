@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release [axenox.DevMan.release]",
             "CREATED_ON": "2024-09-23 21:45:29",
-            "MODIFIED_ON": "2025-08-22 15:17:33",
+            "MODIFIED_ON": "2025-08-26 10:19:33",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef9a416381deba9a41005056be9fa0",
@@ -413,6 +413,52 @@
                                             {
                                                 "action_alias": "exface.core.DeleteObject",
                                                 "visibility": "optional"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Included elsewhere",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.release_includes",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "release_included",
+                                                "comparator": "==",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "release__client__code"
+                                            },
+                                            {
+                                                "attribute_alias": "release__name"
+                                            },
+                                            {
+                                                "attribute_alias": "release__state"
+                                            },
+                                            {
+                                                "attribute_alias": "release__date_planned"
+                                            },
+                                            {
+                                                "attribute_alias": "release__date_staging"
+                                            },
+                                            {
+                                                "attribute_alias": "release__date_released"
+                                            },
+                                            {
+                                                "attribute_alias": "release__date_eol"
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "release__date_planned",
+                                                "direction": "asc"
                                             }
                                         ]
                                     }

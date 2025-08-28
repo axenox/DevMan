@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release deployments [axenox.DevMan.release_deployments]",
             "CREATED_ON": "2025-08-22 08:35:54",
-            "MODIFIED_ON": "2025-08-22 12:52:17",
+            "MODIFIED_ON": "2025-08-28 14:06:02",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f0994c412ceef6994c002248e6305d",
@@ -115,6 +115,9 @@
                     },
                     {
                         "attribute_alias": "deployed_on"
+                    },
+                    {
+                        "attribute_alias": "deployed_by_resource"
                     },
                     {
                         "attribute_alias": "type"

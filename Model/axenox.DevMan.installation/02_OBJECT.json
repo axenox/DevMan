@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Installation [axenox.DevMan.installation]",
             "CREATED_ON": "2021-05-27 19:20:00",
-            "MODIFIED_ON": "2025-08-22 15:16:20",
+            "MODIFIED_ON": "2025-08-28 14:14:14",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ebab78c48c6362ab78747827435ce5",
@@ -152,6 +152,7 @@
                                 "widget_type": "DataTable",
                                 "object_alias": "axenox.DevMan.release_deployments",
                                 "height": "100%",
+                                "nowrap": false,
                                 "filters": [
                                     {
                                         "attribute_alias": "installation",
@@ -169,6 +170,9 @@
                                     },
                                     {
                                         "attribute_alias": "release__LABEL"
+                                    },
+                                    {
+                                        "attribute_alias": "deployed_by_resource__LABEL"
                                     },
                                     {
                                         "attribute_alias": "description",

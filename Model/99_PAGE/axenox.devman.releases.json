@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
     "created_on": "2024-09-23 22:06:28",
     "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2025-08-26 10:34:14",
+    "modified_on": "2025-08-28 14:20:44",
     "contents": {
         "object_alias": "axenox.DevMan.release",
         "widget_type": "SplitHorizontal",
@@ -223,7 +223,7 @@
                                         "widget_type": "SplitHorizontal",
                                         "panels": [
                                             {
-                                                "width": "50%",
+                                                "width": "45%",
                                                 "widgets": [
                                                     {
                                                         "widget_type": "DataTable",
@@ -275,13 +275,16 @@
                                                                 "attribute_alias": "deployed_on"
                                                             },
                                                             {
-                                                                "attribute_alias": "release__LABEL"
-                                                            },
-                                                            {
                                                                 "attribute_alias": "installation__LABEL"
                                                             },
                                                             {
                                                                 "attribute_alias": "type"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "deployed_by_resource__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "release__LABEL"
                                                             },
                                                             {
                                                                 "attribute_alias": "description"
@@ -291,6 +294,12 @@
                                                             {
                                                                 "attribute_alias": "deployed_on",
                                                                 "direction": "desc"
+                                                            }
+                                                        ],
+                                                        "buttons": [
+                                                            {
+                                                                "action_alias": "exface.core.ShowObjectEditDialog",
+                                                                "bind_to_double_click": true
                                                             }
                                                         ]
                                                     }

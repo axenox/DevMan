@@ -67,7 +67,7 @@
         {
             "_EXPORT_SUMMARY": "Release: Deploy [ReleaseDeployDialog]",
             "CREATED_ON": "2025-08-26 10:33:33",
-            "MODIFIED_ON": "2025-08-26 10:35:42",
+            "MODIFIED_ON": "2025-08-28 14:11:11",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f086ae5a71270086ae002248e6305d",
@@ -103,6 +103,9 @@
                             "attribute_alias": "deployed_on"
                         },
                         {
+                            "attribute_alias": "deployed_by_resource"
+                        },
+                        {
                             "attribute_alias": "release",
                             "disabled": true
                         },
@@ -111,6 +114,9 @@
                             "widget_type": "InputComboTable",
                             "multi_select": true,
                             "caption": "Deployed to installation(s)"
+                        },
+                        {
+                            "attribute_alias": "change_ticket"
                         },
                         {
                             "attribute_alias": "description"

@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release [axenox.DevMan.release]",
             "CREATED_ON": "2024-09-23 21:45:29",
-            "MODIFIED_ON": "2025-08-26 10:19:33",
+            "MODIFIED_ON": "2025-08-28 14:12:51",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef9a416381deba9a41005056be9fa0",
@@ -388,6 +388,9 @@
                                             },
                                             {
                                                 "attribute_alias": "change_ticket"
+                                            },
+                                            {
+                                                "attribute_alias": "deployed_by_resource__LABEL"
                                             },
                                             {
                                                 "attribute_alias": "description"

@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Release [axenox.DevMan.release]",
             "CREATED_ON": "2024-09-23 21:45:29",
-            "MODIFIED_ON": "2025-08-28 14:12:51",
+            "MODIFIED_ON": "2025-09-05 09:39:29",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef9a416381deba9a41005056be9fa0",
@@ -180,7 +180,27 @@
                                             {
                                                 "caption": "Add release",
                                                 "icon": "plus",
-                                                "action_alias": "exface.core.ShowObjectCreateDialog"
+                                                "input_widget_id": "uid_field",
+                                                "action": {
+                                                    "alias": "exface.core.ShowObjectCreateDialog",
+                                                    "object_alias": "axenox.DevMan.release_includes",
+                                                    "prefill_with_input_data": true,
+                                                    "prefill_with_filter_context": false,
+                                                    "input_mapper": {
+                                                        "from_object_alias": "axenox.DevMan.release",
+                                                        "to_object_alias": "axenox.DevMan.release_includes",
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "id",
+                                                                "to": "release"
+                                                            },
+                                                            {
+                                                                "from": "=NullValue()",
+                                                                "to": "release_included"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
                                             },
                                             {
                                                 "action_alias": "exface.core.DeleteObject",

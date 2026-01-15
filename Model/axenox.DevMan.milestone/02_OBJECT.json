@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Milestone [axenox.DevMan.milestone]",
             "CREATED_ON": "2019-03-21 09:54:45",
-            "MODIFIED_ON": "2025-06-13 13:37:13",
+            "MODIFIED_ON": "2026-01-15 14:04:50",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e94bbf50eed38fb95b00505689aada",
@@ -128,6 +128,12 @@
                                     },
                                     {
                                         "attribute_alias": "effort_rem_estimated_h"
+                                    },
+                                    {
+                                        "attribute_alias": "release"
+                                    },
+                                    {
+                                        "attribute_alias": "show_in_calendar"
                                     },
                                     {
                                         "attribute_alias": "objectives",

@@ -179,9 +179,9 @@
         {
             "_EXPORT_SUMMARY": "Description [description]",
             "CREATED_ON": "2021-05-07 14:43:40",
-            "MODIFIED_ON": "2021-11-27 15:09:57",
+            "MODIFIED_ON": "2026-01-16 13:16:18",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9796d9858ebc9796025041000001",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -220,7 +220,7 @@
             "DEFAULT_VALUE": "",
             "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": {
-                "length_max": 65535
+                "length_max": 4294967295
             }
         },
         {

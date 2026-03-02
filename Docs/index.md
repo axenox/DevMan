@@ -118,7 +118,7 @@ table {
 <li><a href="2_DevMan/index.md">2. DevMan</a><ul style="list-style-type: none; padding-left: 0; margin-left: 20px;">
 <li><a href="2_DevMan/in_dev.md">2.1 In development</a></li>
 <li><a href="2_DevMan/projects.md">2.2 Projects</a></li>
-<li><a href="2_DevMan/teams.md">2.3 Team</a></li>
+<li><a href="2_DevMan/team.md">2.3 Team</a></li>
 <li><a href="2_DevMan/tickets.md">2.4 Tickets</a></li>
 <li><a href="2_DevMan/releases.md">2.5 Releases</a></li>
 <li><a href="2_DevMan/sprints.md">2.6 Sprints</a></li>

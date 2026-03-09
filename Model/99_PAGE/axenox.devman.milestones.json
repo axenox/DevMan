@@ -10,85 +10,140 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
-    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
-    "modified_on": "2025-07-25 14:34:48",
+    "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
+    "modified_on": "2026-03-09 16:42:18",
     "contents": {
         "object_alias": "axenox.DevMan.milestone",
-        "widget_type": "DataTable",
-        "filters": [
+        "widget_type": "SplitVertical",
+        "panels": [
             {
-                "attribute_alias": "project__client"
+                "caption": "Milestones",
+                "height": "65%",
+                "widgets": [
+                    {
+                        "object_alias": "axenox.DevMan.milestone",
+                        "widget_type": "DataTable",
+                        "id": "table_milestones",
+                        "filters": [
+                            {
+                                "attribute_alias": "project__client"
+                            },
+                            {
+                                "attribute_alias": "project"
+                            },
+                            {
+                                "attribute_alias": "date",
+                                "comparator": ">=",
+                                "value": "=Now()"
+                            },
+                            {
+                                "attribute_alias": "date",
+                                "comparator": "<="
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "objectives"
+                            }
+                        ],
+                        "row_grouper": {
+                            "group_by_attribute_alias": "project__client__LABEL"
+                        },
+                        "columns": [
+                            {
+                                "attribute_alias": "date_week_no"
+                            },
+                            {
+                                "attribute_alias": "date"
+                            },
+                            {
+                                "attribute_alias": "project__LABEL"
+                            },
+                            {
+                                "attribute_alias": "project__client__LABEL"
+                            },
+                            {
+                                "attribute_alias": "name"
+                            },
+                            {
+                                "attribute_alias": "location"
+                            },
+                            {
+                                "attribute_alias": "effort_planned_h"
+                            },
+                            {
+                                "attribute_alias": "effort_remaining_h"
+                            },
+                            {
+                                "attribute_alias": "objectives"
+                            },
+                            {
+                                "attribute_alias": "ticket__state:COUNT",
+                                "caption": "total issues"
+                            },
+                            {
+                                "attribute_alias": "ticket__state:COUNT_IF(< 90)",
+                                "caption": "open issues"
+                            },
+                            {
+                                "attribute_alias": "ticket__state:COUNT_IF(>= 90)",
+                                "caption": "resolved issues"
+                            }
+                        ],
+                        "sorters": [
+                            {
+                                "attribute_alias": "date",
+                                "direction": "desc"
+                            }
+                        ],
+                        "buttons": [
+                            {
+                                "action_alias": "exface.Core.ShowObjectCreateDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                "bind_to_double_click": true
+                            },
+                            {
+                                "action_alias": "exface.Core.ShowObjectCopyDialog"
+                            },
+                            {
+                                "action_alias": "exface.Core.DeleteObject"
+                            }
+                        ]
+                    }
+                ]
             },
             {
-                "attribute_alias": "project"
-            },
-            {
-                "attribute_alias": "date",
-                "comparator": ">=",
-                "value": "=Now()"
-            },
-            {
-                "attribute_alias": "date",
-                "comparator": "<="
-            },
-            {
-                "attribute_alias": "name"
-            },
-            {
-                "attribute_alias": "objectives"
-            }
-        ],
-        "row_grouper": {
-            "group_by_attribute_alias": "project__client__LABEL"
-        },
-        "columns": [
-            {
-                "attribute_alias": "date_week_no"
-            },
-            {
-                "attribute_alias": "date"
-            },
-            {
-                "attribute_alias": "project__LABEL"
-            },
-            {
-                "attribute_alias": "project__client__LABEL"
-            },
-            {
-                "attribute_alias": "name"
-            },
-            {
-                "attribute_alias": "location"
-            },
-            {
-                "attribute_alias": "effort_planned_h"
-            },
-            {
-                "attribute_alias": "effort_remaining_h"
-            },
-            {
-                "attribute_alias": "objectives"
-            }
-        ],
-        "sorters": [
-            {
-                "attribute_alias": "date",
-                "direction": "desc"
-            }
-        ],
-        "buttons": [
-            {
-                "action_alias": "exface.Core.ShowObjectCreateDialog"
-            },
-            {
-                "action_alias": "exface.Core.ShowObjectEditDialog",
-                "bind_to_double_click": true
-            },
-            {
-                "action_alias": "exface.Core.ShowObjectCopyDialog"
-            },
-            {
-                "action_alias": "exface.Core.DeleteObject"
+                "caption": "Milestone related Issues",
+                "widgets": [
+                    {
+                        "widget_type": "DataTable",
+                        "object_alias": "axenox.DevMan.ticket",
+                        "hide_header": true,
+                        "filters": [
+                            {
+                                "attribute_alias": "milestone",
+                                "comparator": "==",
+                                "value": "=table_milestones!id",
+                                "required": true,
+                                "apply_on_change": true
+                            }
+                        ],
+                        "columns": [
+                            {
+                                "attribute_alias": "LABEL"
+                            },
+                            {
+                                "attribute_alias": "state"
+                            },
+                            {
+                                "attribute_alias": "assigned_to__LABEL"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

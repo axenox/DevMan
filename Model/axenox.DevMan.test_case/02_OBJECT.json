@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test case [axenox.DevMan.test_case]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-10-27 10:11:30",
+            "MODIFIED_ON": "2026-03-11 12:01:39",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -190,11 +190,58 @@
                                                 ]
                                             },
                                             {
-                                                "caption": "Anleitung",
                                                 "widgets": [
                                                     {
-                                                        "widget_type": "Browser",
-                                                        "url": "api/docs/powerui/DevMan/Docs/Testanleitungen/Testersteller.md"
+                                                        "widget_type": "SplitVertical",
+                                                        "panels": [
+                                                            {
+                                                                "caption": "Anleitung",
+                                                                "height": "70%",
+                                                                "widgets": [
+                                                                    {
+                                                                        "widget_type": "Browser",
+                                                                        "url": "api/docs/powerui/DevMan/Docs/Testanleitungen/Testersteller.md"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "widgets": [
+                                                                    {
+                                                                        "widget_type": "DataTable",
+                                                                        "object_alias": "axenox.DevMan.test_case_flags",
+                                                                        "caption": "Flags, problems",
+                                                                        "filters": [
+                                                                            {
+                                                                                "attribute_alias": "test_case",
+                                                                                "value": "=field_test_case_id!id",
+                                                                                "required": true,
+                                                                                "hidden": true
+                                                                            }
+                                                                        ],
+                                                                        "columns": [
+                                                                            {
+                                                                                "attribute_alias": "flag__LABEL"
+                                                                            },
+                                                                            {
+                                                                                "attribute_alias": "explanation"
+                                                                            }
+                                                                        ],
+                                                                        "buttons": [
+                                                                            {
+                                                                                "action_alias": "exface.core.ShowObjectCreateDialog"
+                                                                            },
+                                                                            {
+                                                                                "action_alias": "exface.core.ShowObjectEditDialog",
+                                                                                "bind_to_double_click": true
+                                                                            },
+                                                                            {
+                                                                                "action_alias": "exface.core.DeleteObject"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             }

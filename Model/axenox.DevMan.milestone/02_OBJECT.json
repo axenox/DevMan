@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Milestone [axenox.DevMan.milestone]",
             "CREATED_ON": "2019-03-21 09:54:45",
-            "MODIFIED_ON": "2026-01-15 14:04:50",
+            "MODIFIED_ON": "2026-03-03 15:11:12",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "UID": "0x11e94bbf50eed38fb95b00505689aada",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -111,6 +111,11 @@
                             {
                                 "caption": "Milestone",
                                 "widgets": [
+                                    {
+                                        "attribute_alias": "id",
+                                        "id": "MilestoneId",
+                                        "widget_type": "InputHidden"
+                                    },
                                     {
                                         "attribute_alias": "date"
                                     },
@@ -259,6 +264,45 @@
                                             {
                                                 "bind_to_double_click": true,
                                                 "action_alias": "exface.core.ShowObjectEditDialog"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Attachments",
+                                "widgets": [
+                                    {
+                                        "widget_type": "WidgetGroup",
+                                        "caption": "Files",
+                                        "width": "max",
+                                        "collapsed": true,
+                                        "widgets": [
+                                            {
+                                                "widget_type": "ImageGallery",
+                                                "object_alias": "axenox.DevMan.milestone_file",
+                                                "image_title_attribute_alias": "FILENAME",
+                                                "zoomable": true,
+                                                "hide_header": false,
+                                                "width": "max",
+                                                "filters": [
+                                                    {
+                                                        "attribute_alias": "milestone",
+                                                        "hidden": true,
+                                                        "required": true,
+                                                        "comparator": "=="
+                                                    }
+                                                ],
+                                                "columns": [
+                                                    {
+                                                        "attribute_alias": "milestone",
+                                                        "value": "=MilestoneId",
+                                                        "hidden": true
+                                                    }
+                                                ],
+                                                "uploader": {
+                                                    "instant_upload": false
+                                                }
                                             }
                                         ]
                                     }

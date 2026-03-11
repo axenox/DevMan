@@ -37,6 +37,10 @@
         {
             "name": "bug_flag",
             "attribute_alias": "bug_flag"
+        },
+        {
+            "name": "incident_flag",
+            "attribute_alias": "incident_flag"
         }
     ],
     "rows": [
@@ -49,7 +53,8 @@
             "id": 20,
             "name": "Feature",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Bug",
@@ -60,18 +65,20 @@
             "id": 21,
             "name": "Bug",
             "description": "To be fixed",
-            "bug_flag": 1
+            "bug_flag": 1,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Incident",
             "created_on": "2021-05-03 12:04:33",
-            "modified_on": "2021-05-03 13:59:12",
+            "modified_on": "2025-11-10 13:47:04",
             "created_by_user": "0x31000000000000000000000000000000",
-            "modified_by_user": "0x31000000000000000000000000000000",
+            "modified_by_user": "0x11eea89602c1c3dca896005056be9fa0",
             "id": 22,
             "name": "Incident",
             "description": "Reported, but not yet qualified as a bug or anything else",
-            "bug_flag": 1
+            "bug_flag": 1,
+            "incident_flag": 1
         },
         {
             "_EXPORT_SUMMARY": "Story",
@@ -82,7 +89,8 @@
             "id": 23,
             "name": "Story",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Epic",
@@ -93,7 +101,8 @@
             "id": 24,
             "name": "Epic",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Known Issue",
@@ -104,7 +113,8 @@
             "id": 25,
             "name": "Known Issue",
             "description": "Non-critical bug: may remain unfixed for now",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "CR",
@@ -115,7 +125,8 @@
             "id": 26,
             "name": "CR",
             "description": "Change request by client",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "ToDo",
@@ -126,7 +137,8 @@
             "id": 27,
             "name": "ToDo",
             "description": "Maintenance, installation, communication, etc.",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Refactoring",
@@ -137,7 +149,8 @@
             "id": 28,
             "name": "Refactoring",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Demo",
@@ -148,7 +161,8 @@
             "id": 29,
             "name": "Demo",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Idea",
@@ -159,7 +173,8 @@
             "id": 30,
             "name": "Idea",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "Docs",
@@ -170,7 +185,8 @@
             "id": 32,
             "name": "Docs",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
         },
         {
             "_EXPORT_SUMMARY": "R&D",
@@ -181,7 +197,20 @@
             "id": 33,
             "name": "R&D",
             "description": "",
-            "bug_flag": 0
+            "bug_flag": 0,
+            "incident_flag": 0
+        },
+        {
+            "_EXPORT_SUMMARY": "Concept",
+            "created_on": "2025-12-20 08:48:19",
+            "modified_on": "2025-12-20 08:48:46",
+            "created_by_user": "0x11eea89602c1c3dca896005056be9fa0",
+            "modified_by_user": "0x11eea89602c1c3dca896005056be9fa0",
+            "id": 34,
+            "name": "Concept",
+            "description": "Making a detailed plan for future implementation",
+            "bug_flag": 0,
+            "incident_flag": 0
         }
     ],
     "totals_rows": [],

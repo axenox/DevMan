@@ -33,6 +33,10 @@
         {
             "name": "PAGE_GROUP",
             "attribute_alias": "PAGE_GROUP"
+        },
+        {
+            "name": "APP",
+            "attribute_alias": "APP"
         }
     ],
     "rows": [
@@ -44,7 +48,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee8f4b1e17f9da8f4b005056be9fa0",
             "PAGE": "0x11eb9751368995f49751025041000001",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Test plans",
@@ -54,7 +59,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee95cb1e18170895cb005056be9fa0",
             "PAGE": "0x11ebb097e0562cd2b097747827435ce5",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Test scenarios",
@@ -64,7 +70,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee988e1e1811ae988e005056be9fa0",
             "PAGE": "0x11eb8fba1bf2e24c8fba025041000001",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Test Sprints",
@@ -74,7 +81,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee9a1f1e1827529a1f005056be9fa0",
             "PAGE": "0x11eebd12c0033c9ebd12005056be9fa0",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Apps & features",
@@ -84,7 +92,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee9f3c1e1831529f3c005056be9fa0",
             "PAGE": "0x11ebbb0dbfc220a2bb0d025041000001",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Test scenarios",
@@ -94,7 +103,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11eeacf31e182c66acf3005056be9fa0",
             "PAGE": "0x11eeb351aa6c06f6b351005056be9fa0",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Test log",
@@ -104,7 +114,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11eeb7211e180c86b721005056be9fa0",
             "PAGE": "0x11eba3d7a564e2dca3d7025041000001",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Testing",
@@ -114,7 +125,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11eeb91b1e17d3c4b91b005056be9fa0",
             "PAGE": "0x11eb95f1427f2f7495f1025041000001",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Reports",
@@ -124,7 +136,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11eeba931e182234ba93005056be9fa0",
             "PAGE": "0x11ee8867e83671348867005056be9fa0",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / Tickets",
@@ -134,7 +147,8 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee8e8dfc79c9108e8d005056be9fa0",
             "PAGE": "0x09481916d5b611e789120050568905af",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         },
         {
             "_EXPORT_SUMMARY": "Testing / DevMan",
@@ -144,7 +158,19 @@
             "MODIFIED_BY_USER": "0x11ebb7e1d97b26d6b7e1005056bee7c0",
             "UID": "0x11ee91f10988d2b891f1005056be9fa0",
             "PAGE": "0x35da4e8ce55a11e78da60050568905af",
-            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0"
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
+        },
+        {
+            "_EXPORT_SUMMARY": "Testing / Tickets",
+            "CREATED_ON": "2026-03-10 13:15:11",
+            "MODIFIED_ON": "2026-03-10 13:15:11",
+            "CREATED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "UID": "0x11f19eedc986dc769eed002248e6305d",
+            "PAGE": "0x11f1a009c9740c90a009002248e6305d",
+            "PAGE_GROUP": "0x11ee80430e9aebca8043005056be9fa0",
+            "APP": "0x38000000000000000000000000000000"
         }
     ],
     "totals_rows": [],
@@ -153,7 +179,7 @@
         "base_object_alias": "exface.Core.PAGE_GROUP_PAGES",
         "conditions": [
             {
-                "expression": "PAGE__APP",
+                "expression": "APP",
                 "comparator": "=",
                 "value": "0x38000000000000000000000000000000",
                 "object_alias": "exface.Core.PAGE_GROUP_PAGES"

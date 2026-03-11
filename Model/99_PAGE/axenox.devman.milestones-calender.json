@@ -1,0 +1,59 @@
+{
+    "uid": "0x11f0a9a27c8ee084a9a2002248e6305d",
+    "alias_with_namespace": "axenox.devman.milestones-calender",
+    "menu_parent_page_selector": "0x35da4e8ce55a11e78da60050568905af",
+    "menu_index": 7,
+    "menu_visible": true,
+    "name": "Milestones Calender",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "created_on": "2025-10-09 14:35:49",
+    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "modified_on": "2026-01-27 18:08:09",
+    "contents": {
+        "object_alias": "axenox.DevMan.milestone",
+        "widget_type": "Scheduler",
+        "filters": [
+            {
+                "attribute_alias": "show_in_calendar",
+                "value": true,
+                "hidden": true
+            },
+            {
+                "attribute_alias": "project__client"
+            },
+            {
+                "attribute_alias": "project"
+            },
+            {
+                "attribute_alias": "date",
+                "comparator": ">=",
+                "value": "=Now()"
+            },
+            {
+                "attribute_alias": "date",
+                "comparator": "<="
+            },
+            {
+                "attribute_alias": "name"
+            },
+            {
+                "attribute_alias": "objectives"
+            }
+        ],
+        "timeline": {
+            "granularity": "days_per_month"
+        },
+        "items": {
+            "start_time": "date",
+            "title": "LABEL",
+            "subtitle": "project__LABEL",
+            "default_duration_hours": 23
+        },
+        "resources": {
+            "title": "project__client__LABEL"
+        }
+    }
+}

@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
     "created_on": "2025-01-29 13:12:08",
-    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
-    "modified_on": "2025-08-14 12:07:39",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2025-11-17 17:34:06",
     "contents": {
         "object_alias": "exface.Core.DUMMY",
         "widget_type": "SplitHorizontal",
@@ -137,7 +137,7 @@
                     {
                         "object_alias": "exface.Core.DUMMY",
                         "widget_type": "axenox.GenAI.AIChat",
-                        "agent_alias": "test_case_formatter"
+                        "agent_alias": "powerui.DevMan.test_case_formatter"
                     }
                 ]
             }

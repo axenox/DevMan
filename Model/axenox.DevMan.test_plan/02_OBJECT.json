@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test plan [axenox.DevMan.test_plan]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-08-14 18:04:01",
+            "MODIFIED_ON": "2025-12-17 13:59:07",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11eb8430d97a024a8430025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -125,7 +125,20 @@
                                         "attribute_alias": "name"
                                     },
                                     {
-                                        "attribute_alias": "application"
+                                        "attribute_alias": "application",
+                                        "widget_type": "InputComboTable",
+                                        "id": "applicationInputTable",
+                                        "table": {
+                                            "object_alias": "axenox.DevMan.application",
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "name"
+                                                },
+                                                {
+                                                    "attribute_alias": "testing_url"
+                                                }
+                                            ]
+                                        }
                                     },
                                     {
                                         "attribute_alias": "sprint"
@@ -135,6 +148,14 @@
                                     },
                                     {
                                         "attribute_alias": "milestone"
+                                    },
+                                    {
+                                        "attribute_alias": "estimated_effort"
+                                    },
+                                    {
+                                        "caption": "Testing Url",
+                                        "value": "=applicationInputTable!testing_url",
+                                        "widget_type": "Display"
                                     },
                                     {
                                         "attribute_alias": "description",
@@ -158,6 +179,9 @@
                                             }
                                         ],
                                         "columns": [
+                                            {
+                                                "attribute_alias": "test_case__feature__module__application__LABEL"
+                                            },
                                             {
                                                 "attribute_alias": "test_case__external_test_link__external_ticket_id:LIST",
                                                 "width_max": "300px",

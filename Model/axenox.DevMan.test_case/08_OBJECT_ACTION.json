@@ -67,9 +67,9 @@
         {
             "_EXPORT_SUMMARY": "Test case: Add to test plan [TestCasesAddToPlanDialog]",
             "CREATED_ON": "2021-05-20 19:00:45",
-            "MODIFIED_ON": "2021-05-20 19:00:45",
+            "MODIFIED_ON": "2025-09-18 09:58:32",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11eba191eada4634a191025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
@@ -92,6 +92,9 @@
                         {
                             "attribute_alias": "test_case",
                             "widget_type": "InputSelect",
+                            "value_data_type": {
+                                "alias": "exface.Core.String"
+                            },
                             "options_object_alias": "axenox.DevMan.test_case",
                             "multi_select": true,
                             "height": 8,
@@ -309,375 +312,11 @@
             "DOCS": ""
         },
         {
-            "_EXPORT_SUMMARY": "Test case: Perform test [TestCaseStartDialog2]",
-            "CREATED_ON": "2021-06-07 15:04:36",
-            "MODIFIED_ON": "2021-06-08 12:27:54",
-            "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
-            "UID": "0x11ebb23ae99a4460b23a025041000001",
-            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
-            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
-            "ALIAS": "TestCaseStartDialog2",
-            "NAME": "Perform test",
-            "SHORT_DESCRIPTION": "",
-            "CONFIG_UXON": {
-                "object_alias": "axenox.DevMan.test_log",
-                "icon": "play",
-                "input_rows_min": 1,
-                "input_rows_max": 1,
-                "input_mapper": {
-                    "column_to_column_mappings": [
-                        {
-                            "from": "id",
-                            "to": "test_case"
-                        },
-                        {
-                            "from": "description",
-                            "to": "test_description"
-                        }
-                    ]
-                },
-                "widget": {
-                    "widget_type": "Dialog",
-                    "object_alias": "axenox.DevMan.test_log",
-                    "header": {
-                        "widgets": [
-                            {
-                                "attribute_alias": "test_case__LABEL"
-                            },
-                            {
-                                "attribute_alias": "test_case__feature__LABEL"
-                            }
-                        ]
-                    },
-                    "widgets": [
-                        {
-                            "attribute_alias": "test_case",
-                            "id": "test_case_field",
-                            "widget_type": "InputHidden"
-                        },
-                        {
-                            "attribute_alias": "test_case__name",
-                            "widget_type": "InputHidden"
-                        },
-                        {
-                            "attribute_alias": "tested_installation",
-                            "id": "tested_installation_field",
-                            "widget_type": "InputComboTable",
-                            "required": true,
-                            "table": {
-                                "object_alias": "axenox.DevMan.installation",
-                                "columns": [
-                                    {
-                                        "attribute_group_alias": "~DEFAULT_DISPLAY"
-                                    },
-                                    {
-                                        "attribute_alias": "current_workbench_version"
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "attribute_alias": "tested_workbench_version",
-                            "value": "=tested_installation_field!current_workbench_version"
-                        },
-                        {
-                            "attribute_alias": "ticket"
-                        },
-                        {
-                            "attribute_alias": "effort"
-                        },
-                        {
-                            "attribute_alias": "test_plan",
-                            "widget_type": "InputComboTable",
-                            "required": false,
-                            "filters": [
-                                {
-                                    "attribute_alias": "test_plan_cases__test_case",
-                                    "value": "=test_case_field!id"
-                                },
-                                {
-                                    "attribute_alias": "closed_flag",
-                                    "value": 0
-                                }
-                            ]
-                        },
-                        {
-                            "attribute_alias": "tested_by_resource",
-                            "value": "=User('resource__id')"
-                        },
-                        {
-                            "attribute_alias": "tested_on",
-                            "value": 0
-                        },
-                        {
-                            "attribute_alias": "test_description",
-                            "width": 2,
-                            "height": 15
-                        }
-                    ],
-                    "buttons": [
-                        {
-                            "caption": "Failed + Ticket",
-                            "icon": "bug",
-                            "action": {
-                                "alias": "exface.Core.ShowDialog",
-                                "input_mapper": {
-                                    "column_to_column_mappings": [
-                                        {
-                                            "from": "test_case__name",
-                                            "to": "title"
-                                        },
-                                        {
-                                            "from": 21,
-                                            "to": "type"
-                                        },
-                                        {
-                                            "from": "test_description",
-                                            "to": "description"
-                                        },
-                                        {
-                                            "from": "tested_installation",
-                                            "to": "_tested_installation"
-                                        },
-                                        {
-                                            "from": "tested_workbench_version",
-                                            "to": "_tested_workbench_version"
-                                        },
-                                        {
-                                            "from": "test_case",
-                                            "to": "_test_case"
-                                        },
-                                        {
-                                            "from": "tested_by_resource",
-                                            "to": "_tested_by_resource"
-                                        },
-                                        {
-                                            "from": "tested_on",
-                                            "to": "_tested_on"
-                                        },
-                                        {
-                                            "from": "test_plan",
-                                            "to": "_test_plan"
-                                        }
-                                    ]
-                                },
-                                "dialog": {
-                                    "object_alias": "axenox.DevMan.ticket",
-                                    "widgets": [
-                                        {
-                                            "data_column_name": "_tested_installation",
-                                            "widget_type": "InputHidden"
-                                        },
-                                        {
-                                            "data_column_name": "_tested_workbench_version",
-                                            "widget_type": "InputHidden"
-                                        },
-                                        {
-                                            "data_column_name": "_test_case",
-                                            "widget_type": "InputHidden"
-                                        },
-                                        {
-                                            "data_column_name": "_tested_by_resource",
-                                            "widget_type": "InputHidden"
-                                        },
-                                        {
-                                            "data_column_name": "_tested_on",
-                                            "widget_type": "InputHidden"
-                                        },
-                                        {
-                                            "data_column_name": "_test_plan",
-                                            "widget_type": "InputHidden"
-                                        },
-                                        {
-                                            "attribute_alias": "title",
-                                            "width": "max"
-                                        },
-                                        {
-                                            "attribute_alias": "type"
-                                        },
-                                        {
-                                            "attribute_alias": "parent_ticket"
-                                        },
-                                        {
-                                            "attribute_alias": "state"
-                                        },
-                                        {
-                                            "attribute_alias": "complexity"
-                                        },
-                                        {
-                                            "widget_type": "InlineGroup",
-                                            "caption": "Effort plan / remaining / spent",
-                                            "separator": "/",
-                                            "widgets": [
-                                                {
-                                                    "attribute_alias": "effort_plan_estimated_h"
-                                                },
-                                                {
-                                                    "attribute_alias": "effort_rem_estimated_h"
-                                                },
-                                                {
-                                                    "attribute_alias": "effort_real_h"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "attribute_alias": "assigned_to"
-                                        },
-                                        {
-                                            "attribute_alias": "milestone"
-                                        },
-                                        {
-                                            "object_alias": "axenox.DevMan.ticket_tags",
-                                            "attribute_alias": "tag",
-                                            "widget_type": "InputTags",
-                                            "required": false,
-                                            "multi_select": true,
-                                            "caption": "Tags"
-                                        },
-                                        {
-                                            "caption": "Project priority",
-                                            "widget_type": "DataSpreadSheet",
-                                            "object_alias": "axenox.DevMan.project_tickets",
-                                            "hide_header": true,
-                                            "height": 5,
-                                            "filters": [
-                                                {
-                                                    "attribute_alias": "ticket",
-                                                    "required": true,
-                                                    "hidden": true,
-                                                    "value": "=field_ticket_id"
-                                                }
-                                            ],
-                                            "columns": [
-                                                {
-                                                    "attribute_alias": "project",
-                                                    "cell_widget": {
-                                                        "widget_type": "InputComboTable",
-                                                        "lazy_loading": false
-                                                    }
-                                                },
-                                                {
-                                                    "attribute_alias": "priority",
-                                                    "cell_widget": {
-                                                        "widget_type": "InputComboTable",
-                                                        "lazy_loading": false
-                                                    }
-                                                },
-                                                {
-                                                    "attribute_alias": "comment"
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    "buttons": [
-                                        {
-                                            "caption": "Save",
-                                            "visibility": "promoted",
-                                            "align": "opposite",
-                                            "action": {
-                                                "alias": "exface.Core.ActionChain",
-                                                "actions": [
-                                                    {
-                                                        "alias": "exface.Core.CreateData",
-                                                        "object_alias": "axenox.DevMan.ticket"
-                                                    },
-                                                    {
-                                                        "alias": "exface.Core.CreateData",
-                                                        "ignore_related_objects_in_input_data": true,
-                                                        "object_alias": "axenox.DevMan.test_log",
-                                                        "input_mapper": {
-                                                            "from_object_alias": "axenox.DevMan.ticket",
-                                                            "column_to_column_mappings": [
-                                                                {
-                                                                    "from": "id",
-                                                                    "to": "ticket"
-                                                                },
-                                                                {
-                                                                    "from": "=0",
-                                                                    "to": "test_ok_flag"
-                                                                },
-                                                                {
-                                                                    "from": "description",
-                                                                    "to": "description"
-                                                                },
-                                                                {
-                                                                    "from": "_tested_installation",
-                                                                    "to": "tested_installation"
-                                                                },
-                                                                {
-                                                                    "from": "_tested_workbench_version",
-                                                                    "to": "tested_workbench_version"
-                                                                },
-                                                                {
-                                                                    "from": "_test_case",
-                                                                    "to": "test_case"
-                                                                },
-                                                                {
-                                                                    "from": "_tested_by_resource",
-                                                                    "to": "tested_by_resource"
-                                                                },
-                                                                {
-                                                                    "from": "_tested_on",
-                                                                    "to": "tested_on"
-                                                                },
-                                                                {
-                                                                    "from": "_test_plan",
-                                                                    "to": "test_plan"
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        },
-                        {
-                            "caption": "Failed",
-                            "icon": "bug",
-                            "close_dialog_after_action_succeeds": true
-                        },
-                        {
-                            "caption": "OK",
-                            "close_dialog_after_action_succeeds": true,
-                            "action": {
-                                "alias": "exface.Core.CreateData",
-                                "ignore_related_objects_in_input_data": true,
-                                "input_mappers": [
-                                    {
-                                        "from_object_alias": "axenox.TestMan.TEST_LOG"
-                                    }
-                                ],
-                                "input_mapper": {
-                                    "column_to_column_mappings": [
-                                        {
-                                            "from": "=1",
-                                            "to": "test_ok_flag"
-                                        },
-                                        {
-                                            "from": "test_case__test_plan_cases__test_plan",
-                                            "to": "test_plan"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            "APP": "0x38000000000000000000000000000000",
-            "USE_IN_OBJECT_BASKET_FLAG": 0,
-            "DOCS": ""
-        },
-        {
             "_EXPORT_SUMMARY": "Test case: Perform test [TestCaseStartDialog]",
             "CREATED_ON": "2021-06-08 12:29:39",
-            "MODIFIED_ON": "2025-08-08 19:01:03",
+            "MODIFIED_ON": "2026-02-16 14:22:12",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ef933268ff399c9332005056be9fa0",
             "UID": "0x11eb9c8f6dec62f89c8f025041000001",
             "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
             "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
@@ -934,7 +573,8 @@
                                                             "widget_type": "Text",
                                                             "width": 2,
                                                             "caption": "Additional Info",
-                                                            "data_column_name": "_test_plan_comment"
+                                                            "data_column_name": "_test_plan_comment",
+                                                            "calculation": "=Calc(_test_plan_comment)"
                                                         },
                                                         {
                                                             "attribute_alias": "tested_by_resource",
@@ -955,6 +595,7 @@
                                                         {
                                                             "attribute_alias": "comment",
                                                             "widget_type": "InputText",
+                                                            "id": "commentID",
                                                             "width": "max"
                                                         },
                                                         {
@@ -1089,6 +730,77 @@
                                     ]
                                 },
                                 {
+                                    "caption": "Issue",
+                                    "object_alias": "axenox.DevMan.ticket",
+                                    "columns_in_grid": 3,
+                                    "//widgets": [
+                                        {
+                                            "attribute_alias": "title",
+                                            "value": "=Concatenate('Issue in TC', test_case__LABEL)",
+                                            "width": 3
+                                        },
+                                        {
+                                            "widget_type": "WidgetGroup",
+                                            "widgets": [
+                                                {
+                                                    "attribute_alias": "assigned_to"
+                                                },
+                                                {
+                                                    "attribute_alias": "state"
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "attribute_alias": "severity",
+                                                    "*/": ""
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "attribute_alias": "priority",
+                                                    "*/": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "attribute_alias": "description",
+                                            "height": 15,
+                                            "width": 2,
+                                            "widget_type": "InputMarkdown",
+                                            "hide_caption": true,
+                                            "editor_mode": "wysiwyg"
+                                        },
+                                        {
+                                            "/*": "",
+                                            "caption": "Attachments",
+                                            "widget_type": "ImageGallery",
+                                            "object_alias": "axenox.DevMan.test_case_issue_file",
+                                            "image_title_attribute_alias": "FILENAME",
+                                            "zoomable": true,
+                                            "hide_header": false,
+                                            "//width": 2,
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_case_issue",
+                                                    "comparator": "==",
+                                                    "value": "=uid_field",
+                                                    "hidden": true,
+                                                    "required": true
+                                                }
+                                            ],
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "test_case_issue",
+                                                    "value": "=uid_field",
+                                                    "hidden": true
+                                                }
+                                            ],
+                                            "uploader": {
+                                                "instant_upload": false
+                                            },
+                                            "*/": ""
+                                        }
+                                    ]
+                                },
+                                {
                                     "caption": "Login data",
                                     "widgets": [
                                         {
@@ -1098,6 +810,64 @@
                                             "height": "max",
                                             "hide_caption": true,
                                             "editor_mode": "wysiwyg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Ext. Links",
+                                    "widgets": [
+                                        {
+                                            "widget_type": "DataTable",
+                                            "object_alias": "axenox.DevMan.external_test_link",
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_case",
+                                                    "value": "=test_case_field",
+                                                    "required": true,
+                                                    "hidden": true,
+                                                    "comparator": "=="
+                                                },
+                                                {
+                                                    "attribute_alias": "external_system"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment"
+                                                }
+                                            ],
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "external_system__LABEL"
+                                                },
+                                                {
+                                                    "attribute_alias": "external_ticket_id"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment",
+                                                    "width_max": "500px"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_plan"
+                                                },
+                                                {
+                                                    "attribute_alias": "url",
+                                                    "hidden": true
+                                                }
+                                            ],
+                                            "sorters": [
+                                                {
+                                                    "attribute_alias": "external_ticket_id",
+                                                    "direction": "asc"
+                                                }
+                                            ],
+                                            "buttons": [
+                                                {
+                                                    "action": {
+                                                        "alias": "exface.Core.GoToUrl",
+                                                        "url": "[#url#]",
+                                                        "open_in_new_window": true
+                                                    }
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -1137,73 +907,61 @@
                             "disabled_if_input_invalid": false,
                             "action": {
                                 "alias": "exface.Core.ActionChain",
-                                "input_invalid_if": [
-                                    {
-                                        "error_text": "Please add comment why the test failed!",
-                                        "operator": "AND",
-                                        "conditions": [
-                                            {
-                                                "expression": "comment",
-                                                "comparator": "==",
-                                                "value": ""
-                                            }
-                                        ]
-                                    }
-                                ],
+                                "use_input_data_of_action": 0,
                                 "actions": [
                                     {
                                         "alias": "exface.Core.CreateData",
                                         "object_alias": "axenox.DevMan.ticket",
                                         "input_mapper": {
                                             "from_object_alias": "axenox.DevMan.test_log",
+                                            "to_object_alias": "axenox.DevMan.ticket",
                                             "column_to_column_mappings": [
                                                 {
-                                                    "from": "=NullValue()",
-                                                    "to": "id"
-                                                },
-                                                {
-                                                    "from": "=Concatenate('Failed test case \"', test_case__LABEL, '\"')",
-                                                    "to": "title"
-                                                },
-                                                {
-                                                    "from": "test_description",
+                                                    "from": "=Concatenate('Description:\\n\\n', test_description)",
                                                     "to": "description"
                                                 },
                                                 {
-                                                    "from": 21,
+                                                    "from": "=Concatenate('Test case: ', test_case__LABEL)",
+                                                    "to": "title"
+                                                },
+                                                {
+                                                    "from": 22,
                                                     "to": "type"
                                                 },
                                                 {
-                                                    "from": "tested_installation",
-                                                    "to": "_tested_installation"
-                                                },
-                                                {
-                                                    "from": "tested_workbench_version",
-                                                    "to": "_tested_workbench_version"
-                                                },
-                                                {
-                                                    "from": "tested_on",
-                                                    "to": "_tested_on"
-                                                },
-                                                {
-                                                    "from": "tested_by_resource",
-                                                    "to": "_tested_by_resource"
-                                                },
-                                                {
-                                                    "from": "test_case",
-                                                    "to": "_test_case"
-                                                },
-                                                {
-                                                    "from": "test_plan",
-                                                    "to": "_test_plan"
-                                                },
-                                                {
-                                                    "from": "test_log_file",
-                                                    "to": "_test_log_file"
-                                                },
+                                                    "from": "ticket",
+                                                    "to": "id"
+                                                }
+                                            ]
+                                        },
+                                        "output_mappers": [
+                                            {
+                                                "from_object_alias": "axenox.DevMan.ticket",
+                                                "column_to_variable_mappings": [
+                                                    {
+                                                        "from": "id",
+                                                        "to": "_ticketId"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "alias": "exface.Core.CreateData",
+                                        "object_alias": "axenox.DevMan.ticket_comment",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.test_log",
+                                            "to_object_alias": "axenox.DevMan.ticket_comment",
+                                            "column_to_column_mappings": [
                                                 {
                                                     "from": "comment",
-                                                    "to": "_comment"
+                                                    "to": "comment"
+                                                }
+                                            ],
+                                            "variable_to_column_mappings": [
+                                                {
+                                                    "variable": "_ticketId",
+                                                    "to": "ticket"
                                                 }
                                             ]
                                         }
@@ -1213,54 +971,48 @@
                                         "ignore_related_objects_in_input_data": false,
                                         "object_alias": "axenox.DevMan.test_log",
                                         "input_mapper": {
-                                            "from_object_alias": "axenox.DevMan.ticket",
+                                            "from_object_alias": "axenox.DevMan.test_log",
+                                            "to_object_alias": "axenox.DevMan.test_log",
+                                            "inherit_columns": "own_system_attributes",
                                             "column_to_column_mappings": [
-                                                {
-                                                    "from": "id",
-                                                    "to": "ticket"
-                                                },
-                                                {
-                                                    "from": "=NullValue()",
-                                                    "to": "id"
-                                                },
                                                 {
                                                     "from": "=0",
                                                     "to": "test_ok_flag"
                                                 },
                                                 {
-                                                    "from": "description",
+                                                    "from": "test_description",
                                                     "to": "test_description"
                                                 },
                                                 {
-                                                    "from": "_test_log_file",
-                                                    "to": "test_log_file"
-                                                },
-                                                {
-                                                    "from": "_tested_installation",
+                                                    "from": "tested_installation",
                                                     "to": "tested_installation"
                                                 },
                                                 {
-                                                    "from": "_tested_workbench_version",
+                                                    "from": "tested_workbench_version",
                                                     "to": "tested_workbench_version"
                                                 },
                                                 {
-                                                    "from": "_test_case",
+                                                    "from": "test_case",
                                                     "to": "test_case"
                                                 },
                                                 {
-                                                    "from": "_tested_by_resource",
+                                                    "from": "tested_by_resource",
                                                     "to": "tested_by_resource"
                                                 },
                                                 {
-                                                    "from": "_tested_on",
+                                                    "from": "tested_on",
                                                     "to": "tested_on"
                                                 },
                                                 {
-                                                    "from": "_test_plan",
+                                                    "from": "test_plan",
                                                     "to": "test_plan"
                                                 },
                                                 {
-                                                    "from": "_comment",
+                                                    "from": "test_log_file",
+                                                    "to": "test_log_file"
+                                                },
+                                                {
+                                                    "from": "comment",
                                                     "to": "comment"
                                                 }
                                             ]
@@ -1707,6 +1459,1730 @@
                         },
                         {
                             "attribute_alias": "archived_flag"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test case: Perform test (Incident) [TestCaseStartDialogIncident]",
+            "CREATED_ON": "2025-11-10 13:26:42",
+            "MODIFIED_ON": "2025-11-10 13:58:56",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f080da836d38f080da002248e6305d",
+            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
+            "ALIAS": "TestCaseStartDialogIncident",
+            "NAME": "Perform test (Incident)",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "object_alias": "axenox.DevMan.test_log",
+                "icon": "play",
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "input_mappers": [
+                    {
+                        "from_object_alias": "axenox.DevMan.test_case",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "id",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "login_data",
+                                "to": "test_case__login_data"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.feature_test_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
+                            },
+                            {
+                                "from": "comment",
+                                "to": "_test_plan_comment"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.test_scenario_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
+                            }
+                        ]
+                    }
+                ],
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.test_log",
+                    "maximized": true,
+                    "width": 5,
+                    "header": {
+                        "widgets": [
+                            {
+                                "attribute_alias": "test_case__feature__module__LABEL",
+                                "width": 1
+                            },
+                            {
+                                "attribute_alias": "test_case__feature__LABEL",
+                                "width": 2
+                            },
+                            {
+                                "attribute_alias": "test_case__LABEL",
+                                "width": 2
+                            }
+                        ]
+                    },
+                    "widgets": [
+                        {
+                            "widget_type": "Tabs",
+                            "tabs": [
+                                {
+                                    "caption": "Test",
+                                    "widgets": [
+                                        {
+                                            "widget_type": "SplitHorizontal",
+                                            "panels": [
+                                                {
+                                                    "caption": "Test log",
+                                                    "width": "50%",
+                                                    "columns_in_grid": 2,
+                                                    "widgets": [
+                                                        {
+                                                            "attribute_alias": "id",
+                                                            "id": "test_log_field",
+                                                            "widget_type": "InputHidden"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_case",
+                                                            "id": "test_case_field",
+                                                            "widget_type": "InputHidden"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_case__LABEL",
+                                                            "widget_type": "InputHidden"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "tested_installation",
+                                                            "id": "tested_installation_field",
+                                                            "widget_type": "InputComboTable",
+                                                            "required": true,
+                                                            "table": {
+                                                                "object_alias": "axenox.DevMan.installation",
+                                                                "columns": [
+                                                                    {
+                                                                        "attribute_group_alias": "~DEFAULT_DISPLAY"
+                                                                    },
+                                                                    {
+                                                                        "attribute_alias": "current_workbench_version"
+                                                                    },
+                                                                    {
+                                                                        "attribute_alias": "current_build_time"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "widget_type": "InlineGroup",
+                                                            "caption": "Tested version / build time",
+                                                            "separator": "/",
+                                                            "widgets": [
+                                                                {
+                                                                    "attribute_alias": "tested_workbench_version",
+                                                                    "value": "=tested_installation_field!current_workbench_version",
+                                                                    "width": "50px"
+                                                                },
+                                                                {
+                                                                    "attribute_alias": "tested_build_time",
+                                                                    "value": "=tested_installation_field!current_build_time"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "attribute_alias": "effort"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_plan",
+                                                            "widget_type": "InputComboTable",
+                                                            "required": false,
+                                                            "autosearch_single_suggestion": true,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_plan_cases__test_case",
+                                                                    "value": "=test_case_field!id"
+                                                                },
+                                                                {
+                                                                    "attribute_alias": "closed_flag",
+                                                                    "value": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "widget_type": "Text",
+                                                            "width": 2,
+                                                            "caption": "Additional Info",
+                                                            "data_column_name": "_test_plan_comment",
+                                                            "calculation": "=Calc(_test_plan_comment)"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "tested_by_resource",
+                                                            "value": "=User('resource__id')"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "tested_on",
+                                                            "value": 0
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_log_type",
+                                                            "value": 1
+                                                        },
+                                                        {
+                                                            "attribute_alias": "ticket",
+                                                            "width": "max"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "comment",
+                                                            "widget_type": "InputText",
+                                                            "width": "max"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_description",
+                                                            "caption": "Test log",
+                                                            "widget_type": "InputMarkdown",
+                                                            "editor_mode": "wysiwyg",
+                                                            "width": "max",
+                                                            "height": 12
+                                                        },
+                                                        {
+                                                            "caption": "Test case attachments",
+                                                            "widget_type": "ImageGallery",
+                                                            "object_alias": "axenox.DevMan.test_case_file",
+                                                            "image_title_attribute_alias": "FILENAME",
+                                                            "zoomable": true,
+                                                            "zoom_on_click": true,
+                                                            "hide_header": false,
+                                                            "download_enabled": true,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_case",
+                                                                    "hidden": true,
+                                                                    "required": true,
+                                                                    "comparator": "==",
+                                                                    "value": "=test_case_field"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "caption": "Test log attachments",
+                                                            "widget_type": "ImageGallery",
+                                                            "object_alias": "axenox.DevMan.test_log_file",
+                                                            "image_title_attribute_alias": "FILENAME",
+                                                            "zoomable": true,
+                                                            "hide_header": false,
+                                                            "width": "max",
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_log",
+                                                                    "hidden": true,
+                                                                    "required": true,
+                                                                    "comparator": "=="
+                                                                }
+                                                            ],
+                                                            "columns": [
+                                                                {
+                                                                    "attribute_alias": "test_log",
+                                                                    "value": "=test_log_field!id",
+                                                                    "hidden": true
+                                                                }
+                                                            ],
+                                                            "uploader": {
+                                                                "instant_upload": false
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "caption": "Incident",
+                                                    "object_alias": "axenox.DevMan.ticket",
+                                                    "columns_in_grid": 1,
+                                                    "width": "25%",
+                                                    "widgets": [
+                                                        {
+                                                            "attribute_alias": "title",
+                                                            "value": "=Concatenate('Issue in TC', test_case__LABEL)"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "assigned_to"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "state"
+                                                        },
+                                                        {
+                                                            "/*": "",
+                                                            "attribute_alias": "severity",
+                                                            "*/": ""
+                                                        },
+                                                        {
+                                                            "/*": "",
+                                                            "attribute_alias": "priority",
+                                                            "*/": ""
+                                                        },
+                                                        {
+                                                            "attribute_alias": "description",
+                                                            "height": 15,
+                                                            "width": 1,
+                                                            "widget_type": "InputMarkdown",
+                                                            "hide_caption": true,
+                                                            "editor_mode": "wysiwyg"
+                                                        },
+                                                        {
+                                                            "/*": "",
+                                                            "caption": "Attachments",
+                                                            "widget_type": "ImageGallery",
+                                                            "object_alias": "axenox.DevMan.test_case_issue_file",
+                                                            "image_title_attribute_alias": "FILENAME",
+                                                            "zoomable": true,
+                                                            "hide_header": false,
+                                                            "//width": 2,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_case_issue",
+                                                                    "comparator": "==",
+                                                                    "value": "=uid_field",
+                                                                    "hidden": true,
+                                                                    "required": true
+                                                                }
+                                                            ],
+                                                            "columns": [
+                                                                {
+                                                                    "attribute_alias": "test_case_issue",
+                                                                    "value": "=uid_field",
+                                                                    "hidden": true
+                                                                }
+                                                            ],
+                                                            "uploader": {
+                                                                "instant_upload": false
+                                                            },
+                                                            "*/": ""
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "caption": "Anleitung",
+                                                    "width": "25%",
+                                                    "widgets": [
+                                                        {
+                                                            "widget_type": "Browser",
+                                                            "url": "api/docs/powerui/DevMan/Docs/Testanleitungen/Tester.md"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "widgets": [
+                                                        {
+                                                            "caption": "This test also covers",
+                                                            "widget_type": "DataTable",
+                                                            "object_alias": "axenox.DevMan.test_case_coverage",
+                                                            "paginate": false,
+                                                            "hide_header": true,
+                                                            "hide_footer": true,
+                                                            "nowrap": false,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_case",
+                                                                    "required": true,
+                                                                    "comparator": "==",
+                                                                    "hidden": true,
+                                                                    "value": "=test_case_field"
+                                                                }
+                                                            ],
+                                                            "columns": [
+                                                                {
+                                                                    "attribute_alias": "covers_test_case__name"
+                                                                },
+                                                                {
+                                                                    "attribute_alias": "comment"
+                                                                }
+                                                            ],
+                                                            "sorters": [
+                                                                {
+                                                                    "attribute_alias": "covers_test_case__name",
+                                                                    "direction": "asc"
+                                                                }
+                                                            ],
+                                                            "buttons": [
+                                                                {
+                                                                    "action": {
+                                                                        "alias": "exface.core.ShowObjectInfoDialog",
+                                                                        "object_alias": "axenox.DevMan.test_case",
+                                                                        "input_mapper": {
+                                                                            "column_to_column_mappings": [
+                                                                                {
+                                                                                    "from": "covers_test_case",
+                                                                                    "to": "id"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "bind_to_double_click": true
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "*/": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Login data",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__login_data",
+                                            "widget_type": "InputMarkdown",
+                                            "width": "max",
+                                            "height": "max",
+                                            "hide_caption": true,
+                                            "editor_mode": "wysiwyg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Ext. Links",
+                                    "widgets": [
+                                        {
+                                            "widget_type": "DataTable",
+                                            "object_alias": "axenox.DevMan.external_test_link",
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_case",
+                                                    "value": "=test_case_field",
+                                                    "required": true,
+                                                    "hidden": true,
+                                                    "comparator": "=="
+                                                },
+                                                {
+                                                    "attribute_alias": "external_system"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment"
+                                                }
+                                            ],
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "external_system__LABEL"
+                                                },
+                                                {
+                                                    "attribute_alias": "external_ticket_id"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment",
+                                                    "width_max": "500px"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_plan"
+                                                },
+                                                {
+                                                    "attribute_alias": "url",
+                                                    "hidden": true
+                                                }
+                                            ],
+                                            "sorters": [
+                                                {
+                                                    "attribute_alias": "external_ticket_id",
+                                                    "direction": "asc"
+                                                }
+                                            ],
+                                            "buttons": [
+                                                {
+                                                    "action": {
+                                                        "alias": "exface.Core.GoToUrl",
+                                                        "url": "[#url#]",
+                                                        "open_in_new_window": true
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Feature setup",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__feature__test_setup",
+                                            "widget_type": "InputMarkdown",
+                                            "hide_caption": true,
+                                            "readonly": true,
+                                            "width": "max",
+                                            "height": "100%"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Module setup",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__feature__module__test_setup",
+                                            "widget_type": "InputMarkdown",
+                                            "readonly": true,
+                                            "hide_caption": true,
+                                            "width": "max",
+                                            "height": "100%"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "caption": "Failed + Ticket",
+                            "icon": "bug",
+                            "disabled_if_input_invalid": false,
+                            "action": {
+                                "alias": "exface.Core.ActionChain",
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "Please add comment why the test failed!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "comment",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "actions": [
+                                    {
+                                        "alias": "exface.Core.CreateData",
+                                        "object_alias": "axenox.DevMan.ticket",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.test_log",
+                                            "to_object_alias": "axenox.DevMan.ticket",
+                                            "column_to_column_mappings": [
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "id"
+                                                },
+                                                {
+                                                    "from": "title",
+                                                    "to": "title"
+                                                },
+                                                {
+                                                    "from": "state",
+                                                    "to": "state"
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "from": "assigned_to",
+                                                    "to": "assigned_to",
+                                                    "*/": ""
+                                                },
+                                                {
+                                                    "from": "description",
+                                                    "to": "description"
+                                                },
+                                                {
+                                                    "from": "=Lookup('id', 'axenox.DevMan.ticket_type', 'incident_flag == 1')",
+                                                    "to": "type"
+                                                },
+                                                {
+                                                    "from": "test_log_file",
+                                                    "to": "_test_log_file"
+                                                }
+                                            ],
+                                            "column_to_variable_mappings": [
+                                                {
+                                                    "from": "tested_installation",
+                                                    "variable": "_tested_installation"
+                                                },
+                                                {
+                                                    "from": "tested_workbench_version",
+                                                    "variable": "_tested_workbench_version"
+                                                },
+                                                {
+                                                    "from": "tested_on",
+                                                    "variable": "_tested_on"
+                                                },
+                                                {
+                                                    "from": "tested_by_resource",
+                                                    "variable": "_tested_by_resource"
+                                                },
+                                                {
+                                                    "from": "test_case",
+                                                    "variable": "_test_case"
+                                                },
+                                                {
+                                                    "from": "test_plan",
+                                                    "variable": "_test_plan"
+                                                },
+                                                {
+                                                    "from": "comment",
+                                                    "variable": "_comment"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "alias": "exface.Core.CreateData",
+                                        "ignore_related_objects_in_input_data": false,
+                                        "object_alias": "axenox.DevMan.test_log",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.ticket",
+                                            "column_to_column_mappings": [
+                                                {
+                                                    "from": "id",
+                                                    "to": "ticket"
+                                                },
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "id"
+                                                },
+                                                {
+                                                    "from": "=0",
+                                                    "to": "test_ok_flag"
+                                                },
+                                                {
+                                                    "from": "description",
+                                                    "to": "test_description"
+                                                },
+                                                {
+                                                    "from": "_test_log_file",
+                                                    "to": "test_log_file"
+                                                }
+                                            ],
+                                            "variable_to_column_mappings": [
+                                                {
+                                                    "variable": "_tested_installation",
+                                                    "to": "tested_installation"
+                                                },
+                                                {
+                                                    "variable": "_tested_workbench_version",
+                                                    "to": "tested_workbench_version"
+                                                },
+                                                {
+                                                    "variable": "_test_case",
+                                                    "to": "test_case"
+                                                },
+                                                {
+                                                    "variable": "_tested_by_resource",
+                                                    "to": "tested_by_resource"
+                                                },
+                                                {
+                                                    "variable": "_tested_on",
+                                                    "to": "tested_on"
+                                                },
+                                                {
+                                                    "variable": "_test_plan",
+                                                    "to": "test_plan"
+                                                },
+                                                {
+                                                    "variable": "_comment",
+                                                    "to": "comment"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "caption": "Failed",
+                            "icon": "bug",
+                            "close_dialog_after_action_succeeds": true,
+                            "disabled_if_input_invalid": false,
+                            "action": {
+                                "alias": "exface.Core.CreateData",
+                                "ignore_related_objects_in_input_data": false,
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "Please add comment why the test failed!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "comment",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "input_mapper": {
+                                    "from_object_alias": "axenox.DevMan.test_log",
+                                    "to_object_alias": "axenox.DevMan.test_log",
+                                    "inherit_columns": "own_system_attributes",
+                                    "column_to_column_mappings": [
+                                        {
+                                            "from": "=0",
+                                            "to": "test_ok_flag"
+                                        },
+                                        {
+                                            "from": "test_description",
+                                            "to": "test_description"
+                                        },
+                                        {
+                                            "from": "tested_installation",
+                                            "to": "tested_installation"
+                                        },
+                                        {
+                                            "from": "tested_workbench_version",
+                                            "to": "tested_workbench_version"
+                                        },
+                                        {
+                                            "from": "test_case",
+                                            "to": "test_case"
+                                        },
+                                        {
+                                            "from": "tested_by_resource",
+                                            "to": "tested_by_resource"
+                                        },
+                                        {
+                                            "from": "tested_on",
+                                            "to": "tested_on"
+                                        },
+                                        {
+                                            "from": "test_plan",
+                                            "to": "test_plan"
+                                        },
+                                        {
+                                            "from": "test_log_file",
+                                            "to": "test_log_file"
+                                        },
+                                        {
+                                            "from": "comment",
+                                            "to": "comment"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "caption": "OK",
+                            "close_dialog_after_action_succeeds": true,
+                            "action": {
+                                "alias": "exface.Core.CreateData",
+                                "ignore_related_objects_in_input_data": false,
+                                "input_mapper": {
+                                    "from_object_alias": "axenox.DevMan.test_log",
+                                    "to_object_alias": "axenox.DevMan.test_log",
+                                    "inherit_columns": "own_system_attributes",
+                                    "column_to_column_mappings": [
+                                        {
+                                            "from": "=1",
+                                            "to": "test_ok_flag"
+                                        },
+                                        {
+                                            "from": "test_description",
+                                            "to": "test_description"
+                                        },
+                                        {
+                                            "from": "tested_installation",
+                                            "to": "tested_installation"
+                                        },
+                                        {
+                                            "from": "tested_workbench_version",
+                                            "to": "tested_workbench_version"
+                                        },
+                                        {
+                                            "from": "test_case",
+                                            "to": "test_case"
+                                        },
+                                        {
+                                            "from": "tested_by_resource",
+                                            "to": "tested_by_resource"
+                                        },
+                                        {
+                                            "from": "tested_on",
+                                            "to": "tested_on"
+                                        },
+                                        {
+                                            "from": "test_plan",
+                                            "to": "test_plan"
+                                        },
+                                        {
+                                            "from": "test_log_file",
+                                            "to": "test_log_file"
+                                        },
+                                        {
+                                            "from": "comment",
+                                            "to": "comment"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Test case: Perform test (Incident tab) [TestCaseStartDialogIncidentTab]",
+            "CREATED_ON": "2025-11-10 13:29:13",
+            "MODIFIED_ON": "2025-11-10 13:29:13",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f0937adda70242937a002248e6305d",
+            "OBJECT": "0x11eb9f70d979e24c9f70025041000001",
+            "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
+            "ALIAS": "TestCaseStartDialogIncidentTab",
+            "NAME": "Perform test (Incident tab)",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "object_alias": "axenox.DevMan.test_log",
+                "icon": "play",
+                "input_rows_min": 1,
+                "input_rows_max": 1,
+                "input_mappers": [
+                    {
+                        "from_object_alias": "axenox.DevMan.test_case",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "id",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "login_data",
+                                "to": "test_case__login_data"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.feature_test_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
+                            },
+                            {
+                                "from": "comment",
+                                "to": "_test_plan_comment"
+                            }
+                        ]
+                    },
+                    {
+                        "from_object_alias": "axenox.DevMan.test_scenario_cases",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_case",
+                                "to": "test_case"
+                            },
+                            {
+                                "from": "test_case__name",
+                                "to": "test_case__name"
+                            },
+                            {
+                                "from": "test_case__LABEL",
+                                "to": "test_case__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__LABEL",
+                                "to": "test_case__feature__LABEL"
+                            },
+                            {
+                                "from": "test_case__feature__module__LABEL",
+                                "to": "test_case__feature__module__LABEL"
+                            },
+                            {
+                                "from": "test_case__description",
+                                "to": "test_description"
+                            },
+                            {
+                                "from": "test_case__login_data",
+                                "to": "test_case__login_data"
+                            }
+                        ]
+                    }
+                ],
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.test_log",
+                    "width": 4,
+                    "header": {
+                        "widgets": [
+                            {
+                                "attribute_alias": "test_case__feature__module__LABEL",
+                                "width": 1
+                            },
+                            {
+                                "attribute_alias": "test_case__feature__LABEL",
+                                "width": 2
+                            },
+                            {
+                                "attribute_alias": "test_case__LABEL",
+                                "width": "max"
+                            }
+                        ]
+                    },
+                    "widgets": [
+                        {
+                            "widget_type": "Tabs",
+                            "tabs": [
+                                {
+                                    "caption": "Test",
+                                    "widgets": [
+                                        {
+                                            "widget_type": "SplitHorizontal",
+                                            "panels": [
+                                                {
+                                                    "width": "67%",
+                                                    "columns_in_grid": 2,
+                                                    "widgets": [
+                                                        {
+                                                            "attribute_alias": "id",
+                                                            "id": "test_log_field",
+                                                            "widget_type": "InputHidden"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_case",
+                                                            "id": "test_case_field",
+                                                            "widget_type": "InputHidden"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_case__LABEL",
+                                                            "widget_type": "InputHidden"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "tested_installation",
+                                                            "id": "tested_installation_field",
+                                                            "widget_type": "InputComboTable",
+                                                            "required": true,
+                                                            "table": {
+                                                                "object_alias": "axenox.DevMan.installation",
+                                                                "columns": [
+                                                                    {
+                                                                        "attribute_group_alias": "~DEFAULT_DISPLAY"
+                                                                    },
+                                                                    {
+                                                                        "attribute_alias": "current_workbench_version"
+                                                                    },
+                                                                    {
+                                                                        "attribute_alias": "current_build_time"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "widget_type": "InlineGroup",
+                                                            "caption": "Tested version / build time",
+                                                            "separator": "/",
+                                                            "widgets": [
+                                                                {
+                                                                    "attribute_alias": "tested_workbench_version",
+                                                                    "value": "=tested_installation_field!current_workbench_version",
+                                                                    "width": "50px"
+                                                                },
+                                                                {
+                                                                    "attribute_alias": "tested_build_time",
+                                                                    "value": "=tested_installation_field!current_build_time"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "attribute_alias": "effort"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_plan",
+                                                            "widget_type": "InputComboTable",
+                                                            "required": false,
+                                                            "autosearch_single_suggestion": true,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_plan_cases__test_case",
+                                                                    "value": "=test_case_field!id"
+                                                                },
+                                                                {
+                                                                    "attribute_alias": "closed_flag",
+                                                                    "value": 0
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "widget_type": "Text",
+                                                            "width": 2,
+                                                            "caption": "Additional Info",
+                                                            "data_column_name": "_test_plan_comment",
+                                                            "calculation": "=Calc(_test_plan_comment)"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "tested_by_resource",
+                                                            "value": "=User('resource__id')"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "tested_on",
+                                                            "value": 0
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_log_type",
+                                                            "value": 1
+                                                        },
+                                                        {
+                                                            "attribute_alias": "ticket",
+                                                            "width": "max"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "comment",
+                                                            "widget_type": "InputText",
+                                                            "width": "max"
+                                                        },
+                                                        {
+                                                            "attribute_alias": "test_description",
+                                                            "caption": "Test log",
+                                                            "widget_type": "InputMarkdown",
+                                                            "editor_mode": "wysiwyg",
+                                                            "width": "max",
+                                                            "height": 12
+                                                        },
+                                                        {
+                                                            "caption": "Test case attachments",
+                                                            "widget_type": "ImageGallery",
+                                                            "object_alias": "axenox.DevMan.test_case_file",
+                                                            "image_title_attribute_alias": "FILENAME",
+                                                            "zoomable": true,
+                                                            "zoom_on_click": true,
+                                                            "hide_header": false,
+                                                            "download_enabled": true,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_case",
+                                                                    "hidden": true,
+                                                                    "required": true,
+                                                                    "comparator": "==",
+                                                                    "value": "=test_case_field"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "widget_type": "WidgetGroup",
+                                                            "caption": "Test log attachments",
+                                                            "width": "max",
+                                                            "collapsed": true,
+                                                            "widgets": [
+                                                                {
+                                                                    "widget_type": "ImageGallery",
+                                                                    "object_alias": "axenox.DevMan.test_log_file",
+                                                                    "image_title_attribute_alias": "FILENAME",
+                                                                    "zoomable": true,
+                                                                    "hide_header": false,
+                                                                    "width": "max",
+                                                                    "filters": [
+                                                                        {
+                                                                            "attribute_alias": "test_log",
+                                                                            "hidden": true,
+                                                                            "required": true,
+                                                                            "comparator": "=="
+                                                                        }
+                                                                    ],
+                                                                    "columns": [
+                                                                        {
+                                                                            "attribute_alias": "test_log",
+                                                                            "value": "=test_log_field!id",
+                                                                            "hidden": true
+                                                                        }
+                                                                    ],
+                                                                    "uploader": {
+                                                                        "instant_upload": false
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "caption": "Anleitung",
+                                                    "widgets": [
+                                                        {
+                                                            "widget_type": "Browser",
+                                                            "url": "api/docs/powerui/DevMan/Docs/Testanleitungen/Tester.md"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "widgets": [
+                                                        {
+                                                            "caption": "This test also covers",
+                                                            "widget_type": "DataTable",
+                                                            "object_alias": "axenox.DevMan.test_case_coverage",
+                                                            "paginate": false,
+                                                            "hide_header": true,
+                                                            "hide_footer": true,
+                                                            "nowrap": false,
+                                                            "filters": [
+                                                                {
+                                                                    "attribute_alias": "test_case",
+                                                                    "required": true,
+                                                                    "comparator": "==",
+                                                                    "hidden": true,
+                                                                    "value": "=test_case_field"
+                                                                }
+                                                            ],
+                                                            "columns": [
+                                                                {
+                                                                    "attribute_alias": "covers_test_case__name"
+                                                                },
+                                                                {
+                                                                    "attribute_alias": "comment"
+                                                                }
+                                                            ],
+                                                            "sorters": [
+                                                                {
+                                                                    "attribute_alias": "covers_test_case__name",
+                                                                    "direction": "asc"
+                                                                }
+                                                            ],
+                                                            "buttons": [
+                                                                {
+                                                                    "action": {
+                                                                        "alias": "exface.core.ShowObjectInfoDialog",
+                                                                        "object_alias": "axenox.DevMan.test_case",
+                                                                        "input_mapper": {
+                                                                            "column_to_column_mappings": [
+                                                                                {
+                                                                                    "from": "covers_test_case",
+                                                                                    "to": "id"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "bind_to_double_click": true
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "*/": ""
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Issue",
+                                    "object_alias": "axenox.DevMan.ticket",
+                                    "columns_in_grid": 3,
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "title",
+                                            "value": "=Concatenate('Issue in TC', test_case__LABEL)",
+                                            "width": 3
+                                        },
+                                        {
+                                            "widget_type": "WidgetGroup",
+                                            "widgets": [
+                                                {
+                                                    "attribute_alias": "assigned_to"
+                                                },
+                                                {
+                                                    "attribute_alias": "state"
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "attribute_alias": "severity",
+                                                    "*/": ""
+                                                },
+                                                {
+                                                    "/*": "",
+                                                    "attribute_alias": "priority",
+                                                    "*/": ""
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "attribute_alias": "description",
+                                            "height": 15,
+                                            "width": 2,
+                                            "widget_type": "InputMarkdown",
+                                            "hide_caption": true,
+                                            "editor_mode": "wysiwyg"
+                                        },
+                                        {
+                                            "/*": "",
+                                            "caption": "Attachments",
+                                            "widget_type": "ImageGallery",
+                                            "object_alias": "axenox.DevMan.test_case_issue_file",
+                                            "image_title_attribute_alias": "FILENAME",
+                                            "zoomable": true,
+                                            "hide_header": false,
+                                            "//width": 2,
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_case_issue",
+                                                    "comparator": "==",
+                                                    "value": "=uid_field",
+                                                    "hidden": true,
+                                                    "required": true
+                                                }
+                                            ],
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "test_case_issue",
+                                                    "value": "=uid_field",
+                                                    "hidden": true
+                                                }
+                                            ],
+                                            "uploader": {
+                                                "instant_upload": false
+                                            },
+                                            "*/": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Login data",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__login_data",
+                                            "widget_type": "InputMarkdown",
+                                            "width": "max",
+                                            "height": "max",
+                                            "hide_caption": true,
+                                            "editor_mode": "wysiwyg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Ext. Links",
+                                    "widgets": [
+                                        {
+                                            "widget_type": "DataTable",
+                                            "object_alias": "axenox.DevMan.external_test_link",
+                                            "filters": [
+                                                {
+                                                    "attribute_alias": "test_case",
+                                                    "value": "=test_case_field",
+                                                    "required": true,
+                                                    "hidden": true,
+                                                    "comparator": "=="
+                                                },
+                                                {
+                                                    "attribute_alias": "external_system"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment"
+                                                }
+                                            ],
+                                            "columns": [
+                                                {
+                                                    "attribute_alias": "external_system__LABEL"
+                                                },
+                                                {
+                                                    "attribute_alias": "external_ticket_id"
+                                                },
+                                                {
+                                                    "attribute_alias": "comment",
+                                                    "width_max": "500px"
+                                                },
+                                                {
+                                                    "attribute_alias": "test_plan"
+                                                },
+                                                {
+                                                    "attribute_alias": "url",
+                                                    "hidden": true
+                                                }
+                                            ],
+                                            "sorters": [
+                                                {
+                                                    "attribute_alias": "external_ticket_id",
+                                                    "direction": "asc"
+                                                }
+                                            ],
+                                            "buttons": [
+                                                {
+                                                    "action": {
+                                                        "alias": "exface.Core.GoToUrl",
+                                                        "url": "[#url#]",
+                                                        "open_in_new_window": true
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Feature setup",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__feature__test_setup",
+                                            "widget_type": "InputMarkdown",
+                                            "hide_caption": true,
+                                            "readonly": true,
+                                            "width": "max",
+                                            "height": "100%"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "caption": "Module setup",
+                                    "widgets": [
+                                        {
+                                            "attribute_alias": "test_case__feature__module__test_setup",
+                                            "widget_type": "InputMarkdown",
+                                            "readonly": true,
+                                            "hide_caption": true,
+                                            "width": "max",
+                                            "height": "100%"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "caption": "Failed + Ticket",
+                            "icon": "bug",
+                            "disabled_if_input_invalid": false,
+                            "action": {
+                                "alias": "exface.Core.ActionChain",
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "Please add comment why the test failed!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "comment",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "actions": [
+                                    {
+                                        "alias": "exface.Core.CreateData",
+                                        "object_alias": "axenox.DevMan.ticket",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.test_log",
+                                            "column_to_column_mappings": [
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "id"
+                                                },
+                                                {
+                                                    "from": "title",
+                                                    "to": "title"
+                                                },
+                                                {
+                                                    "from": "description",
+                                                    "to": "description"
+                                                },
+                                                {
+                                                    "from": 21,
+                                                    "to": "type"
+                                                },
+                                                {
+                                                    "from": "tested_installation",
+                                                    "to": "_tested_installation"
+                                                },
+                                                {
+                                                    "from": "tested_workbench_version",
+                                                    "to": "_tested_workbench_version"
+                                                },
+                                                {
+                                                    "from": "tested_on",
+                                                    "to": "_tested_on"
+                                                },
+                                                {
+                                                    "from": "tested_by_resource",
+                                                    "to": "_tested_by_resource"
+                                                },
+                                                {
+                                                    "from": "test_case",
+                                                    "to": "_test_case"
+                                                },
+                                                {
+                                                    "from": "test_plan",
+                                                    "to": "_test_plan"
+                                                },
+                                                {
+                                                    "from": "test_log_file",
+                                                    "to": "_test_log_file"
+                                                },
+                                                {
+                                                    "from": "comment",
+                                                    "to": "_comment"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "alias": "exface.Core.CreateData",
+                                        "ignore_related_objects_in_input_data": false,
+                                        "object_alias": "axenox.DevMan.test_log",
+                                        "input_mapper": {
+                                            "from_object_alias": "axenox.DevMan.ticket",
+                                            "column_to_column_mappings": [
+                                                {
+                                                    "from": "id",
+                                                    "to": "ticket"
+                                                },
+                                                {
+                                                    "from": "=NullValue()",
+                                                    "to": "id"
+                                                },
+                                                {
+                                                    "from": "=0",
+                                                    "to": "test_ok_flag"
+                                                },
+                                                {
+                                                    "from": "description",
+                                                    "to": "test_description"
+                                                },
+                                                {
+                                                    "from": "_test_log_file",
+                                                    "to": "test_log_file"
+                                                },
+                                                {
+                                                    "from": "_tested_installation",
+                                                    "to": "tested_installation"
+                                                },
+                                                {
+                                                    "from": "_tested_workbench_version",
+                                                    "to": "tested_workbench_version"
+                                                },
+                                                {
+                                                    "from": "_test_case",
+                                                    "to": "test_case"
+                                                },
+                                                {
+                                                    "from": "_tested_by_resource",
+                                                    "to": "tested_by_resource"
+                                                },
+                                                {
+                                                    "from": "_tested_on",
+                                                    "to": "tested_on"
+                                                },
+                                                {
+                                                    "from": "_test_plan",
+                                                    "to": "test_plan"
+                                                },
+                                                {
+                                                    "from": "_comment",
+                                                    "to": "comment"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "caption": "Failed",
+                            "icon": "bug",
+                            "close_dialog_after_action_succeeds": true,
+                            "disabled_if_input_invalid": false,
+                            "action": {
+                                "alias": "exface.Core.CreateData",
+                                "ignore_related_objects_in_input_data": false,
+                                "input_invalid_if": [
+                                    {
+                                        "error_text": "Please add comment why the test failed!",
+                                        "operator": "AND",
+                                        "conditions": [
+                                            {
+                                                "expression": "comment",
+                                                "comparator": "==",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "input_mapper": {
+                                    "from_object_alias": "axenox.DevMan.test_log",
+                                    "to_object_alias": "axenox.DevMan.test_log",
+                                    "inherit_columns": "own_system_attributes",
+                                    "column_to_column_mappings": [
+                                        {
+                                            "from": "=0",
+                                            "to": "test_ok_flag"
+                                        },
+                                        {
+                                            "from": "test_description",
+                                            "to": "test_description"
+                                        },
+                                        {
+                                            "from": "tested_installation",
+                                            "to": "tested_installation"
+                                        },
+                                        {
+                                            "from": "tested_workbench_version",
+                                            "to": "tested_workbench_version"
+                                        },
+                                        {
+                                            "from": "test_case",
+                                            "to": "test_case"
+                                        },
+                                        {
+                                            "from": "tested_by_resource",
+                                            "to": "tested_by_resource"
+                                        },
+                                        {
+                                            "from": "tested_on",
+                                            "to": "tested_on"
+                                        },
+                                        {
+                                            "from": "test_plan",
+                                            "to": "test_plan"
+                                        },
+                                        {
+                                            "from": "test_log_file",
+                                            "to": "test_log_file"
+                                        },
+                                        {
+                                            "from": "comment",
+                                            "to": "comment"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "caption": "OK",
+                            "close_dialog_after_action_succeeds": true,
+                            "action": {
+                                "alias": "exface.Core.CreateData",
+                                "ignore_related_objects_in_input_data": false,
+                                "input_mapper": {
+                                    "from_object_alias": "axenox.DevMan.test_log",
+                                    "to_object_alias": "axenox.DevMan.test_log",
+                                    "inherit_columns": "own_system_attributes",
+                                    "column_to_column_mappings": [
+                                        {
+                                            "from": "=1",
+                                            "to": "test_ok_flag"
+                                        },
+                                        {
+                                            "from": "test_description",
+                                            "to": "test_description"
+                                        },
+                                        {
+                                            "from": "tested_installation",
+                                            "to": "tested_installation"
+                                        },
+                                        {
+                                            "from": "tested_workbench_version",
+                                            "to": "tested_workbench_version"
+                                        },
+                                        {
+                                            "from": "test_case",
+                                            "to": "test_case"
+                                        },
+                                        {
+                                            "from": "tested_by_resource",
+                                            "to": "tested_by_resource"
+                                        },
+                                        {
+                                            "from": "tested_on",
+                                            "to": "tested_on"
+                                        },
+                                        {
+                                            "from": "test_plan",
+                                            "to": "test_plan"
+                                        },
+                                        {
+                                            "from": "test_log_file",
+                                            "to": "test_log_file"
+                                        },
+                                        {
+                                            "from": "comment",
+                                            "to": "comment"
+                                        }
+                                    ]
+                                }
+                            }
                         }
                     ]
                 }

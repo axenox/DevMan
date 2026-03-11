@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
     "created_on": "2025-08-14 11:56:34",
     "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
-    "modified_on": "2025-08-15 13:31:04",
+    "modified_on": "2025-10-07 11:50:42",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.test_plan_cases",
@@ -85,6 +85,11 @@
             },
             {
                 "attribute_alias": "test_case__feature__LABEL"
+            },
+            {
+                "attribute_alias": "test_case__external_test_link__external_ticket_id:LIST",
+                "width_max": "300px",
+                "caption": "Ext. Tickets"
             },
             {
                 "attribute_alias": "comment",
@@ -163,6 +168,23 @@
                         "column_to_column_mappings": [
                             {
                                 "from": "test_case",
+                                "to": "id"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "caption": "Test plan info",
+                "action": {
+                    "alias": "exface.core.ShowObjectInfoDialog",
+                    "object_alias": "axenox.DevMan.test_plan",
+                    "input_mapper": {
+                        "from_object_alias": "axenox.DevMan.test_plan_cases",
+                        "to_object_alias": "axenox.DevMan.test_plan",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "test_plan",
                                 "to": "id"
                             }
                         ]

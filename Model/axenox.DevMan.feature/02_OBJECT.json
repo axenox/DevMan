@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Feature [axenox.DevMan.feature]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-03-21 11:49:21",
+            "MODIFIED_ON": "2025-12-10 17:15:26",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11ebaf1ed97424b0af1e025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -158,6 +158,7 @@
                                                     {
                                                         "widget_type": "DataTable",
                                                         "object_alias": "axenox.DevMan.feature_test_cases",
+                                                        "multi_select": true,
                                                         "row_grouper": {
                                                             "group_by_attribute_alias": "direct_flag"
                                                         },
@@ -287,6 +288,9 @@
                                                             },
                                                             {
                                                                 "action_alias": "axenox.DevMan.TestCaseMarkAsToDo"
+                                                            },
+                                                            {
+                                                                "action_alias": "axenox.DevMan.TestCasesAddToPlanDialog"
                                                             },
                                                             {
                                                                 "visibility": "optional",

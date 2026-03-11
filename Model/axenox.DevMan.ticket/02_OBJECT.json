@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket [axenox.DevMan.ticket]",
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2025-08-13 17:20:09",
+            "MODIFIED_ON": "2026-03-10 12:39:20",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -106,216 +106,322 @@
                 "widget_type": "Dialog",
                 "maximized": true,
                 "columns_in_grid": 3,
+                "header": {
+                    "hide_caption": true,
+                    "widgets": [
+                        {
+                            "attribute_alias": "id",
+                            "caption": "Ticket #"
+                        },
+                        {
+                            "attribute_alias": "external_ticket_link__external_ticket_id:LIST_DISTINCT",
+                            "caption": "Ext. tickets"
+                        }
+                    ]
+                },
                 "widgets": [
                     {
-                        "attribute_alias": "title",
-                        "width": 3
-                    },
-                    {
-                        "widget_type": "WidgetGroup",
-                        "widgets": [
+                        "widget_type": "Tabs",
+                        "tabs": [
                             {
-                                "attribute_alias": "id",
-                                "widget_type": "InputHidden",
-                                "id": "field_ticket_id"
-                            },
-                            {
-                                "attribute_alias": "type"
-                            },
-                            {
-                                "attribute_alias": "assigned_to"
-                            },
-                            {
-                                "object_alias": "axenox.DevMan.ticket_tags",
-                                "attribute_alias": "tag",
-                                "widget_type": "InputTags",
-                                "required": false,
-                                "multi_select": true,
-                                "caption": "Tags"
-                            },
-                            {
-                                "object_alias": "axenox.DevMan.feature_tickets",
-                                "attribute_alias": "feature",
-                                "widget_type": "InputComboTable",
-                                "caption": "Features",
-                                "required": false,
-                                "multi_select": true
-                            },
-                            {
-                                "attribute_alias": "state"
-                            },
-                            {
-                                "attribute_alias": "parent_ticket"
-                            },
-                            {
-                                "attribute_alias": "complexity"
-                            },
-                            {
-                                "attribute_alias": "milestone"
-                            },
-                            {
-                                "widget_type": "InlineGroup",
-                                "caption": "Effort plan / remaining / spent",
-                                "separator": "/",
+                                "widget_type": "Tab",
+                                "caption": "Ticket",
+                                "columns_in_grid": 3,
                                 "widgets": [
                                     {
-                                        "attribute_alias": "effort_plan_estimated_h"
+                                        "attribute_alias": "title",
+                                        "width": 3
                                     },
                                     {
-                                        "attribute_alias": "effort_rem_estimated_h"
+                                        "widget_type": "WidgetGroup",
+                                        "widgets": [
+                                            {
+                                                "attribute_alias": "id",
+                                                "widget_type": "InputHidden",
+                                                "id": "field_ticket_id"
+                                            },
+                                            {
+                                                "attribute_alias": "type"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to"
+                                            },
+                                            {
+                                                "object_alias": "axenox.DevMan.ticket_tags",
+                                                "attribute_alias": "tag",
+                                                "widget_type": "InputTags",
+                                                "required": false,
+                                                "multi_select": true,
+                                                "caption": "Tags"
+                                            },
+                                            {
+                                                "object_alias": "axenox.DevMan.feature_tickets",
+                                                "attribute_alias": "feature",
+                                                "widget_type": "InputComboTable",
+                                                "caption": "Features",
+                                                "required": false,
+                                                "multi_select": true
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "parent_ticket"
+                                            },
+                                            {
+                                                "attribute_alias": "complexity"
+                                            },
+                                            {
+                                                "attribute_alias": "milestone",
+                                                "widget_type": "InputComboTable",
+                                                "table": {
+                                                    "object_alias": "axenox.DevMan.milestone",
+                                                    "columns": [
+                                                        {
+                                                            "attribute_group_alias": "~DEFAULT_DISPLAY"
+                                                        }
+                                                    ],
+                                                    "filters": [
+                                                        {
+                                                            "attribute_alias": "date",
+                                                            "comparator": ">=",
+                                                            "value": -5
+                                                        }
+                                                    ],
+                                                    "sorters": [
+                                                        {
+                                                            "attribute_alias": "date",
+                                                            "direction": "asc"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "widget_type": "InlineGroup",
+                                                "caption": "Effort plan / remaining / spent",
+                                                "separator": "/",
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "effort_plan_estimated_h"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "effort_rem_estimated_h"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "effort_real_h"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "widget_type": "InlineGroup",
+                                                "caption": "Sprint / position",
+                                                "separator": "/",
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "sprint"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "sprint_pos"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "widget_type": "InlineGroup",
+                                                "caption": "Created",
+                                                "separator": "by",
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "created_on"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "created_by_user__FULL_NAME"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "attribute_alias": "severity"
+                                            },
+                                            {
+                                                "caption": "Project priority",
+                                                "widget_type": "DataSpreadSheet",
+                                                "object_alias": "axenox.DevMan.project_tickets",
+                                                "hide_header": true,
+                                                "height": 5,
+                                                "filters": [
+                                                    {
+                                                        "attribute_alias": "ticket",
+                                                        "required": true,
+                                                        "hidden": true,
+                                                        "value": "=field_ticket_id"
+                                                    }
+                                                ],
+                                                "columns": [
+                                                    {
+                                                        "attribute_alias": "project",
+                                                        "cell_widget": {
+                                                            "widget_type": "InputComboTable",
+                                                            "lazy_loading": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "attribute_alias": "priority",
+                                                        "cell_widget": {
+                                                            "widget_type": "InputComboTable",
+                                                            "lazy_loading": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "attribute_alias": "comment"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "/*": "",
+                                                "caption": "Subtickets",
+                                                "widget_type": "DataTable",
+                                                "object_alias": "axenox.DevMan.ticket",
+                                                "hide_header": true,
+                                                "hide_footer": true,
+                                                "paginate": false,
+                                                "height": 7,
+                                                "lazy_loading_action": {
+                                                    "alias": "exface.core.ReadData",
+                                                    "update_filter_context": false
+                                                },
+                                                "filters": [
+                                                    {
+                                                        "attribute_alias": "parent_ticket",
+                                                        "required": true,
+                                                        "hidden": true,
+                                                        "value": "=field_ticket_id"
+                                                    }
+                                                ],
+                                                "columns": [
+                                                    {
+                                                        "attribute_alias": "id"
+                                                    },
+                                                    {
+                                                        "calculation": "=Left(title, 60)"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "type__LABEL"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "state"
+                                                    }
+                                                ],
+                                                "sorters": [
+                                                    {
+                                                        "attribute_alias": "state",
+                                                        "direction": "asc"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "id",
+                                                        "direction": "desc"
+                                                    }
+                                                ],
+                                                "buttons": [
+                                                    {
+                                                        "action_alias": "exface.core.ShowObjectEditDialog",
+                                                        "bind_to_double_click": true
+                                                    }
+                                                ],
+                                                "*/": ""
+                                            },
+                                            {
+                                                "caption": "Kommentare",
+                                                "widget_type": "DataTable",
+                                                "object_alias": "axenox.DevMan.ticket_comment",
+                                                "empty_text": "No issues were found while testing this test case.",
+                                                "hide_header": false,
+                                                "hide_footer": false,
+                                                "paginate": false,
+                                                "height": 7,
+                                                "filters": [
+                                                    {
+                                                        "attribute_alias": "ticket__id",
+                                                        "required": true,
+                                                        "hidden": true,
+                                                        "value": "=field_ticket_id",
+                                                        "comparator": "=="
+                                                    }
+                                                ],
+                                                "columns": [
+                                                    {
+                                                        "attribute_alias": "created_on",
+                                                        "width": "140px",
+                                                        "caption": "Datum"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "created_by_user__FULL_NAME",
+                                                        "width": "150px",
+                                                        "caption": "Von"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "comment",
+                                                        "width": "max",
+                                                        "caption": "Kommentar"
+                                                    }
+                                                ],
+                                                "sorters": [
+                                                    {
+                                                        "attribute_alias": "created_on",
+                                                        "direction": "desc"
+                                                    }
+                                                ],
+                                                "buttons": [
+                                                    {
+                                                        "action_alias": "exface.core.ShowObjectEditDialog",
+                                                        "bind_to_double_click": true,
+                                                        "icon": "edit"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
                                     {
-                                        "attribute_alias": "effort_real_h"
-                                    }
-                                ]
-                            },
-                            {
-                                "widget_type": "InlineGroup",
-                                "caption": "Sprint / position",
-                                "separator": "/",
-                                "widgets": [
-                                    {
-                                        "attribute_alias": "sprint"
+                                        "attribute_alias": "description",
+                                        "height": "800px",
+                                        "width": 2,
+                                        "widget_type": "InputMarkdown",
+                                        "hide_caption": true,
+                                        "editor_mode": "wysiwyg"
                                     },
                                     {
-                                        "attribute_alias": "sprint_pos"
-                                    }
-                                ]
-                            },
-                            {
-                                "widget_type": "InlineGroup",
-                                "caption": "Created",
-                                "separator": "by",
-                                "widgets": [
-                                    {
-                                        "attribute_alias": "created_on"
-                                    },
-                                    {
-                                        "attribute_alias": "created_by_user__FULL_NAME"
-                                    }
-                                ]
-                            },
-                            {
-                                "caption": "Project priority",
-                                "widget_type": "DataSpreadSheet",
-                                "object_alias": "axenox.DevMan.project_tickets",
-                                "hide_header": true,
-                                "height": 5,
-                                "filters": [
-                                    {
-                                        "attribute_alias": "ticket",
-                                        "required": true,
-                                        "hidden": true,
-                                        "value": "=field_ticket_id"
-                                    }
-                                ],
-                                "columns": [
-                                    {
-                                        "attribute_alias": "project",
-                                        "cell_widget": {
-                                            "widget_type": "InputComboTable",
-                                            "lazy_loading": false
+                                        "caption": "Attachments",
+                                        "widget_type": "ImageGallery",
+                                        "object_alias": "axenox.DevMan.ticket_file",
+                                        "image_title_attribute_alias": "FILENAME",
+                                        "zoomable": true,
+                                        "hide_header": false,
+                                        "width": 3,
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "ticket",
+                                                "hidden": true,
+                                                "required": true,
+                                                "comparator": "=="
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "ticket",
+                                                "value": "=field_ticket_id",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "uploader": {
+                                            "instant_upload": false
                                         }
-                                    },
-                                    {
-                                        "attribute_alias": "priority",
-                                        "cell_widget": {
-                                            "widget_type": "InputComboTable",
-                                            "lazy_loading": false
-                                        }
-                                    },
-                                    {
-                                        "attribute_alias": "comment"
                                     }
                                 ]
                             },
                             {
-                                "caption": "Subtickets",
-                                "widget_type": "DataTable",
-                                "object_alias": "axenox.DevMan.ticket",
-                                "hide_header": true,
-                                "hide_footer": true,
-                                "paginate": false,
-                                "height": 7,
-                                "lazy_loading_action": {
-                                    "alias": "exface.core.ReadData",
-                                    "update_filter_context": false
-                                },
-                                "filters": [
-                                    {
-                                        "attribute_alias": "parent_ticket",
-                                        "required": true,
-                                        "hidden": true,
-                                        "value": "=field_ticket_id"
-                                    }
-                                ],
-                                "columns": [
-                                    {
-                                        "attribute_alias": "id"
-                                    },
-                                    {
-                                        "calculation": "=Left(title, 60)"
-                                    },
-                                    {
-                                        "attribute_alias": "type__LABEL"
-                                    },
-                                    {
-                                        "attribute_alias": "state"
-                                    }
-                                ],
-                                "sorters": [
-                                    {
-                                        "attribute_alias": "state",
-                                        "direction": "asc"
-                                    },
-                                    {
-                                        "attribute_alias": "id",
-                                        "direction": "desc"
-                                    }
-                                ],
-                                "buttons": [
-                                    {
-                                        "action_alias": "exface.core.ShowObjectEditDialog",
-                                        "bind_to_double_click": true
-                                    }
-                                ]
+                                "widget_type": "Tab",
+                                "caption": "Test Case",
+                                "columns_in_grid": 3
                             }
                         ]
-                    },
-                    {
-                        "attribute_alias": "description",
-                        "height": "max",
-                        "width": 2,
-                        "widget_type": "InputMarkdown",
-                        "hide_caption": true,
-                        "editor_mode": "wysiwyg"
-                    },
-                    {
-                        "caption": "Attachments",
-                        "widget_type": "ImageGallery",
-                        "object_alias": "axenox.DevMan.ticket_file",
-                        "image_title_attribute_alias": "FILENAME",
-                        "zoomable": true,
-                        "hide_header": false,
-                        "width": 2,
-                        "filters": [
-                            {
-                                "attribute_alias": "ticket",
-                                "hidden": true,
-                                "required": true,
-                                "comparator": "=="
-                            }
-                        ],
-                        "columns": [
-                            {
-                                "attribute_alias": "ticket",
-                                "value": "=field_ticket_id",
-                                "hidden": true
-                            }
-                        ],
-                        "uploader": {
-                            "instant_upload": false
-                        }
                     }
                 ],
                 "buttons": [

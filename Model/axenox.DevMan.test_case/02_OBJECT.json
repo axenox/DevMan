@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Test case [axenox.DevMan.test_case]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2025-07-30 12:32:22",
+            "MODIFIED_ON": "2025-10-27 10:11:30",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
@@ -595,6 +595,60 @@
                                             {
                                                 "action_alias": "exface.core.ShowObjectInfoDialog",
                                                 "bind_to_double_click": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Issues",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_case_issue",
+                                        "empty_text": "No issues were found while testing this test case.",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_case",
+                                                "comparator": "==",
+                                                "value": "=field_test_case_id",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "Number"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "test_case__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "severity"
+                                            },
+                                            {
+                                                "attribute_alias": "priority"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "action_alias": "exface.Core.ShowObjectEditDialog",
+                                                "bind_to_double_click": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "Number",
+                                                "direction": "asc"
                                             }
                                         ]
                                     }

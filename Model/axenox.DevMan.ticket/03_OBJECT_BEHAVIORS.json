@@ -63,9 +63,9 @@
         {
             "_EXPORT_SUMMARY": "Ticket states",
             "CREATED_ON": "2017-04-03 13:51:12",
-            "MODIFIED_ON": "2024-04-02 16:53:39",
+            "MODIFIED_ON": "2026-03-02 11:10:01",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eeb5e96f6eb832b5e9005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
             "BEHAVIOR": "exface/Core/Behaviors/StateMachineBehavior.php",
             "CONFIG_UXON": {
@@ -89,7 +89,11 @@
                         "name": "Analyzing"
                     },
                     "40": {
-                        "name": "Analyzed"
+                        "name": "Ready to start"
+                    },
+                    "45": {
+                        "name": "Need more info",
+                        "color": "orange"
                     },
                     "50": {
                         "name": "In Progress"
@@ -109,7 +113,7 @@
                     },
                     "80": {
                         "name": "Test failed",
-                        "color": "orangered"
+                        "color": "~ERROR"
                     },
                     "90": {
                         "name": "Cancelled",

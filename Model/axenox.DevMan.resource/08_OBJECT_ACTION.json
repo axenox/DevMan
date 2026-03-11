@@ -67,9 +67,9 @@
         {
             "_EXPORT_SUMMARY": "Resource: Reorder [ResourceTicketsReorderDialog]",
             "CREATED_ON": "2022-02-10 21:33:37",
-            "MODIFIED_ON": "2022-02-11 10:15:06",
+            "MODIFIED_ON": "2025-10-06 12:08:22",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
-            "MODIFIED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ec8d71b9a4d1ec8d71005056bee7c0",
             "OBJECT": "0x11e6c6ab62ffaac2a3e40205857feb80",
             "ACTION_PROTOTYPE": "exface/Core/Actions/ShowDialog.php",
@@ -116,7 +116,8 @@
                                     "attribute_alias": "type__LABEL"
                                 },
                                 {
-                                    "attribute_alias": "state"
+                                    "calculation": "=Format(state)",
+                                    "caption": "State"
                                 },
                                 {
                                     "attribute_alias": "priority_avg"

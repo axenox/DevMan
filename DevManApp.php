@@ -8,6 +8,7 @@ use exface\Core\Facades\AbstractHttpFacade\HttpFacadeInstaller;
 use exface\Core\Factories\FacadeFactory;
 use axenox\DevMan\Facades\WebhookFacade;
 use exface\Core\CommonLogic\AppInstallers\DataInstaller;
+use exface\Core\CommonLogic\AppInstallers\AppDocsInstaller;
 
 class DevManApp extends App
 {
@@ -36,6 +37,9 @@ class DevManApp extends App
         $dataInstaller->addDataToMerge('axenox.DevMan.ticket_type', 'created_on');
         $dataInstaller->addDataToMerge('axenox.DevMan.test_log_type', 'created_on');
         $installer->addInstaller($dataInstaller);
+        
+        $docsInstaller = new AppDocsInstaller($this->getSelector());
+        $installer->addInstaller($docsInstaller);
         
         return $installer;
     }

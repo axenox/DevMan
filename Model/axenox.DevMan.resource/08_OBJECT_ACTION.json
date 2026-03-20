@@ -67,7 +67,7 @@
         {
             "_EXPORT_SUMMARY": "Resource: Reorder [ResourceTicketsReorderDialog]",
             "CREATED_ON": "2022-02-10 21:33:37",
-            "MODIFIED_ON": "2025-10-06 12:08:22",
+            "MODIFIED_ON": "2026-03-20 11:20:04",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ec8d71b9a4d1ec8d71005056bee7c0",
@@ -82,42 +82,35 @@
                     "axenox.DevMan.ticket"
                 ],
                 "dialog": {
+                    "width": 3,
                     "widgets": [
                         {
                             "object_alias": "axenox.DevMan.ticket",
-                            "widget_type": "DataTree",
-                            "tree_parent_id_attribute_alias": "parent_ticket",
-                            "tree_root_uid": "NULL",
-                            "tree_expanded": true,
+                            "widget_type": "DataSpreadSheet",
                             "paginate": false,
-                            "row_reorder": {
-                                "order_index_attribute_alias": "assigned_at_pos",
-                                "order_direction": "asc"
-                            },
+                            "row_number_attribute_alias": "assigned_at_pos",
+                            "allow_to_drag_rows": true,
+                            "allow_to_add_rows": false,
                             "filters": [
                                 {
                                     "attribute_alias": "assigned_to",
-                                    "required": true
+                                    "required": true,
+                                    "disabled": true
                                 }
                             ],
                             "columns": [
-                                {
-                                    "attribute_alias": "assigned_at_pos",
-                                    "hidden": true
-                                },
                                 {
                                     "attribute_alias": "modified_on",
                                     "hidden": true
                                 },
                                 {
-                                    "attribute_alias": "LABEL"
+                                    "attribute_alias": "title"
                                 },
                                 {
-                                    "attribute_alias": "type__LABEL"
+                                    "attribute_alias": "type"
                                 },
                                 {
-                                    "calculation": "=Format(state)",
-                                    "caption": "State"
+                                    "attribute_alias": "state"
                                 },
                                 {
                                     "attribute_alias": "priority_avg"
@@ -134,7 +127,25 @@
                                     "attribute_alias": "assigned_at_pos",
                                     "direction": "asc"
                                 }
+                            ],
+                            "buttons": [
+                                {
+                                    "action_alias": "exface.core.SaveData",
+                                    "id": "save_button",
+                                    "hidden": true
+                                }
                             ]
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "visibility": "promoted",
+                            "align": "opposite",
+                            "action": {
+                                "alias": "exface.core.CallWidgetFunction",
+                                "widget_id": "save_button",
+                                "function": "press"
+                            }
                         }
                     ]
                 }

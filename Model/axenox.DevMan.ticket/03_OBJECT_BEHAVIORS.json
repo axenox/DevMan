@@ -63,7 +63,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket states",
             "CREATED_ON": "2017-04-03 13:51:12",
-            "MODIFIED_ON": "2026-03-02 11:10:01",
+            "MODIFIED_ON": "2026-03-18 14:46:19",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
@@ -74,7 +74,7 @@
                 "states": {
                     "5": {
                         "name": "Shelved",
-                        "color": "lightgrey"
+                        "color": "white"
                     },
                     "10": {
                         "name": "New"
@@ -99,7 +99,7 @@
                         "name": "In Progress"
                     },
                     "52": {
-                        "name": "In Review"
+                        "name": "Committed/PR"
                     },
                     "55": {
                         "name": "Need fix",
@@ -111,17 +111,21 @@
                     "70": {
                         "name": "Testing"
                     },
+                    "75": {
+                        "name": "Need follow-up",
+                        "color": "orange"
+                    },
                     "80": {
                         "name": "Test failed",
                         "color": "~ERROR"
                     },
                     "90": {
                         "name": "Cancelled",
-                        "color": "gray"
+                        "color": "lightgray"
                     },
                     "95": {
                         "name": "Obsolete",
-                        "color": "gray"
+                        "color": "lightgray"
                     },
                     "99": {
                         "name": "Done"

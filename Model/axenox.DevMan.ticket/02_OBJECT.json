@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket [axenox.DevMan.ticket]",
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2026-03-10 12:39:20",
+            "MODIFIED_ON": "2026-03-20 09:30:23",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -141,6 +141,11 @@
                                                 "id": "field_ticket_id"
                                             },
                                             {
+                                                "attribute_alias": "test_case__id",
+                                                "widget_type": "InputHidden",
+                                                "id": "test_case_id"
+                                            },
+                                            {
                                                 "attribute_alias": "type"
                                             },
                                             {
@@ -169,32 +174,45 @@
                                                 "attribute_alias": "parent_ticket"
                                             },
                                             {
-                                                "attribute_alias": "complexity"
+                                                "widget_type": "InlineGroup",
+                                                "caption": "Milestone / position",
+                                                "separator": "/",
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "milestone"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "milestone_at_pos",
+                                                        "width": "50px"
+                                                    }
+                                                ]
                                             },
                                             {
-                                                "attribute_alias": "milestone",
-                                                "widget_type": "InputComboTable",
-                                                "table": {
-                                                    "object_alias": "axenox.DevMan.milestone",
-                                                    "columns": [
-                                                        {
-                                                            "attribute_group_alias": "~DEFAULT_DISPLAY"
-                                                        }
-                                                    ],
-                                                    "filters": [
-                                                        {
-                                                            "attribute_alias": "date",
-                                                            "comparator": ">=",
-                                                            "value": -5
-                                                        }
-                                                    ],
-                                                    "sorters": [
-                                                        {
-                                                            "attribute_alias": "date",
-                                                            "direction": "asc"
-                                                        }
-                                                    ]
-                                                }
+                                                "widget_type": "InlineGroup",
+                                                "caption": "Sprint / position",
+                                                "separator": "/",
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "sprint"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "sprint_pos",
+                                                        "width": "50px"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "widget_type": "InlineGroup",
+                                                "caption": "Severity, complexity",
+                                                "separator": ",",
+                                                "widgets": [
+                                                    {
+                                                        "attribute_alias": "severity"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "complexity"
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "widget_type": "InlineGroup",
@@ -214,19 +232,6 @@
                                             },
                                             {
                                                 "widget_type": "InlineGroup",
-                                                "caption": "Sprint / position",
-                                                "separator": "/",
-                                                "widgets": [
-                                                    {
-                                                        "attribute_alias": "sprint"
-                                                    },
-                                                    {
-                                                        "attribute_alias": "sprint_pos"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "widget_type": "InlineGroup",
                                                 "caption": "Created",
                                                 "separator": "by",
                                                 "widgets": [
@@ -237,9 +242,6 @@
                                                         "attribute_alias": "created_by_user__FULL_NAME"
                                                     }
                                                 ]
-                                            },
-                                            {
-                                                "attribute_alias": "severity"
                                             },
                                             {
                                                 "caption": "Project priority",
@@ -329,7 +331,6 @@
                                                 "*/": ""
                                             },
                                             {
-                                                "caption": "Kommentare",
                                                 "widget_type": "DataTable",
                                                 "object_alias": "axenox.DevMan.ticket_comment",
                                                 "empty_text": "No issues were found while testing this test case.",
@@ -349,18 +350,21 @@
                                                 "columns": [
                                                     {
                                                         "attribute_alias": "created_on",
-                                                        "width": "140px",
-                                                        "caption": "Datum"
+                                                        "width_max": "140px"
                                                     },
                                                     {
                                                         "attribute_alias": "created_by_user__FULL_NAME",
-                                                        "width": "150px",
-                                                        "caption": "Von"
+                                                        "width_max": "150px"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "comment_type"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "action_required"
                                                     },
                                                     {
                                                         "attribute_alias": "comment",
-                                                        "width": "max",
-                                                        "caption": "Kommentar"
+                                                        "width": "max"
                                                     }
                                                 ],
                                                 "sorters": [
@@ -371,9 +375,25 @@
                                                 ],
                                                 "buttons": [
                                                     {
+                                                        "input_widget_id": "field_ticket_id",
+                                                        "action": {
+                                                            "alias": "exface.core.ShowObjectCreateDialog",
+                                                            "prefill_with_input_data": true,
+                                                            "input_mapper": {
+                                                                "from_object_alias": "axenox.DevMan.ticket",
+                                                                "to_object_alias": "axenox.DevMan.ticket_comment",
+                                                                "column_to_column_mappings": [
+                                                                    {
+                                                                        "from": "id",
+                                                                        "to": "ticket"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    {
                                                         "action_alias": "exface.core.ShowObjectEditDialog",
-                                                        "bind_to_double_click": true,
-                                                        "icon": "edit"
+                                                        "bind_to_double_click": true
                                                     }
                                                 ]
                                             }
@@ -419,7 +439,110 @@
                             {
                                 "widget_type": "Tab",
                                 "caption": "Test Case",
-                                "columns_in_grid": 3
+                                "columns_in_grid": 3,
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.test_log_coverage",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_case",
+                                                "comparator": "==",
+                                                "value": "=test_case_id",
+                                                "hidden": true
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__tested_installation"
+                                            },
+                                            {
+                                                "attribute_alias": "tested_by_resource"
+                                            },
+                                            {
+                                                "attribute_alias": "tested_on",
+                                                "widget_type": "RangeFilter"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__test_plan"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "tested_on"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__tested_installation__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_ok_flag"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__tested_workbench_version"
+                                            },
+                                            {
+                                                "attribute_alias": "tested_by_resource__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "tested_directly"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__effort"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__ticket__id"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__test_plan__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log__comment"
+                                            },
+                                            {
+                                                "attribute_alias": "tested_test_case__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "test_log",
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "tested_on",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "bind_to_double_click": true,
+                                                "action": {
+                                                    "alias": "exface.Core.ShowObjectEditDialog",
+                                                    "object_alias": "axenox.DevMan.test_log",
+                                                    "input_mapper": {
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "test_log",
+                                                                "to": "id"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "alias": "exface.Core.DeleteObject",
+                                                    "object_alias": "axenox.DevMan.test_log",
+                                                    "input_mapper": {
+                                                        "column_to_column_mappings": [
+                                                            {
+                                                                "from": "test_log",
+                                                                "to": "id"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }

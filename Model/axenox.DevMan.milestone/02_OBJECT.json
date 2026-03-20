@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Milestone [axenox.DevMan.milestone]",
             "CREATED_ON": "2019-03-21 09:54:45",
-            "MODIFIED_ON": "2026-03-03 15:11:12",
+            "MODIFIED_ON": "2026-03-20 11:18:38",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea844784bd96ca844005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e94bbf50eed38fb95b00505689aada",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -117,7 +117,21 @@
                                         "widget_type": "InputHidden"
                                     },
                                     {
-                                        "attribute_alias": "date"
+                                        "caption": "Date",
+                                        "widget_type": "InlineGroup",
+                                        "separator": "-",
+                                        "widgets": [
+                                            {
+                                                "widget_type": "InputDate",
+                                                "attribute_alias": "date"
+                                            },
+                                            {
+                                                "attribute_alias": "date_to"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "attribute_alias": "status"
                                     },
                                     {
                                         "attribute_alias": "project"
@@ -135,14 +149,20 @@
                                         "attribute_alias": "effort_rem_estimated_h"
                                     },
                                     {
+                                        "attribute_alias": "installation"
+                                    },
+                                    {
+                                        "attribute_alias": "milestone_type"
+                                    },
+                                    {
                                         "attribute_alias": "release"
                                     },
                                     {
-                                        "attribute_alias": "show_in_calendar"
+                                        "attribute_alias": "objectives",
+                                        "//width": 2
                                     },
                                     {
-                                        "attribute_alias": "objectives",
-                                        "width": 2
+                                        "attribute_alias": "show_in_calendar"
                                     },
                                     {
                                         "attribute_alias": "description",
@@ -208,6 +228,10 @@
                                         ],
                                         "columns": [
                                             {
+                                                "attribute_alias": "milestone_at_pos",
+                                                "caption": "Pos."
+                                            },
+                                            {
                                                 "attribute_alias": "id"
                                             },
                                             {
@@ -220,6 +244,12 @@
                                                 "attribute_alias": "assigned_to__LABEL"
                                             }
                                         ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "milestone_at_pos",
+                                                "direction": "asc"
+                                            }
+                                        ],
                                         "buttons": [
                                             {
                                                 "action_alias": "exface.core.ShowObjectCreateDialog"
@@ -227,6 +257,9 @@
                                             {
                                                 "bind_to_double_click": true,
                                                 "action_alias": "exface.core.ShowObjectEditDialog"
+                                            },
+                                            {
+                                                "action_alias": "axenox.DevMan.MilestoneTicketsReorderDialog"
                                             }
                                         ]
                                     }

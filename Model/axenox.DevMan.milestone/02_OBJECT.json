@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Milestone [axenox.DevMan.milestone]",
             "CREATED_ON": "2019-03-21 09:54:45",
-            "MODIFIED_ON": "2026-03-20 11:18:38",
+            "MODIFIED_ON": "2026-04-15 14:39:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
             "UID": "0x11e94bbf50eed38fb95b00505689aada",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -104,6 +104,7 @@
             "DATA_ADDRESS_PROPS": null,
             "DEFAULT_EDITOR_UXON": {
                 "widget_type": "Dialog",
+                "maximized": false,
                 "widgets": [
                     {
                         "widget_type": "Tabs",
@@ -117,52 +118,66 @@
                                         "widget_type": "InputHidden"
                                     },
                                     {
-                                        "caption": "Date",
-                                        "widget_type": "InlineGroup",
-                                        "separator": "-",
+                                        "widget_type": "WidgetGroup",
+                                        "width": 1,
                                         "widgets": [
                                             {
-                                                "widget_type": "InputDate",
-                                                "attribute_alias": "date"
+                                                "attribute_alias": "project"
                                             },
                                             {
-                                                "attribute_alias": "date_to"
+                                                "attribute_alias": "name"
+                                            },
+                                            {
+                                                "attribute_alias": "milestone_type"
+                                            },
+                                            {
+                                                "caption": "Date",
+                                                "widget_type": "InlineGroup",
+                                                "separator": "-",
+                                                "//width": 1,
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "InputDate",
+                                                        "attribute_alias": "date"
+                                                    },
+                                                    {
+                                                        "attribute_alias": "date_to"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "attribute_alias": "status",
+                                                "//width": 1
+                                            },
+                                            {
+                                                "attribute_alias": "installation"
                                             }
                                         ]
                                     },
                                     {
-                                        "attribute_alias": "status"
-                                    },
-                                    {
-                                        "attribute_alias": "project"
-                                    },
-                                    {
-                                        "attribute_alias": "name"
-                                    },
-                                    {
-                                        "attribute_alias": "location"
-                                    },
-                                    {
-                                        "attribute_alias": "effort_planned_h"
-                                    },
-                                    {
-                                        "attribute_alias": "effort_rem_estimated_h"
-                                    },
-                                    {
-                                        "attribute_alias": "installation"
-                                    },
-                                    {
-                                        "attribute_alias": "milestone_type"
-                                    },
-                                    {
-                                        "attribute_alias": "release"
-                                    },
-                                    {
-                                        "attribute_alias": "objectives",
-                                        "//width": 2
-                                    },
-                                    {
-                                        "attribute_alias": "show_in_calendar"
+                                        "widget_type": "WidgetGroup",
+                                        "//columns_in_grid": 2,
+                                        "width": 1,
+                                        "widgets": [
+                                            {
+                                                "attribute_alias": "effort_planned_h"
+                                            },
+                                            {
+                                                "attribute_alias": "effort_rem_estimated_h"
+                                            },
+                                            {
+                                                "attribute_alias": "location"
+                                            },
+                                            {
+                                                "attribute_alias": "release"
+                                            },
+                                            {
+                                                "attribute_alias": "objectives"
+                                            },
+                                            {
+                                                "attribute_alias": "show_in_calendar"
+                                            }
+                                        ]
                                     },
                                     {
                                         "attribute_alias": "description",
@@ -177,7 +192,6 @@
                                         "widget_type": "DataTable",
                                         "object_alias": "axenox.DevMan.approval",
                                         "paginate": false,
-                                        "height": "max",
                                         "filters": [
                                             {
                                                 "attribute_alias": "milestone",
@@ -269,34 +283,83 @@
                                 "caption": "Test plans",
                                 "widgets": [
                                     {
-                                        "widget_type": "DataTable",
-                                        "object_alias": "axenox.DevMan.test_plan",
-                                        "filters": [
+                                        "widget_type": "SplitVertical",
+                                        "widgets": [
                                             {
-                                                "attribute_alias": "milestone",
-                                                "comparator": "==",
-                                                "required": true,
-                                                "hidden": true
-                                            }
-                                        ],
-                                        "columns": [
-                                            {
-                                                "attribute_alias": "id"
+                                                "height": "50%",
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "DataTable",
+                                                        "id": "testplan_selector",
+                                                        "object_alias": "axenox.DevMan.test_plan",
+                                                        "filters": [
+                                                            {
+                                                                "attribute_alias": "milestone",
+                                                                "comparator": "==",
+                                                                "required": true,
+                                                                "hidden": true
+                                                            }
+                                                        ],
+                                                        "columns": [
+                                                            {
+                                                                "attribute_alias": "id"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "name"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "application__LABEL"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "state"
+                                                            }
+                                                        ],
+                                                        "buttons": [
+                                                            {
+                                                                "action_alias": "exface.core.ShowObjectCreateDialog"
+                                                            },
+                                                            {
+                                                                "bind_to_double_click": true,
+                                                                "action_alias": "exface.core.ShowObjectEditDialog"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
-                                                "attribute_alias": "name"
-                                            },
-                                            {
-                                                "attribute_alias": "application__LABEL"
-                                            }
-                                        ],
-                                        "buttons": [
-                                            {
-                                                "action_alias": "exface.core.ShowObjectCreateDialog"
-                                            },
-                                            {
-                                                "bind_to_double_click": true,
-                                                "action_alias": "exface.core.ShowObjectEditDialog"
+                                                "height": "50%",
+                                                "widgets": [
+                                                    {
+                                                        "widget_type": "DataTable",
+                                                        "object_alias": "axenox.DevMan.test_case",
+                                                        "filters": [
+                                                            {
+                                                                "attribute_alias": "test_plan_cases__test_plan",
+                                                                "value": "=testplan_selector!id",
+                                                                "comparator": "==",
+                                                                "apply_on_change": true,
+                                                                "required": true,
+                                                                "hidden": true
+                                                            }
+                                                        ],
+                                                        "columns": [
+                                                            {
+                                                                "attribute_alias": "LABEL"
+                                                            },
+                                                            {
+                                                                "caption": "Comment from Testplan",
+                                                                "attribute_alias": "test_plan_cases__comment"
+                                                            },
+                                                            {
+                                                                "attribute_alias": "test_case_status__test_status"
+                                                            },
+                                                            {
+                                                                "caption": "Comment for log entry",
+                                                                "attribute_alias": "test_case_status__last_test_log__comment"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -308,7 +371,7 @@
                                     {
                                         "widget_type": "WidgetGroup",
                                         "caption": "Files",
-                                        "width": "max",
+                                        "width": "100%",
                                         "collapsed": true,
                                         "widgets": [
                                             {
@@ -317,7 +380,7 @@
                                                 "image_title_attribute_alias": "FILENAME",
                                                 "zoomable": true,
                                                 "hide_header": false,
-                                                "width": "max",
+                                                "width": "100%",
                                                 "filters": [
                                                     {
                                                         "attribute_alias": "milestone",

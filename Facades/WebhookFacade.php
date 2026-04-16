@@ -11,6 +11,7 @@ use exface\Core\Factories\ActionFactory;
 use exface\Core\DataTypes\DateTimeDataType;
 use axenox\DevMan\Actions\ProcessVcsUpdate;
 use exface\Core\Exceptions\RuntimeException;
+use axenox\DevMan\Facades\WebhookFacade\Middleware\AzureDevOpsToGithubPushMiddleware;
 
 /**
  * Web service to receive webhooks from version control systems (e.g. Git)
@@ -70,6 +71,17 @@ class WebhookFacade extends AbstractHttpFacade
         return new Response(200, [], $output);
     }
     
+    /**
+     * {@inheritDoc}
+     * @see \exface\Core\Facades\AbstractHttpFacade\AbstractHttpFacade::getMiddleware()
+     */
+    protected function getMiddleware() : array
+    {
+        $middleware = parent::getMiddleware();
+        $middleware[] = new AzureDevOpsToGithubPushMiddleware();
+        return $middleware;
+    }
+
     /**
      * 
      * {@inheritDoc}

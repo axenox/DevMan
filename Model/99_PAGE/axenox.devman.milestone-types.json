@@ -1,0 +1,49 @@
+{
+    "uid": "0x11f190d3c7c2b5b090d3002248e6305d",
+    "alias_with_namespace": "axenox.devman.milestone-types",
+    "menu_parent_page_selector": "0x1249305e4bd511e9a96b00505689aada",
+    "menu_index": 0,
+    "menu_visible": true,
+    "name": "Milestone Types",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "created_on": "2026-03-16 09:11:48",
+    "modified_by_user_selector": "0x11ee9cec2b4dcaca9cec005056be9fa0",
+    "modified_on": "2026-03-16 09:34:50",
+    "contents": {
+        "widget_type": "DataTable",
+        "object_alias": "axenox.DevMan.milestone_type",
+        "columns": [
+            {
+                "attribute_group_alias": "~VISIBLE"
+            },
+            {
+                "attribute_alias": "modified_on"
+            }
+        ],
+        "buttons": [
+            {
+                "action_alias": "exface.Core.ShowDataImportDialog"
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
+            },
+            {
+                "action": {
+                    "alias": "exface.Core.ShowObjectEditDialog",
+                    "prefill_with_filter_context": true
+                },
+                "bind_to_double_click": true
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectCopyDialog"
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject",
+                "visibility": "optional"
+            }
+        ]
+    }
+}

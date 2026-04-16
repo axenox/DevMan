@@ -95,6 +95,18 @@
             "attribute_alias": "COPYABLEFLAG"
         },
         {
+            "name": "ICON",
+            "attribute_alias": "ICON"
+        },
+        {
+            "name": "ICON_SET",
+            "attribute_alias": "ICON_SET"
+        },
+        {
+            "name": "ABBREVIATION",
+            "attribute_alias": "ABBREVIATION"
+        },
+        {
             "name": "ALIAS",
             "attribute_alias": "ALIAS"
         },
@@ -200,6 +212,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 1,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "name",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "name",
@@ -247,6 +262,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 1,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "start_on",
             "DATATYPE": "0x32000000000000000000000000000000",
             "DATA_ADDRESS": "start_on",
@@ -292,6 +310,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 1,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "end_on",
             "DATATYPE": "0x32000000000000000000000000000000",
             "DATA_ADDRESS": "end_on",
@@ -337,6 +358,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 1,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "description",
             "DATATYPE": "0x30000000000000000000000000000000",
             "DATA_ADDRESS": "description",
@@ -384,6 +408,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 1,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "closed_flag",
             "DATATYPE": "0x37000000000000000000000000000000",
             "DATA_ADDRESS": "closed_flag",
@@ -433,6 +460,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 0,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "ticket_progress",
             "DATATYPE": "0x11eba058909b49cca058025041000001",
             "DATA_ADDRESS": [
@@ -485,6 +515,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 0,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "active_day",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "IF([#closed_flag#] = 1, NULL, GREATEST(DATEDIFF(NOW(), [#start_on#]), 0))",
@@ -534,6 +567,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 0,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "time_progress",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": [
@@ -585,6 +621,9 @@
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
             "COPYABLEFLAG": 1,
+            "ICON": null,
+            "ICON_SET": null,
+            "ABBREVIATION": null,
             "ALIAS": "release",
             "DATATYPE": "0x11e7b0277435425e98350205857feb80",
             "DATA_ADDRESS": "release_id",

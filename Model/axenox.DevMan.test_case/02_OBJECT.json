@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Test case [axenox.DevMan.test_case]",
             "CREATED_ON": "2021-05-07 14:43:39",
-            "MODIFIED_ON": "2026-03-11 12:01:39",
+            "MODIFIED_ON": "2026-03-17 19:37:42",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11ee9cec2b4dcaca9cec005056be9fa0",
             "UID": "0x11eb9f70d979e24c9f70025041000001",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -105,6 +105,7 @@
             "DEFAULT_EDITOR_UXON": {
                 "widget_type": "Dialog",
                 "width": 4,
+                "maximized": true,
                 "widgets": [
                     {
                         "widget_type": "Tabs",
@@ -491,6 +492,64 @@
                                 ]
                             },
                             {
+                                "caption": "Incidents",
+                                "widgets": [
+                                    {
+                                        "widget_type": "DataTable",
+                                        "object_alias": "axenox.DevMan.ticket",
+                                        "filters": [
+                                            {
+                                                "attribute_alias": "test_case__id",
+                                                "comparator": "==",
+                                                "value": "=field_test_case_id",
+                                                "required": true,
+                                                "hidden": true
+                                            }
+                                        ],
+                                        "sorters": [
+                                            {
+                                                "attribute_alias": "id",
+                                                "direction": "desc"
+                                            }
+                                        ],
+                                        "columns": [
+                                            {
+                                                "attribute_alias": "id"
+                                            },
+                                            {
+                                                "attribute_alias": "type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "title"
+                                            },
+                                            {
+                                                "attribute_alias": "state"
+                                            },
+                                            {
+                                                "attribute_alias": "assigned_to__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "created_on"
+                                            },
+                                            {
+                                                "attribute_alias": "created_by_user__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "ticket_tags__tag__LABEL:LIST_DISTINCT",
+                                                "caption": "Tags"
+                                            }
+                                        ],
+                                        "buttons": [
+                                            {
+                                                "bind_to_double_click": true,
+                                                "caption": "Open ticket",
+                                                "action_alias": "exface.core.ShowObjectEditDialog"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
                                 "caption": "Ext. Links",
                                 "widgets": [
                                     {
@@ -642,60 +701,6 @@
                                             {
                                                 "action_alias": "exface.core.ShowObjectInfoDialog",
                                                 "bind_to_double_click": true
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "caption": "Issues",
-                                "widgets": [
-                                    {
-                                        "widget_type": "DataTable",
-                                        "object_alias": "axenox.DevMan.test_case_issue",
-                                        "empty_text": "No issues were found while testing this test case.",
-                                        "filters": [
-                                            {
-                                                "attribute_alias": "test_case",
-                                                "comparator": "==",
-                                                "value": "=field_test_case_id",
-                                                "required": true,
-                                                "hidden": true
-                                            }
-                                        ],
-                                        "columns": [
-                                            {
-                                                "attribute_alias": "Number"
-                                            },
-                                            {
-                                                "attribute_alias": "state"
-                                            },
-                                            {
-                                                "attribute_alias": "title"
-                                            },
-                                            {
-                                                "attribute_alias": "test_case__LABEL"
-                                            },
-                                            {
-                                                "attribute_alias": "assigned_to__LABEL"
-                                            },
-                                            {
-                                                "attribute_alias": "severity"
-                                            },
-                                            {
-                                                "attribute_alias": "priority"
-                                            }
-                                        ],
-                                        "buttons": [
-                                            {
-                                                "action_alias": "exface.Core.ShowObjectEditDialog",
-                                                "bind_to_double_click": true
-                                            }
-                                        ],
-                                        "sorters": [
-                                            {
-                                                "attribute_alias": "Number",
-                                                "direction": "asc"
                                             }
                                         ]
                                     }

@@ -73,14 +73,16 @@ class AzureDevOpsToGithubPushMiddleware implements MiddlewareInterface
         $resource = $payload['resource'] ?? [];
         $repository = $resource['repository'] ?? [];
         $refUpdate = $resource['refUpdates'][0] ?? [];
-        $commits = [];
+        $pushedBy = $resource['pushedBy'] ?? [];
+        
+        $githubCommits = [];
 
-        foreach (($resource['commits'] ?? []) as $commit) {
+        foreach (($resource['commits'] ?? []) as $devopsCommit) {
             $added = [];
             $modified = [];
             $removed = [];
 
-            foreach (($commit['changes'] ?? []) as $change) {
+            foreach (($devopsCommit['changes'] ?? []) as $change) {
                 $path = $change['item']['path'] ?? ($change['newContent']['path'] ?? null);
                 if ($path === null || $path === '') {
                     continue;
@@ -101,16 +103,17 @@ class AzureDevOpsToGithubPushMiddleware implements MiddlewareInterface
                 }
             }
 
-            $commits[] = [
-                'id' => $commit['commitId'] ?? ($commit['id'] ?? ''),
-                'message' => $commit['comment'] ?? ($commit['message'] ?? ''),
-                'timestamp' => $commit['author']['date'] ?? $commit['committer']['date'] ?? ($payload['createdDate'] ?? date(DATE_ATOM)),
-                'url' => $commit['url'] ?? ($resource['repository']['url'] ?? ''),
+            $githubCommits[] = [
+                'id' => $devopsCommit['commitId'] ?? ($devopsCommit['id'] ?? ''),
+                'message' => $devopsCommit['comment'] ?? ($devopsCommit['message'] ?? ''),
+                'timestamp' => $devopsCommit['author']['date'] ?? $devopsCommit['committer']['date'] ?? ($payload['createdDate'] ?? date(DATE_ATOM)),
+                'url' => $this->getCommitUrl($devopsCommit, $repository),
+                // IDEA use $pushedBy['displayName'] with the full name here somewhere?
                 'author' => [
-                    'name' => $commit['author']['name'] ?? ($commit['author']['email'] ?? 'Azure DevOps')
+                    'name' => $devopsCommit['author']['name'] ?? ($devopsCommit['author']['email'] ?? 'Azure DevOps')
                 ],
                 'committer' => [
-                    'name' => $commit['committer']['name'] ?? ($commit['committer']['email'] ?? ($commit['author']['name'] ?? 'Azure DevOps'))
+                    'name' => $devopsCommit['committer']['name'] ?? ($devopsCommit['committer']['email'] ?? ($devopsCommit['author']['name'] ?? 'Azure DevOps'))
                 ],
                 'added' => array_values(array_unique($added)),
                 'modified' => array_values(array_unique($modified)),
@@ -124,12 +127,22 @@ class AzureDevOpsToGithubPushMiddleware implements MiddlewareInterface
                 'html_url' => $repository['remoteUrl'] ?? ($repository['webUrl'] ?? ($payload['resourceContainers']['project']['baseUrl'] ?? '')),
                 'homepage' => $repository['webUrl'] ?? ($repository['remoteUrl'] ?? '')
             ],
-            'commits' => $commits,
+            'commits' => $githubCommits,
             // Keep the untouched provider payload for diagnostics/reprocessing.
             'x_original_payload' => [
                 'azure_devops' => $payload
             ]
         ];
+    }
+    
+    protected function getCommitUrl(array $commit, array $repository) : string
+    {
+        $webBase = $repository['remoteUrl'] ?? null;
+        $commitId = $commit['commitId'] ?? null;
+        if ($commitId !== null && $webBase !== null) {
+            return $webBase . '/commit/' . $commitId;
+        }
+        return $commit['url'] ?? ($repository['url'] ?? '');
     }
     
     protected function getExamplePayload(): string

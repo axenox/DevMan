@@ -198,6 +198,104 @@
             "APP": "0x38000000000000000000000000000000",
             "USE_IN_OBJECT_BASKET_FLAG": 0,
             "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Ticket: Add tag [TicketAddTagDialog]",
+            "CREATED_ON": "2026-06-03 21:34:18",
+            "MODIFIED_ON": "2026-06-03 21:34:57",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f1b87036b8d6b4b870002248e6305d",
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowObjectCreateDialog.php",
+            "ALIAS": "TicketAddTagDialog",
+            "NAME": "Add tag",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "object_alias": "axenox.DevMan.ticket_tags",
+                "prefill_with_input_data": true,
+                "input_object_alias": "axenox.DevMan.ticket",
+                "icon": "tag",
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.ticket_tags",
+                    "height": "auto",
+                    "width": 1,
+                    "widgets": [
+                        {
+                            "attribute_alias": "ticket",
+                            "widget_type": "InputComboTable",
+                            "multi_select": true,
+                            "disabled": true
+                        },
+                        {
+                            "attribute_alias": "tag"
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "action_alias": "exface.Core.CreateData",
+                            "visibility": "promoted",
+                            "align": "opposite"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Ticket: Add project [TicketAddProjectDialog]",
+            "CREATED_ON": "2026-06-03 21:35:53",
+            "MODIFIED_ON": "2026-06-03 21:35:53",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f1b9e06f0298b6b9e0002248e6305d",
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowObjectCreateDialog.php",
+            "ALIAS": "TicketAddProjectDialog",
+            "NAME": "Add project",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "object_alias": "axenox.DevMan.project_tickets",
+                "prefill_with_input_data": true,
+                "input_object_alias": "axenox.DevMan.ticket",
+                "icon": "tag",
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.project_tickets",
+                    "height": "auto",
+                    "width": 1,
+                    "widgets": [
+                        {
+                            "attribute_alias": "ticket",
+                            "widget_type": "InputComboTable",
+                            "multi_select": true,
+                            "disabled": true
+                        },
+                        {
+                            "attribute_alias": "project"
+                        },
+                        {
+                            "attribute_alias": "priority"
+                        },
+                        {
+                            "attribute_alias": "comment"
+                        }
+                    ],
+                    "buttons": [
+                        {
+                            "action_alias": "exface.Core.CreateData",
+                            "visibility": "promoted",
+                            "align": "opposite"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
         }
     ],
     "totals_rows": [],

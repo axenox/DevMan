@@ -1,0 +1,141 @@
+{
+    "object_alias": "axenox.ETL.step",
+    "columns": [
+        {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "name"
+        },
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "to_object",
+            "attribute_alias": "to_object"
+        },
+        {
+            "name": "stop_flow_on_error",
+            "attribute_alias": "stop_flow_on_error"
+        },
+        {
+            "name": "disabled",
+            "attribute_alias": "disabled"
+        },
+        {
+            "name": "flow",
+            "attribute_alias": "flow"
+        },
+        {
+            "name": "from_object",
+            "attribute_alias": "from_object"
+        },
+        {
+            "name": "type",
+            "attribute_alias": "type"
+        },
+        {
+            "name": "etl_config_uxon",
+            "attribute_alias": "etl_config_uxon"
+        },
+        {
+            "name": "name",
+            "attribute_alias": "name"
+        },
+        {
+            "name": "etl_prototype",
+            "attribute_alias": "etl_prototype"
+        },
+        {
+            "name": "description",
+            "attribute_alias": "description"
+        },
+        {
+            "name": "step_flow_sequence",
+            "attribute_alias": "step_flow_sequence"
+        },
+        {
+            "name": "parent_step",
+            "attribute_alias": "parent_step"
+        }
+    ],
+    "rows": [
+        {
+            "_EXPORT_SUMMARY": "Tickets > JSON",
+            "CREATED_ON": "2026-06-16 23:11:51",
+            "MODIFIED_ON": "2026-06-17 11:50:19",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f18044fec97ee48044002248e6305d",
+            "to_object": "0x11eeae4695964d78ae46025041000001",
+            "stop_flow_on_error": 1,
+            "disabled": 0,
+            "flow": "0x11f18c1de3d835c68c1d002248e6305d",
+            "from_object": "0x11e5f0b9cd1f508089840050568905af",
+            "type": "E",
+            "etl_config_uxon": {
+                "row_limit": "[#~parameter:limit#]",
+                "row_offset": "[#~parameter:offset#]",
+                "base_data_sheet": {
+                    "object_alias": "axenox.DevMan.ticket",
+                    "filters": {
+                        "operator": "AND",
+                        "conditions": [
+                            {
+                                "expression": "assigned_to__name",
+                                "comparator": "==",
+                                "value": "[#~parameter:assigned_to#]"
+                            }
+                        ]
+                    }
+                }
+            },
+            "name": "Tickets > JSON",
+            "etl_prototype": "axenox/etl/ETLPrototypes/DataSheetToJsonApi.php",
+            "description": "",
+            "step_flow_sequence": 1,
+            "parent_step": null
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "axenox.ETL.step",
+        "conditions": [
+            {
+                "expression": "flow__app",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "axenox.ETL.step"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

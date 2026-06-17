@@ -8,6 +8,7 @@ use exface\Core\Facades\AbstractHttpFacade\HttpFacadeInstaller;
 use exface\Core\Factories\FacadeFactory;
 use axenox\DevMan\Facades\WebhookFacade;
 use exface\Core\CommonLogic\AppInstallers\DataInstaller;
+use axenox\ETL\Common\DataFlowInstaller;
 
 class DevManApp extends App
 {
@@ -26,6 +27,9 @@ class DevManApp extends App
         ->setFoldersWithStaticSql(['Views'])
         ->setDataSourceSelector('0x39000000000000000000000000000000');
         $installer->addInstaller($sqlInstaller);
+        
+        $ETLInstaller = new DataFlowInstaller($this->getSelector(), $container);
+        $installer->addInstaller($ETLInstaller);
         
         // Proxy facade
         $tplInstaller = new HttpFacadeInstaller($this->getSelector());

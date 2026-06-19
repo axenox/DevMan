@@ -1,0 +1,151 @@
+{
+    "object_alias": "exface.Core.AUTHORIZATION_POLICY",
+    "columns": [
+        {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "NAME",
+            "attribute_alias": "NAME"
+        },
+        {
+            "name": "DESCRIPTION",
+            "attribute_alias": "DESCRIPTION"
+        },
+        {
+            "name": "EFFECT",
+            "attribute_alias": "EFFECT"
+        },
+        {
+            "name": "APP",
+            "attribute_alias": "APP"
+        },
+        {
+            "name": "AUTHORIZATION_POINT",
+            "attribute_alias": "AUTHORIZATION_POINT"
+        },
+        {
+            "name": "TARGET_PAGE_GROUP",
+            "attribute_alias": "TARGET_PAGE_GROUP"
+        },
+        {
+            "name": "TARGET_USER_ROLE",
+            "attribute_alias": "TARGET_USER_ROLE"
+        },
+        {
+            "name": "TARGET_OBJECT",
+            "attribute_alias": "TARGET_OBJECT"
+        },
+        {
+            "name": "CONDITION_UXON",
+            "attribute_alias": "CONDITION_UXON"
+        },
+        {
+            "name": "TARGET_ACTION_MODEL",
+            "attribute_alias": "TARGET_ACTION_MODEL"
+        },
+        {
+            "name": "TARGET_ACTION_PROTOTYPE",
+            "attribute_alias": "TARGET_ACTION_PROTOTYPE"
+        },
+        {
+            "name": "TARGET_FACADE",
+            "attribute_alias": "TARGET_FACADE"
+        },
+        {
+            "name": "TARGET_APP",
+            "attribute_alias": "TARGET_APP"
+        }
+    ],
+    "rows": [
+        {
+            "_EXPORT_SUMMARY": "DataFlowFacade für web API users",
+            "CREATED_ON": "2026-06-17 11:56:24",
+            "MODIFIED_ON": "2026-06-17 11:56:24",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f1b53dcd12663eb53d002248e6305d",
+            "NAME": "DataFlowFacade für web API users",
+            "DESCRIPTION": "",
+            "EFFECT": "P",
+            "APP": "0x38000000000000000000000000000000",
+            "AUTHORIZATION_POINT": "0x11ea8e12097517b8801f025041000001",
+            "TARGET_PAGE_GROUP": null,
+            "TARGET_USER_ROLE": "0x11f194bcb103088694bc002248e6305d",
+            "TARGET_OBJECT": null,
+            "CONDITION_UXON": null,
+            "TARGET_ACTION_MODEL": null,
+            "TARGET_ACTION_PROTOTYPE": "",
+            "TARGET_FACADE": "axenox/etl/Facades/DataFlowFacade.php",
+            "TARGET_APP": null
+        },
+        {
+            "_EXPORT_SUMMARY": "RunETLFlow for Web API users",
+            "CREATED_ON": "2026-06-18 11:22:17",
+            "MODIFIED_ON": "2026-06-18 11:22:17",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f1bf01337e0440bf01002248e6305d",
+            "NAME": "RunETLFlow for Web API users",
+            "DESCRIPTION": "",
+            "EFFECT": "P",
+            "APP": "0x38000000000000000000000000000000",
+            "AUTHORIZATION_POINT": "0x11ea8eddc766689f8ba98c04ba002958",
+            "TARGET_PAGE_GROUP": null,
+            "TARGET_USER_ROLE": "0x11f194bcb103088694bc002248e6305d",
+            "TARGET_OBJECT": null,
+            "CONDITION_UXON": null,
+            "TARGET_ACTION_MODEL": null,
+            "TARGET_ACTION_PROTOTYPE": "axenox/etl/Actions/RunETLFlow.php",
+            "TARGET_FACADE": "axenox/etl/Facades/DataFlowFacade.php",
+            "TARGET_APP": null
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "exface.Core.AUTHORIZATION_POLICY",
+        "conditions": [
+            {
+                "expression": "APP",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "exface.Core.AUTHORIZATION_POLICY"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

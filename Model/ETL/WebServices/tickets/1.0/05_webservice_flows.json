@@ -1,0 +1,94 @@
+{
+    "object_alias": "axenox.ETL.webservice_flow",
+    "columns": [
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "flow",
+            "attribute_alias": "flow"
+        },
+        {
+            "name": "webservice",
+            "attribute_alias": "webservice"
+        },
+        {
+            "name": "route",
+            "attribute_alias": "route"
+        }
+    ],
+    "rows": [
+        {
+            "CREATED_ON": "2026-06-16 23:12:21",
+            "MODIFIED_ON": "2026-06-18 10:13:21",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
+            "UID": "0x11f19e1b102b00409e1b002248e6305d",
+            "flow": "0x11f18c1de3d835c68c1d002248e6305d",
+            "webservice": "0x11f1a1daabf3465aa1da002248e6305d",
+            "route": "Export"
+        },
+        {
+            "CREATED_ON": "2026-06-18 10:13:15",
+            "MODIFIED_ON": "2026-06-18 10:13:15",
+            "CREATED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
+            "MODIFIED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
+            "UID": "0x11f1ae748e4fea50ae74002248e6305d",
+            "flow": "0x11f1aea2b01ed58eaea2002248e6305d",
+            "webservice": "0x11f1a1daabf3465aa1da002248e6305d",
+            "route": "Import"
+        },
+        {
+            "CREATED_ON": "2026-06-18 15:30:37",
+            "MODIFIED_ON": "2026-06-18 15:30:37",
+            "CREATED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
+            "MODIFIED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
+            "UID": "0x11f1bd11e498c658bd11002248e6305d",
+            "flow": "0x11f182606a8859d28260002248e6305d",
+            "webservice": "0x11f1a1daabf3465aa1da002248e6305d",
+            "route": "Resources"
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "axenox.ETL.webservice_flow",
+        "conditions": [
+            {
+                "expression": "webservice__app",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "axenox.ETL.webservice_flow"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

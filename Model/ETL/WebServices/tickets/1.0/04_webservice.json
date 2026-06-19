@@ -1,0 +1,655 @@
+{
+    "object_alias": "axenox.ETL.webservice",
+    "columns": [
+        {
+            "name": "_EXPORT_SUMMARY",
+            "hidden": true,
+            "attribute_alias": "LABEL"
+        },
+        {
+            "name": "CREATED_ON",
+            "attribute_alias": "CREATED_ON"
+        },
+        {
+            "name": "MODIFIED_ON",
+            "attribute_alias": "MODIFIED_ON"
+        },
+        {
+            "name": "CREATED_BY_USER",
+            "attribute_alias": "CREATED_BY_USER"
+        },
+        {
+            "name": "MODIFIED_BY_USER",
+            "attribute_alias": "MODIFIED_BY_USER"
+        },
+        {
+            "name": "UID",
+            "attribute_alias": "UID"
+        },
+        {
+            "name": "alias",
+            "attribute_alias": "alias"
+        },
+        {
+            "name": "remote_connection",
+            "attribute_alias": "remote_connection"
+        },
+        {
+            "name": "app",
+            "attribute_alias": "app"
+        },
+        {
+            "name": "description",
+            "attribute_alias": "description"
+        },
+        {
+            "name": "type",
+            "attribute_alias": "type"
+        },
+        {
+            "name": "swagger_json",
+            "attribute_alias": "swagger_json"
+        },
+        {
+            "name": "name",
+            "attribute_alias": "name"
+        },
+        {
+            "name": "config_uxon",
+            "attribute_alias": "config_uxon"
+        },
+        {
+            "name": "local_url",
+            "attribute_alias": "local_url"
+        },
+        {
+            "name": "flow_direction",
+            "attribute_alias": "flow_direction"
+        },
+        {
+            "name": "version",
+            "attribute_alias": "version"
+        },
+        {
+            "name": "enabled",
+            "attribute_alias": "enabled"
+        }
+    ],
+    "rows": [
+        {
+            "_EXPORT_SUMMARY": "Ticket API [1.0]",
+            "CREATED_ON": "2026-06-16 23:09:32",
+            "MODIFIED_ON": "2026-06-19 14:58:46",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f1a1daabf3465aa1da002248e6305d",
+            "alias": "tickets",
+            "remote_connection": null,
+            "app": "0x38000000000000000000000000000000",
+            "description": "",
+            "type": "0x11eeb68096f66284b680025041000001",
+            "swagger_json": {
+                "openapi": "3.0.3",
+                "info": {
+                    "title": "Ticket API",
+                    "description": [
+                        "// Multiline text delimited by `\n`",
+                        "// TODO Describe your API here. Markdown is supported.",
+                        "",
+                        "Typical topics:",
+                        "",
+                        "- What is the API doing?",
+                        "- Who is it for?",
+                        "- What happens to duplicate data?"
+                    ]
+                },
+                "servers": [],
+                "tags": [
+                    {
+                        "name": "Tickets",
+                        "description": "Read/write tickets"
+                    }
+                ],
+                "paths": {
+                    "/Export": {
+                        "get": {
+                            "tags": [
+                                "Tickets"
+                            ],
+                            "description": "// What data is the route going to import",
+                            "parameters": [
+                                {
+                                    "name": "limit",
+                                    "in": "query",
+                                    "description": "Limit the maximum number of rows to be included in one response",
+                                    "required": false,
+                                    "schema": {
+                                        "type": "integer",
+                                        "example": 100
+                                    }
+                                },
+                                {
+                                    "name": "offset",
+                                    "in": "query",
+                                    "description": "Skip this number of rows when reading",
+                                    "required": false,
+                                    "schema": {
+                                        "type": "integer",
+                                        "example": 0
+                                    }
+                                },
+                                {
+                                    "name": "assigned_to",
+                                    "in": "query",
+                                    "required": false,
+                                    "description": "Show only tickets assigned to the resource with this name",
+                                    "schema": {
+                                        "type": "string"
+                                    }
+                                }
+                            ],
+                            "responses": {
+                                "200": {
+                                    "description": "Success",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "objects": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/ticket"
+                                                            }
+                                                        },
+                                                        "page_limit": {
+                                                            "type": "integer",
+                                                            "nullable": true,
+                                                            "x-placeholder": "[#~parameter:limit#]",
+                                                            "description": "The requested max. number of rows"
+                                                        },
+                                                        "page_offset": {
+                                                            "type": "integer",
+                                                            "nullable": true,
+                                                            "x-placeholder": "[#~parameter:offset#]",
+                                                            "description": "Number of rows skipped when reading"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "examples": {
+                                                "standard": {
+                                                    "summary": "Response with data"
+                                                },
+                                                "defaultResponse": {
+                                                    "summary": "Response if no data was found",
+                                                    "value": {
+                                                        "page_limit": null,
+                                                        "page_offset": null
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "/Resources": {
+                        "get": {
+                            "tags": [
+                                "Resources"
+                            ],
+                            "description": "// What data is the route going to import",
+                            "parameters": [
+                                {
+                                    "name": "limit",
+                                    "in": "query",
+                                    "description": "Limit the maximum number of rows to be included in one response",
+                                    "required": false,
+                                    "schema": {
+                                        "type": "integer",
+                                        "example": 100
+                                    }
+                                },
+                                {
+                                    "name": "offset",
+                                    "in": "query",
+                                    "description": "Skip this number of rows when reading",
+                                    "required": false,
+                                    "schema": {
+                                        "type": "integer",
+                                        "example": 0
+                                    }
+                                },
+                                {
+                                    "name": "user",
+                                    "in": "query",
+                                    "required": false,
+                                    "description": "Show only resources related to this user UID.",
+                                    "schema": {
+                                        "type": "string"
+                                    }
+                                }
+                            ],
+                            "responses": {
+                                "200": {
+                                    "description": "Success",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "objects": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "$ref": "#/components/schemas/resource"
+                                                            }
+                                                        },
+                                                        "page_limit": {
+                                                            "type": "integer",
+                                                            "nullable": true,
+                                                            "x-placeholder": "[#~parameter:limit#]",
+                                                            "description": "The requested max. number of rows"
+                                                        },
+                                                        "page_offset": {
+                                                            "type": "integer",
+                                                            "nullable": true,
+                                                            "x-placeholder": "[#~parameter:offset#]",
+                                                            "description": "Number of rows skipped when reading"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "examples": {
+                                                "standard": {
+                                                    "summary": "Response with data"
+                                                },
+                                                "defaultResponse": {
+                                                    "summary": "Response if no data was found",
+                                                    "value": {
+                                                        "page_limit": null,
+                                                        "page_offset": null
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "/Import": {
+                        "post": {
+                            "tags": [
+                                "Import"
+                            ],
+                            "description": "Import DevMan tickets via JSON.",
+                            "parameters": [],
+                            "requestBody": {
+                                "required": true,
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "type": "array",
+                                            "x-object-alias": "axenox.DevMan.ticket",
+                                            "items": {
+                                                "$ref": "#/components/schemas/ticket"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "responses": {
+                                "200": {
+                                    "description": "Daten wurden erfolgreich importiert"
+                                },
+                                "400": {
+                                    "description": "Die Daten sind fehlerhaft"
+                                }
+                            }
+                        }
+                    }
+                },
+                "components": {
+                    "schemas": {
+                        "ticket": {
+                            "type": "object",
+                            "x-object-alias": "axenox.DevMan.ticket",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "x-attribute-alias": "id",
+                                    "example": 2116
+                                },
+                                "created_on": {
+                                    "type": "string",
+                                    "format": "datetime",
+                                    "nullable": true,
+                                    "example": "2026-06-17 11:12:19",
+                                    "x-attribute-alias": "created_on"
+                                },
+                                "modified_on": {
+                                    "type": "string",
+                                    "format": "datetime",
+                                    "nullable": true,
+                                    "example": "2026-06-17 11:12:19",
+                                    "x-attribute-alias": "modified_on"
+                                },
+                                "created_by_user": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "Antonia Muehlberg",
+                                    "x-foreign-key": "created_by_user_oid",
+                                    "x-attribute-alias": "created_by_user"
+                                },
+                                "modified_by_user": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "Antonia Muehlberg",
+                                    "x-foreign-key": "modified_by_user_oid",
+                                    "x-attribute-alias": "modified_by_user"
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "example": "NBR Testing: Die Karte für Flächensicherungen hat falsche Layer",
+                                    "x-attribute-alias": "title"
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "NBR Testing: Im Trace scheint es, dass die **Wegerechtmaßnahme Details: Einheitliche Map-Mutation** keine Änderungen an der Karte von Flächensicherungen produziert.",
+                                    "x-attribute-alias": "description"
+                                },
+                                "parent_ticket": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": "1545 Hintergrund-Sync von Rollen mit Azure bei SSO",
+                                    "x-foreign-key": "parent_ticket_id",
+                                    "x-attribute-alias": "parent_ticket"
+                                },
+                                "state": {
+                                    "type": "string",
+                                    "example": 10,
+                                    "x-attribute-alias": "state"
+                                },
+                                "complexity": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": 2,
+                                    "x-attribute-alias": "complexity"
+                                },
+                                "LABEL": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "2116 NBR Testing: Die Karte für Flächensicherungen hat falsche Layer",
+                                    "x-attribute-alias": "LABEL"
+                                },
+                                "effort_planned_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Initially planned effort",
+                                    "example": 8,
+                                    "x-attribute-alias": "effort_planned_h"
+                                },
+                                "assigned_to": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "description": "Relation to the resource, the ticket is currently assigned to.",
+                                    "example": "Georg B.",
+                                    "x-foreign-key": "assigned_to",
+                                    "x-attribute-alias": "assigned_to"
+                                },
+                                "priority_avg": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Average priority across all projects",
+                                    "example": 1,
+                                    "x-attribute-alias": "priority_avg"
+                                },
+                                "project_title_list": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "description": "Active projects",
+                                    "example": "NBR BMDB",
+                                    "x-attribute-alias": "project_title_list"
+                                },
+                                "value": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Shows, how valuable the ticket is across all projects. The score shows, for how many projects this ticket has a high priority.",
+                                    "example": 1,
+                                    "x-attribute-alias": "value"
+                                },
+                                "effort_remaining_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Remaining effort",
+                                    "example": 0,
+                                    "x-attribute-alias": "effort_remaining_h"
+                                },
+                                "type": {
+                                    "type": "integer",
+                                    "example": "Bug",
+                                    "x-foreign-key": "ticket_type_id",
+                                    "x-attribute-alias": "type"
+                                },
+                                "effort_plan_estimated_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Plan effort estimated initially",
+                                    "example": 8,
+                                    "x-attribute-alias": "effort_plan_estimated_h"
+                                },
+                                "effort_rem_estimated_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Estimated remaining effort",
+                                    "example": 0,
+                                    "x-attribute-alias": "effort_rem_estimated_h"
+                                },
+                                "effort_plan_children_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Total planned effort of subtickets",
+                                    "example": 48,
+                                    "x-attribute-alias": "effort_plan_children_h"
+                                },
+                                "effort_rem_children_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Total remaining effort of subtickets",
+                                    "example": 48,
+                                    "x-attribute-alias": "effort_rem_children_h"
+                                },
+                                "subticket_flag": {
+                                    "type": "boolean",
+                                    "example": 0,
+                                    "x-attribute-alias": "subticket_flag"
+                                },
+                                "effort_real_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "example": 1,
+                                    "x-attribute-alias": "effort_real_h"
+                                },
+                                "milestone": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": "18.06.2026 - Produktivsetzung NBR BMDB 18.06.26",
+                                    "x-foreign-key": "milestone_id",
+                                    "x-attribute-alias": "milestone"
+                                },
+                                "done_flag": {
+                                    "type": "boolean",
+                                    "nullable": true,
+                                    "example": 0,
+                                    "x-attribute-alias": "done_flag"
+                                },
+                                "assigned_at_pos": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": 1,
+                                    "x-attribute-alias": "assigned_at_pos"
+                                },
+                                "sprint_pos": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": 1,
+                                    "x-attribute-alias": "sprint_pos"
+                                },
+                                "sprint": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": "OneLink PI5 S6",
+                                    "x-foreign-key": "sprint_id",
+                                    "x-attribute-alias": "sprint"
+                                },
+                                "origin": {
+                                    "type": "string",
+                                    "enum": [
+                                        "TEST",
+                                        "OTHER"
+                                    ],
+                                    "example": "OTHER",
+                                    "x-attribute-alias": "origin"
+                                },
+                                "release": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": "Power UI 1.31",
+                                    "x-foreign-key": "release_id",
+                                    "x-attribute-alias": "release"
+                                },
+                                "severity": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Describes how much of the system or processes the issue affects.",
+                                    "example": 2,
+                                    "x-attribute-alias": "severity"
+                                },
+                                "milestone_at_pos": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": 1,
+                                    "x-attribute-alias": "milestone_at_pos"
+                                },
+                                "test_case": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": "3997 Rollentest: Nebenbestimmungen Nachweise",
+                                    "x-foreign-key": "test_case_id",
+                                    "x-attribute-alias": "test_case"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "created_on",
+                                "modified_on",
+                                "created_by_user",
+                                "modified_by_user",
+                                "id",
+                                "title",
+                                "description",
+                                "parent_ticket",
+                                "state",
+                                "complexity",
+                                "LABEL",
+                                "effort_planned_h",
+                                "assigned_to",
+                                "priority_avg",
+                                "project_title_list",
+                                "value",
+                                "effort_remaining_h",
+                                "type",
+                                "effort_plan_estimated_h",
+                                "effort_rem_estimated_h",
+                                "effort_plan_children_h",
+                                "effort_rem_children_h",
+                                "subticket_flag",
+                                "effort_real_h",
+                                "milestone",
+                                "done_flag",
+                                "assigned_at_pos",
+                                "sprint_pos",
+                                "sprint",
+                                "origin",
+                                "release",
+                                "severity",
+                                "milestone_at_pos",
+                                "test_case"
+                            ]
+                        },
+                        "resource": {
+                            "type": "object",
+                            "x-object-alias": "axenox.DevMan.resource",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "x-attribute-alias": "id",
+                                    "example": 2116
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "x-attribute-alias": "name",
+                                    "example": "Georg B."
+                                },
+                                "user": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "x-attribute-alias": "user",
+                                    "example": "0x11eea89602c1c3dca896005056be9fa0"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "name": "Ticket API",
+            "config_uxon": {
+                "authentication": {
+                    "header_as_api_key": {
+                        "key_http_header": "X-API-KEY",
+                        "disabled": false
+                    }
+                }
+            },
+            "local_url": "tickets",
+            "flow_direction": "OUT",
+            "version": 1,
+            "enabled": 1
+        }
+    ],
+    "totals_rows": [],
+    "filters": {
+        "operator": "AND",
+        "base_object_alias": "axenox.ETL.webservice",
+        "conditions": [
+            {
+                "expression": "app",
+                "comparator": "=",
+                "value": "0x38000000000000000000000000000000",
+                "object_alias": "axenox.ETL.webservice"
+            }
+        ]
+    },
+    "rows_limit": null,
+    "rows_offset": 0,
+    "sorters": [
+        {
+            "attribute_alias": "CREATED_ON",
+            "direction": "ASC"
+        },
+        {
+            "attribute_alias": "UID",
+            "direction": "ASC"
+        }
+    ]
+}

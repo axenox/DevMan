@@ -12,11 +12,13 @@
 ALTER TABLE `ticket`
     ADD COLUMN `milestone_id` int(10) NULL
         AFTER `assigned_at_pos`,
-    ADD COLUMN `milestone_at_pos` int(11) NULL
-        AFTER `milestone_id`,
     ADD INDEX `IDX_ticket_milestone_id` (`milestone_id`),
     ADD CONSTRAINT `FK_ticket_milestone_id`
         FOREIGN KEY (`milestone_id`) REFERENCES `milestone` (`id`);
+
+ALTER TABLE `ticket`
+    ADD COLUMN `milestone_at_pos` int(11) NULL
+        AFTER `milestone_id`;
 
 -- DOWN
 ALTER TABLE `ticket`

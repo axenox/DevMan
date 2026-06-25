@@ -79,15 +79,15 @@
         {
             "_EXPORT_SUMMARY": "JSON > Tickets",
             "CREATED_ON": "2026-06-18 10:09:07",
-            "MODIFIED_ON": "2026-06-18 10:36:08",
+            "MODIFIED_ON": "2026-06-25 08:37:44",
             "CREATED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
-            "MODIFIED_BY_USER": "0x11efb880cda68010b880005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f1a1bcfaeb63b6a1bc002248e6305d",
             "to_object": "0x11e5f0b9cd1f508089840050568905af",
             "stop_flow_on_error": 1,
             "disabled": 0,
             "flow": "0x11f1aea2b01ed58eaea2002248e6305d",
-            "from_object": null,
+            "from_object": "0x11eeae4695964d78ae46025041000001",
             "type": "E",
             "etl_config_uxon": {
                 "skip_invalid_rows": true,

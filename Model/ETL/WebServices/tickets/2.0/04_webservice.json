@@ -77,12 +77,12 @@
     ],
     "rows": [
         {
-            "_EXPORT_SUMMARY": "Ticket API [1.0]",
-            "CREATED_ON": "2026-06-16 23:09:32",
-            "MODIFIED_ON": "2026-06-25 09:01:09",
+            "_EXPORT_SUMMARY": "Ticket API [2.0]",
+            "CREATED_ON": "2026-06-25 09:00:13",
+            "MODIFIED_ON": "2026-06-25 17:13:39",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
-            "UID": "0x11f1a1daabf3465aa1da002248e6305d",
+            "UID": "0x11f1889c83776b96889c002248e6305d",
             "alias": "tickets",
             "remote_connection": null,
             "app": "0x38000000000000000000000000000000",
@@ -286,7 +286,7 @@
                     "/save": {
                         "post": {
                             "tags": [
-                                "Import"
+                                "Tickets"
                             ],
                             "description": "Import DevMan tickets via JSON.",
                             "parameters": [],
@@ -374,7 +374,7 @@
                                     "x-attribute-alias": "parent_ticket"
                                 },
                                 "state": {
-                                    "type": "string",
+                                    "type": "integer",
                                     "example": 10,
                                     "x-attribute-alias": "state"
                                 },
@@ -395,9 +395,27 @@
                                     "type": "integer",
                                     "nullable": true,
                                     "description": "Relation to the resource, the ticket is currently assigned to.",
-                                    "example": "Georg B.",
+                                    "example": 105,
                                     "x-foreign-key": "assigned_to",
                                     "x-attribute-alias": "assigned_to"
+                                },
+                                "assignee": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "description": "Name of the resource, the ticket is currently assigned to.",
+                                    "example": "Max M.",
+                                    "x-attribute-alias": "assigned_to__LABEL",
+                                    "x-lookup": {
+                                        "lookup_object_alias": "axenox.DevMan.resource",
+                                        "lookup_column": "id",
+                                        "if_not_found": "error_on_first",
+                                        "matches": [
+                                            {
+                                                "from": "assignee",
+                                                "lookup": "name"
+                                            }
+                                        ]
+                                    }
                                 },
                                 "priority_avg": {
                                     "type": "number",
@@ -584,7 +602,7 @@
             },
             "local_url": "tickets",
             "flow_direction": "OUT",
-            "version": 1,
+            "version": 2,
             "enabled": 1
         }
     ],

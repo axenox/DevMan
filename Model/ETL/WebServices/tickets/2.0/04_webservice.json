@@ -79,7 +79,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket API [2.0]",
             "CREATED_ON": "2026-06-25 09:00:13",
-            "MODIFIED_ON": "2026-06-25 17:13:39",
+            "MODIFIED_ON": "2026-06-26 15:43:35",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f1889c83776b96889c002248e6305d",
@@ -327,34 +327,6 @@
                                     "x-attribute-alias": "id",
                                     "example": 2116
                                 },
-                                "created_on": {
-                                    "type": "string",
-                                    "format": "datetime",
-                                    "nullable": true,
-                                    "example": "2026-06-17 11:12:19",
-                                    "x-attribute-alias": "created_on"
-                                },
-                                "modified_on": {
-                                    "type": "string",
-                                    "format": "datetime",
-                                    "nullable": true,
-                                    "example": "2026-06-17 11:12:19",
-                                    "x-attribute-alias": "modified_on"
-                                },
-                                "created_by_user": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "example": "0x11f08ce4baed19b88ce4005056be9857",
-                                    "x-foreign-key": "created_by_user_oid",
-                                    "x-attribute-alias": "created_by_user"
-                                },
-                                "modified_by_user": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "example": "0x11f08ce4baed19b88ce4005056be9857",
-                                    "x-foreign-key": "modified_by_user_oid",
-                                    "x-attribute-alias": "modified_by_user"
-                                },
                                 "title": {
                                     "type": "string",
                                     "example": "Ticket to demonstrate the API",
@@ -366,38 +338,27 @@
                                     "example": "Create a ticket to demonstrate the Web API of the DevMan",
                                     "x-attribute-alias": "description"
                                 },
-                                "parent_ticket": {
-                                    "type": "integer",
-                                    "nullable": true,
-                                    "example": 1024,
-                                    "x-foreign-key": "parent_ticket_id",
-                                    "x-attribute-alias": "parent_ticket"
-                                },
                                 "state": {
                                     "type": "integer",
                                     "example": 10,
                                     "x-attribute-alias": "state"
                                 },
-                                "complexity": {
-                                    "type": "integer",
+                                "type": {
+                                    "type": "string",
+                                    "example": "Bug",
                                     "nullable": true,
-                                    "example": 2,
-                                    "x-attribute-alias": "complexity"
-                                },
-                                "effort_planned_h": {
-                                    "type": "number",
-                                    "nullable": true,
-                                    "description": "Initially planned effort",
-                                    "example": 8,
-                                    "x-attribute-alias": "effort_planned_h"
-                                },
-                                "assigned_to": {
-                                    "type": "integer",
-                                    "nullable": true,
-                                    "description": "Relation to the resource, the ticket is currently assigned to.",
-                                    "example": 105,
-                                    "x-foreign-key": "assigned_to",
-                                    "x-attribute-alias": "assigned_to"
+                                    "x-attribute-alias": "type__LABEL",
+                                    "x-lookup": {
+                                        "lookup_object_alias": "axenox.DevMan.ticket_type",
+                                        "lookup_column": "id",
+                                        "if_not_found": "error_on_first",
+                                        "matches": [
+                                            {
+                                                "from": "type",
+                                                "lookup": "LABEL"
+                                            }
+                                        ]
+                                    }
                                 },
                                 "assignee": {
                                     "type": "string",
@@ -417,19 +378,20 @@
                                         ]
                                     }
                                 },
+                                "assigned_to": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "description": "Relation to the resource, the ticket is currently assigned to.",
+                                    "example": 105,
+                                    "x-foreign-key": "assigned_to",
+                                    "x-attribute-alias": "assigned_to"
+                                },
                                 "priority_avg": {
                                     "type": "number",
                                     "nullable": true,
                                     "description": "Average priority across all projects",
                                     "example": 1,
                                     "x-attribute-alias": "priority_avg"
-                                },
-                                "project_title_list": {
-                                    "type": "string",
-                                    "nullable": true,
-                                    "description": "Active projects",
-                                    "example": "Proj1, Proj2",
-                                    "x-attribute-alias": "project_title_list"
                                 },
                                 "value": {
                                     "type": "number",
@@ -438,19 +400,39 @@
                                     "example": 1,
                                     "x-attribute-alias": "value"
                                 },
+                                "project_title_list": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "description": "Active projects",
+                                    "example": "Proj1, Proj2",
+                                    "x-attribute-alias": "project_title_list"
+                                },
+                                "complexity": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": 2,
+                                    "x-attribute-alias": "complexity"
+                                },
+                                "effort_planned_h": {
+                                    "type": "number",
+                                    "nullable": true,
+                                    "description": "Initially planned effort",
+                                    "example": 8,
+                                    "x-attribute-alias": "effort_planned_h"
+                                },
+                                "parent_ticket": {
+                                    "type": "integer",
+                                    "nullable": true,
+                                    "example": 1024,
+                                    "x-foreign-key": "parent_ticket_id",
+                                    "x-attribute-alias": "parent_ticket"
+                                },
                                 "effort_remaining_h": {
                                     "type": "number",
                                     "nullable": true,
                                     "description": "Remaining effort",
                                     "example": 0,
                                     "x-attribute-alias": "effort_remaining_h"
-                                },
-                                "type": {
-                                    "type": "integer",
-                                    "example": "Bug",
-                                    "nullable": true,
-                                    "x-foreign-key": "ticket_type_id",
-                                    "x-attribute-alias": "type"
                                 },
                                 "effort_plan_estimated_h": {
                                     "type": "number",
@@ -554,6 +536,32 @@
                                     "nullable": true,
                                     "example": "3997 Rollentest: Nebenbestimmungen Nachweise",
                                     "x-attribute-alias": "test_case__LABEL"
+                                },
+                                "created_on": {
+                                    "type": "string",
+                                    "format": "datetime",
+                                    "nullable": true,
+                                    "example": "2026-06-17 11:12:19",
+                                    "x-attribute-alias": "created_on"
+                                },
+                                "created_by_user": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "0x11f08ce4baed19b88ce4005056be9857",
+                                    "x-attribute-alias": "created_by_user"
+                                },
+                                "modified_on": {
+                                    "type": "string",
+                                    "format": "datetime",
+                                    "nullable": true,
+                                    "example": "2026-06-17 11:12:19",
+                                    "x-attribute-alias": "modified_on"
+                                },
+                                "modified_by_user": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "0x11f08ce4baed19b88ce4005056be9857",
+                                    "x-attribute-alias": "modified_by_user"
                                 }
                             },
                             "additionalProperties": false,
@@ -598,6 +606,9 @@
                         "key_http_header": "X-API-KEY",
                         "disabled": false
                     }
+                },
+                "validation": {
+                    "verbose": true
                 }
             },
             "local_url": "tickets",

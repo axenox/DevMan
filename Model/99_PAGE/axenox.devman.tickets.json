@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
     "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2026-06-03 21:36:30",
+    "modified_on": "2026-06-29 16:15:08",
     "contents": {
         "widget_type": "DataTable",
         "object_alias": "axenox.DevMan.ticket",
@@ -102,11 +102,7 @@
                 "attribute_alias": "type__LABEL"
             },
             {
-                "attribute_alias": "milestone__date",
-                "caption": "milestone date",
-                "cell_widget": {
-                    "hint": "Scheduled delivery date."
-                }
+                "attribute_alias": "due_on"
             },
             {
                 "attribute_alias": "value"

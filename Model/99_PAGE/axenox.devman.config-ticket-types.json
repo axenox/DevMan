@@ -10,12 +10,15 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
-    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2026-03-11 12:03:18",
+    "modified_by_user_selector": "0x11efb880cda68010b880005056be9fa0",
+    "modified_on": "2026-06-18 14:32:01",
     "contents": {
         "object_alias": "axenox.DevMan.ticket_type",
         "widget_type": "DataTable",
         "columns": [
+            {
+                "attribute_alias": "id"
+            },
             {
                 "attribute_group_alias": "~VISIBLE"
             },

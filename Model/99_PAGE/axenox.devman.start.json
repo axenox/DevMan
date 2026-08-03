@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
     "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
-    "modified_on": "2026-03-10 13:35:13",
+    "modified_on": "2026-08-03 13:31:27",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.ticket",
@@ -23,7 +23,7 @@
                         "widget_type": "SplitHorizontal",
                         "panels": [
                             {
-                                "width": "50%",
+                                "width": "100%",
                                 "caption": "Assigned to me",
                                 "widgets": [
                                     {
@@ -53,6 +53,9 @@
                                             },
                                             {
                                                 "attribute_alias": "type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "due_on"
                                             },
                                             {
                                                 "attribute_alias": "milestone__date",
@@ -99,8 +102,7 @@
                                         ]
                                     }
                                 ]
-                            },
-                            []
+                            }
                         ]
                     }
                 ]
@@ -142,6 +144,9 @@
                                             },
                                             {
                                                 "attribute_alias": "type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "due_on"
                                             },
                                             {
                                                 "attribute_alias": "milestone__date",
@@ -206,6 +211,9 @@
                                             },
                                             {
                                                 "attribute_alias": "type__LABEL"
+                                            },
+                                            {
+                                                "attribute_alias": "due_on"
                                             },
                                             {
                                                 "attribute_alias": "milestone__date",

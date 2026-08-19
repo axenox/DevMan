@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Ticket [axenox.DevMan.ticket]",
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2026-07-02 14:59:26",
+            "MODIFIED_ON": "2026-08-19 16:59:34",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x11eea0bd394bca54a0bd005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -231,6 +231,9 @@
                                                 ]
                                             },
                                             {
+                                                "attribute_alias": "time_booking_text"
+                                            },
+                                            {
                                                 "widget_type": "InlineGroup",
                                                 "caption": "Created",
                                                 "separator": "by",
@@ -248,7 +251,7 @@
                                                 "widget_type": "DataSpreadSheet",
                                                 "object_alias": "axenox.DevMan.project_tickets",
                                                 "hide_header": true,
-                                                "height": 7,
+                                                "height": 5,
                                                 "filters": [
                                                     {
                                                         "attribute_alias": "ticket",
@@ -285,7 +288,6 @@
                                                 "hide_header": true,
                                                 "hide_footer": true,
                                                 "paginate": false,
-                                                "height": 7,
                                                 "lazy_loading_action": {
                                                     "alias": "exface.core.ReadData",
                                                     "update_filter_context": false
@@ -335,7 +337,7 @@
                                                 "object_alias": "axenox.DevMan.ticket_comment",
                                                 "empty_text": "No issues were found while testing this test case.",
                                                 "paginate": false,
-                                                "height": 15.11,
+                                                "height": 10,
                                                 "caption": "Comments",
                                                 "filters": [
                                                     {
@@ -400,7 +402,7 @@
                                     },
                                     {
                                         "attribute_alias": "description",
-                                        "height": 25,
+                                        "height": "65%",
                                         "width": 2,
                                         "widget_type": "InputMarkdown",
                                         "hide_caption": true,
@@ -415,6 +417,7 @@
                                         "zoomable": true,
                                         "hide_header": false,
                                         "width": 2,
+                                        "height": "35%",
                                         "filters": [
                                             {
                                                 "attribute_alias": "ticket",
@@ -449,7 +452,8 @@
                                                 "attribute_alias": "test_case",
                                                 "comparator": "==",
                                                 "value": "=test_case_id",
-                                                "hidden": true
+                                                "hidden": true,
+                                                "required": true
                                             },
                                             {
                                                 "attribute_alias": "test_log__tested_installation"

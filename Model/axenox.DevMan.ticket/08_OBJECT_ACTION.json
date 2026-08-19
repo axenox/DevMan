@@ -296,6 +296,39 @@
             "APP": "0x38000000000000000000000000000000",
             "USE_IN_OBJECT_BASKET_FLAG": 0,
             "DOCS": ""
+        },
+        {
+            "_EXPORT_SUMMARY": "Ticket: Assign [TicketAssignDialog]",
+            "CREATED_ON": "2026-08-19 16:48:04",
+            "MODIFIED_ON": "2026-08-19 16:48:04",
+            "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
+            "UID": "0x11f1a92ffbb1af6ea92f002248e6305d",
+            "OBJECT": "0x11e5f0b9cd1f508089840050568905af",
+            "ACTION_PROTOTYPE": "exface/core/Actions/ShowMassEditDialog.php",
+            "ALIAS": "TicketAssignDialog",
+            "NAME": "Assign",
+            "SHORT_DESCRIPTION": "",
+            "CONFIG_UXON": {
+                "prefill_with_input_data": true,
+                "input_rows_min": 1,
+                "input_object_alias": "axenox.DevMan.ticket",
+                "icon": "user",
+                "widget": {
+                    "widget_type": "Dialog",
+                    "object_alias": "axenox.DevMan.ticket",
+                    "height": "auto",
+                    "width": 1,
+                    "widgets": [
+                        {
+                            "attribute_alias": "assigned_to"
+                        }
+                    ]
+                }
+            },
+            "APP": "0x38000000000000000000000000000000",
+            "USE_IN_OBJECT_BASKET_FLAG": 0,
+            "DOCS": ""
         }
     ],
     "totals_rows": [],

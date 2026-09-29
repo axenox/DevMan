@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "1970-01-01 01:00:00",
-    "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
-    "modified_on": "2025-04-02 16:49:34",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2026-09-29 13:37:49",
     "contents": {
         "widget_type": "SplitHorizontal",
         "object_alias": "axenox.DevMan.project",
@@ -23,10 +23,10 @@
                         "widget_type": "SplitVertical",
                         "panels": [
                             {
-                                "caption": "Projects",
                                 "height": "60%",
                                 "widgets": [
                                     {
+                                        "caption": "Projects",
                                         "widget_type": "DataTable",
                                         "id": "projects_table",
                                         "nowrap": false,
@@ -102,11 +102,11 @@
                                 ]
                             },
                             {
-                                "caption": "Upcoming Milestones",
                                 "collapsed": true,
                                 "collapsible": true,
                                 "widgets": [
                                     {
+                                        "caption": "Upcoming Milestones",
                                         "widget_type": "DataTable",
                                         "object_alias": "axenox.DevMan.milestone",
                                         "paginate": false,
@@ -166,9 +166,9 @@
                 ]
             },
             {
-                "caption": "Tickets",
                 "widgets": [
                     {
+                        "caption": "Tickets",
                         "widget_type": "DataTable",
                         "multi_select": true,
                         "object_alias": "axenox.DevMan.project_tickets",

@@ -10,17 +10,17 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-05-20 08:51:05",
-    "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
-    "modified_on": "2025-12-18 17:02:26",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2026-09-29 13:46:52",
     "contents": {
         "object_alias": "axenox.DevMan.application",
         "widget_type": "SplitHorizontal",
         "panels": [
             {
-                "caption": "Applications",
                 "width": "30%",
                 "widgets": [
                     {
+                        "caption": "Applications",
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.application",
                         "id": "applications_table",
@@ -84,9 +84,9 @@
                 ]
             },
             {
-                "caption": "Modules",
                 "widgets": [
                     {
+                        "caption": "Modules",
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.module",
                         "id": "modules_table",
@@ -140,10 +140,10 @@
                 ]
             },
             {
-                "caption": "Features",
                 "width": "40%",
                 "widgets": [
                     {
+                        "caption": "Features",
                         "widget_type": "DataTree",
                         "object_alias": "axenox.DevMan.feature",
                         "tree_parent_relation_alias": "parent_feature",

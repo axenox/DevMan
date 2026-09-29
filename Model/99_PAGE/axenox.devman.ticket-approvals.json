@@ -1,0 +1,101 @@
+{
+    "uid": "0x11f19d0f19caceb89d0f002248e6305d",
+    "alias_with_namespace": "axenox.devman.ticket-approvals",
+    "menu_parent_page_selector": "0x09481916d5b611e789120050568905af",
+    "menu_index": 3,
+    "menu_visible": true,
+    "name": "Approvals",
+    "description": "",
+    "intro": "",
+    "replaces_page_selector": null,
+    "created_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "created_on": "2026-09-29 08:43:38",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2026-09-29 09:05:01",
+    "contents": {
+        "widget_type": "DataTable",
+        "object_alias": "axenox.DevMan.approval",
+        "filters": [
+            {
+                "attribute_alias": "ticket"
+            },
+            {
+                "attribute_alias": "approved_by_resource"
+            }
+        ],
+        "columns": [
+            {
+                "attribute_alias": "approved_on"
+            },
+            {
+                "attribute_alias": "approved_by_resource__LABEL"
+            },
+            {
+                "attribute_alias": "effort",
+                "caption": "A"
+            },
+            {
+                "attribute_alias": "ticket__effort_planned_h",
+                "caption": "P"
+            },
+            {
+                "attribute_alias": "ticket__effort_real_h",
+                "caption": "R"
+            },
+            {
+                "widget_type": "DataColumnGroup",
+                "caption": "Ticket",
+                "columns": [
+                    {
+                        "attribute_alias": "ticket__id"
+                    },
+                    {
+                        "calculation": "=Left(ticket__title, 60)"
+                    },
+                    {
+                        "attribute_alias": "ticket__state"
+                    }
+                ]
+            },
+            {
+                "attribute_alias": "description"
+            }
+        ],
+        "sorters": [
+            {
+                "attribute_alias": "approved_on",
+                "direction": "desc"
+            }
+        ],
+        "buttons": [
+            {
+                "action_alias": "exface.Core.ShowObjectCreateDialog"
+            },
+            {
+                "action_alias": "exface.Core.ShowObjectEditDialog",
+                "bind_to_double_click": true
+            },
+            {
+                "caption": "Open ticket",
+                "action": {
+                    "alias": "exface.Core.ShowObjectEditDialog",
+                    "object_alias": "axenox.DevMan.ticket",
+                    "input_mapper": {
+                        "from_object_alias": "axenox.DevMan.approval",
+                        "to_object_alias": "axenox.DevMan.ticket",
+                        "column_to_column_mappings": [
+                            {
+                                "from": "ticket",
+                                "to": "id"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "action_alias": "exface.Core.DeleteObject",
+                "visibility": "optional"
+            }
+        ]
+    }
+}

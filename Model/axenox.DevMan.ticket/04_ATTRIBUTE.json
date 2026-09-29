@@ -191,7 +191,7 @@
         {
             "_EXPORT_SUMMARY": "Title [title]",
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9d191154889840050568905af",
@@ -241,7 +241,7 @@
         {
             "_EXPORT_SUMMARY": "Description [description]",
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9d19117f189840050568905af",
@@ -265,7 +265,7 @@
             "NAME": "Description",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
-            "COPYABLEFLAG": 1,
+            "COPYABLEFLAG": 0,
             "ICON": null,
             "ICON_SET": null,
             "ABBREVIATION": null,
@@ -293,7 +293,7 @@
         {
             "_EXPORT_SUMMARY": "Parent ticket [parent_ticket]",
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9d191192889840050568905af",
@@ -341,7 +341,7 @@
         {
             "_EXPORT_SUMMARY": "State [state]",
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2026-06-29 16:23:05",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9d1911a3289840050568905af",
@@ -363,7 +363,7 @@
             "NAME": "State",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
-            "COPYABLEFLAG": 1,
+            "COPYABLEFLAG": 0,
             "ICON": "",
             "ICON_SET": "",
             "ABBREVIATION": "",
@@ -414,7 +414,7 @@
         {
             "_EXPORT_SUMMARY": "Complexity [complexity]",
             "CREATED_ON": "2016-03-23 06:41:32",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9d1911b2c89840050568905af",
@@ -462,7 +462,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket [LABEL]",
             "CREATED_ON": "2016-03-23 07:20:47",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0bf4d80502c89840050568905af",
@@ -510,7 +510,7 @@
         {
             "_EXPORT_SUMMARY": "Effort Pl. [effort_planned_h]",
             "CREATED_ON": "2016-12-14 16:29:09",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e6c21a6e6c5a1f9da3e4b318306b9a",
@@ -558,7 +558,7 @@
         {
             "_EXPORT_SUMMARY": "Assigned to [assigned_to]",
             "CREATED_ON": "2016-12-14 16:29:09",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e6c21a6e6cab499da3e4b318306b9a",
@@ -606,7 +606,7 @@
         {
             "_EXPORT_SUMMARY": "Pr./All [priority_avg]",
             "CREATED_ON": "2017-04-12 12:05:31",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e71f784f21821a9f3ae4b318306b9a",
@@ -663,7 +663,7 @@
         {
             "_EXPORT_SUMMARY": "Projects [project_title_list]",
             "CREATED_ON": "2017-04-12 12:18:08",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e71f7a124802ed9f3ae4b318306b9a",
@@ -711,7 +711,7 @@
         {
             "_EXPORT_SUMMARY": "Value [value]",
             "CREATED_ON": "2018-03-16 15:18:06",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e8292d35ba6a55a8930050568905af",
@@ -759,7 +759,7 @@
         {
             "_EXPORT_SUMMARY": "Effort Rem. [effort_remaining_h]",
             "CREATED_ON": "2019-03-14 10:49:57",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e94646e5f2610fb95b00505689aada",
@@ -807,7 +807,7 @@
         {
             "_EXPORT_SUMMARY": "Type [type]",
             "CREATED_ON": "2019-03-14 10:55:06",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e946479e6eaef9b95b00505689aada",
@@ -855,7 +855,7 @@
         {
             "_EXPORT_SUMMARY": "Effort Pl. (est.) [effort_plan_estimated_h]",
             "CREATED_ON": "2019-03-16 17:18:02",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e9480f6f17114db95b00505689aada",
@@ -903,7 +903,7 @@
         {
             "_EXPORT_SUMMARY": "Effort Rem. (est.) [effort_rem_estimated_h]",
             "CREATED_ON": "2019-03-16 17:18:02",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e9480f6f186942b95b00505689aada",
@@ -951,7 +951,7 @@
         {
             "_EXPORT_SUMMARY": "Eff. Plan (Subtickets) [effort_plan_children_h]",
             "CREATED_ON": "2019-03-16 17:23:59",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e94810444d62d5b95b00505689aada",
@@ -999,7 +999,7 @@
         {
             "_EXPORT_SUMMARY": "Eff. Rem. (Subtickets) [effort_rem_children_h]",
             "CREATED_ON": "2019-03-17 09:45:53",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e948996e7ec50cb95b00505689aada",
@@ -1047,7 +1047,7 @@
         {
             "_EXPORT_SUMMARY": "# [id]",
             "CREATED_ON": "2021-04-30 16:29:54",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb826187efe92e8261025041000001",
@@ -1095,7 +1095,7 @@
         {
             "_EXPORT_SUMMARY": "Effort spent [effort_real_h]",
             "CREATED_ON": "2021-05-05 12:44:19",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eba327d8a7975aa327025041000001",
@@ -1115,7 +1115,7 @@
             "NAME": "Effort spent",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
-            "COPYABLEFLAG": 1,
+            "COPYABLEFLAG": 0,
             "ICON": null,
             "ICON_SET": null,
             "ABBREVIATION": null,
@@ -1143,7 +1143,7 @@
         {
             "_EXPORT_SUMMARY": "Milestone [milestone]",
             "CREATED_ON": "2021-05-05 15:09:20",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ebb54e1aefb9a8b54e025041000001",
@@ -1191,7 +1191,7 @@
         {
             "_EXPORT_SUMMARY": "Is subticket [subticket_flag]",
             "CREATED_ON": "2021-05-05 17:47:45",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eb916b3c7238e2916b025041000001",
@@ -1239,7 +1239,7 @@
         {
             "_EXPORT_SUMMARY": "Done [done_flag]",
             "CREATED_ON": "2021-11-01 11:08:27",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eca1dba8386d24a1db005056bee7c0",
@@ -1287,7 +1287,7 @@
         {
             "_EXPORT_SUMMARY": "Assigned at pos [assigned_at_pos]",
             "CREATED_ON": "2021-11-01 22:46:28",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eca7262ba55d5aa726747827435ce5",
@@ -1335,7 +1335,7 @@
         {
             "_EXPORT_SUMMARY": "Sprint pos [sprint_pos]",
             "CREATED_ON": "2021-11-08 15:29:14",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ecaaa93fdd64a0aaa9025041000001",
@@ -1355,7 +1355,7 @@
             "NAME": "Sprint pos",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
-            "COPYABLEFLAG": 1,
+            "COPYABLEFLAG": 0,
             "ICON": null,
             "ICON_SET": null,
             "ABBREVIATION": null,
@@ -1383,7 +1383,7 @@
         {
             "_EXPORT_SUMMARY": "Sprint [sprint]",
             "CREATED_ON": "2021-11-08 15:29:14",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ecaf4c3fd1a39aaf4c025041000001",
@@ -1431,7 +1431,7 @@
         {
             "_EXPORT_SUMMARY": "Origin [origin]",
             "CREATED_ON": "2024-03-26 11:37:02",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11eb87a6463eb30c87a6005056bee7c0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11eea442c829e6c6a442005056be9fa0",
@@ -1491,7 +1491,7 @@
         {
             "_EXPORT_SUMMARY": "Release [release]",
             "CREATED_ON": "2024-09-23 21:52:52",
-            "MODIFIED_ON": "2025-08-14 14:17:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11ef96256b4fa2e89625005056be9fa0",
@@ -1539,9 +1539,9 @@
         {
             "_EXPORT_SUMMARY": "Severity [severity]",
             "CREATED_ON": "2026-02-18 14:03:37",
-            "MODIFIED_ON": "2026-02-18 16:14:15",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11ef933268ff399c9332005056be9fa0",
-            "MODIFIED_BY_USER": "0x11ef933268ff399c9332005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f19ee23cf3d67a9ee2002248e6305d",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -1603,9 +1603,9 @@
         {
             "_EXPORT_SUMMARY": "Test case [test_case]",
             "CREATED_ON": "2026-03-11 16:27:59",
-            "MODIFIED_ON": "2026-03-11 16:27:59",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11ef933268ff399c9332005056be9fa0",
-            "MODIFIED_BY_USER": "0x11ef933268ff399c9332005056be9fa0",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f1ae46e30dda2aae46002248e6305d",
             "SORTABLEFLAG": 1,
             "FILTERABLEFLAG": 1,
@@ -1619,11 +1619,11 @@
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": null,
+            "COMMENTS": "",
             "NAME": "Test case",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
-            "COPYABLEFLAG": 1,
+            "COPYABLEFLAG": 0,
             "ICON": null,
             "ICON_SET": null,
             "ABBREVIATION": null,
@@ -1644,14 +1644,14 @@
             "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_VALUE": null,
-            "FIXED_VALUE": null,
+            "DEFAULT_VALUE": "",
+            "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": null
         },
         {
             "_EXPORT_SUMMARY": "Milestone priority [milestone_at_pos]",
             "CREATED_ON": "2026-03-20 09:24:55",
-            "MODIFIED_ON": "2026-03-20 09:25:20",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f1acd946cef9a8acd9002248e6305d",
@@ -1671,7 +1671,7 @@
             "NAME": "Milestone priority",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
-            "COPYABLEFLAG": 1,
+            "COPYABLEFLAG": 0,
             "ICON": null,
             "ICON_SET": null,
             "ABBREVIATION": null,
@@ -1699,7 +1699,7 @@
         {
             "_EXPORT_SUMMARY": "Due [due_on]",
             "CREATED_ON": "2026-06-29 15:36:23",
-            "MODIFIED_ON": "2026-06-29 15:41:32",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f18635854a6e648635002248e6305d",
@@ -1756,7 +1756,7 @@
         {
             "_EXPORT_SUMMARY": "Time booking text [time_booking_text]",
             "CREATED_ON": "2026-08-19 16:58:32",
-            "MODIFIED_ON": "2026-08-19 16:58:32",
+            "MODIFIED_ON": "2026-08-21 14:58:51",
             "CREATED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11f1a0ee72597e66a0ee002248e6305d",
@@ -1772,7 +1772,7 @@
             "COPY_WITH_RELATED_OBJECT": null,
             "DELETE_WITH_RELATED_OBJECT": null,
             "DEFAULT_DISPLAY_UXON": null,
-            "COMMENTS": null,
+            "COMMENTS": "",
             "NAME": "Time booking text",
             "RELATION_CARDINALITY": "",
             "TYPE": "D",
@@ -1797,8 +1797,8 @@
             "RELATED_OBJ_ATTR": null,
             "SHORT_DESCRIPTION": "",
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_VALUE": null,
-            "FIXED_VALUE": null,
+            "DEFAULT_VALUE": "",
+            "FIXED_VALUE": "",
             "CUSTOM_DATA_TYPE": {
                 "length_max": 100
             }

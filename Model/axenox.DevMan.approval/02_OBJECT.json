@@ -87,9 +87,9 @@
         {
             "_EXPORT_SUMMARY": "Approval [axenox.DevMan.approval]",
             "CREATED_ON": "2019-03-21 10:00:51",
-            "MODIFIED_ON": "2021-04-30 11:33:53",
+            "MODIFIED_ON": "2026-09-29 08:58:26",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
-            "MODIFIED_BY_USER": "0x31000000000000000000000000000000",
+            "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e94bc02b03100cb95b00505689aada",
             "READABLE_FLAG": 1,
             "WRITABLE_FLAG": 1,
@@ -102,7 +102,41 @@
             "SHORT_DESCRIPTION": "",
             "PARENT_OBJECT": null,
             "DATA_ADDRESS_PROPS": null,
-            "DEFAULT_EDITOR_UXON": null,
+            "DEFAULT_EDITOR_UXON": {
+                "widget_type": "Dialog",
+                "width": 1,
+                "columns_in_grid": 1,
+                "height": "auto",
+                "widgets": [
+                    {
+                        "attribute_alias": "project"
+                    },
+                    {
+                        "attribute_alias": "approved_by_resource"
+                    },
+                    {
+                        "attribute_alias": "description"
+                    },
+                    {
+                        "widget_type": "WidgetGroup",
+                        "caption": "Approval scope",
+                        "widgets": [
+                            {
+                                "attribute_alias": "milestone"
+                            },
+                            {
+                                "attribute_alias": "ticket"
+                            },
+                            {
+                                "attribute_alias": "effort"
+                            },
+                            {
+                                "attribute_alias": "resource"
+                            }
+                        ]
+                    }
+                ]
+            },
             "ALIAS": "approval",
             "DATA_ADDRESS": "approval"
         }

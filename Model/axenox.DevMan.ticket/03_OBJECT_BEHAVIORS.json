@@ -63,7 +63,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket states",
             "CREATED_ON": "2017-04-03 13:51:12",
-            "MODIFIED_ON": "2026-06-29 16:22:48",
+            "MODIFIED_ON": "2026-09-28 14:44:56",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e718746bebebebbeb2e4b318306b9a",
@@ -81,6 +81,10 @@
                     },
                     "15": {
                         "name": "In discussion"
+                    },
+                    "18": {
+                        "name": "Awaiting approval",
+                        "color": "yellow"
                     },
                     "20": {
                         "name": "Approved"

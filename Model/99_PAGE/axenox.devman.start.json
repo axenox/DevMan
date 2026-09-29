@@ -10,8 +10,8 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
-    "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
-    "modified_on": "2026-08-03 13:31:27",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2026-09-29 09:13:18",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.ticket",
@@ -24,9 +24,9 @@
                         "panels": [
                             {
                                 "width": "100%",
-                                "caption": "Assigned to me",
                                 "widgets": [
                                     {
+                                        "caption": "Assigned to me",
                                         "widget_type": "DataTable",
                                         "filters": [
                                             {
@@ -114,9 +114,9 @@
                         "panels": [
                             {
                                 "width": "50%",
-                                "caption": "Tickets I created",
                                 "widgets": [
                                     {
+                                        "caption": "Tickets I created",
                                         "widget_type": "DataTable",
                                         "filters": [
                                             {
@@ -140,7 +140,7 @@
                                                 "attribute_alias": "id"
                                             },
                                             {
-                                                "attribute_alias": "title"
+                                                "calculation": "=Left(title, 80)"
                                             },
                                             {
                                                 "attribute_alias": "type__LABEL"
@@ -181,9 +181,9 @@
                                 ]
                             },
                             {
-                                "caption": "Last worked on",
                                 "widgets": [
                                     {
+                                        "caption": "Last worked on",
                                         "widget_type": "DataTable",
                                         "filters": [
                                             {
@@ -207,7 +207,7 @@
                                                 "attribute_alias": "id"
                                             },
                                             {
-                                                "attribute_alias": "title"
+                                                "calculation": "=Left(title, 80)"
                                             },
                                             {
                                                 "attribute_alias": "type__LABEL"

@@ -11,16 +11,16 @@
     "created_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
     "created_on": "2024-09-23 22:06:28",
     "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2025-08-28 14:20:44",
+    "modified_on": "2026-09-29 09:14:10",
     "contents": {
         "object_alias": "axenox.DevMan.release",
         "widget_type": "SplitHorizontal",
         "panels": [
             {
-                "caption": "Releases",
                 "width": "60%",
                 "widgets": [
                     {
+                        "caption": "Releases",
                         "widget_type": "DataTable",
                         "id": "releases_table",
                         "filters": [
@@ -114,10 +114,10 @@
                         "widget_type": "SplitVertical",
                         "panels": [
                             {
-                                "caption": "Tickets",
                                 "height": "60%",
                                 "widgets": [
                                     {
+                                        "caption": "Tickets",
                                         "widget_type": "DataTable",
                                         "object_alias": "axenox.DevMan.ticket",
                                         "paginate": false,

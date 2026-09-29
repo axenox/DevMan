@@ -10,17 +10,17 @@
     "replaces_page_selector": null,
     "created_by_user_selector": "0x31000000000000000000000000000000",
     "created_on": "2021-11-02 10:28:12",
-    "modified_by_user_selector": "0x11eea0bd394bca54a0bd005056be9fa0",
-    "modified_on": "2026-03-10 13:33:22",
+    "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
+    "modified_on": "2026-09-29 09:08:22",
     "contents": {
         "object_alias": "axenox.DevMan.resource",
         "widget_type": "SplitHorizontal",
         "panels": [
             {
-                "caption": "Team",
                 "width": "33%",
                 "widgets": [
                     {
+                        "caption": "Team",
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.resource",
                         "id": "resources_table",
@@ -73,9 +73,9 @@
                 ]
             },
             {
-                "caption": "Backlog",
                 "widgets": [
                     {
+                        "caption": "Backlog",
                         "widget_type": "DataTable",
                         "object_alias": "axenox.DevMan.ticket",
                         "multi_select": true,
@@ -149,8 +149,8 @@
                                 "direction": "asc"
                             },
                             {
-                                "attribute_alias": "created_on",
-                                "direction": "desc"
+                                "attribute_alias": "priority_avg",
+                                "direction": "asc"
                             }
                         ],
                         "buttons": [

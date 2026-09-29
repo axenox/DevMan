@@ -87,7 +87,7 @@
         {
             "_EXPORT_SUMMARY": "Ticket [axenox.DevMan.ticket]",
             "CREATED_ON": "2016-03-23 06:41:24",
-            "MODIFIED_ON": "2026-09-29 09:03:17",
+            "MODIFIED_ON": "2026-09-29 13:50:23",
             "CREATED_BY_USER": "0x31000000000000000000000000000000",
             "MODIFIED_BY_USER": "0x11eea89602c1c3dca896005056be9fa0",
             "UID": "0x11e5f0b9cd1f508089840050568905af",
@@ -771,7 +771,37 @@
                     },
                     {
                         "action_alias": "axenox.DevMan.TicketLinksDialog",
-                        "close_dialog": false
+                        "close_dialog": false,
+                        "disabled_if": {
+                            "operator": "AND",
+                            "conditions": [
+                                {
+                                    "value_left": "=field_ticket_id",
+                                    "comparator": "==",
+                                    "value_right": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "close_dialog": false,
+                        "caption": "Approve",
+                        "icon": "pencil-square",
+                        "action": {
+                            "alias": "exface.core.ShowObjectCreateDialog",
+                            "object_alias": "axenox.DevMan.approval",
+                            "prefill_with_input_data": true
+                        },
+                        "disabled_if": {
+                            "operator": "AND",
+                            "conditions": [
+                                {
+                                    "value_left": "=field_ticket_id",
+                                    "comparator": "==",
+                                    "value_right": ""
+                                }
+                            ]
+                        }
                     }
                 ]
             },

@@ -220,9 +220,6 @@
                 }
             },
             {
-                "action_alias": "axenox.DevMan.EditTicket"
-            },
-            {
                 "action_alias": "axenox.DevMan.TicketAddTagDialog"
             },
             {

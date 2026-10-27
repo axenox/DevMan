@@ -11,7 +11,7 @@
     "created_by_user_selector": "0x00000000000000000000000000000000",
     "created_on": "2020-06-22 10:44:39",
     "modified_by_user_selector": "0x11eea89602c1c3dca896005056be9fa0",
-    "modified_on": "2026-09-29 09:13:18",
+    "modified_on": "2026-10-06 13:15:16",
     "contents": {
         "widget_type": "SplitVertical",
         "object_alias": "axenox.DevMan.ticket",
@@ -96,8 +96,18 @@
                                         ],
                                         "buttons": [
                                             {
+                                                "action_alias": "exface.core.ShowObjectCreateDialog"
+                                            },
+                                            {
                                                 "action_alias": "exface.Core.ShowObjectEditDialog",
                                                 "bind_to_double_click": true
+                                            },
+                                            {
+                                                "caption": "All tickets",
+                                                "action": {
+                                                    "alias": "exface.core.GoToPage",
+                                                    "page_alias": "axenox.devman.tickets"
+                                                }
                                             }
                                         ]
                                     }

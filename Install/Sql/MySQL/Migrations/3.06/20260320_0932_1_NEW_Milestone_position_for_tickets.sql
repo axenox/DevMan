@@ -1,26 +1,19 @@
 /*
- * Add missing milestone assignment fields to ticket.
+ * Add ticket ordering within a milestone.
  *
- * This migration creates ticket.milestone_id and ticket.milestone_at_pos
- * for installations that do not yet have these columns.
+ * milestone_id already exists from the earlier topic migrations.
+ * Add milestone_at_pos only if missing so installation retries are safe.
  *
- * The migration also creates an index and foreign key for milestone_id.
+ * DOWN preserves the column to avoid losing existing ticket positions.
  *
  * @author OpenAI
  */
 -- UP
-ALTER TABLE `ticket`
-    ADD COLUMN `milestone_id` int(10) NULL
-        AFTER `assigned_at_pos`,
-    ADD INDEX `IDX_ticket_milestone_id` (`milestone_id`),
-    ADD CONSTRAINT `FK_ticket_milestone_id`
-        FOREIGN KEY (`milestone_id`) REFERENCES `milestone` (`id`);
-
-ALTER TABLE `ticket`
-    ADD COLUMN `milestone_at_pos` int(11) NULL
-        AFTER `milestone_id`;
+CALL execute_sql_on_missing_column(
+    'ticket',
+    'milestone_at_pos',
+    'ALTER TABLE `ticket` ADD COLUMN `milestone_at_pos` int(11) NULL AFTER `milestone_id`'
+);
 
 -- DOWN
-ALTER TABLE `ticket`
-    DROP FOREIGN KEY `FK_ticket_milestone_id`,
-    DROP INDEX `IDX_ticket_milestone_id`;
+-- DO NOT drop columns to avoid data loss.
